@@ -57,6 +57,11 @@
             justify-content: space-between;
             margin-bottom: 2px;
         }
+        
+        /* Ensure the last item in sub-line (Date/Location) is pushed to right */
+        .entry-sub-line > *:last-child {
+            text-align: right;
+        }
 
         .company, .school {
             font-weight: 700;
@@ -172,10 +177,13 @@
             <h2>Experience</h2>
             <div class="entry">
                 <div class="entry-header">
-                    <span class="company">Indian Potash Limited (Internship)</span>
+                    <span class="company">Assistant - Instrumentation Department</span>
                     <span class="date">Jun 2025 – Aug 2025</span>
                 </div>
-                <div class="role">Assistant - Instrumentation Department | Muzaffarnagar</div>
+                <div class="entry-sub-line">
+                    <div class="role">Indian Potash Limited (Internship)</div>
+                    <div class="location">Muzaffarnagar</div>
+                </div>
                 <ul>
                     <li>Performed hands-on calibration of RTD Pt100 temperature sensors, pressure transmitters, and electromagnetic flowmeters using HART communicators and precision test equipment.</li>
                     <li>Conducted field testing and troubleshooting of industrial instrumentation systems with dead weight testers and precision multimeters.</li>
