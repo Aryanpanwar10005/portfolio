@@ -11,7 +11,7 @@
         :root {
             --font-main: 'Merriweather', 'Times New Roman', serif;
             --color-text: #2b2b2b;
-            --color-link: #0000EE; /* Standard Blue for better visibility or keep black with underline */
+            --color-link: var(--color-text);
             --line-height: 1.5;
         }
 
@@ -19,7 +19,7 @@
 
         .contact-info a {
             color: var(--color-link);
-            text-decoration: underline; /* Make links obvious */
+            text-decoration: none;
             margin: 0 4px;
         }
 
