@@ -11,72 +11,15 @@
         :root {
             --font-main: 'Merriweather', 'Times New Roman', serif;
             --color-text: #2b2b2b;
-            --color-link: #000000;
+            --color-link: #0000EE; /* Standard Blue for better visibility or keep black with underline */
             --line-height: 1.5;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: var(--font-main);
-            color: var(--color-text);
-            line-height: var(--line-height);
-            background-color: #f5f5f5; /* Light gray background for web viewing */
-            padding: 40px 20px;
-        }
-
-        .resume-container {
-            max-width: 800px; /* A4 width approx */
-            margin: 0 auto;
-            background: white;
-            padding: 40px 50px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        /* Print Styles */
-        @media print {
-            body {
-                background: white;
-                padding: 0;
-            }
-            .resume-container {
-                box-shadow: none;
-                width: 100%;
-                max-width: 100%;
-                padding: 0;
-                margin: 0;
-            }
-            .no-print {
-                display: none;
-            }
-        }
-
-        /* Header */
-        header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 24pt;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-            letter-spacing: 1px;
-        }
-
-        .contact-info {
-            font-size: 11pt;
-            margin-bottom: 10px;
-        }
+        /* ... */
 
         .contact-info a {
             color: var(--color-link);
-            text-decoration: none;
+            text-decoration: underline; /* Make links obvious */
             margin: 0 4px;
         }
 
@@ -185,13 +128,13 @@
 </head>
 <body>
     <a href="index.html" class="back-link no-print">← Back to Portfolio</a>
-    <a href="javascript:window.print()" class="download-btn no-print">Download / Print PDF</a>
+    <a href="Aryan_Panwar.pdf" download class="download-btn no-print">Download Original PDF</a>
 
     <div class="resume-container">
         <header>
             <h1>Aryan Panwar</h1>
             <div class="contact-info">
-                <span>+91-7817060230</span>
+                <a href="tel:+917817060230">+91-7817060230</a>
                 <span class="separator">|</span>
                 <a href="mailto:aryanpanwar10005@gmail.com">aryanpanwar10005@gmail.com</a>
                 <span class="separator">|</span>
