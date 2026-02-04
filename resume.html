@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Aryan Panwar</title>
+    <style>
+        /* Replicating the LaTeX/Computer Modern Resume Style */
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+        :root {
+            --font-main: 'Merriweather', 'Times New Roman', serif;
+            --color-text: #2b2b2b;
+            --color-link: #000000;
+            --line-height: 1.5;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--color-text);
+            line-height: var(--line-height);
+            background-color: #f5f5f5; /* Light gray background for web viewing */
+            padding: 40px 20px;
+        }
+
+        .resume-container {
+            max-width: 800px; /* A4 width approx */
+            margin: 0 auto;
+            background: white;
+            padding: 40px 50px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .resume-container {
+                box-shadow: none;
+                width: 100%;
+                max-width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 24pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .contact-info {
+            font-size: 11pt;
+            margin-bottom: 10px;
+        }
+
+        .contact-info a {
+            color: var(--color-link);
+            text-decoration: none;
+            margin: 0 4px;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .separator {
+            margin: 0 4px;
+            color: #666;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 18px;
+        }
+
+        h2 {
+            font-size: 12pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom: 1px solid #000;
+            margin-bottom: 10px;
+            padding-bottom: 2px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Entries */
+        .entry {
+            margin-bottom: 10px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2px;
+        }
+
+        .company, .school {
+            font-weight: 700;
+            font-size: 11pt;
+        }
+
+        .location, .date {
+            font-style: italic;
+            font-size: 11pt;
+        }
+
+        .role, .degree {
+            font-style: italic;
+            font-size: 11pt;
+            margin-bottom: 4px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            font-size: 10.5pt;
+        }
+
+        li {
+            margin-bottom: 3px;
+            text-align: justify;
+        }
+
+        /* Skills */
+        .skills-list {
+            font-size: 10.5pt;
+        }
+        
+        .skill-category {
+            font-weight: 700;
+        }
+
+        /* Download Button for Web */
+        .download-btn {
+            display: block;
+            width: fit-content;
+            margin: 0 auto 30px auto;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            font-family: sans-serif;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        .download-btn:hover {
+            background-color: #555;
+        }
+        
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-family: sans-serif;
+            text-decoration: none;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link no-print">← Back to Portfolio</a>
+    <a href="javascript:window.print()" class="download-btn no-print">Download / Print PDF</a>
+
+    <div class="resume-container">
+        <header>
+            <h1>Aryan Panwar</h1>
+            <div class="contact-info">
+                <span>+91-7817060230</span>
+                <span class="separator">|</span>
+                <a href="mailto:aryanpanwar10005@gmail.com">aryanpanwar10005@gmail.com</a>
+                <span class="separator">|</span>
+                <a href="https://linkedin.com/in/aryan-panwar" target="_blank">linkedin.com/in/aryan-panwar</a>
+                <span class="separator">|</span>
+                <a href="https://github.com/Aryanpanwar10005" target="_blank">github.com/Aryanpanwar10005</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Education</h2>
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="school">MIET Meerut</span>
+                    <span class="location">Meerut, Uttar Pradesh</span>
+                </div>
+                <div class="degree">B.Tech in Electronics and Communication Engineering</div>
+                <div class="date" style="float: right; margin-top: -24px;">2022 – 2026</div>
+            </div>
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="school">Shardein School</span>
+                    <span class="location">Muzaffarnagar, UP</span>
+                </div>
+                <div class="degree">Senior Secondary School</div>
+                <div class="date" style="float: right; margin-top: -24px;">2020 – 2022</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="company">Indian Potash Limited (Internship)</span>
+                    <span class="date">Jun 2025 – Aug 2025</span>
+                </div>
+                <div class="role">Assistant - Instrumentation Department | Muzaffarnagar</div>
+                <ul>
+                    <li>Performed hands-on calibration of RTD Pt100 temperature sensors, pressure transmitters, and electromagnetic flowmeters using HART communicators and precision test equipment.</li>
+                    <li>Conducted field testing and troubleshooting of industrial instrumentation systems with dead weight testers and precision multimeters.</li>
+                    <li>Gained practical experience with Safety Instrumented Systems (SIS) and emergency shutdown protocols in process control environments.</li>
+                    <li>Assisted in maintenance and diagnostics of field devices, learning industrial communication standards and calibration procedures.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="company">Wireless EV Charging System</span>
+                    <span class="date">2025</span>
+                </div>
+                <div class="role">Arduino, IPT, IoT | <a href="https://github.com/Aryanpanwar10005">GitHub</a></div>
+                <ul>
+                    <li>Developed Arduino-based charging station control firmware with automated vehicle detection and safety interlocks.</li>
+                    <li>Programmed IR sensor array processing for 95% accurate vehicle positioning using digital input filtering.</li>
+                    <li>Implemented real-time LCD status monitoring and relay control logic for charging sequence management.</li>
+                    <li>Designed resonant circuit tuning for inductive power transfer achieving 85% efficiency with emergency shutdown capability.</li>
+                </ul>
+            </div>
+            
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="company">Smart Staircase Lighting System</span>
+                    <span class="date">2023</span>
+                </div>
+                <div class="role">Arduino, IoT, Automation | <a href="https://github.com/Aryanpanwar10005">GitHub</a></div>
+                <ul>
+                    <li>Designed motion-activated lighting control system using IR sensors and Arduino microcontroller.</li>
+                    <li>Programmed sequential LED control firmware achieving 45% energy reduction through intelligent detection logic.</li>
+                    <li>Implemented adjustable timing parameters using millis() function for customizable automation behavior.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="company">Edge-Avoiding Autonomous Robot</span>
+                    <span class="date">2022</span>
+                </div>
+                <div class="role">Arduino, Embedded C, HC-SR04</div>
+                <ul>
+                    <li>Developed autonomous navigation firmware using ultrasonic sensor array and Arduino motor control.</li>
+                    <li>Implemented sensor data filtering algorithms improving edge detection accuracy by 40% through averaging and calibration.</li>
+                    <li>Programmed real-time obstacle avoidance logic using threshold-based decision making for safe autonomous movement.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-list">
+                <p><span class="skill-category">Programming:</span> Embedded C/C++, Arduino (C/C++), Python, MATLAB</p>
+                <p><span class="skill-category">Microcontrollers:</span> Arduino (ATmega328), 8051 Microcontroller</p>
+                <p><span class="skill-category">Communication Protocols:</span> UART, I2C (working knowledge), HART Protocol</p>
+                <p><span class="skill-category">Hardware:</span> Sensor Integration, Circuit Design, Prototyping, PCB Design Basics</p>
+                <p><span class="skill-category">Development Tools:</span> Arduino IDE, PlatformIO (basic), LabVIEW</p>
+                <p><span class="skill-category">Test Equipment:</span> Oscilloscopes, Multimeters, Function Generators, Logic Analyzers, HART Communicators</p>
+                <p><span class="skill-category">Industrial:</span> Process Instrumentation, Calibration Procedures, SIS, Field Device Configuration</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
