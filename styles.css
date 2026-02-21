@@ -766,6 +766,68 @@ section:last-child {
 }
 
 /* ===================================
+   Skills Section Extensions
+   =================================== */
+#skills {
+  margin-bottom: var(--space-4xl); /* More breathing room before Contact */
+}
+
+.exploring-callout {
+  margin-top: var(--space-3xl);
+  padding: var(--space-xl);
+  background: rgba(100, 255, 218, 0.03);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(100, 255, 218, 0.08);
+}
+
+.exploring-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  margin-top: var(--space-lg);
+}
+
+.exploring-card {
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+}
+
+.exploring-icon-wrapper {
+  background: rgba(100, 255, 218, 0.1);
+  padding: 10px;
+  border-radius: var(--radius-md);
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exploring-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.exploring-info h4 {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.exploring-info p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .exploring-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+/* ===================================
    Contact Section
    =================================== */
 .contact-section {
