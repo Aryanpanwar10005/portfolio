@@ -51,24 +51,40 @@
     <meta property="og:locale" content="en_IN" />
     <meta property="og:site_name" content="Aryan Panwar - Portfolio" />
 
-    <!-- JSON-LD Structured Data: Person -->
+    <!-- JSON-LD Structured Data: ProfilePage + Person (Google Rich Results) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Aryan Panwar",
-      "url": "https://aryanpanwar.in",
-      "image": "https://aryanpanwar.in/Aryan_Panwar.webp",
-      "jobTitle": "ECE Engineer & Product Builder",
-      "description": "Final-year ECE student, product builder, and AI explorer. Built FitWardrobe and Mithivoices. Based in Meerut, UP.",
-      "email": "aryanpanwar10005@gmail.com",
-      "telephone": "+917817060230",
-      "alumniOf": { "@type": "CollegeOrUniversity", "name": "MIET Meerut" },
-      "address": { "@type": "PostalAddress", "addressLocality": "Meerut", "addressRegion": "Uttar Pradesh", "addressCountry": "IN" },
-      "sameAs": [
-        "https://www.linkedin.com/in/aryan-panwar1",
-        "https://github.com/Aryanpanwar10005"
-      ]
+      "@type": "ProfilePage",
+      "dateCreated": "2025-01-01T00:00:00+05:30",
+      "dateModified": "2026-02-22T03:50:00+05:30",
+      "mainEntity": {
+        "@type": "Person",
+        "@id": "https://aryanpanwar.in/#person",
+        "name": "Aryan Panwar",
+        "url": "https://aryanpanwar.in",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://aryanpanwar.in/Aryan_Panwar.webp",
+          "width": 1920,
+          "height": 912
+        },
+        "jobTitle": "ECE Engineer & Product Builder",
+        "description": "Final-year ECE student, product builder, and AI explorer. Built FitWardrobe (live Android AI app) and Mithivoices (open-source AI voice platform). Based in Meerut, UP.",
+        "email": "aryanpanwar10005@gmail.com",
+        "telephone": "+917817060230",
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "MIET Meerut" },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Meerut",
+          "addressRegion": "Uttar Pradesh",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/aryan-panwar1",
+          "https://github.com/Aryanpanwar10005"
+        ]
+      }
     }
     </script>
 
