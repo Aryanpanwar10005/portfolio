@@ -90,9 +90,15 @@
 
     <title>Aryan Panwar - ECE Engineer | Product Builder | AI Explorer</title>
 
-    <!-- Google Fonts Preconnect -->
+    <!-- Google Fonts Preconnect & Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- DevIcons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -100,7 +106,9 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body data-theme="dark">
+    <a class="skip-to-content" href="#about">Skip to content</a>
+
     <!-- Mobile Navigation Overlay -->
     <div class="mobile-nav-overlay" id="mobile-menu">
       <nav class="mobile-nav-links">
@@ -121,8 +129,7 @@
           href="Aryan_Panwar.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          class="btn btn-primary"
-          style="margin-top: 20px"
+          class="btn btn-primary btn-resume-mobile"
           >Resume</a
         >
       </nav>
@@ -143,14 +150,19 @@
           >
           <a href="#skills" class="nav-link" data-section="skills">Skills</a>
           <a href="#contact" class="nav-link" data-section="contact">Contact</a>
-          <a
-            href="Aryan_Panwar.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary"
-            style="padding: 6px 16px; font-size: 0.8rem"
-            >Resume</a
-          >
+          <div class="nav-actions">
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle light/dark mode">
+              <i data-lucide="sun" class="sun-icon"></i>
+              <i data-lucide="moon" class="moon-icon"></i>
+            </button>
+            <a
+              href="Aryan_Panwar.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary btn-resume-nav"
+              >Resume</a
+            >
+          </div>
         </div>
 
         <button
@@ -166,21 +178,25 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
-      <div class="container hero-content fade-in">
-        <span class="hero-greeting">Hi, my name is</span>
-        <h1 class="hero-name">
-          Aryan Panwar<span class="cursor-blink"></span>
+      <div class="container hero-content">
+        <div class="availability-badge" data-aos="fade-down" data-aos-delay="100">
+          <span class="pulse-dot"></span>
+          Available for Opportunities
+        </div>
+        <span class="hero-greeting" data-aos="fade-up" data-aos-delay="200">Hi, my name is</span>
+        <h1 class="hero-name" data-aos="fade-up" data-aos-delay="300">
+          Aryan Panwar
         </h1>
-        <h2 class="hero-title">ECE Engineer & Product Builder</h2>
-        <p class="hero-description">
-          I'm a final-year Electronics and Communication Engineering student who
+        <h2 class="hero-title" data-aos="fade-up" data-aos-delay="400">
+          <span id="typewriter"></span><span class="typewriter-cursor"></span>
+        </h2>
+        <p class="hero-description" data-aos="fade-up" data-aos-delay="500">
+          I'm a final-year Electronics and Communication Engineering student at <strong>MIET Meerut</strong> who
           builds real products — from a live AI stylist app to an open-source
-          voice platform. My roots are in embedded systems and industrial
-          instrumentation, and I'm actively exploring Agentic AI, LLMs, and edge
-          intelligence.
+          voice platform. I bridge the gap between low-level hardware logic and high-level AI orchestration.
         </p>
-        <div class="hero-meta">
-          <span>B.Tech ECE @ MIET Meerut</span>
+        <div class="hero-meta" data-aos="fade-up" data-aos-delay="600">
+          <span>B.Tech ECE @ MIET</span>
           <span>Class of 2026</span>
           <span>Based in Meerut, UP</span>
         </div>
@@ -225,15 +241,15 @@
     </section>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="section section-padding">
       <div class="container">
-        <div class="section-header fade-in">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-number">01.</span>
           <h2 class="section-title">About Me</h2>
         </div>
 
-        <div class="about-grid fade-in">
-          <div class="about-text">
+        <div class="about-grid">
+          <div class="about-text" data-aos="fade-right">
             <p>
               I'm a final-year Electronics and Communication Engineering student
               at MIET Meerut with hands-on experience in embedded systems,
@@ -256,16 +272,29 @@
 
             <div class="tech-interests">
               <h3>Technical Interests:</h3>
-              <ul class="tech-list">
-                <li>Agentic AI, LLMs and intelligent automation</li>
-                <li>Product development and open-source software</li>
-                <li>Industrial process control and instrumentation</li>
-                <li>IoT, embedded systems and edge AI</li>
-              </ul>
+              <div class="tech-interest-grid">
+                <div class="interest-item">
+                  <span class="interest-icon"><i data-lucide="bot"></i></span>
+                  Agentic AI & LLMs
+                </div>
+                <div class="interest-item">
+                  <span class="interest-icon"><i data-lucide="cpu"></i></span>
+                  IoT & Embedded Systems
+                </div>
+                <div class="interest-item">
+                  <span class="interest-icon"
+                    ><i data-lucide="settings"></i></span>
+                  Industrial Automation
+                </div>
+                <div class="interest-item">
+                  <span class="interest-icon"><i data-lucide="code-2"></i></span>
+                  Open Source Software
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="info-cards">
+          <div class="info-cards" data-aos="fade-left">
             <div class="info-card">
               <h3><i data-lucide="graduation-cap"></i> Education</h3>
               <div class="info-item">
@@ -279,14 +308,10 @@
             </div>
 
             <div class="info-card">
-              <h3><i data-lucide="map-pin"></i> Contact Info</h3>
+              <h3><i data-lucide="award"></i> Certifications</h3>
               <div class="info-item">
-                <span class="info-title">Email</span>
-                <span class="info-meta">aryanpanwar10005@gmail.com</span>
-              </div>
-              <div class="info-item">
-                <span class="info-title">Location</span>
-                <span class="info-meta">Meerut, Uttar Pradesh</span>
+                <span class="info-title">Industrial Automation</span>
+                <span class="info-meta">Potash Limited Training</span>
               </div>
             </div>
           </div>
@@ -295,53 +320,51 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience">
+    <section id="experience" class="section section-padding">
       <div class="container">
-        <div class="section-header fade-in">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-number">02.</span>
           <h2 class="section-title">Where I've Worked</h2>
         </div>
 
-        <div class="timeline fade-in">
-          <div class="timeline-item">
-            <span class="timeline-date">Jun 2025 – Aug 2025</span>
-            <h3 class="timeline-role">
-              Assistant - Instrumentation Department
-            </h3>
-            <div class="timeline-company">
-              Indian Potash Limited | Muzaffarnagar, UP
-            </div>
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="experience-card">
+              <div class="timeline-header">
+                <span class="timeline-date">Jun 2025 – Aug 2025</span>
+                <h3 class="timeline-role">
+                  Assistant - Instrumentation Department
+                </h3>
+                <div class="timeline-company">
+                  Indian Potash Limited | Muzaffarnagar, UP
+                </div>
+              </div>
 
-            <div class="timeline-content">
-              <ul>
-                <li>
-                  Performed hands-on calibration of RTD Pt100 temperature
-                  sensors, pressure transmitters, and electromagnetic flowmeters
-                  using HART communicators and precision test equipment.
-                </li>
-                <li>
-                  Conducted field testing and troubleshooting of industrial
-                  instrumentation systems with dead weight testers and precision
-                  multimeters.
-                </li>
-                <li>
-                  Gained practical experience with Safety Instrumented Systems
-                  (SIS) and emergency shutdown protocols in process control
-                  environment.
-                </li>
-                <li>
-                  Assisted in maintenance and diagnostics of field devices,
-                  learning industrial communication standards and calibration
-                  procedures.
-                </li>
-              </ul>
+              <div class="timeline-content">
+                <ul>
+                  <li>
+                    Performed hands-on calibration of RTD Pt100 temperature
+                    sensors, pressure transmitters, and electromagnetic
+                    flowmeters using HART communicators.
+                  </li>
+                  <li>
+                    Conducted field testing and troubleshooting of industrial
+                    instrumentation systems with dead weight testers and
+                    precision multimeters.
+                  </li>
+                  <li>
+                    Gained practical experience with Safety Instrumented Systems
+                    (SIS) and emergency shutdown protocols in process control.
+                  </li>
+                </ul>
 
-              <div class="tags">
-                <span class="tag">RTD Sensors</span>
-                <span class="tag">HART Protocol</span>
-                <span class="tag">SIS</span>
-                <span class="tag">Calibration</span>
-                <span class="tag">Industrial Automation</span>
+                <div class="tags">
+                  <span class="tag">RTD Sensors</span>
+                  <span class="tag">HART Protocol</span>
+                  <span class="tag">SIS</span>
+                  <span class="tag">Calibration</span>
+                  <span class="tag">Automation</span>
+                </div>
               </div>
             </div>
           </div>
@@ -352,207 +375,140 @@
     <!-- Projects Section -->
     <section id="projects">
       <div class="container">
-        <div class="section-header fade-in">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-number">03.</span>
           <h2 class="section-title">Things I've Shipped & Built</h2>
         </div>
 
         <!-- Row 1: Featured Products -->
-        <div class="projects-row fade-in">
-          <span class="row-label">Featured Products</span>
-          <div class="featured-projects-grid">
+        <div class="projects-row">
+          <span class="row-label" data-aos="fade-right">Featured Products</span>
+          <div class="projects-grid">
             <!-- FitWardrobe -->
-            <div class="project-card featured">
-              <div class="project-header">
-                <i data-lucide="folder" class="folder-icon"></i>
-                <div class="project-links">
-                  <span class="live-badge">LIVE</span>
-                  <a
-                    href="https://fitwardrobe.me"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Live Site"
-                  >
-                    <i data-lucide="external-link"></i>
-                  </a>
-                </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="project-thumbnail">
+                <img src="assets/projects/fitwardrobe.png" alt="FitWardrobe App Preview" loading="lazy">
+                <div class="thumbnail-overlay"></div>
               </div>
-              <div class="role-badge">Founder & Product Lead</div>
-              <h3 class="project-title">
-                FitWardrobe — AI Personal Stylist App
-              </h3>
-              <p class="project-desc">
-                Privacy-first Android app that uses on-device AI to analyse your
-                wardrobe and suggest outfits based on occasion. Clothing photos
-                and personal data stay entirely on your device — nothing is
-                uploaded to external servers. Built with Google Gemini Vision
-                for clothing analysis, IndexedDB for local storage, and
-                Capacitor for native Android packaging. Currently in beta with a
-                Play Store release planned.
-              </p>
-              <ul class="project-tech-list">
-                <li>React</li>
-                <li>TypeScript</li>
-                <li>Capacitor</li>
-                <li>Google Gemini API</li>
-                <li>IndexedDB</li>
-                <li>Android</li>
-                <li>PWA</li>
-              </ul>
+              <div class="project-body">
+                <div class="project-header-top">
+                  <i data-lucide="layout" class="project-icon"></i>
+                  <div class="project-links">
+                    <span class="live-badge">LIVE</span>
+                    <a href="https://fitwardrobe.me" target="_blank" rel="noopener noreferrer"><i data-lucide="external-link"></i></a>
+                  </div>
+                </div>
+                <div class="role-badge">Founder & Product Lead</div>
+                <h3>FitWardrobe</h3>
+                <p class="project-desc">Privacy-first AI fashion stylist app. Uses on-device Gemini Vision to analyze wardrobes without server uploads. Built with React and Capacitor.</p>
+                <ul class="project-tech-list">
+                  <li>React</li>
+                  <li>Capacitor</li>
+                  <li>Gemini API</li>
+                  <li>IndexedDB</li>
+                </ul>
+              </div>
             </div>
 
             <!-- Mithivoices -->
-            <div class="project-card featured">
-              <div class="project-header">
-                <i data-lucide="folder" class="folder-icon"></i>
-                <div class="project-links">
-                  <a
-                    href="https://github.com/mithivoices/ai-voice-platform"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub Link"
-                  >
-                    <i data-lucide="github"></i>
-                  </a>
-                </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="project-thumbnail">
+                <img src="assets/projects/mithivoices.png" alt="Mithivoices Platform Preview" loading="lazy">
+                <div class="thumbnail-overlay"></div>
               </div>
-              <div class="role-badge">Creator & Maintainer</div>
-              <h3 class="project-title">
-                Mithivoices — Open-Source AI Voice Platform
-              </h3>
-              <p class="project-desc">
-                Open-source platform for Text-to-Speech and Speech-to-Text
-                supporting 19 neural voices across 8 languages including Hindi,
-                English, German, Spanish, and Malayalam. Built with Piper TTS
-                for neural voice synthesis and OpenAI Whisper for transcription,
-                served through a Python FastAPI backend and a React TypeScript
-                frontend. Released v0.2.0 with multi-LLM support and modular
-                architecture.
-              </p>
-              <ul class="project-tech-list">
-                <li>Python</li>
-                <li>FastAPI</li>
-                <li>React</li>
-                <li>TypeScript</li>
-                <li>Piper TTS</li>
-                <li>Whisper STT</li>
-                <li>Open Source</li>
-              </ul>
+              <div class="project-body">
+                <div class="project-header-top">
+                  <i data-lucide="mic" class="project-icon"></i>
+                  <div class="project-links">
+                    <a href="https://github.com/mithivoices/ai-voice-platform" target="_blank" rel="noopener noreferrer"><i data-lucide="github"></i></a>
+                  </div>
+                </div>
+                <div class="role-badge">Creator & Maintainer</div>
+                <h3>Mithivoices</h3>
+                <p class="project-desc">Open-source TTS/STT platform with 19 neural voices. Modular architecture supporting multi-LLM orchestration and Piper TTS.</p>
+                <ul class="project-tech-list">
+                  <li>Python</li>
+                  <li>FastAPI</li>
+                  <li>Piper TTS</li>
+                  <li>Whisper</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Row 2: Hardware Projects -->
-        <div class="projects-row fade-in">
-          <span class="row-label">Hardware Projects</span>
-          <div class="hardware-projects-grid">
-            <!-- Wireless EV Charging -->
-            <div class="project-card hardware">
-              <div class="project-header">
-                <i data-lucide="folder" class="folder-icon"></i>
-                <div class="project-links">
-                  <a
-                    href="https://github.com/Aryanpanwar10005/wireless_ev_charging"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub Link"
-                  >
-                    <i data-lucide="github"></i>
-                  </a>
+        <!-- Row 2: Hardware & IoT -->
+        <div class="projects-row">
+          <span class="row-label" data-aos="fade-right">Hardware & Logic</span>
+          <div class="projects-grid">
+            <!-- EV Charging -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="project-body">
+                <div class="project-header-top">
+                  <i data-lucide="zap" class="project-icon"></i>
+                  <div class="project-links">
+                    <a href="https://github.com/Aryanpanwar10005/wireless_ev_charging" target="_blank" rel="noopener noreferrer"><i data-lucide="github"></i></a>
+                  </div>
                 </div>
+                <h3>Wireless EV Charger</h3>
+                <p class="project-desc">IPT-based wireless power transfer system with 85% efficiency. Features automated alignment detection via IR sensor arrays.</p>
+                <ul class="project-tech-list">
+                  <li>Arduino</li>
+                  <li>IPT</li>
+                  <li>Embedded C</li>
+                  <li>IoT</li>
+                </ul>
               </div>
-              <h3 class="project-title">Wireless EV Charging System</h3>
-              <p class="project-desc">
-                Arduino-based prototype for wireless electric vehicle charging
-                using Inductive Power Transfer (IPT). The system automatically
-                detects vehicle positioning using an IR sensor array with 95%
-                accuracy and manages the full charging sequence — from detection
-                to relay control — with emergency shutdown capability. Achieved
-                85% power transfer efficiency through resonant circuit tuning.
-              </p>
-              <ul class="project-tech-list">
-                <li>Arduino</li>
-                <li>Embedded C++</li>
-                <li>IPT</li>
-                <li>IR Sensors</li>
-                <li>IoT</li>
-              </ul>
             </div>
 
-            <!-- Smart Staircase Lighting -->
-            <div class="project-card hardware">
-              <div class="project-header">
-                <i data-lucide="folder" class="folder-icon"></i>
-                <div class="project-links">
-                  <a
-                    href="https://github.com/Aryanpanwar10005/smart_staircase_lighting_system"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub Link"
-                  >
-                    <i data-lucide="github"></i>
-                  </a>
-                </div>
+            <!-- Smart Staircase -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="project-thumbnail">
+                <img src="assets/projects/staircase.png" alt="Smart Staircase Project" loading="lazy">
+                <div class="thumbnail-overlay"></div>
               </div>
-              <h3 class="project-title">Smart Staircase Lighting System</h3>
-              <p class="project-desc">
-                Motion-activated staircase lighting system using IR sensors and
-                Arduino. Lights activate sequentially when motion is detected
-                and shut off automatically after a configurable timeout — no
-                manual switching needed. Uses non-blocking millis() timing logic
-                to avoid delays. Achieved 45% energy reduction compared to
-                always-on lighting.
-              </p>
-              <ul class="project-tech-list">
-                <li>Arduino</li>
-                <li>Embedded C++</li>
-                <li>IR Sensors</li>
-                <li>Automation</li>
-              </ul>
+              <div class="project-body">
+                <div class="project-header-top">
+                  <i data-lucide="lightbulb" class="project-icon"></i>
+                  <div class="project-links">
+                    <a href="https://github.com/Aryanpanwar10005/smart_staircase_lighting_system" target="_blank" rel="noopener noreferrer"><i data-lucide="github"></i></a>
+                  </div>
+                </div>
+                <h3>Smart Staircase</h3>
+                <p class="project-desc">Motion-activated sequential lighting system reducing energy consumption by 45%. Non-blocking millis() timing logic.</p>
+                <ul class="project-tech-list">
+                  <li>Arduino</li>
+                  <li>Sensors</li>
+                  <li>Energy Optimization</li>
+                </ul>
+              </div>
             </div>
 
             <!-- Autonomous Robot -->
-            <div class="project-card hardware">
-              <div class="project-header">
-                <i data-lucide="folder" class="folder-icon"></i>
-                <div class="project-links">
-                  <a
-                    href="https://github.com/Aryanpanwar10005"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub Link"
-                  >
-                    <i data-lucide="github"></i>
-                  </a>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="project-body">
+                <div class="project-header-top">
+                  <i data-lucide="bot" class="project-icon"></i>
+                  <div class="project-links">
+                    <a href="https://github.com/Aryanpanwar10005" target="_blank" rel="noopener noreferrer"><i data-lucide="github"></i></a>
+                  </div>
                 </div>
+                <h3>Autonomous Robot</h3>
+                <p class="project-desc">Edge-avoiding robot using ultrasonic sensor arrays and custom decision-logic filters for 40% higher accuracy.</p>
+                <ul class="project-tech-list">
+                  <li>Robotics</li>
+                  <li>C++</li>
+                  <li>PWM</li>
+                  <li>HC-SR04</li>
+                </ul>
               </div>
-              <h3 class="project-title">Edge-Avoiding Autonomous Robot</h3>
-              <p class="project-desc">
-                Autonomous navigation robot using an ultrasonic sensor array and
-                Arduino motor control. The firmware continuously reads sensor
-                data, applies averaging and calibration filters to improve edge
-                detection accuracy by 40%, and uses threshold-based decision
-                logic to avoid obstacles and edges in real time.
-              </p>
-              <ul class="project-tech-list">
-                <li>Arduino</li>
-                <li>Embedded C</li>
-                <li>HC-SR04</li>
-                <li>Robotics</li>
-                <li>PWM</li>
-              </ul>
             </div>
           </div>
         </div>
 
-        <div class="project-cta fade-in">
-          <a
-            href="https://github.com/Aryanpanwar10005"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary"
-          >
-            View Complete Project Archive
+        <div class="project-cta" data-aos="fade-up">
+          <a href="https://github.com/Aryanpanwar10005" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Explore Complete Archive
           </a>
         </div>
       </div>
@@ -566,122 +522,76 @@
           <h2 class="section-title">Technical Arsenal</h2>
         </div>
 
-        <div class="skills-grid fade-in">
-          <div class="skill-category">
-            <h3>Programming</h3>
-            <ul class="skill-list">
-              <li>Embedded C/C++</li>
-              <li>Arduino (C++)</li>
-              <li>Python</li>
-              <li>MATLAB</li>
-            </ul>
+        <div class="skills-bento" data-aos="fade-up">
+          <!-- Card 1: Embedded (Large) -->
+          <div class="skill-card large">
+            <div class="card-content">
+              <h3><i data-lucide="cpu"></i> Embedded & Hardware Logic</h3>
+              <p class="skill-card-desc">Designing low-level systems and robust circuit architectures.</p>
+            </div>
+            <div class="skill-badges">
+              <span class="skill-badge"><i class="devicon-cplusplus-plain"></i> C/C++</span>
+              <span class="skill-badge"><i class="devicon-arduino-plain"></i> Arduino</span>
+              <span class="skill-badge">8051 Family</span>
+              <span class="skill-badge">UART/I2C/SPI</span>
+              <span class="skill-badge">Circuit Design</span>
+              <span class="skill-badge">HART Protocol</span>
+              <span class="skill-badge">LabVIEW</span>
+              <span class="skill-badge">PCB Design</span>
+            </div>
           </div>
 
-          <div class="skill-category">
-            <h3>AI / ML Tools</h3>
-            <ul class="skill-list">
-              <li>Piper TTS</li>
-              <li>Whisper STT</li>
-              <li>LLM APIs</li>
-              <li>On-Device AI</li>
-            </ul>
+          <!-- Card 2: AI & ML (Tall) -->
+          <div class="skill-card tall">
+            <div class="card-content">
+              <h3><i data-lucide="brain-circuit"></i> AI & ML</h3>
+              <p class="skill-card-desc">Bridging hardware with intelligent processing.</p>
+            </div>
+            <div class="skill-badges">
+              <span class="skill-badge"><i class="devicon-python-plain"></i> Python</span>
+              <span class="skill-badge">Piper TTS</span>
+              <span class="skill-badge">Whisper STT</span>
+              <span class="skill-badge">On-Device AI</span>
+              <span class="skill-badge">TensorFlow</span>
+              <span class="skill-badge">NLP</span>
+            </div>
           </div>
 
-          <div class="skill-category">
-            <h3>Microcontrollers</h3>
-            <ul class="skill-list">
-              <li>Arduino (ATmega328)</li>
-              <li>8051 Family</li>
-            </ul>
-          </div>
-
-          <div class="skill-category">
-            <h3>Protocols</h3>
-            <ul class="skill-list">
-              <li>UART / USART</li>
-              <li>I2C</li>
-              <li>HART Protocol</li>
-            </ul>
-          </div>
-
-          <div class="skill-category">
-            <h3>Hardware</h3>
-            <ul class="skill-list">
-              <li>Sensor Integration</li>
-              <li>Circuit Design</li>
-              <li>PCB Basics</li>
-              <li>Prototyping</li>
-            </ul>
-          </div>
-
-          <div class="skill-category">
-            <h3>Tools</h3>
-            <ul class="skill-list">
-              <li>Arduino IDE</li>
-              <li>PlatformIO</li>
-              <li>LabVIEW</li>
-              <li>GitHub Actions</li>
-            </ul>
-          </div>
-
-          <div class="skill-category">
-            <h3>Equipment</h3>
-            <ul class="skill-list">
-              <li>Oscilloscopes</li>
-              <li>Logic Analyzers</li>
-              <li>HART Communicators</li>
-              <li>Function Generators</li>
-            </ul>
-          </div>
-
-          <div class="skill-category">
-            <h3>Industrial</h3>
-            <ul class="skill-list">
-              <li>Process Control</li>
-              <li>Calibration Procedures</li>
-              <li>SIS Standards</li>
-              <li>Field Configuration</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Exploring Callout -->
-        <div class="exploring-callout fade-in">
-          <span class="row-label">Currently Exploring</span>
-          <div class="exploring-grid">
-            <div class="exploring-card">
-              <div class="exploring-icon-wrapper">
-                <i data-lucide="bot" class="exploring-icon"></i>
-              </div>
-              <div class="exploring-info">
-                <h4>Agentic AI & LLMs</h4>
-                <p>
-                  Autonomous AI agents, prompt engineering, and LLM
-                  orchestration.
-                </p>
+          <!-- Card 3: GenAI (Standard) -->
+          <div class="skill-card">
+            <div class="card-content">
+              <h3><i data-lucide="sparkles"></i> Agentic AI</h3>
+              <div class="skill-badges">
+                <span class="skill-badge">LLM APIs</span>
+                <span class="skill-badge">V0 / Cursor</span>
+                <span class="skill-badge">Prompt Eng.</span>
               </div>
             </div>
-            <div class="exploring-card">
-              <div class="exploring-icon-wrapper">
-                <i data-lucide="binary" class="exploring-icon"></i>
-              </div>
-              <div class="exploring-info">
-                <h4>Data Analysis</h4>
-                <p>
-                  Python-based workflows and extracting insights from real-world
-                  data.
-                </p>
-              </div>
+          </div>
+
+          <!-- Card 4: Backend (Wide) -->
+          <div class="skill-card wide">
+            <div class="card-content">
+              <h3><i data-lucide="terminal"></i> Cloud & Dev Tools</h3>
+              <p class="skill-card-desc">Building scalable APIs and automated workflows.</p>
             </div>
-            <div class="exploring-card">
-              <div class="exploring-icon-wrapper">
-                <i data-lucide="cpu" class="exploring-icon"></i>
-              </div>
-              <div class="exploring-info">
-                <h4>Edge AI & IoT</h4>
-                <p>
-                  On-device ML models running directly on embedded hardware.
-                </p>
+            <div class="skill-badges">
+              <span class="skill-badge"><i class="devicon-fastapi-plain"></i> FastAPI</span>
+              <span class="skill-badge"><i class="devicon-github-original"></i> GitHub Actions</span>
+              <span class="skill-badge"><i class="devicon-git-plain"></i> Git Source Control</span>
+              <span class="skill-badge">PlatformIO</span>
+              <span class="skill-badge">Docker</span>
+            </div>
+          </div>
+
+          <!-- Card 5: Product (Standard) -->
+          <div class="skill-card">
+            <div class="card-content">
+              <h3><i data-lucide="target"></i> Product & Strategy</h3>
+              <div class="skill-badges">
+                <span class="skill-badge">User Research</span>
+                <span class="skill-badge">Documentation</span>
+                <span class="skill-badge">PM Basics</span>
               </div>
             </div>
           </div>
@@ -689,49 +599,18 @@
       </div>
     </section>
 
-    <section id="contact" class="fade-in">
-      <div class="container">
+    <!-- Contact Section -->
+    <section id="contact" class="section section-padding">
+      <div class="container" data-aos="fade-up">
         <div class="contact-section">
-          <h2 class="section-heading-main">Get In Touch</h2>
-          <p class="contact-text">
+          <span class="contact-subtitle">What's Next?</span>
+          <h2>Get In Touch</h2>
+          <p class="contact-description">
             I'm currently open to new opportunities across ECE, AI, and product
             development. Whether you want to collaborate on a project, discuss
             ideas, or just say hi — my inbox is always open!
           </p>
-
-          <div class="contact-cards">
-            <a href="mailto:aryanpanwar10005@gmail.com" class="contact-card">
-              <i data-lucide="mail"></i>
-              <span>Email Me</span>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/aryan-panwar1"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contact-card"
-            >
-              <i data-lucide="linkedin"></i>
-              <span>LinkedIn</span>
-            </a>
-            <a
-              href="https://github.com/Aryanpanwar10005"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contact-card"
-            >
-              <i data-lucide="github"></i>
-              <span>GitHub</span>
-            </a>
-            <a href="tel:+917817060230" class="contact-card">
-              <i data-lucide="phone"></i>
-              <span>+91-7817060230</span>
-            </a>
-          </div>
-
-          <a
-            href="mailto:aryanpanwar10005@gmail.com"
-            class="btn btn-primary"
-            style="padding: 16px 32px; font-size: 1rem"
+          <a href="mailto:aryanpanwar10005@gmail.com" class="btn btn-primary"
             >Say Hello</a
           >
         </div>
@@ -740,7 +619,7 @@
 
     <!-- Footer -->
     <footer>
-      <div class="container">
+      <div class="container footer-content">
         <div class="footer-socials">
           <a
             href="https://github.com/Aryanpanwar10005"
@@ -762,13 +641,15 @@
             <i data-lucide="mail"></i>
           </a>
         </div>
-        <p>Designed & Built by Aryan Panwar</p>
-        <p style="font-size: 0.8rem; margin-top: 8px">
-          © 2026 All rights reserved.
-        </p>
+        <div class="footer-credit">
+          <p>Designed & Built by <a href="/">Aryan Panwar</a></p>
+          <p>© 2026 Aryan Panwar</p>
+        </div>
       </div>
     </footer>
 
+    <!-- Third Party Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
