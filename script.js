@@ -179,6 +179,7 @@ class NavigationManager {
     }
 
     toggleMobileMenu() {
+        if (!this.menuOverlay || !this.menuBtn) return;
         const isActive = this.menuOverlay.classList.toggle('active');
         this.body.style.overflow = isActive ? 'hidden' : '';
         this.menuBtn.setAttribute('aria-expanded', isActive);
