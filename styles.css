@@ -855,6 +855,27 @@ section:last-child {
   object-fit: cover;
   transition: transform var(--transition-std);
   opacity: 0.8;
+  display: block;
+}
+
+/* Fallback when image fails to load */
+.project-thumbnail img[data-missing="true"] {
+  display: none;
+}
+
+.project-thumbnail--placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.05) 0%, rgba(123, 47, 190, 0.1) 100%);
+}
+
+.project-thumbnail--placeholder::after {
+  content: attr(data-icon);
+  font-size: 3rem;
+  opacity: 0.3;
 }
 
 .project-card:hover .project-thumbnail img {
