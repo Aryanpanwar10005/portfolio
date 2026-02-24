@@ -97,13 +97,15 @@
     <!-- Inline theme init: read localStorage before paint to prevent FOUC -->
     <script>
       (function() {
-        var t = localStorage.getItem('theme') || 'dark';
+        var t = 'dark';
+        try { t = localStorage.getItem('theme') || 'dark'; } catch (_) {}
         document.documentElement.setAttribute('data-theme', t);
       })();
     </script>
 
-    <!-- AOS CSS v2.3.4 -->
+    <!-- AOS Animation Library v2.3.4 (CSS + JS must match) -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     
     <!-- DevIcons v2.16.0 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
