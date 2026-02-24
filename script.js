@@ -97,10 +97,18 @@ class NavigationManager {
         // Smooth Scroll for Anchors
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', (e) => {
+                const href = anchor.getAttribute('href');
+                // Ignore bare '#' or empty/single-char hrefs (invalid selectors)
+                if (!href || href.length <= 1) return;
                 e.preventDefault();
-                const target = document.querySelector(anchor.getAttribute('href'));
+                let target;
+                try {
+                    target = document.querySelector(href);
+                } catch (_) {
+                    return; // Invalid selector — bail out
+                }
                 if (target) {
-                    if (this.menuOverlay.classList.contains('active')) {
+                    if (this.menuOverlay && this.menuOverlay.classList.contains('active')) {
                         this.toggleMobileMenu();
                     }
                     target.scrollIntoView({ behavior: 'smooth' });
@@ -110,16 +118,16 @@ class NavigationManager {
 
         // Close on Esc
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && this.menuOverlay.classList.contains('active')) {
+            if (e.key === 'Escape' && this.menuOverlay?.classList.contains('active')) {
                 this.toggleMobileMenu();
             }
         });
 
         // Close on click outside
         document.addEventListener('click', (e) => {
-            if (this.menuOverlay.classList.contains('active') && 
-                !this.menuOverlay.contains(e.target) && 
-                !this.menuBtn.contains(e.target)) {
+            if (this.menuOverlay?.classList.contains('active') && 
+                !this.menuOverlay?.contains(e.target) && 
+                !this.menuBtn?.contains(e.target)) {
                 this.toggleMobileMenu();
             }
         });
