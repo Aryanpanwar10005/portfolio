@@ -94,19 +94,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
-    <!-- AOS CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    
-    <!-- DevIcons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <!-- Inline theme init: read localStorage before paint to prevent FOUC -->
+    <script>
+      (function() {
+        var t = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
 
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- AOS CSS v2.3.4 -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    
+    <!-- DevIcons v2.16.0 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
+
+    <!-- Lucide Icons v0.525.0 -->
+    <script src="https://unpkg.com/lucide@0.525.0/dist/umd/lucide.min.js"></script>
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body data-theme="dark">
+  <body>
     <a class="skip-to-content" href="#about">Skip to content</a>
 
     <!-- Mobile Navigation Overlay -->

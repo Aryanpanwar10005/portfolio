@@ -19,6 +19,12 @@
   --glass-border: rgba(255, 255, 255, 0.1);
   --glow-color: rgba(0, 217, 255, 0.3);
 
+  /* RGB channel values for rgba() composition */
+  --color-primary-rgb: 0, 217, 255;
+
+  /* Theme-aware navbar scrolled background */
+  --nav-scrolled-bg: rgba(10, 15, 30, 0.92);
+
   /* Legacy Variable Bridges (to avoid immediate breakage) */
   --bg-primary: var(--bg-dark);
   --bg-secondary: #10162a;
@@ -40,6 +46,7 @@
   --space-xl: 32px;
   --space-2xl: 48px;
   --space-3xl: 64px;
+  --space-4xl: 96px;
 
   /* Layout */
   --max-width: 1200px;
@@ -63,6 +70,7 @@
   --glass-bg: rgba(255, 255, 255, 0.7);
   --glass-border: rgba(0, 0, 0, 0.1);
   --glow-color: rgba(0, 217, 255, 0.15);
+  --nav-scrolled-bg: rgba(248, 250, 252, 0.92);
 }
 /* ===================================
    Reset & Base Styles
@@ -226,8 +234,9 @@ section:last-child {
 }
 
 #navbar.scrolled {
-  background: rgba(10, 15, 30, 0.92);
+  background: var(--nav-scrolled-bg);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--glass-border);
   height: 70px; /* Slim down on scroll */
 }
