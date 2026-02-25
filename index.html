@@ -55,36 +55,48 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfilePage",
-      "dateCreated": "2025-01-01T00:00:00+05:30",
-      "dateModified": "2026-02-22T03:50:00+05:30",
-      "mainEntity": {
-        "@type": "Person",
-        "@id": "https://aryanpanwar.in/#person",
-        "name": "Aryan Panwar",
-        "url": "https://aryanpanwar.in",
-        "image": {
-          "@type": "ImageObject",
-          "url": "https://aryanpanwar.in/Aryan_Panwar.webp",
-          "width": 1920,
-          "height": 912
+      "@graph": [
+        {
+          "@type": "ProfilePage",
+          "@id": "https://aryanpanwar.in/#profile",
+          "dateCreated": "2025-01-01T00:00:00+05:30",
+          "dateModified": "2026-02-25T12:00:00+05:30",
+          "mainEntity": {
+            "@id": "https://aryanpanwar.in/#person"
+          }
         },
-        "jobTitle": "ECE Engineer & Product Builder",
-        "description": "Final-year ECE student, product builder, and AI explorer. Built FitWardrobe (AI app) and Mithivoices (AI voice platform). Based in Meerut, UP.",
-        "email": "aryanpanwar10005@gmail.com",
-        "telephone": "+917817060230",
-        "alumniOf": { "@type": "CollegeOrUniversity", "name": "MIET Meerut" },
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Meerut",
-          "addressRegion": "Uttar Pradesh",
-          "addressCountry": "IN"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/in/aryan-panwar1",
-          "https://github.com/Aryanpanwar10005"
-        ]
-      }
+        {
+          "@type": ["Person", "Organization"],
+          "@id": "https://aryanpanwar.in/#person",
+          "name": "Aryan Panwar",
+          "url": "https://aryanpanwar.in/",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://aryanpanwar.in/Aryan_Panwar.webp",
+            "width": 1920,
+            "height": 912
+          },
+          "jobTitle": "Embedded Systems Engineer & Agentic AI Developer",
+          "description": "Final-year ECE student at MIET Meerut with hands-on experience in embedded systems, industrial instrumentation, and IoT automation. Building intelligent hardware and software products.",
+          "email": "aryanpanwar10005@gmail.com",
+          "telephone": "+917817060230",
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "MIET Meerut"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Meerut",
+            "addressRegion": "Uttar Pradesh",
+            "addressCountry": "IN"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/aryan-panwar1",
+            "https://github.com/Aryanpanwar10005",
+            "https://x.com/AryanP_06"
+          ]
+        }
+      ]
     }
     </script>
 
@@ -132,6 +144,9 @@
         <a href="#skills" class="mobile-nav-link" data-section="skills"
           >Skills</a
         >
+        <a href="#blog" class="mobile-nav-link" data-section="blog"
+          >Blog</a
+        >
         <a href="#contact" class="mobile-nav-link" data-section="contact"
           >Contact</a
         >
@@ -159,6 +174,7 @@
             >Projects</a
           >
           <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+          <a href="#blog" class="nav-link" data-section="blog">Blog</a>
           <a href="#contact" class="nav-link" data-section="contact">Contact</a>
           <div class="nav-actions">
             <button id="themeToggle" class="theme-toggle" aria-label="Toggle light/dark mode">
@@ -444,6 +460,30 @@
                 </ul>
               </div>
             </div>
+
+            <!-- SEO & GEO Optimizer Skill -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="project-thumbnail" style="background: linear-gradient(135deg, var(--primary) 0%, var(--surface-light) 100%);">
+                <div class="thumbnail-overlay"></div>
+              </div>
+              <div class="project-body">
+                <div class="project-header-top">
+                  <i data-lucide="search" class="project-icon"></i>
+                  <div class="project-links">
+                    <span class="live-badge" style="background: var(--primary);">NEW</span>
+                    <a href="https://github.com/Aryanpanwar10005/seo-geo-optimizer" target="_blank" rel="noopener noreferrer"><i data-lucide="github"></i></a>
+                  </div>
+                </div>
+                <div class="role-badge">Creator</div>
+                <h3>SEO & GEO Optimizer Skill</h3>
+                <p class="project-desc">Universal SEO & GEO skill for AI IDEs like Cursor, Windsurf, Copilot, Bolt, etc. Optimizes for Google, Bing, Perplexity, and ChatGPT.</p>
+                <ul class="project-tech-list">
+                  <li>SEO & GEO</li>
+                  <li>Agentic AI</li>
+                  <li>Prompts</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -650,6 +690,74 @@
             </div>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">05.</span>
+          <h2 class="section-title">Insights &amp; Articles</h2>
+        </div>
+
+        <div class="project-bento" data-aos="fade-up">
+          <div class="bento-grid-3">
+            <!-- Article 1 -->
+            <div class="project-card">
+              <div class="project-body">
+                <div class="project-header-top">
+                  <i data-lucide="book-open" class="project-icon"></i>
+                  <div class="project-links">
+                    <a href="blog/what-is-agentic-ai-developer.html"><i data-lucide="external-link"></i></a>
+                  </div>
+                </div>
+                <h3>What is an Agentic AI Developer?</h3>
+                <p class="project-desc">A deep dive into the role blending software engineering with LLM orchestration and autonomous reasoning.</p>
+                <ul class="project-tech-list">
+                  <li>Agentic AI</li>
+                  <li>Careers</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="project-card">
+              <div class="project-body">
+                <div class="project-header-top">
+                  <i data-lucide="book-open" class="project-icon"></i>
+                  <div class="project-links">
+                    <a href="blog/modern-embedded-engineer.html"><i data-lucide="external-link"></i></a>
+                  </div>
+                </div>
+                <h3>The Modern Embedded Engineer</h3>
+                <p class="project-desc">How hardware logic, RTOS, and Edge AI are shaping the future of physical computing.</p>
+                <ul class="project-tech-list">
+                  <li>Hardware</li>
+                  <li>Edge AI</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Article 3 -->
+            <div class="project-card">
+              <div class="project-body">
+                <div class="project-header-top">
+                  <i data-lucide="book-open" class="project-icon"></i>
+                  <div class="project-links">
+                    <a href="blog/seo-for-product-managers.html"><i data-lucide="external-link"></i></a>
+                  </div>
+                </div>
+                <h3>SEO for Product Managers</h3>
+                <p class="project-desc">Why technical SEO and GEO (Generative Engine Optimization) are essential product features.</p>
+                <ul class="project-tech-list">
+                  <li>Product Growth</li>
+                  <li>SEO</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

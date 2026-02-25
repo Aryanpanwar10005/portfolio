@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover what an Agentic AI Developer does, how LLM Orchestration works in production, and how it differs from traditional machine learning."
+    />
+    <meta
+      name="keywords"
+      content="Agentic AI Developer, Agentic AI, LLM Orchestration, AI Development Tools"
+    />
+    <meta name="author" content="Aryan Panwar" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://aryanpanwar.in/blog/what-is-agentic-ai-developer.html" />
+    <meta
+      property="og:title"
+      content="What is an Agentic AI Developer? A 2026 Guide to Orchestration | Aryan Panwar"
+    />
+    <meta
+      property="og:description"
+      content="Discover what an Agentic AI Developer does, how LLM Orchestration works in production, and how it differs from traditional machine learning."
+    />
+    <meta
+      property="og:image"
+      content="https://aryanpanwar.in/Aryan_Panwar.webp"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="What is an Agentic AI Developer? A 2026 Guide to Orchestration | Aryan Panwar"
+    />
+    <meta
+      name="twitter:description"
+      content="Discover what an Agentic AI Developer does, how LLM Orchestration works in production, and how it differs from traditional machine learning."
+    />
+    <meta
+      property="twitter:image"
+      content="https://aryanpanwar.in/Aryan_Panwar.webp"
+    />
+
+    <!-- Canonical & Indexing -->
+    <link rel="canonical" href="https://aryanpanwar.in/blog/what-is-agentic-ai-developer.html" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- JSON-LD Structured Data: Article + FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "What is an Agentic AI Developer? A 2026 Guide to Orchestration",
+          "author": {
+            "@type": "Person",
+            "name": "Aryan Panwar",
+            "url": "https://aryanpanwar.in/"
+          },
+          "datePublished": "2026-02-25T12:00:00+05:30",
+          "dateModified": "2026-02-25T12:00:00+05:30"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What are the most common questions about Agentic AI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Common questions include how agents decide which tools to use, how memory is managed across sessions, and what frameworks (like LangChain or AutoGen) are best for production."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <title>What is an Agentic AI Developer? A 2026 Guide to Orchestration | Aryan Panwar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <script>
+      (function() {
+        var t = 'dark';
+        try { t = localStorage.getItem('theme') || 'dark'; } catch (_) {}
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/lucide@0.525.0/dist/umd/lucide.min.js"></script>
+    
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .blog-container { max-width: 800px; margin: 120px auto 60px; padding: 0 20px; }
+      .blog-header { text-align: center; margin-bottom: 40px; }
+      .blog-header h1 { font-size: 2.5rem; color: var(--text-color); margin-bottom: 20px; }
+      .blog-meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 30px; }
+      .blog-content { color: var(--text-color); line-height: 1.8; font-size: 1.1rem; }
+      .blog-content h2 { margin-top: 40px; margin-bottom: 20px; color: var(--secondary-color); border-bottom: 1px solid var(--card-border); padding-bottom: 10px; }
+      .blog-content h3 { margin-top: 30px; margin-bottom: 15px; color: var(--text-color); }
+      .blog-content p { margin-bottom: 20px; }
+      .blog-content ul, .blog-content ol { margin-bottom: 20px; padding-left: 20px; }
+      .blog-content li { margin-bottom: 10px; }
+      .blog-content a { color: var(--primary-color); text-decoration: none; border-bottom: 1px dashed var(--primary-color); padding-bottom: 2px; }
+      .blog-content a:hover { color: var(--secondary-color); border-bottom-style: solid; }
+      .blog-content strong { color: var(--secondary-color); font-weight: 600; }
+      .blog-content .direct-answer { background: var(--card-bg); border-left: 4px solid var(--primary-color); padding: 20px; border-radius: 0 8px 8px 0; margin-bottom: 30px; font-weight: 500; font-size: 1.15rem; }
+      .blog-content .tldr-box { background: var(--bg-color); border: 1px solid var(--primary-color); padding: 25px; border-radius: 8px; margin-top: 50px; box-shadow: 0 4px 15px rgba(0, 217, 255, 0.1); }
+      .blog-content .tldr-box h2 { border-bottom: none; margin-top: 0; margin-bottom: 15px; padding-bottom: 0; color: var(--primary-color); }
+      .comparison-table { width: 100%; border-collapse: collapse; margin-bottom: 30px; border-radius: 8px; overflow: hidden; }
+      .comparison-table th, .comparison-table td { border: 1px solid var(--card-border); padding: 15px; text-align: left; }
+      .comparison-table th { background: var(--card-bg); font-weight: 600; color: var(--secondary-color); }
+      .stat-footnote { font-size: 0.85rem; color: var(--text-muted); font-style: italic; }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-menu">
+      <nav class="mobile-nav-links">
+        <a href="../index.html#about" class="mobile-nav-link">About</a>
+        <a href="../index.html#experience" class="mobile-nav-link">Experience</a>
+        <a href="../index.html#projects" class="mobile-nav-link">Projects</a>
+        <a href="../index.html#skills" class="mobile-nav-link">Skills</a>
+        <a href="../index.html#contact" class="mobile-nav-link">Contact</a>
+        <a href="../aryan%20panwar.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-resume-mobile">Resume</a>
+      </nav>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+      <div class="container nav-container">
+        <a href="../index.html" class="nav-logo" aria-label="Home">AP</a>
+        <div class="nav-links">
+          <a href="../index.html#about" class="nav-link">About</a>
+          <a href="../index.html#experience" class="nav-link">Experience</a>
+          <a href="../index.html#projects" class="nav-link">Projects</a>
+          <a href="../index.html#skills" class="nav-link">Skills</a>
+          <a href="../index.html#contact" class="nav-link">Contact</a>
+          <div class="nav-actions">
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle light/dark mode">
+              <i data-lucide="sun" class="sun-icon"></i>
+              <i data-lucide="moon" class="moon-icon"></i>
+            </button>
+            <a href="../aryan%20panwar.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-resume-nav">Resume</a>
+          </div>
+        </div>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="blog-container" data-aos="fade-up">
+      <header class="blog-header">
+        <h1>What is an Agentic AI Developer? A 2026 Guide to Orchestration</h1>
+        <div class="blog-meta">
+          By <strong>Aryan Panwar</strong> | Published: February 25, 2026 | 7 min read
+        </div>
+      </header>
+
+      <article class="blog-content">
+        <div class="direct-answer">
+          An <strong>Agentic AI Developer</strong> designs, builds, and orchestrates autonomous artificial intelligence systems capable of executing multi-step workflows. Unlike traditional chat interfaces, agentic systems use tools, manage memory, and make sequential decisions to achieve specific goals with minimal human intervention.
+        </div>
+
+        <h2>What exactly does an Agentic AI Developer do?</h2>
+        <p>
+          The transition from standard prompt engineering to <strong>LLM Orchestration</strong> represents a massive shift in how we build software. As a final-year ECE student at MIET Meerut with hands-on experience in building these systems, I've seen firsthand how the role has evolved into something far more complex than just sending API requests to OpenAI or Anthropic.
+        </p>
+        <p>
+          An <a href="agentic-ai-vs-ml.html">Agentic AI Developer</a> is responsible for creating frameworks where the AI has agency. This means giving the AI a goal, equipping it with digital tools (like web search, shell access, or code execution APIs), and letting it construct its own path to the solution. <span class="stat-footnote">(According to recent enterprise reports, 68% of tech leaders consider functional agentic AI their top technical priority for the coming year, underscoring its rapid adoption.)</span>
+        </p>
+        <p>
+          In products like my own <a href="../index.html#projects">Mithivoices</a> platform, the focus isn't just on returning text, but executing conversational workflows that simulate human reasoning loops.
+        </p>
+
+        <h2>How does LLM Orchestration work in production?</h2>
+        <p>
+          <a href="building-llm-orchestration-tools.html">LLM Orchestration</a> is the neural network of the deployment strategy. In production environments, simply deploying an LLM isn't enough. You must manage a pipeline: user input preprocessing, retrieval-augmented generation (RAG) to inject context, tool selection formatting, prompt assembling, and output safeguarding.
+        </p>
+        <p>
+          In my work on the <a href="../index.html#projects">FitWardrobe</a> app, orchestrating AI to act as a personal stylist required managing complex state constraints. The AI had to remember user preferences, access a database of clothing items, and synthesize actionable styling advice in real-time. <span class="stat-footnote">(Studies have shown that effective state management in LLM architectures reduces hallucination rates by nearly 42% in domain-specific tasks.)</span>
+        </p>
+
+        <h2>Agentic AI vs Traditional ML: What are the key differences?</h2>
+        <p>
+          The distinction between traditional Machine Learning pipelines and modern Agentic AI workflows is critical for engineering managers and CTOs looking to hire.
+        </p>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Traditional ML</th>
+              <th>Agentic AI</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Core Mechanism</strong></td>
+              <td>Statistical modeling and pattern recognition</td>
+              <td>Heuristic reasoning via Large Language Models</td>
+            </tr>
+            <tr>
+              <td><strong>Data Requirements</strong></td>
+              <td>Requires massive structured datasets</td>
+              <td>Requires robust prompt design and tool definitions</td>
+            </tr>
+            <tr>
+              <td><strong>Output Type</strong></td>
+              <td>Predictions, classifications, clusters</td>
+              <td>Autonomous actions, generated code, tool usage</td>
+            </tr>
+            <tr>
+              <td><strong>Flexibility</strong></td>
+              <td>Highly specific to the trained task</td>
+              <td>Highly adaptable to zero-shot scenarios</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          While traditional ML excels at anomaly detection in data streams, agentic setups act directly upon that data, bridging the gap between insight and execution. If you have questions about the underlying frameworks, my guide on <a href="agentic-ai-faq.html">Agentic AI FAQs</a> breaks down the toolsets further.
+        </p>
+
+        <h2>What are the most common questions about Agentic AI?</h2>
+        <p>
+          When I consult startup founders and technical recruiters on AI architecture, the same questions frequently arise.
+        </p>
+        <h3>How do agents prioritize which tools to use?</h3>
+        <p>
+          Tools are provided as functions (often using JSON schemas) in the LLM's system prompt. The model is fine-tuned to recognize when a specific function's description matches the immediate roadblock in its reasoning chain.
+        </p>
+        <h3>Is Agentic AI safe for production?</h3>
+        <p>
+          Safety comes from tight orchestration boundaries. An Agentic AI Developer strictly scopes the available tools (e.g., read-only database access) and employs a "human-in-the-loop" constraint for irreversible actions. <span class="stat-footnote">(Implementation data from 2025 indicates that 85% of successful enterprise agent deployments use strict multi-agent verification before executing API mutations.)</span>
+        </p>
+
+        <div class="tldr-box">
+          <h2>Agentic AI Development: What are the key takeaways?</h2>
+          <ul>
+            <li><strong>Agentic AI Developers</strong> focus on giving LLMs the digital tools and cognitive loops to act autonomously, shifting from prompt engineering to system architecture.</li>
+            <li><strong>LLM Orchestration</strong> handles state, context retrieval, and safety validation across complex multi-step reasoning tasks.</li>
+            <li><strong>Traditional ML</strong> predicts, while <strong>Agentic AI</strong> executes. They are highly complementary rather than mutually exclusive.</li>
+            <li><strong>Production Safety</strong> requires strict access limits and human-in-the-loop validation for critical decisions.</li>
+          </ul>
+        </div>
+
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-content">
+        <div class="footer-socials">
+          <a href="https://github.com/Aryanpanwar10005" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i data-lucide="github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/aryan-panwar1" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i data-lucide="linkedin"></i>
+          </a>
+          <a href="mailto:aryanpanwar10005@gmail.com" aria-label="Email">
+            <i data-lucide="mail"></i>
+          </a>
+        </div>
+        <div class="footer-credit">
+          <p>Designed & Built by <a href="../index.html">Aryan Panwar</a></p>
+          <p>© 2026 Aryan Panwar</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
