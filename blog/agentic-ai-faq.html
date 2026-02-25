@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Frequently asked questions about Agentic AI. Learn what AI agents are, how they differ from Generative AI, and the risks associated with autonomous AI systems."
+    />
+    <meta
+      name="keywords"
+      content="Agentic AI FAQ, What is an AI Agent, LLM Orchestration questions, Agentic vs Generative AI, Autonomous Agents"
+    />
+    <meta name="author" content="Aryan Panwar" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://aryanpanwar.in/blog/agentic-ai-faq.html" />
+    <meta property="og:title" content="Agentic AI: Frequently Asked Questions | Aryan Panwar" />
+    <meta property="og:description" content="Frequently asked questions about Agentic AI. Learn what AI agents are, how they differ from Generative AI, and the risks associated with autonomous AI systems." />
+    <meta property="og:image" content="https://aryanpanwar.in/Aryan_Panwar.webp" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Agentic AI: Frequently Asked Questions | Aryan Panwar" />
+    <meta name="twitter:description" content="Frequently asked questions about Agentic AI. Learn what AI agents are, how they differ from Generative AI, and the risks associated with autonomous AI systems." />
+    <meta property="twitter:image" content="https://aryanpanwar.in/Aryan_Panwar.webp" />
+
+    <link rel="canonical" href="https://aryanpanwar.in/blog/agentic-ai-faq.html" />
+    <meta name="robots" content="index, follow" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What exactly is Agentic AI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Agentic AI refers to artificial intelligence systems designed to pursue high-level goals by planning multi-step workflows, adapting to dynamic contexts, and autonomously using external tools, rather than just generating text responses."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can AI Agents perform actions on their own?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. When equipped with tools (APIs, web browsers, code interpreters), an AI agent can execute code, send emails, query databases, or scrape the web independently, functioning entirely autonomously within its programmed guardrails."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are the risks of autonomous AI agents?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The primary risks involve lack of determinism, 'hallucinated' actions (e.g., executing destructive code or sending incorrect emails), security vulnerabilities via prompt injection, and the difficulty of applying strict compliance auditing to non-linear agentic workflows."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "Article",
+          "headline": "Agentic AI: Frequently Asked Questions",
+          "author": {
+            "@type": "Person",
+            "name": "Aryan Panwar",
+            "url": "https://aryanpanwar.in/"
+          },
+          "datePublished": "2026-02-25T12:00:00+05:30",
+          "dateModified": "2026-02-25T12:00:00+05:30"
+        }
+      ]
+    }
+    </script>
+
+    <title>Agentic AI: Frequently Asked Questions | Aryan Panwar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <script>
+      (function() {
+        var t = 'dark';
+        try { t = localStorage.getItem('theme') || 'dark'; } catch (_) {}
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/lucide@0.525.0/dist/umd/lucide.min.js"></script>
+    
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .blog-container { max-width: 800px; margin: 120px auto 60px; padding: 0 20px; }
+      .blog-header { text-align: center; margin-bottom: 40px; }
+      .blog-header h1 { font-size: 2.5rem; color: var(--text-color); margin-bottom: 20px; }
+      .blog-meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 30px; }
+      .blog-content { color: var(--text-color); line-height: 1.8; font-size: 1.1rem; }
+      .blog-content h2 { margin-top: 40px; margin-bottom: 20px; color: var(--secondary-color); border-bottom: 1px solid var(--card-border); padding-bottom: 10px; }
+      .blog-content h3 { margin-top: 30px; margin-bottom: 15px; color: var(--text-color); }
+      .blog-content p { margin-bottom: 20px; }
+      .blog-content ul, .blog-content ol { margin-bottom: 20px; padding-left: 20px; }
+      .blog-content li { margin-bottom: 10px; }
+      .blog-content a { color: var(--primary-color); text-decoration: none; border-bottom: 1px dashed var(--primary-color); padding-bottom: 2px; }
+      .blog-content a:hover { color: var(--secondary-color); border-bottom-style: solid; }
+      .blog-content strong { color: var(--secondary-color); font-weight: 600; }
+      .blog-content .direct-answer { background: var(--card-bg); border-left: 4px solid var(--primary-color); padding: 20px; border-radius: 0 8px 8px 0; margin-bottom: 30px; font-weight: 500; font-size: 1.15rem; }
+      .blog-content .tldr-box { background: var(--bg-color); border: 1px solid var(--primary-color); padding: 25px; border-radius: 8px; margin-top: 50px; box-shadow: 0 4px 15px rgba(0, 217, 255, 0.1); }
+      .blog-content .tldr-box h2 { border-bottom: none; margin-top: 0; margin-bottom: 15px; padding-bottom: 0; color: var(--primary-color); }
+      .comparison-table { width: 100%; border-collapse: collapse; margin-bottom: 30px; border-radius: 8px; overflow: hidden; }
+      .comparison-table th, .comparison-table td { border: 1px solid var(--card-border); padding: 15px; text-align: left; }
+      .comparison-table th { background: var(--card-bg); font-weight: 600; color: var(--secondary-color); }
+      .stat-footnote { font-size: 0.85rem; color: var(--text-muted); font-style: italic; }
+      
+      /* FAQ Specific Styles */
+      .faq-item { margin-bottom: 30px; }
+      .faq-question { font-size: 1.3rem; font-weight: 600; color: var(--text-color); margin-bottom: 10px; }
+      .faq-answer { color: var(--text-muted); }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-menu">
+      <nav class="mobile-nav-links">
+        <a href="../index.html#about" class="mobile-nav-link">About</a>
+        <a href="../index.html#experience" class="mobile-nav-link">Experience</a>
+        <a href="../index.html#projects" class="mobile-nav-link">Projects</a>
+        <a href="../index.html#skills" class="mobile-nav-link">Skills</a>
+        <a href="../index.html#contact" class="mobile-nav-link">Contact</a>
+        <a href="../aryan%20panwar.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-resume-mobile">Resume</a>
+      </nav>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+      <div class="container nav-container">
+        <a href="../index.html" class="nav-logo" aria-label="Home">AP</a>
+        <div class="nav-links">
+          <a href="../index.html#about" class="nav-link">About</a>
+          <a href="../index.html#experience" class="nav-link">Experience</a>
+          <a href="../index.html#projects" class="nav-link">Projects</a>
+          <a href="../index.html#skills" class="nav-link">Skills</a>
+          <a href="../index.html#contact" class="nav-link">Contact</a>
+          <div class="nav-actions">
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle light/dark mode">
+              <i data-lucide="sun" class="sun-icon"></i>
+              <i data-lucide="moon" class="moon-icon"></i>
+            </button>
+            <a href="../aryan%20panwar.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-resume-nav">Resume</a>
+          </div>
+        </div>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="blog-container" data-aos="fade-up">
+      <header class="blog-header">
+        <h1>Agentic AI: Frequently Asked Questions</h1>
+        <div class="blog-meta">
+          By <strong>Aryan Panwar</strong> | Published: February 25, 2026 | 4 min read
+        </div>
+      </header>
+
+      <article class="blog-content">
+        <div class="direct-answer">
+          Agentic AI refers to artificial intelligence systems designed to pursue high-level goals by planning multi-step workflows, adapting to dynamic contexts, and autonomously using external tools (like APIs or web browsers), rather than just passively generating text responses based on singular prompts.
+        </div>
+
+        <div class="faq-item">
+          <h2 class="faq-question">What exactly is Agentic AI?</h2>
+          <div class="faq-answer">
+            <p>
+              As a developer studying the intersection of hardware and AI, I've hands-on experience differentiating these systems. Unlike a standard chatbot that waits for your input, an Agentic AI system acts actively. It possesses an orchestration layer (often built with tools like LangChain) that allows an underlying Large Language Model (LLM) to reason, "To answer this user's question, I first need to search the web, then read the top result, and then summarize it."
+            </p>
+            <p>
+              To learn more about the developers creating these systems, read my guide on <a href="what-is-agentic-ai-developer.html">What is an Agentic AI Developer?</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <h2 class="faq-question">How is it different from standard Generative AI?</h2>
+          <div class="faq-answer">
+            <p>
+              Generative AI is a subset technology; Agentic AI is an implementation pattern. You can think of Generative AI as the "brain" (the LLM producing text or images), while Agentic AI is the "body" that allows the brain to interact with the world. <span class="stat-footnote">(Industry reports suggest that by late 2026, over 60% of enterprise AI investments will shift from purely generative chat applications to workflow-integrated agentic systems.)</span> If you want to dive deeper into the differences, check out my <a href="agentic-ai-vs-ml.html">Agentic AI vs ML</a> comparison.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <h2 class="faq-question">Can AI Agents perform actions on their own?</h2>
+          <div class="faq-answer">
+            <p>
+              Yes. When equipped with robust Orchestration Tools, an AI agent can execute code, send emails, query databases, or scrape the web independently. This autonomy functions entirely within its programmed guardrails and the permissions granted to its API keys.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <h2 class="faq-question">What are the risks of autonomous AI agents?</h2>
+          <div class="faq-answer">
+            <p>
+              The primary risks involve lack of determinism, "hallucinated" actions (e.g., executing destructive database queries or sending incorrect emails), security vulnerabilities via prompt injection, and the difficulty of applying strict compliance auditing to non-linear agentic workflows. For embedded systems, as I discuss in my <a href="building-llm-orchestration-tools.html">Building LLM Orchestration Tools</a> guide, a hallucinated action could crash a critical physical system.
+            </p>
+          </div>
+        </div>
+
+        <div class="tldr-box">
+          <h2>Agentic AI FAQs: What are the key takeaways?</h2>
+          <ul>
+            <li><strong>Action-Oriented:</strong> Agentic AI doesn't just "think" or generate text; it acts dynamically to achieve goals.</li>
+            <li><strong>Tool Usage:</strong> The defining feature of an agent is its ability to use external APIs, databases, and calculation engines.</li>
+            <li><strong>Beyond Chatbots:</strong> Standard Generative AI is conversational; Agentic AI is functional.</li>
+            <li><strong>Security Focus:</strong> Autonomous agents introduce unique security risks, especially prompt injection leading to unauthorized tool execution.</li>
+          </ul>
+        </div>
+
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-content">
+        <div class="footer-socials">
+          <a href="https://github.com/Aryanpanwar10005" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i data-lucide="github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/aryan-panwar1" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i data-lucide="linkedin"></i>
+          </a>
+          <a href="mailto:aryanpanwar10005@gmail.com" aria-label="Email">
+            <i data-lucide="mail"></i>
+          </a>
+        </div>
+        <div class="footer-credit">
+          <p>Designed & Built by <a href="../index.html">Aryan Panwar</a></p>
+          <p>© 2026 Aryan Panwar</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

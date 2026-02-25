@@ -1,0 +1,24 @@
+# Aryan Panwar
+> Final-year ECE student at MIET Meerut with hands-on experience in embedded systems, industrial instrumentation, and IoT automation. Building intelligent hardware and software products.
+
+## About
+Aryan Panwar is an Embedded Systems Engineer & Agentic AI Developer. He specializes in bridging hardware logic with modern AI capabilities, particularly LLM orchestration and Agentic AI workflows.
+
+Projects:
+- FitWardrobe: AI-powered capsule wardrobe mobile app
+- Mithivoices: AI voice conversational bot platform
+- SEO & GEO Optimizer Skill: Universal AI skill for search optimization
+
+## Official Links
+- [Homepage](https://aryanpanwar.in/)
+- [LinkedIn](https://www.linkedin.com/in/aryan-panwar1)
+- [GitHub](https://github.com/Aryanpanwar10005)
+- [X (Twitter)](https://x.com/AryanP_06)
+
+## Key Content & Guides
+- [What is an Agentic AI Developer? A 2026 Guide to Orchestration](https://aryanpanwar.in/blog/what-is-agentic-ai-developer.html)
+- [The Modern Embedded Engineer: Bridging Hardware and AI](https://aryanpanwar.in/blog/modern-embedded-engineer.html)
+- [SEO for Product Managers: Building Discoverable AI Products](https://aryanpanwar.in/blog/seo-for-product-managers.html)
+
+## Contact
+Email: aryanpanwar10005@gmail.com
