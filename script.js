@@ -17,15 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Open Source Contributor'
     ]);
 
-    // Third Party: AOS (Animate On Scroll)
-    if (typeof AOS !== 'undefined') {
-        AOS.init({
-            duration: 800,
-            once: true,
-            mirror: false,
-            offset: 100
-        });
-    }
+
 
     // Start UI Effects
     typewriter.start();
@@ -134,6 +126,7 @@ class NavigationManager {
     }
 
     handleNavbarScroll() {
+        if (!this.navbar) return;
         const currentScroll = window.scrollY;
         
         // Background blur/border on scroll
@@ -172,7 +165,8 @@ class NavigationManager {
 
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href').slice(1) === currentSection) {
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('#') && href.slice(1) === currentSection) {
                 link.classList.add('active');
             }
         });
