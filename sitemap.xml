@@ -1,83 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <!-- Homepage -->
   <url>
     <loc>https://aryanpanwar.in/</loc>
-    <lastmod>2026-02-25T12:00:00+00:00</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Pillar pages: priority 0.8, changefreq weekly -->
+  <!-- Pillar Pages -->
   <url>
     <loc>https://aryanpanwar.in/blog/what-is-agentic-ai-developer.html</loc>
-    <lastmod>2026-02-25T12:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://aryanpanwar.in/blog/modern-embedded-engineer.html</loc>
-    <lastmod>2026-02-25T12:00:00+00:00</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aryanpanwar.in/blog/seo-for-product-managers.html</loc>
-    <lastmod>2026-02-25T12:00:00+00:00</lastmod>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aryanpanwar.in/blog/modern-embedded-engineer.html</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Cluster pages: priority 0.6, changefreq monthly -->
-  <url>
-    <loc>https://aryanpanwar.in/blog/agentic-ai-vs-ml.html</loc>
-    <lastmod>2026-02-25T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  <!-- Cluster and FAQ Pages -->
   <url>
     <loc>https://aryanpanwar.in/blog/building-llm-orchestration-tools.html</loc>
-    <lastmod>2026-02-25T12:00:00+00:00</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://aryanpanwar.in/blog/embedded-iot-automation.html</loc>
-    <lastmod>2026-02-25T12:00:00+00:00</lastmod>
+    <loc>https://aryanpanwar.in/blog/agentic-ai-vs-ml.html</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://aryanpanwar.in/blog/hardware-logic-in-ai.html</loc>
-    <lastmod>2026-02-25T12:00:00+00:00</lastmod>
+    <loc>https://aryanpanwar.in/blog/agentic-ai-faq.html</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://aryanpanwar.in/blog/technical-seo-for-ai-products.html</loc>
-    <lastmod>2026-02-25T12:00:00+00:00</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
-  <!-- FAQ pages: priority 0.5, changefreq monthly -->
   <url>
-    <loc>https://aryanpanwar.in/blog/agentic-ai-faq.html</loc>
-    <lastmod>2026-02-25T12:00:00+00:00</lastmod>
+    <loc>https://aryanpanwar.in/blog/seo-product-management-faq.html</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aryanpanwar.in/blog/hardware-logic-in-ai.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aryanpanwar.in/blog/embedded-iot-automation.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://aryanpanwar.in/blog/embedded-engineer-faq.html</loc>
-    <lastmod>2026-02-25T12:00:00+00:00</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aryanpanwar.in/blog/seo-product-management-faq.html</loc>
-    <lastmod>2026-02-25T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
   </url>
 </urlset>

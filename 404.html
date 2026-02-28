@@ -1,74 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Page Not Found | Aryan Panwar</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" />
+    <meta name="description" content="The page you are looking for does not exist. Return to Aryan Panwar's portfolio.">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- External Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
-      :root {
-        --bg-dark: #0a0f1e;
-        --color-primary: #00d9ff;
-        --color-text-main: #e2e8f0;
-        --font-heading: 'Space Grotesk', sans-serif;
-        --font-body: 'Inter', sans-serif;
-      }
-      body {
-        background-color: var(--bg-dark);
-        color: var(--color-text-main);
-        font-family: var(--font-body);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        margin: 0;
-        text-align: center;
-        overflow: hidden;
-      }
-      .error-container {
-        padding: 2rem;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 20px;
-        backdrop-filter: blur(10px);
-      }
-      h1 {
-        font-family: var(--font-heading);
-        font-size: 8rem;
-        margin: 0;
-        color: var(--color-primary);
-        line-height: 1;
-      }
-      p {
-        font-size: 1.25rem;
-        margin-bottom: 2rem;
-        opacity: 0.8;
-      }
-      .btn {
-        display: inline-block;
-        color: var(--color-primary);
-        text-decoration: none;
-        border: 1px solid var(--color-primary);
-        padding: 0.75rem 1.5rem;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-        font-family: var(--font-heading);
-        font-weight: 500;
-      }
-      .btn:hover {
-        background: rgba(0, 217, 255, 0.1);
-        transform: translateY(-2px);
-      }
+        :root {
+            --primary: #0ea5e9;
+            --primary-dark: #0284c7;
+            --bg-dark: #0f172a;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 8rem;
+            margin: 0;
+            background: linear-gradient(135deg, var(--primary), #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 1rem 0;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1.125rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.2);
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(14, 165, 233, 0.3);
+        }
+
+        .glitch-wrapper {
+            position: relative;
+        }
+
+        /* Subtle animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .container {
+            animation: float 4s ease-in-out infinite;
+        }
     </style>
-  </head>
-  <body>
-    <div class="error-container">
-      <h1>404</h1>
-      <p>Oops! The page you're looking for doesn't exist.</p>
-      <a href="/" class="btn">Back to Home</a>
+</head>
+<body>
+    <div class="container">
+        <div class="glitch-wrapper">
+            <h1>404</h1>
+        </div>
+        <h2>Lost in the Neural Network?</h2>
+        <p>The page you're looking for has been pruned or never existed in the current model. Let's get you back to safety.</p>
+        <a href="/" class="btn">Return to Portfolio</a>
     </div>
-  </body>
+</body>
 </html>

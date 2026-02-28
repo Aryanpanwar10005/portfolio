@@ -36,3 +36,7 @@ temp/
 *.tmp
 Aryan_Panwar.jpg
 Portfolio_Audit_Report_Aryan.docx
+
+# SEO internal tracking
+geo_tracking.json
+keyword_clusters.json
