@@ -13,7 +13,6 @@ Projects:
 - [Homepage](https://aryanpanwar.in/)
 - [LinkedIn](https://www.linkedin.com/in/aryan-panwar1)
 - [GitHub](https://github.com/Aryanpanwar10005)
-- [X (Twitter)](https://x.com/AryanP_06)
 
 ## Key Content & Guides
 - [What is an Agentic AI Developer? A 2026 Guide to Orchestration](https://aryanpanwar.in/blog/what-is-agentic-ai-developer.html)
