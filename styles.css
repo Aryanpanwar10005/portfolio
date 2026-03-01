@@ -961,7 +961,7 @@ section:last-child {
 .role-badge {
   font-family: var(--font-mono);
   font-size: 0.7rem;
-  color: var(--color-secondary);
+  color: #b47ee8; /* Lightened from --color-secondary (#7b2fbe) to pass WCAG 4.5:1 contrast */
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: var(--space-xs);
