@@ -1355,3 +1355,10 @@ footer {
   color: #64748B;
   font-family: var(--font-mono);
 }
+
+
+/* Accessibility: Ensure links within paragraphs are distinguishable beyond just color */
+p a, li a:not(.nav-link):not(.btn):not(.social-link):not(.footer-link) {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
