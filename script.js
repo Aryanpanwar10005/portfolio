@@ -22,12 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start UI Effects
     typewriter.start();
     
-    // Console Signature
-    console.log(
-        '%c Built by Aryan Panwar %c aryanpanwar.in ',
-        'background: #00d9ff; color: #0a0f1e; padding: 4px; border-radius: 4px 0 0 4px; font-weight: bold;',
-        'background: #7b2fbe; color: #fff; padding: 4px; border-radius: 0 4px 4px 0;'
-    );
 });
 
 /* ===================================
