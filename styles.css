@@ -1358,7 +1358,8 @@ footer {
 
 
 /* Accessibility: Ensure links within paragraphs are distinguishable beyond just color */
-p a, li a:not(.nav-link):not(.btn):not(.social-link):not(.footer-link) {
+p a:not(.nav-link, .btn, .social-link, .footer-link),
+li a:not(.nav-link, .btn, .social-link, .footer-link) {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
