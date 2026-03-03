@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Technical Case Study: Mithivoices - An open-source platform for real-time AI voice cloning and autonomous agent orchestration."
+    />
+    <meta name="author" content="Aryan Panwar" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://aryanpanwar.in/reports/mithivoices-case-study.html" />
+    <meta property="og:title" content="Mithivoices Case Study: AI Voice Orchestration | Aryan Panwar" />
+    <meta property="og:description" content="Technical deep dive into sub-500ms voice cloning and autonomous conversational agents." />
+    <meta property="og:image" content="https://aryanpanwar.in/assets/img/Aryan_Panwar.webp" />
+    <link rel="canonical" href="https://aryanpanwar.in/reports/mithivoices-case-study.html" />
+    <title>Mithivoices Case Study | Aryan Panwar</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicons/favicon.svg" />
+    
+    <script>
+      (function() {
+        var t = 'dark';
+        try { t = localStorage.getItem('theme') || 'dark'; } catch (_) {}
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
+    <style>
+      .report-container { max-width: 800px; margin: 120px auto 60px; padding: 0 20px; }
+      .report-header { text-align: center; margin-bottom: 40px; }
+      .report-header h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 20px; }
+      .breadcrumb { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 25px; display: flex; align-items: center; gap: 8px; font-family: var(--font-heading); }
+      .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+      .breadcrumb a:hover { color: var(--color-primary); }
+      .report-content { line-height: 1.8; }
+      .report-content h2 { color: var(--color-primary); margin-top: 40px; margin-bottom: 20px; }
+      .report-content h3 { color: var(--color-text-main); margin-top: 30px; margin-bottom: 15px; }
+      .tech-stack-tag { display: inline-block; padding: 4px 12px; background: rgba(0, 217, 255, 0.1); color: var(--color-primary); border-radius: 4px; font-size: 0.85rem; margin-right: 8px; margin-bottom: 8px; border: 1px solid rgba(0, 217, 255, 0.2); }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <nav id="navbar">
+        <div class="container nav-container">
+          <a href="../index.html" class="nav-logo" aria-label="Home">AP</a>
+          <div class="nav-links">
+            <a href="../index.html#about" class="nav-link">About</a>
+            <a href="../index.html#experience" class="nav-link">Experience</a>
+            <a href="../index.html#projects" class="nav-link">Projects</a>
+            <a href="../index.html#skills" class="nav-link">Skills</a>
+            <a href="../index.html#blog" class="nav-link">Blog</a>
+            <a href="../index.html#contact" class="nav-link">Contact</a>
+            <div class="nav-actions">
+              <button id="themeToggle" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i data-lucide="sun" class="sun-icon"></i>
+                <i data-lucide="moon" class="moon-icon"></i>
+              </button>
+              <a href="../assets/docs/Aryan_Panwar.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-resume-nav">Resume</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="report-container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="separator">/</span>
+        <a href="../index.html#projects">Projects</a>
+        <span class="separator">/</span>
+        <span class="current" aria-current="page">Mithivoices Case Study</span>
+      </nav>
+
+      <div class="report-header">
+        <h1 class="hero-name">Mithivoices: AI Voice Platform</h1>
+        <p style="color: var(--color-text-dim);">Real-time Voice Cloning and Autonomous Orchestration.</p>
+      </div>
+
+      <div class="report-content">
+        <h2>Objective</h2>
+        <p>Develop an open-source platform capable of sub-500ms voice cloning and multi-agent conversational reasoning for production environments.</p>
+
+        <h2>Technical Architecture</h2>
+        <div style="margin-bottom: 20px;">
+          <span class="tech-stack-tag">Whisper STT</span>
+          <span class="tech-stack-tag">WebSockets</span>
+          <span class="tech-stack-tag">LangGraph</span>
+          <span class="tech-stack-tag">FastAPI</span>
+          <span class="tech-stack-tag">Redis</span>
+        </div>
+        
+        <h3>1. Voice Cloning Engine</h3>
+        <p>Integration of state-of-the-art TTS/STT pipelines. By optimizing the model weights for inference-only environments, we achieved near-instant identity preservation during the cloning process.</p>
+
+        <h3>2. RTC Engine</h3>
+        <p>A low-latency WebSocket orchestrator built with FastAPI and Redis. It handles bidirectional audio streams with minimal jitter, essential for human-like conversational pacing.</p>
+
+        <h3>3. Autonomous Agents</h3>
+        <p>Utilizing LangGraph to define stateful, multi-turn conversational graphs. These agents can "step out" of the conversation to perform actions (like booking an appointment) and "step back in" with the result, all while maintaining the user's voice context.</p>
+
+        <h2>Key Moats</h2>
+        <h3>Performance at Scale</h3>
+        <p>Achieving under 500ms end-to-end response time even under heavy load. This was accomplished by implementing custom C++ audio buffers and GPU-accelerated tensor processing.</p>
+
+        <h3>Open Orchestration</h3>
+        <p>The platform is provider-agnostic. Users can swap between ElevenLabs, OpenAI, or local Coqui models with a single configuration change, preventing vendor lock-in for critical AI infrastructure.</p>
+
+        <div style="margin-top: 60px; padding: 30px; background: rgba(0, 217, 255, 0.05); border-radius: 8px; border: 1px solid rgba(0, 217, 255, 0.1);">
+          <h3>Community Impact</h3>
+          <p>Mithivoices is open-source and has gained traction among developers looking for a robust, self-hosted alternative to proprietary voice APIs.</p>
+          <a href="https://github.com/mithivoices/ai-voice-platform" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top: 20px;">View on GitHub</a>
+        </div>
+      </div>
+    </main>
+
+    <footer style="padding: 60px 0; border-top: 1px solid var(--card-border); margin-top: 80px; text-align: center;">
+      <div class="container">
+        <p style="color: var(--color-text-dim);">&copy; 2026 Aryan Panwar. Case Study Documentation.</p>
+      </div>
+    </footer>
+
+    <script src="../assets/vendor/lucide.min.js"></script>
+    <script>
+      lucide.createIcons();
+      const themeToggle = document.getElementById('themeToggle');
+      if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+          try {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', nextTheme);
+            localStorage.setItem('theme', nextTheme);
+          } catch (e) {
+            console.warn('Theme selection could not be saved:', e);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

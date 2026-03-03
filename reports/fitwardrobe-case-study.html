@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Technical Case Study: FitWardrobe - An AI-powered personal stylist bridging computer vision and LLM orchestration."
+    />
+    <meta name="author" content="Aryan Panwar" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://aryanpanwar.in/reports/fitwardrobe-case-study.html" />
+    <meta property="og:title" content="FitWardrobe Case Study: AI Personal Stylist | Aryan Panwar" />
+    <meta property="og:description" content="A deep dive into building production-grade AI for personalized fashion." />
+    <meta property="og:image" content="https://aryanpanwar.in/assets/img/Aryan_Panwar.webp" />
+    <link rel="canonical" href="https://aryanpanwar.in/reports/fitwardrobe-case-study.html" />
+    <title>FitWardrobe Case Study | Aryan Panwar</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicons/favicon.svg" />
+    
+    <script>
+      (function() {
+        var t = 'dark';
+        try { t = localStorage.getItem('theme') || 'dark'; } catch (_) {}
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
+    <style>
+      .report-container { max-width: 800px; margin: 120px auto 60px; padding: 0 20px; }
+      .report-header { text-align: center; margin-bottom: 40px; }
+      .report-header h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 20px; }
+      .breadcrumb { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 25px; display: flex; align-items: center; gap: 8px; font-family: var(--font-heading); }
+      .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+      .breadcrumb a:hover { color: var(--color-primary); }
+      .report-content { line-height: 1.8; }
+      .report-content h2 { color: var(--color-primary); margin-top: 40px; margin-bottom: 20px; }
+      .report-content h3 { color: var(--color-text-main); margin-top: 30px; margin-bottom: 15px; }
+      .tech-stack-tag { display: inline-block; padding: 4px 12px; background: rgba(0, 217, 255, 0.1); color: var(--color-primary); border-radius: 4px; font-size: 0.85rem; margin-right: 8px; margin-bottom: 8px; border: 1px solid rgba(0, 217, 255, 0.2); }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <nav id="navbar">
+        <div class="container nav-container">
+          <a href="../index.html" class="nav-logo" aria-label="Home">AP</a>
+          <div class="nav-links">
+            <a href="../index.html#about" class="nav-link">About</a>
+            <a href="../index.html#experience" class="nav-link">Experience</a>
+            <a href="../index.html#projects" class="nav-link">Projects</a>
+            <a href="../index.html#skills" class="nav-link">Skills</a>
+            <a href="../index.html#blog" class="nav-link">Blog</a>
+            <a href="../index.html#contact" class="nav-link">Contact</a>
+            <div class="nav-actions">
+              <button id="themeToggle" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i data-lucide="sun" class="sun-icon"></i>
+                <i data-lucide="moon" class="moon-icon"></i>
+              </button>
+              <a href="../assets/docs/Aryan_Panwar.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-resume-nav">Resume</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="report-container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="separator">/</span>
+        <a href="../index.html#projects">Projects</a>
+        <span class="separator">/</span>
+        <span class="current">FitWardrobe Case Study</span>
+      </nav>
+
+      <div class="report-header">
+        <h1 class="hero-name">FitWardrobe: The AI Personal Stylist</h1>
+        <p style="color: var(--color-text-dim);">Bridging Computer Vision and LLM Orchestration for Personalized Fashion.</p>
+      </div>
+
+      <div class="report-content">
+        <h2>Objective</h2>
+        <p>Build a production-grade AI system that provides personalized fashion recommendations based on user-provided images and preferences, while maintaining strict data privacy.</p>
+
+        <h2>Technical Architecture</h2>
+        <div style="margin-bottom: 20px;">
+          <span class="tech-stack-tag">Vision Transformers</span>
+          <span class="tech-stack-tag">Pinecone (Vector DB)</span>
+          <span class="tech-stack-tag">GPT-4o</span>
+          <span class="tech-stack-tag">Next.js</span>
+          <span class="tech-stack-tag">Deno/Edge Functions</span>
+        </div>
+        
+        <h3>1. Vision Layer</h3>
+        <p>Utilizing custom-tuned computer vision models for precise garment detection. We extract over 50 unique attributes per item—including fabric texture, color palette, and structural silhouette—to create a digital "DNA" of the user's wardrobe.</p>
+
+        <h3>2. RAG Engine</h3>
+        <p>A sophisticated Retrieval-Augmented Generation (RAG) system utilizing Pinecone as a vector database. It stores thousands of seasonal trends and high-fashion style heuristics, allowing the AI to ground its advice in actual industry standards.</p>
+
+        <h3>3. LLM Orchestration</h3>
+        <p>The logic layer uses GPT-4o for natural language styling advice. It synthesizes the visual data with the style heuristics to provide nuanced reasoning: "Because you have a predominantly warm-toned wardrobe, this navy blazer provides the perfect high-contrast anchor."</p>
+
+        <h2>Key Moats</h2>
+        <h3>Precision Styling</h3>
+        <p>Moving beyond simple keyword search to true visual understanding. The system doesn't just see "a red shirt"; it sees a "burgundy linen button-down with a relaxed fit," allowing for significantly more accurate matching.</p>
+
+        <h3>Privacy-First Architecture</h3>
+        <p>Photos never leave a secure, encrypted transit layer. Edge-optimized processing ensures that sensitive biometric and household data is handled with maximum compliance and user trust.</p>
+
+        <div style="margin-top: 60px; padding: 30px; background: rgba(0, 217, 255, 0.05); border-radius: 8px; border: 1px solid rgba(0, 217, 255, 0.1);">
+          <h3>Results</h3>
+          <p>FitWardrobe is currently live and serving active beta users, demonstrating a 40% higher engagement rate in outfit selection compared to traditional manual styling tools.</p>
+          <a href="https://fitwardrobe.me" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top: 20px;">Launch Beta App</a>
+        </div>
+      </div>
+    </main>
+
+    <footer style="padding: 60px 0; border-top: 1px solid var(--card-border); margin-top: 80px; text-align: center;">
+      <div class="container">
+        <p style="color: var(--color-text-dim);">&copy; 2026 Aryan Panwar. Case Study Documentation.</p>
+      </div>
+    </footer>
+
+    <script src="../assets/vendor/lucide.min.js"></script>
+    <script>
+      lucide.createIcons();
+      const themeToggle = document.getElementById('themeToggle');
+      if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+          try {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', nextTheme);
+            localStorage.setItem('theme', nextTheme);
+          } catch (e) {
+            console.warn('Theme selection could not be saved:', e);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
