@@ -69,6 +69,12 @@ class NavigationManager {
     }
 
     init() {
+        // Cache section offsets for scroll spy
+        this.cacheSectionOffsets();
+        window.addEventListener('resize', () => {
+            this.cacheSectionOffsets();
+        }, { passive: true });
+
         // Scroll Listeners via requestAnimationFrame
         this.ticking = false;
         window.addEventListener('scroll', () => {
@@ -126,6 +132,14 @@ class NavigationManager {
         });
     }
 
+    cacheSectionOffsets() {
+        this.sections = Array.from(document.querySelectorAll('section[id]')).map(section => ({
+            id: section.getAttribute('id'),
+            top: section.offsetTop,
+            height: section.offsetHeight
+        }));
+    }
+
     handleNavbarScroll() {
         if (!this.navbar) return;
         const currentScroll = window.scrollY;
@@ -152,24 +166,22 @@ class NavigationManager {
     }
 
     handleScrollSpy() {
-        const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('.nav-link');
         const scrollPos = window.scrollY + 200; // Offset for better detection
         
         let currentSection = "";
 
-        sections.forEach(section => {
-            if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
-                currentSection = section.getAttribute('id');
+        if (this.sections) {
+            for (const section of this.sections) {
+                if (scrollPos >= section.top && scrollPos < section.top + section.height) {
+                    currentSection = section.id;
+                }
             }
-        });
+        }
 
         if (currentSection) {
             navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${currentSection}`) {
-                    link.classList.add('active');
-                }
+                link.classList.toggle('active', link.getAttribute('href') === `#${currentSection}`);
             });
         }
     }
