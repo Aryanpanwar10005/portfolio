@@ -617,7 +617,20 @@ section:last-child {
    =================================== */
 .about-grid {
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+.about-left-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.about-right-col {
+  display: flex;
+  flex-direction: column;
   gap: var(--space-2xl);
   align-items: center;
 }
@@ -629,7 +642,13 @@ section:last-child {
   align-items: center;
 }
 
-.about-photo-col img {
+.about-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
   width: 100%;
   max-width: 320px;
   border-radius: var(--radius-lg);
@@ -639,7 +658,7 @@ section:last-child {
   background: var(--glass-bg);
 }
 
-.about-photo-col img:hover {
+.about-image img:hover {
   transform: translateY(-5px);
   border-color: var(--color-primary);
   box-shadow: 0 20px 40px -20px var(--glow-color);
@@ -702,14 +721,20 @@ section:last-child {
   align-items: center;
 }
 
-/* Info Cards (Education/Contact Right Column) */
+/* Info Cards (Education/Certifications Right Column) */
+.info-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
 .info-card {
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
   backdrop-filter: blur(12px);
   padding: var(--space-xl);
   border-radius: var(--radius-lg);
-  margin-bottom: var(--space-lg);
 }
 
 .info-card h3 {
@@ -723,6 +748,32 @@ section:last-child {
 
 .info-item {
   margin-bottom: var(--space-lg);
+}
+
+.cert-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all var(--transition-std);
+  position: relative;
+}
+
+.cert-link:hover {
+  filter: brightness(1.2);
+  transform: translateX(4px);
+}
+
+.cert-link::after {
+  content: ' →';
+  opacity: 0;
+  transition: all var(--transition-std);
+}
+
+.cert-link:hover::after {
+  opacity: 1;
 }
 
 .info-item:last-child {
@@ -1397,12 +1448,10 @@ footer {
 
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: var(--space-2xl);
   }
 
-  .about-photo-col {
-    display: flex;
-    justify-content: center;
+  .about-right-col {
     order: -1;
   }
 }
