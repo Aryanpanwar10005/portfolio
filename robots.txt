@@ -27,3 +27,5 @@ Allow: /
 # Sitemaps
 Sitemap: https://aryanpanwar.in/sitemap.xml
 LLMs: https://aryanpanwar.in/llms.txt
+Favicon: https://aryanpanwar.in/assets/favicons/favicon.svg
+Resume: https://aryanpanwar.in/assets/docs/Aryan_Panwar.pdf
