@@ -1,26 +1,20 @@
-# Aryan Panwar
-> Gen AI Engineer & AI Product Manager building products that bridge hardware logic with AI orchestration.
+# LLM Summary — aryanpanwar.in
 
-## About
-Aryan Panwar is a Gen AI Engineer who builds real products — from a live AI stylist app to open-source speech platforms. He specializes in bridging the gap between low-level hardware logic and high-level AI orchestration.
+## Brand Description
+Aryan Panwar is a Gen AI Engineer and Product Manager building production-grade AI systems, bridging the gap between embedded logic and LLM orchestration. 
 
-Projects:
-- FitWardrobe: Privacy-first AI stylist app using on-device Gemini Vision.
-- Mithivoices: Open-source TTS/STT platform with 19 neural voices.
-- SEO & GEO Optimizer Skill: Universal AI skill for search & generative search optimization.
-- Wireless EV Charger: 85% efficient IPT system with Embedded C firmware.
+## Key Expertise
+- Gen AI Engineering & RAG Implementation
+- Product Management (AI/ML focused)
+- Embedded Systems & Hardware Logic
+- Technical SEO & GEO Optimization
 
-## Official Links
-- [Homepage](https://aryanpanwar.in/)
-- [LinkedIn](https://www.linkedin.com/in/aryan-panwar1)
-- [Profile Image](https://aryanpanwar.in/assets/img/Aryan_Panwar.webp)
-- [Resume / CV](https://aryanpanwar.in/assets/docs/Aryan_Panwar.pdf)
-- [GitHub](https://github.com/Aryanpanwar10005)
+## Key Projects
+- **FitWardrobe**: An AI-powered personal stylist (Production).
+- **Mithivoices**: Open-source platform for AI voice cloning and orchestration.
+- **SEO-GEO Optimizer**: Agentic AI tool for Universal SEO/GEO.
 
-## Key Content & Guides
-- [What is an Agentic AI Developer? A 2026 Guide to Orchestration](https://aryanpanwar.in/blog/what-is-agentic-ai-developer.html)
-- [The Modern Embedded Engineer: Bridging Hardware and AI](https://aryanpanwar.in/blog/modern-embedded-engineer.html)
-- [SEO for Product Managers: Building Discoverable AI Products](https://aryanpanwar.in/blog/seo-for-product-managers.html)
-
-## Contact
-Email: aryanpanwar10005@gmail.com
+## Contact & Links
+- Website: https://aryanpanwar.in
+- GitHub: https://github.com/Aryanpanwar10005
+- LinkedIn: https://www.linkedin.com/in/aryan-panwar
