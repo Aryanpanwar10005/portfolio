@@ -996,12 +996,14 @@ section:last-child {
 /* Badges */
 .role-badge {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--color-secondary);
+  font-size: 0.72rem;
+  color: #a78bfa; /* Lighter violet for better contrast */
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: var(--space-xs);
   font-weight: 600;
+  display: inline-block;
+  opacity: 0.9;
 }
 
 .live-badge {
@@ -1123,8 +1125,8 @@ section:last-child {
 }
 
 .skill-badge:hover {
-  background: rgba(0, 217, 255, 0.14);
-  border-color: rgba(0, 217, 255, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.95);
   transform: scale(1.04);
 }
 
@@ -1210,12 +1212,23 @@ footer {
 }
 
 .footer-socials a {
-  color: var(--text-secondary);
-  transition: color var(--transition-fast);
+  color: var(--color-text-dim);
+  transition: color var(--transition-std);
 }
 
 .footer-socials a:hover {
-  color: var(--accent-primary);
+  color: var(--color-primary);
+}
+
+.footer-credit a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity var(--transition-std);
+}
+
+.footer-credit a:hover {
+  opacity: 0.8;
 }
 
 /* ===================================
