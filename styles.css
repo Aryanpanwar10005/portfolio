@@ -412,9 +412,9 @@ section:last-child {
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7); }
-  70% { box-shadow: 0 0 0 10px rgba(0, 255, 136, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
+  0% { transform: scale(1); opacity: 1; }
+  70% { transform: scale(2.5); opacity: 0; }
+  100% { transform: scale(2.5); opacity: 0; }
 }
 
 .hero-name {
@@ -596,7 +596,30 @@ section:last-child {
   display: grid;
   grid-template-columns: 3fr 2fr;
   gap: var(--space-2xl);
-  align-items: start;
+  align-items: center;
+}
+
+.about-photo-col {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-photo-col img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 30px -10px var(--glow-color);
+  transition: all var(--transition-std);
+  background: var(--glass-bg);
+}
+
+.about-photo-col img:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-primary);
+  box-shadow: 0 20px 40px -20px var(--glow-color);
 }
 
 .about-text p {
@@ -621,6 +644,19 @@ section:last-child {
   margin-bottom: var(--space-lg);
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.skill-card-icon {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.skill-svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  vertical-align: middle;
+  margin-right: 4px;
 }
 
 .tech-interest-grid {
