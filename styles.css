@@ -18,6 +18,8 @@
   --glass-bg: rgba(16, 22, 42, 0.6);
   --glass-border: rgba(255, 255, 255, 0.1);
   --glow-color: rgba(0, 217, 255, 0.3);
+  --skill-bg-hover: rgba(255, 255, 255, 0.08);
+  --skill-color-hover: rgba(255, 255, 255, 0.95);
 
   /* RGB channel values for rgba() composition */
   --color-primary-rgb: 0, 217, 255;
@@ -71,6 +73,8 @@
   --glass-border: rgba(0, 0, 0, 0.1);
   --glow-color: rgba(0, 217, 255, 0.15);
   --nav-scrolled-bg: rgba(248, 250, 252, 0.92);
+  --skill-bg-hover: rgba(0, 0, 0, 0.05);
+  --skill-color-hover: rgba(0, 0, 0, 0.9);
 }
 /* ===================================
    Reset & Base Styles
@@ -1125,8 +1129,8 @@ section:last-child {
 }
 
 .skill-badge:hover {
-    background: rgba(255, 255, 255, 0.08);
-    color: rgba(255, 255, 255, 0.95);
+  background: var(--skill-bg-hover);
+  color: var(--skill-color-hover);
   transform: scale(1.04);
 }
 
