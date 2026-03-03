@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Technical Case Study: SEO-GEO Optimizer - An agentic AI tool designed for autonomous search and generative engine optimization."
+    />
+    <meta name="author" content="Aryan Panwar" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://aryanpanwar.in/reports/seo-geo-case-study.html" />
+    <meta property="og:title" content="SEO-GEO Optimizer Case Study: Agentic AI | Aryan Panwar" />
+    <meta property="og:description" content="Technical deep dive into building an autonomous SEO agent with direct filesystem and audit tool integration." />
+    <meta property="og:image" content="https://aryanpanwar.in/assets/img/Aryan_Panwar.webp" />
+    <link rel="canonical" href="https://aryanpanwar.in/reports/seo-geo-case-study.html" />
+    <title>SEO-GEO Optimizer Case Study | Aryan Panwar</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicons/favicon.svg" />
+    
+    <script>
+      (function() {
+        var t = 'dark';
+        try { t = localStorage.getItem('theme') || 'dark'; } catch (_) {}
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
+    <style>
+      .report-container { max-width: 800px; margin: 120px auto 60px; padding: 0 20px; }
+      .report-header { text-align: center; margin-bottom: 40px; }
+      .report-header h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 20px; }
+      .breadcrumb { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 25px; display: flex; align-items: center; gap: 8px; font-family: var(--font-heading); }
+      .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+      .breadcrumb a:hover { color: var(--color-primary); }
+      .report-content { line-height: 1.8; }
+      .report-content h2 { color: var(--color-primary); margin-top: 40px; margin-bottom: 20px; }
+      .report-content h3 { color: var(--color-text-main); margin-top: 30px; margin-bottom: 15px; }
+      .tech-stack-tag { display: inline-block; padding: 4px 12px; background: rgba(0, 217, 255, 0.1); color: var(--color-primary); border-radius: 4px; font-size: 0.85rem; margin-right: 8px; margin-bottom: 8px; border: 1px solid rgba(0, 217, 255, 0.2); }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <nav id="navbar">
+        <div class="container nav-container">
+          <a href="../index.html" class="nav-logo" aria-label="Home">AP</a>
+          <div class="nav-links">
+            <a href="../index.html#about" class="nav-link">About</a>
+            <a href="../index.html#experience" class="nav-link">Experience</a>
+            <a href="../index.html#projects" class="nav-link">Projects</a>
+            <a href="../index.html#skills" class="nav-link">Skills</a>
+            <a href="../index.html#blog" class="nav-link">Blog</a>
+            <a href="../index.html#contact" class="nav-link">Contact</a>
+            <div class="nav-actions">
+              <button id="themeToggle" class="theme-toggle" aria-label="Toggle light/dark mode">
+                <i data-lucide="sun" class="sun-icon"></i>
+                <i data-lucide="moon" class="moon-icon"></i>
+              </button>
+              <a href="../assets/docs/Aryan_Panwar.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-resume-nav">Resume</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="report-container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="separator">/</span>
+        <a href="../index.html#projects">Projects</a>
+        <span class="separator">/</span>
+        <span class="current">SEO-GEO Optimizer Case Study</span>
+      </nav>
+
+      <div class="report-header">
+        <h1 class="hero-name">SEO-GEO Optimizer: Agentic AI</h1>
+        <p style="color: var(--color-text-dim);">Autonomous Search and Generative Engine Optimization.</p>
+      </div>
+
+      <div class="report-content">
+        <h2>Objective</h2>
+        <p>Create a specialized AI agent capable of autonomously identifying, analyzing, and self-fixing SEO and GEO bottlenecks directly within a codebase.</p>
+
+        <h2>Technical Architecture</h2>
+        <div style="margin-bottom: 20px;">
+          <span class="tech-stack-tag">Multi-Agent System</span>
+          <span class="tech-stack-tag">Filesystem Tooling</span>
+          <span class="tech-stack-tag">PageSpeed API</span>
+          <span class="tech-stack-tag">Node.js</span>
+          <span class="tech-stack-tag">Markdown Orchestration</span>
+        </div>
+        
+        <h3>1. Intelligence Layer</h3>
+        <p>A multi-agent system utilizing advanced prompting and knowledge retrieval. The system is seeded with "Iron Laws" of modern search—ensuring it never makes modifications that violate core design principles or performance targets.</p>
+
+        <h3>2. Tool Integration</h3>
+        <p>The agent has read/write access to the project filesystem, allowing it to perform audits, update meta tags, and optimize content structure without manual intervention. It integrates directly with the Google PageSpeed API to verify performance impacts in real-time.</p>
+
+        <h3>3. Optimization Logic</h3>
+        <p>Encoded heuristics for both traditional SEO (keywords, canonicals) and the emerging field of GEO (Generative Engine Optimization). This ensures the codebase is optimized for both human searchers and AI indexers like ChatGPT and Perplexity.</p>
+
+        <h2>Key Moats</h2>
+        <h3>Zero-Labor Baseline</h3>
+        <p>The agent can bring a site from 0% to 90% optimization health in a single execution loop, reducing the manual labor requirement of technical SEO by over 70%.</p>
+
+        <h3>GEO-First Methodology</h3>
+        <p>Purpose-built for the post-search era. The system automatically generates `llms.txt` and AI-friendly `robots.txt` rules, ensuring the brand is accurately represented in generative AI outputs.</p>
+
+        <div style="margin-top: 60px; padding: 30px; background: rgba(0, 217, 255, 0.05); border-radius: 8px; border: 1px solid rgba(0, 217, 255, 0.1);">
+          <h3>Development Status</h3>
+          <p>The SEO-GEO Optimizer is an active internal project used to maintain several production sites, consistently achieving 100/100 Lighthouse scores.</p>
+          <a href="https://github.com/Aryanpanwar10005/seo-geo-optimizer" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top: 20px;">View Repository</a>
+        </div>
+      </div>
+    </main>
+
+    <footer style="padding: 60px 0; border-top: 1px solid var(--card-border); margin-top: 80px; text-align: center;">
+      <div class="container">
+        <p style="color: var(--color-text-dim);">&copy; 2026 Aryan Panwar. Case Study Documentation.</p>
+      </div>
+    </footer>
+
+    <script src="../assets/vendor/lucide.min.js"></script>
+    <script>
+      lucide.createIcons();
+      const themeToggle = document.getElementById('themeToggle');
+      if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+          try {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', nextTheme);
+            localStorage.setItem('theme', nextTheme);
+          } catch (e) {
+            console.warn('Theme selection could not be saved:', e);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -35,7 +35,12 @@ class ThemeManager {
     }
 
     init() {
-        const savedTheme = localStorage.getItem('theme') || 'dark';
+        let savedTheme = 'dark';
+        try {
+            savedTheme = localStorage.getItem('theme') || 'dark';
+        } catch (e) {
+            console.warn('LocalStorage not accessible for theme preference:', e);
+        }
         this.applyTheme(savedTheme);
 
         if (this.themeToggle) {
@@ -49,8 +54,11 @@ class ThemeManager {
 
     applyTheme(theme) {
         this.html.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
-        // Re-init icons to swap sun/moon visibility if needed or use CSS
+        try {
+            localStorage.setItem('theme', theme);
+        } catch (e) {
+            // Silently fail for the user, but preserve functionality for the session
+        }
     }
 }
 
@@ -219,7 +227,14 @@ class Typewriter {
     }
 
     tick() {
+        if (!Array.isArray(this.phrases) || this.phrases.length === 0) {
+            return;
+        }
+
         const currentPhrase = this.phrases[this.currentPhraseIndex];
+        if (typeof currentPhrase !== 'string') {
+            return;
+        }
         
         if (this.isDeleting) {
             this.currentText = currentPhrase.substring(0, this.currentText.length - 1);

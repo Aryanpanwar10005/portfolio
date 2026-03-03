@@ -766,6 +766,17 @@ section:last-child {
   transform: translateX(4px);
 }
 
+.cert-link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.cert-link:hover {
+  filter: brightness(1.2);
+  transform: translateX(4px);
+}
+
 .cert-link::after {
   content: ' →';
   opacity: 0;
@@ -1036,6 +1047,7 @@ section:last-child {
   color: var(--color-primary);
 }
 
+.project-card h2,
 .project-card h3 {
   font-size: 1.5rem;
   margin-bottom: var(--space-sm);

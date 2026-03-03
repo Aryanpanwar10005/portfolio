@@ -4,7 +4,7 @@
 User-agent: *
 Allow: /
 
-# AI Crawlers — Explicitly allowed for GEO visibility (Perplexity, GPT, Claude)
+# AI Crawlers — Explicitly allowed for GEO visibility (GPTBot, PerplexityBot, ClaudeBot, Googlebot-Extended, anthropic-ai, cohere-ai)
 User-agent: GPTBot
 Allow: /
 
@@ -25,4 +25,3 @@ Allow: /
 
 # Sitemaps
 Sitemap: https://aryanpanwar.in/sitemap.xml
-LLMs: https://aryanpanwar.in/llms.txt
