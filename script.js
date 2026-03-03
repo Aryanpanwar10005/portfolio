@@ -69,10 +69,17 @@ class NavigationManager {
     }
 
     init() {
-        // Scroll Listeners
+        // Scroll Listeners via requestAnimationFrame
+        this.ticking = false;
         window.addEventListener('scroll', () => {
-            this.handleNavbarScroll();
-            this.handleScrollSpy();
+            if (!this.ticking) {
+                window.requestAnimationFrame(() => {
+                    this.handleNavbarScroll();
+                    this.handleScrollSpy();
+                    this.ticking = false;
+                });
+                this.ticking = true;
+            }
         }, { passive: true });
 
         // Mobile Menu Toggle
@@ -147,23 +154,24 @@ class NavigationManager {
     handleScrollSpy() {
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('.nav-link');
+        const scrollPos = window.scrollY + 200; // Offset for better detection
+        
         let currentSection = "";
 
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 150;
-            const sectionHeight = section.clientHeight;
-            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
                 currentSection = section.getAttribute('id');
             }
         });
 
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            const href = link.getAttribute('href');
-            if (href && href.startsWith('#') && href.slice(1) === currentSection) {
-                link.classList.add('active');
-            }
-        });
+        if (currentSection) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
     }
 
     toggleMobileMenu() {
