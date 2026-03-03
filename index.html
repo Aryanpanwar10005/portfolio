@@ -105,9 +105,9 @@
     <!-- Google Fonts Preconnect & Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=optional" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=optional" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=optional" /></noscript>
 
     <!-- Preload Hero Image -->
     <link rel="preload" as="image" href="assets/img/Aryan_Panwar.webp" fetchpriority="high" />
@@ -115,8 +115,8 @@
     <style>
       :root {
         --bg-dark: #0a0f1e; --color-bg: #0a0f1e; --color-primary: #00d9ff; --color-secondary: #7b2fbe;
-        --color-text-main: #e2e8f0; --color-text-dim: #94a3b8; --font-heading: "Space Grotesk", sans-serif;
-        --font-body: "Inter", sans-serif; --header-height: 80px;
+        --color-text-main: #e2e8f0; --color-text-dim: #94a3b8; --font-heading: "Space Grotesk", 'Space Grotesk Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+        --font-body: "Inter", 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; --header-height: 80px;
       }
       :root[data-theme="light"] { --bg-dark: #f8fafc; --color-text-main: #1e293b; --color-text-dim: #64748b; }
       * { margin:0; padding:0; box-sizing:border-box; }
@@ -138,6 +138,10 @@
 
 
     
+    <!-- Preload Critical Fonts -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEpi9sUdTL9r.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2" as="font" type="font/woff2" crossorigin>
+
     <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
     <link rel="mask-icon" href="assets/favicons/favicon.svg" color="#00d9ff">
     <link rel="apple-touch-icon" href="assets/favicons/favicon.svg">
@@ -319,8 +323,8 @@
           <div class="about-image">
             <img src="assets/img/Aryan_Panwar.webp" 
                  alt="Aryan Panwar Headshot" 
-                 width="400" 
-                 height="400" 
+                 width="800" 
+                 height="380" 
                  loading="lazy"
                  decoding="async"
                  style="object-fit: cover;">
@@ -464,8 +468,8 @@
               <div class="project-thumbnail">
                 <img src="assets/projects/fitwardrobe.webp" 
                      alt="FitWardrobe App Preview" 
-                     width="400" 
-                     height="220" 
+                     width="800" 
+                     height="440" 
                      loading="lazy"
                      decoding="async">
                 <div class="thumbnail-overlay"></div>
@@ -504,8 +508,8 @@
               <div class="project-thumbnail">
                 <img src="assets/projects/mithivoices.webp" 
                      alt="Mithivoices Platform Preview" 
-                     width="400" 
-                     height="220" 
+                     width="800" 
+                     height="440" 
                      loading="lazy"
                      decoding="async">
                 <div class="thumbnail-overlay"></div>
@@ -542,8 +546,8 @@
               <div class="project-thumbnail">
                 <img src="assets/projects/seo-geo-optimizer.webp" 
                      alt="SEO & GEO Optimizer Skill Preview" 
-                     width="400" 
-                     height="220" 
+                     width="800" 
+                     height="440" 
                      loading="lazy"
                      decoding="async">
                 <div class="thumbnail-overlay"></div>
@@ -583,8 +587,8 @@
               <div class="project-thumbnail">
                 <img src="assets/projects/evcharger.webp" 
                      alt="Wireless EV Charger Preview" 
-                     width="400" 
-                     height="220" 
+                     width="800" 
+                     height="440" 
                      loading="lazy"
                      decoding="async">
                 <div class="thumbnail-overlay"></div>
@@ -619,8 +623,8 @@
               <div class="project-thumbnail">
                 <img src="assets/projects/staircase.webp" 
                      alt="Smart Staircase Project" 
-                     width="400" 
-                     height="220" 
+                     width="800" 
+                     height="440" 
                      loading="lazy"
                      decoding="async">
                 <div class="thumbnail-overlay"></div>
@@ -653,8 +657,8 @@
               <div class="project-thumbnail">
                 <img src="assets/projects/robot.webp" 
                      alt="Autonomous Robot Preview" 
-                     width="400" 
-                     height="220" 
+                     width="800" 
+                     height="440" 
                      loading="lazy"
                      decoding="async">
                 <div class="thumbnail-overlay"></div>
