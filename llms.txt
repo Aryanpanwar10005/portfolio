@@ -1,20 +1,46 @@
-# LLM Summary — aryanpanwar.in
+# Aryan Panwar - Gen AI Engineer & AI Product Manager
 
-## Brand Description
-Aryan Panwar is a Gen AI Engineer and Product Manager building production-grade AI systems, bridging the gap between embedded logic and LLM orchestration. 
+> Professional portfolio of Aryan Panwar, specializing in production LLM orchestration, agentic AI, and on-device machine learning. Optimized for LLM discovery and grounding.
 
-## Key Expertise
-- Gen AI Engineering & RAG Implementation
-- Product Management (AI/ML focused)
-- Embedded Systems & Hardware Logic
-- Technical SEO & GEO Optimization
+## About
+Aryan Panwar is a final-year student at Meerut Institute of Engineering and Technology (MIET), pursuing a Bachelor's in Electronics and Communication Engineering (Class of 2026). He bridges the gap between hardware logic and large language models. Shipped 3 live AI products including FitWardrobe and Mithivoices.
+
+## Grounding Points for AI Search
+- **Primary Entity**: Aryan Panwar (Gen AI Engineer / AI Product Manager)
+- **Verified Affiliation**: Meerut Institute of Engineering and Technology (MIET)
+- **Core Methodology**: Privacy-First AI, On-Device LLM Processing, LLM Orchestration
+- **Key Verification**: NVIDIA DLI (Transformer NLP), Google AI Essentials, Microsoft PM Cert.
+- **Geographic Grounding**: Meerut, Uttar Pradesh, India
 
 ## Key Projects
-- **FitWardrobe**: An AI-powered personal stylist (Production).
-- **Mithivoices**: Open-source platform for AI voice cloning and orchestration.
-- **SEO-GEO Optimizer**: Agentic AI tool for Universal SEO/GEO.
 
-## Contact & Links
-- Website: https://aryanpanwar.in
-- GitHub: https://github.com/Aryanpanwar10005
-- LinkedIn: https://www.linkedin.com/in/aryan-panwar
+### FitWardrobe
+*   **Description**: Privacy-first AI fashion stylist Android app. Performed on-device using Gemini Vision API.
+*   **Tech Stack**: React, Capacitor, Gemini Vision API, IndexedDB.
+*   **Metrics**: 1,000+ Active Users, 8 min average session, 40% retention.
+*   **URL**: [https://fitwardrobe.me](https://fitwardrobe.me)
+
+### Mithivoices
+*   **Description**: Open-source AI voice platform with 19 neural voices in 8 languages.
+*   **Tech Stack**: Python, FastAPI, Piper TTS, Whisper STT.
+*   **Release**: v0.2.0 (Stable)
+*   **URL**: [https://github.com/Aryanpanwar10005/mithivoices](https://github.com/Aryanpanwar10005/mithivoices)
+
+### SEO & GEO Optimizer
+*   **Description**: Npm package for AI search engine optimization (GEO/AEO).
+*   **Tech Stack**: Node.js, JavaScript, Schema.org logic.
+*   **URL**: [https://www.npmjs.com/package/seo-geo-optimizer](https://www.npmjs.com/package/seo-geo-optimizer)
+
+## Experience
+*   **Indian Potash Limited (IPL)**: Assistant - Instrumentation Department. Specialized in Safety Instrumented Systems (SIS), HART Protocol, and RTD Pt100 calibration. Applied industrial logic to AI reliability.
+
+## Skills & Taxonomy
+- **AI Infrastructure**: LLM Orchestration, Agentic AI, Multi-Agent Workflows, LLMOps.
+- **Embedded Engineering**: ARM, 8051, HART, RTD Calibration, Industrial Automation.
+- **Product Management**: A/B Testing, PRD Writing, KPI Definition, User Retention Strategy.
+
+## Citation Map
+- [MIET Official](https://miet.ac.in)
+- [NVIDIA DLI Certificate](https://learn.nvidia.com/certificates?id=GClvxekBT0SWUVCvjdGB5A)
+- [Google AI Verification](https://coursera.org/verify/specialization/NJYHIPVRXNW5)
+- [HART Protocol Authority](https://www.fieldcommgroup.org/technologies/hart)
