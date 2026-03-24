@@ -34,6 +34,9 @@
   --color-text-main: #e2e8f0;
   --color-text-dim: #94a3b8;
   --color-border: rgba(255, 255, 255, 0.08);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --text-tertiary: #64748b;
+  --accent-secondary: #7b2fbe;
   --glass-bg: rgba(16, 22, 42, 0.6);
   --glass-border: rgba(255, 255, 255, 0.1);
   --glow-color: rgba(0, 217, 255, 0.3);
@@ -84,6 +87,7 @@
 
 :root[data-theme="light"] {
   --bg-dark: #f8fafc;
+  --color-bg: #f8fafc;
   --bg-card: rgba(255, 255, 255, 0.8);
   --color-text-main: #1e293b;
   --color-text-dim: #64748b;
@@ -94,6 +98,9 @@
   --nav-scrolled-bg: rgba(248, 250, 252, 0.92);
   --skill-bg-hover: rgba(0, 0, 0, 0.05);
   --skill-color-hover: rgba(0, 0, 0, 0.9);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --text-tertiary: #64748b;
+  --accent-secondary: #7b2fbe;
 }
 /* ===================================
    Reset & Base Styles
@@ -202,8 +209,19 @@ section:last-child {
 
 /* Safety: if no JS scroll observer runs, fade-in elements must still be visible */
 .fade-in {
-  opacity: 1 !important;
-  transform: none !important;
+  opacity: 1;
+  transform: none;
+}
+
+.js-enabled .fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.js-enabled .fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section-header {
@@ -298,10 +316,10 @@ section:last-child {
   color: var(--color-primary);
 }
 
+.sun-icon, .moon-icon { display: none; }
+
 /* Toggle visibility based on data-theme */
 :root[data-theme="dark"] .sun-icon { display: block; }
-:root[data-theme="dark"] .moon-icon { display: none; }
-:root[data-theme="light"] .sun-icon { display: none; }
 :root[data-theme="light"] .moon-icon { display: block; }
 
 .nav-logo {
@@ -1599,6 +1617,26 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.project-status-badges {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.status-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+}
+
+.status-live { color: #00ff66; border-color: #00ff66; }
+.status-privacy { color: var(--color-primary); border-color: var(--color-primary); }
+.status-tech { color: #a78bfa; border-color: #a78bfa; }
+
 .citation-list h4 {
   font-size: 0.9rem;
   color: var(--color-text-dim);
@@ -1673,50 +1711,6 @@ footer {
   color: var(--color-text-dim);
   font-size: 0.95rem;
   line-height: 1.6;
-}
-
-/* Social Share Buttons */
-.social-share {
-  margin: var(--space-3xl) 0;
-  padding: var(--space-xl);
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-lg);
-}
-
-.social-share h3 {
-  font-size: 1.2rem;
-  margin-bottom: var(--space-lg);
-  color: var(--color-text-main);
-}
-
-.share-btns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.share-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all var(--transition-std);
-  color: white;
-}
-
-.share-btn.linkedin { background: #0077b5; }
-.share-btn.twitter { background: #1da1f2; }
-.share-btn.facebook { background: #1877f2; }
-.share-btn.copy { background: var(--glass-border); color: var(--color-text-main); cursor: pointer; border: none; }
-
-.share-btn:hover {
-  filter: brightness(1.1);
-  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {

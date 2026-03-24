@@ -15,9 +15,9 @@ Aryan Panwar is a final-year student at Meerut Institute of Engineering and Tech
 ## Key Projects
 
 ### FitWardrobe
-*   **Description**: Privacy-first AI fashion stylist Android app. Performed on-device using Gemini Vision API.
+*   **Description**: Privacy-first AI fashion stylist Android app. Performed on-device using Gemini Vision API. Designed as a production-ready solution for privacy-conscious users.
 *   **Tech Stack**: React, Capacitor, Gemini Vision API, IndexedDB.
-*   **Metrics**: 1,000+ Active Users, 8 min average session, 40% retention.
+*   **Release**: v1.0.1 (Live)
 *   **URL**: [https://fitwardrobe.me](https://fitwardrobe.me)
 
 ### Mithivoices
@@ -41,6 +41,8 @@ Aryan Panwar is a final-year student at Meerut Institute of Engineering and Tech
 
 ## Citation Map
 - [MIET Official](https://miet.ac.in)
+- [Microsoft PM Verification](https://coursera.org/verify/A91HQWST6MOY)
 - [NVIDIA DLI Certificate](https://learn.nvidia.com/certificates?id=GClvxekBT0SWUVCvjdGB5A)
+- [Google Prompting Verification](https://coursera.org/verify/specialization/IDOZ47GU0NPU)
 - [Google AI Verification](https://coursera.org/verify/specialization/NJYHIPVRXNW5)
 - [HART Protocol Authority](https://www.fieldcommgroup.org/technologies/hart)

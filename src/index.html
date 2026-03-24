@@ -33,423 +33,122 @@
     <meta name="twitter:description" content="Final-year Gen AI Engineer who has shipped 3 AI products. Building production AI systems with LLMs, React, and Python.">
     <meta name="twitter:image" content="https://aryanpanwar.in/assets/img/og-image.jpg">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
-    
     <!-- Additional Meta -->
     <meta name="theme-color" content="#0a192f">
     <meta name="format-detection" content="telephone=no">
 
-    <!-- JSON-LD Structured Data: Person Schema -->
+    <!-- Consolidated Structured Data (@graph) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Aryan Panwar",
-      "url": "https://aryanpanwar.in",
-      "image": "https://aryanpanwar.in/assets/img/Aryan_Panwar.webp",
-      "jobTitle": "Gen AI Engineer | AI Product Manager",
-      "description": "Final-year Electronics and Communication Engineering student at MIET Meerut who has shipped 3 AI products as both a Gen AI Engineer and AI Product Manager. Specializes in LLM orchestration, agentic AI, on-device AI, and industrial instrumentation.",
-      "alumniOf": {
-        "@type": "EducationalOrganization",
-        "name": "Meerut Institute of Engineering and Technology",
-        "sameAs": "https://miet.ac.in"
-      },
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Indian Potash Limited",
-        "description": "Industrial instrumentation internship - RTD Pt100 calibration, HART protocol, SIS/ESD systems (Jun-Aug 2025)"
-      },
-      "hasCredential": [
+      "@graph": [
         {
-          "@type": "EducationalOccupationalCredential",
-          "name": "Enterprise Product Management Fundamentals",
-          "credentialCategory": "Professional Certificate",
-          "recognizedBy": {
-            "@type": "Organization",
-            "name": "Microsoft"
+          "@type": "Person",
+          "@id": "https://aryanpanwar.in/#person",
+          "name": "Aryan Panwar",
+          "url": "https://aryanpanwar.in",
+          "image": "https://aryanpanwar.in/assets/img/Aryan_Panwar.webp",
+          "jobTitle": "Gen AI Engineer | AI Product Manager",
+          "description": "Final-year ECE student at MIET Meerut who has shipped 3 AI products. Specializes in LLM orchestration, agentic AI, and on-device machine learning.",
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Meerut Institute of Engineering and Technology",
+            "sameAs": "https://miet.ac.in"
           },
-          "dateCreated": "2026-03"
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Indian Potash Limited",
+            "description": "Industrial instrumentation internship (Jun-Aug 2025)"
+          },
+          "sameAs": [
+            "https://github.com/Aryanpanwar10005",
+            "https://linkedin.com/in/aryan-panwar1",
+            "https://x.com/aryan_panwar1"
+          ]
         },
         {
-          "@type": "EducationalOccupationalCredential",
-          "name": "Google Prompting Essentials Specialization",
-          "credentialCategory": "Professional Certificate",
-          "recognizedBy": {
-            "@type": "Organization",
-            "name": "Google"
-          },
-          "dateCreated": "2026-03"
+          "@type": "WebSite",
+          "@id": "https://aryanpanwar.in/#website",
+          "url": "https://aryanpanwar.in",
+          "name": "Aryan Panwar Portfolio",
+          "publisher": { "@id": "https://aryanpanwar.in/#person" },
+          "inLanguage": "en-US"
         },
         {
-          "@type": "EducationalOccupationalCredential",
-          "name": "Google AI Essentials Specialization",
-          "url": "https://coursera.org/verify/specialization/NJYHIPVRXNW5",
-          "credentialCategory": "Professional Certificate",
-          "recognizedBy": {
-            "@type": "Organization",
-            "name": "Google"
-          },
-          "dateCreated": "2026-02"
+          "@type": "Occupation",
+          "@id": "https://aryanpanwar.in/#occupation",
+          "name": "Gen AI Engineer",
+          "mainEntityOfPage": "https://aryanpanwar.in",
+          "description": "Engineers building production systems with Large Language Models and Agentic AI workflows.",
+          "skills": ["LLM Orchestration", "Python", "React", "Vector Databases", "Prompt Engineering"],
+          "occupationLocation": {
+            "@type": "Country",
+            "name": "India"
+          }
         },
         {
-          "@type": "EducationalOccupationalCredential",
-          "name": "Intro to Transformer-Based NLP",
-          "url": "https://learn.nvidia.com/certificates?id=GClvxekBT0SWUVCvjdGB5A",
-          "credentialCategory": "Professional Certificate",
-          "recognizedBy": {
-            "@type": "Organization",
-            "name": "NVIDIA Deep Learning Institute"
-          },
-          "dateCreated": "2026-02"
+          "@type": "ProfessionalService",
+          "name": "Aryan Panwar - Gen AI & AI Product Consulting",
+          "image": "https://aryanpanwar.in/assets/img/Aryan_Panwar.webp",
+          "url": "https://aryanpanwar.in",
+          "priceRange": "$$",
+          "description": "Expert consulting for building production-ready Gen AI systems and on-device AI products."
         },
         {
-          "@type": "EducationalOccupationalCredential",
-          "name": "Industrial Automation Training",
-          "credentialCategory": "Training Certificate",
-          "recognizedBy": {
-            "@type": "Organization",
-            "name": "Indian Potash Limited"
-          },
-          "dateCreated": "2025-08"
+          "@type": "SoftwareApplication",
+          "name": "FitWardrobe",
+          "applicationCategory": "LifestyleApplication",
+          "operatingSystem": "Android",
+          "url": "https://fitwardrobe.me",
+          "author": { "@id": "https://aryanpanwar.in/#person" },
+          "softwareVersion": "1.0.1",
+          "description": "Privacy-first AI fashion stylist Android app using on-device Gemini Vision API."
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Mithivoices",
+          "applicationCategory": "MultimediaApplication",
+          "operatingSystem": "Linux, Windows, Docker",
+          "url": "https://github.com/mithivoices/ai-voice-platform",
+          "author": { "@id": "https://aryanpanwar.in/#person" },
+          "softwareVersion": "0.2.0",
+          "description": "Open-source AI voice platform supporting 19 neural voices."
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "SEO & GEO Optimizer",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Windows, macOS, Linux",
+          "url": "https://github.com/Aryanpanwar10005/seo-geo-optimizer",
+          "author": { "@id": "https://aryanpanwar.in/#person" },
+          "softwareVersion": "1.2.0",
+          "description": "Agentic AI skill for optimizing websites for traditional and GenAI search."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is Aryan Panwar's specialization?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Aryan Panwar specializes in Gen AI engineering and AI product management, building production-ready AI applications using LLMs and on-device AI."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What products has Aryan Panwar shipped?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Aryan has shipped FitWardrobe, Mithivoices, and the SEO & GEO Optimizer skill."
+              }
+            }
+          ]
         }
-      ],
-      "knowsAbout": [
-        "Gen AI Engineering",
-        "Agentic AI",
-        "LLMOps",
-        "AI Product Management",
-        "Prompt Engineering",
-        "LLM Orchestration",
-        "Multi-Agent Workflows",
-        "PyTorch",
-        "TensorFlow",
-        "Hugging Face",
-        "NVIDIA NeMo",
-        "Transformer-Based NLP",
-        "On-Device AI",
-        "Embedded Systems Engineering",
-        "Industrial Instrumentation",
-        "RTD Pt100 Sensors",
-        "HART Protocol",
-        "Safety Instrumented Systems",
-        "Arduino Programming",
-        "ARM Microcontrollers",
-        "React Development",
-        "FastAPI",
-        "Python",
-        "Embedded C/C++",
-        "Piper TTS",
-        "Whisper STT",
-        "Gemini API",
-        "Claude API",
-        "OpenAI API",
-        "Product Management",
-        "A/B Testing",
-        "PRD Writing",
-        "KPI Definition"
-      ],
-      "sameAs": [
-        "https://github.com/Aryanpanwar10005",
-        "https://linkedin.com/in/aryan-panwar1",
-        "https://x.com/aryan_panwar1"
-      ],
-      "email": "aryanpanwar10005@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Meerut",
-        "addressRegion": "Uttar Pradesh",
-        "addressCountry": "IN"
-      }
+      ]
     }
     </script>
-
-<!-- FAQPage Schema for AI Overview Optimization -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is Aryan Panwar's specialization?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Aryan Panwar specializes in Gen AI engineering and AI Product Management. He builds production-ready AI systems using LLM orchestration, agentic workflows, and on-device machine learning (Edge AI). His product methodology focuses on privacy-first architecture, ROI-driven KPI definition, and rapid AI prototyping."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is Aryan's AI Product Management philosophy?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Aryan's AI PM philosophy is 'Privacy-First & Utility-Driven'. He advocates for on-device processing to eliminate data leakage risks, as demonstrated in FitWardrobe. He focuses on defining clear KPIs for AI features, such as token cost optimization, latency reduction, and user retention through intelligent personalization."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What products has Aryan Panwar shipped?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Aryan has shipped three live AI products: FitWardrobe (v1.0.1), a privacy-first AI fashion stylist Android app using on-device processing with Gemini Vision API; Mithivoices (v0.2.0), an open-source text-to-speech platform supporting 19 neural voices across 8 languages; and SEO & GEO Optimizer (v1.2.0), an npm package for optimizing websites for traditional search engines and AI-generated search results."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What industrial experience does Aryan have?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "During his internship at Indian Potash Limited in Muzaffarnagar, UP (Summer 2025), Aryan worked directly with RTD Pt100 sensors, HART communicators, and Safety Instrumented Systems in live process control environments. He performed hands-on calibration of industrial instrumentation equipment including pressure transmitters and electromagnetic flowmeters."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What embedded systems technologies does Aryan know?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Aryan has expertise in embedded C/C++, Arduino (ATmega328P), 8051 microcontrollers, ARM MCUs, communication protocols (UART/I2C, HART), sensor integration (RTD, pressure, electromagnetic flowmeters), circuit design, PCB prototyping, and industrial automation systems. He has built projects including a wireless EV charger with 85% efficiency and a smart staircase system reducing energy consumption by 45%."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What AI and machine learning skills does Aryan have?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Aryan's AI/ML skills include PyTorch, TensorFlow, Hugging Face, NVIDIA NeMo, BERT, transformer-based NLP, text classification, NER, sentiment analysis, LLM APIs (Claude, OpenAI, Gemini), prompt engineering (few-shot, zero-shot, chain-of-thought), multi-agent workflows, LLMOps, model fine-tuning, on-device AI, and generative AI. He also has certifications from Google (AI Essentials, Prompting Essentials) and NVIDIA (Transformer-Based NLP)."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is Aryan Panwar available for opportunities?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, Aryan is actively seeking opportunities for Summer 2026 in Gen AI engineering, AI product management, or hybrid technical product roles. He is interested in positions that combine engineering and product management, particularly at startups or companies building AI products. He is based in Meerut, Uttar Pradesh, India, and is open to both on-site and remote opportunities."
-      }
-    }
-  ]
-}
-</script>
-
-<!-- SoftwareApplication Schema: FitWardrobe -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "FitWardrobe",
-  "applicationCategory": "LifestyleApplication",
-  "operatingSystem": "Android",
-  "url": "https://fitwardrobe.me",
-  "author": {
-    "@type": "Person",
-    "name": "Aryan Panwar",
-    "url": "https://aryanpanwar.in"
-  },
-  "softwareVersion": "1.0.1",
-  "description": "Privacy-first AI fashion stylist Android app that performs all image analysis on-device without uploading photos to servers. Uses React, Capacitor, and Gemini Vision API for intelligent outfit recommendations based on occasion, weather, and personal style.",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "applicationSubCategory": "AI Fashion App",
-  "screenshot": "https://aryanpanwar.in/assets/projects/fitwardrobe-screenshot.jpg",
-  "featureList": [
-    "On-device AI analysis (no photos uploaded to servers)",
-    "Wardrobe photo storage in IndexedDB",
-    "Gemini Vision API integration",
-    "Outfit recommendations by occasion and weather",
-    "Privacy-first architecture",
-    "Cross-platform with Capacitor"
-  ],
-  "releaseNotes": "v1.0.1 - Live on fitwardrobe.me with full production features",
-  "programmingLanguage": ["JavaScript", "TypeScript"],
-  "technology": ["React", "Capacitor", "Gemini Vision API", "IndexedDB", "Supabase", "PostHog"]
-}
-</script>
-
-<!-- ProfessionalService Schema: Gen AI Consulting -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Aryan Panwar - Gen AI & AI Product Consulting",
-  "image": "https://aryanpanwar.in/assets/img/Aryan_Panwar.webp",
-  "url": "https://aryanpanwar.in",
-  "telephone": "",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "",
-    "addressLocality": "Meerut",
-    "addressRegion": "Uttar Pradesh",
-    "postalCode": "250005",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 28.9845,
-    "longitude": 77.7064
-  },
-  "priceRange": "$$",
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday"
-    ],
-    "opens": "09:00",
-    "closes": "18:00"
-  },
-  "serviceType": [
-    "Gen AI Engineering",
-    "AI Product Management",
-    "LLM Orchestration",
-    "Agentic AI Development",
-    "On-Device AI Implementation"
-  ],
-  "areaServed": [
-    {
-      "@type": "Country",
-      "name": "India"
-    },
-    {
-      "@type": "Country",
-      "name": "United States"
-    }
-  ],
-  "description": "Expert consulting for building production-ready Gen AI systems, multi-agent workflows, and privacy-first on-device AI products."
-}
-</script>
-
-<!-- EducationalOrganization Schema: MIET Meerut -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  "@id": "https://miet.ac.in",
-  "name": "Meerut Institute of Engineering and Technology",
-  "alternateName": "MIET Meerut",
-  "url": "https://miet.ac.in",
-  "logo": "https://miet.ac.in/assets/images/logo.png",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "NH-58, Delhi-Roorkee Highway",
-    "addressLocality": "Meerut",
-    "addressRegion": "Uttar Pradesh",
-    "postalCode": "250005",
-    "addressCountry": "IN"
-  },
-  "sameAs": [
-    "https://en.wikipedia.org/wiki/Meerut_Institute_of_Engineering_and_Technology",
-    "https://www.facebook.com/MIET.Meerut.Official/",
-    "https://www.linkedin.com/school/mietmeerut/"
-  ]
-}
-</script>
-
-<!-- SoftwareApplication Schema: Mithivoices -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Mithivoices",
-  "applicationCategory": "DeveloperApplication",
-  "operatingSystem": "Linux, Windows, macOS",
-  "url": "https://github.com/Aryanpanwar10005/mithivoices",
-  "author": {
-    "@type": "Person",
-    "name": "Aryan Panwar",
-    "url": "https://aryanpanwar.in"
-  },
-  "softwareVersion": "0.2.0",
-  "description": "Open-source text-to-speech and speech-to-text platform supporting 19 neural voices across 8 languages. Built with Python, FastAPI, Piper TTS, and Whisper STT with GitHub Actions CI/CD pipeline.",
-  "license": "https://opensource.org/licenses/MIT",
-  "codeRepository": "https://github.com/Aryanpanwar10005/mithivoices",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "applicationSubCategory": "AI Voice Platform",
-  "featureList": [
-    "19 neural voices across 8 languages",
-    "Text-to-speech with Piper TTS",
-    "Speech-to-text with Whisper STT",
-    "FastAPI backend",
-    "React frontend",
-    "GitHub Actions CI/CD",
-    "Docker deployment"
-  ],
-  "releaseNotes": "v0.2.0 - Multi-language support with improved voice quality",
-  "programmingLanguage": ["Python", "JavaScript"],
-  "technology": ["FastAPI", "React", "Piper TTS", "Whisper STT", "PyTorch", "Hugging Face"]
-}
-</script>
-
-<!-- SoftwareApplication Schema: SEO & GEO Optimizer -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "SEO & GEO Optimizer",
-  "applicationCategory": "DeveloperApplication",
-  "operatingSystem": "Any (npx package)",
-  "url": "https://github.com/Aryanpanwar10005/seo-geo-optimizer",
-  "author": {
-    "@type": "Person",
-    "name": "Aryan Panwar",
-    "url": "https://aryanpanwar.in"
-  },
-  "softwareVersion": "1.2.0",
-  "description": "Universal SEO & GEO skill for AI IDEs that optimizes websites for traditional search engines (Google, Bing) and AI-generated search results (AI Overviews, Bing Copilot, ChatGPT, Perplexity, Claude). Works with Cursor, Windsurf, GitHub Copilot, Replit, Lovable, Bolt.",
-  "license": "https://opensource.org/licenses/MIT",
-  "codeRepository": "https://github.com/Aryanpanwar10005/seo-geo-optimizer",
-  "downloadUrl": "https://www.npmjs.com/package/seo-geo-optimizer",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "applicationSubCategory": "SEO Tool",
-  "featureList": [
-    "14-phase agentic workflow",
-    "SEO + GEO + AEO triple optimization",
-    "Google & Bing 2025-2026 compliance",
-    "AI Overviews optimization",
-    "6 AI IDE integrations",
-    "Schema.org generation",
-    "Core Web Vitals optimization"
-  ],
-  "releaseNotes": "v1.2.0 - Added Bing Copilot grounding eligibility, expanded AI IDE support",
-  "programmingLanguage": ["JavaScript"],
-  "installUrl": "https://www.npmjs.com/package/seo-geo-optimizer",
-  "softwareHelp": "https://github.com/Aryanpanwar10005/seo-geo-optimizer/blob/main/README.md"
-}
-</script>
-
-
-    <!-- JSON-LD Structured Data: WebSite Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Aryan Panwar Portfolio",
-      "url": "https://aryanpanwar.in",
-      "description": "Professional portfolio of Aryan Panwar — Gen AI Engineer and AI Product Manager who has shipped 3 AI products",
-      "inLanguage": "en-US",
-      "author": {
-        "@type": "Person",
-        "name": "Aryan Panwar"
-      }
-    }
-    </script>
-
-    <title>Aryan Panwar - Gen AI Engineer | Embedded Systems | AI Product Manager</title>
-
+    
     <!-- Google Fonts Preconnect & Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -458,7 +157,7 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=optional" /></noscript>
 
     <!-- Preload Hero Image -->
-    <link rel="preload" as="image" href="assets/img/Aryan_Panwar.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/assets/img/Aryan_Panwar.webp" fetchpriority="high" />
 
     <style>
       :root {
@@ -487,9 +186,9 @@
 
     
 
-    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
-    <link rel="mask-icon" href="assets/favicons/favicon.svg" color="#00d9ff">
-    <link rel="apple-touch-icon" href="assets/favicons/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+    <link rel="mask-icon" href="/assets/favicons/favicon.svg" color="#00d9ff">
+    <link rel="apple-touch-icon" href="/assets/favicons/favicon.svg">
     <link rel="stylesheet" href="styles.css?v=1.0.0" media="print" onload="this.media='all'" />
     <noscript><link rel="stylesheet" href="styles.css?v=1.0.0" /></noscript>
   </head>
@@ -775,6 +474,16 @@
               <div class="info-card">
                 <h3><i data-lucide="award"></i> Certifications</h3>
                 <div class="info-item">
+                  <span class="info-title">Enterprise Product Management Fundamentals</span>
+                  <span class="info-meta">Microsoft | Mar 2026</span>
+                  <a href="https://coursera.org/verify/A91HQWST6MOY" target="_blank" rel="noopener noreferrer" class="cert-link">Verify Certificate</a>
+                </div>
+                <div class="info-item">
+                  <span class="info-title">Google Prompting Essentials Specialization</span>
+                  <span class="info-meta">Google / Coursera | Mar 2026</span>
+                  <a href="https://coursera.org/verify/specialization/IDOZ47GU0NPU" target="_blank" rel="noopener noreferrer" class="cert-link">Verify Certificate</a>
+                </div>
+                <div class="info-item">
                   <span class="info-title">Google AI Essentials</span>
                   <span class="info-meta">Google / Coursera | Feb 2026</span>
                   <a href="https://coursera.org/verify/specialization/NJYHIPVRXNW5" target="_blank" rel="noopener noreferrer" class="cert-link">Verify Certificate</a>
@@ -881,21 +590,21 @@
                 <div class="role-badge">Founder &amp; Product Lead</div>
                 <h3>FitWardrobe</h3>
                 <div class="answer-block">
-                  <strong>FitWardrobe</strong> is a privacy-first <strong>AI fashion stylist</strong> application developed by <strong>Aryan Panwar</strong>. It leverages the <strong>Gemini Vision API</strong> to provide intelligent outfit recommendations based on weather and occasion, while performing all image analysis on-device. The app is built with <strong>React</strong> and <strong>Capacitor</strong>, catering to over <strong>1,000+ users</strong> as a production-ready clothing management solution.
+                  <strong>FitWardrobe</strong> is a privacy-first <strong>AI fashion stylist</strong> application developed by <strong>Aryan Panwar</strong>. It leverages the <strong>Gemini Vision API</strong> to provide intelligent outfit recommendations based on weather and occasion, while performing all image analysis on-device. The app is built with <strong>React</strong> and <strong>Capacitor</strong>, serving as a production-ready clothing management solution currently in <strong>private beta</strong>.
                 </div>
 
                 <div class="metric-grid">
                   <div class="metric-card">
-                    <span class="metric-value">1,000+</span>
-                    <span class="metric-label">Active Users</span>
+                    <span class="metric-value">BETA</span>
+                    <span class="metric-label">Current Phase</span>
                   </div>
                   <div class="metric-card">
-                    <span class="metric-value">8 min</span>
-                    <span class="metric-label">Avg Session</span>
+                    <span class="metric-value">LIVE</span>
+                    <span class="metric-label">Active Testing</span>
                   </div>
                   <div class="metric-card">
-                    <span class="metric-value">40%</span>
-                    <span class="metric-label">Retention</span>
+                    <span class="metric-value">CORE</span>
+                    <span class="metric-label">Privacy Focus</span>
                   </div>
                 </div>
 
@@ -1514,7 +1223,7 @@
           </div>
         </div>
         <div class="blog-view-all" style="text-align: center; margin-top: 3rem;">
-          <a href="blog/index.html" class="btn btn-secondary">View All Articles</a>
+          <a href="/blog/" class="btn btn-secondary">View All Articles</a>
         </div>
       </div>
     </section>
@@ -1523,9 +1232,8 @@
     <section id="faq" class="section section-padding">
       <div class="container">
         <div class="section-header">
-          <span class="section-number">05.</span>
-          <h2>Frequently Asked Questions</h2>
-          <div class="section-line"></div>
+          <span class="section-number">06.</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
         </div>
 
         <div class="faq-grid">
@@ -1580,28 +1288,6 @@
       </div>
     </section>
 
-    <!-- Social Share (Bing Authority Factor) -->
-    <section class="section section-padding" style="padding-top: 0;">
-      <div class="container">
-        <div class="social-share">
-          <h3>Share This Portfolio</h3>
-          <div class="share-btns">
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://aryanpanwar.in" 
-               target="_blank" rel="noopener noreferrer" class="share-btn linkedin">
-               Share on LinkedIn
-            </a>
-            <a href="https://twitter.com/intent/tweet?url=https://aryanpanwar.in&text=Check%20out%20Aryan%20Panwar's%20Gen%20AI%20Portfolio!" 
-               target="_blank" rel="noopener noreferrer" class="share-btn twitter">
-               Share on Twitter
-            </a>
-            <button onclick="navigator.clipboard.writeText('https://aryanpanwar.in')" class="share-btn copy">
-               Copy Link
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
     </main>
 
     <!-- Footer -->
@@ -1636,7 +1322,7 @@
     </footer>
 
     <!-- Third Party Scripts -->
-    <script src="assets/vendor/lucide.min.js" defer></script>
-    <script src="script.js" defer></script>
+    <script src="/assets/vendor/lucide.min.js" defer></script>
+    <script src="/script.js" defer></script>
   </body>
 </html>

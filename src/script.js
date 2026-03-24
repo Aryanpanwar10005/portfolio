@@ -4,8 +4,32 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize Lucide Icons
-    lucide.createIcons();
+    // Flag JS as enabled for CSS scoping
+    document.documentElement.classList.add('js-enabled');
+
+    // Initialize Lucide Icons with safety guard
+    if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
+        lucide.createIcons();
+    } else {
+        console.warn('Lucide icons library not loaded or incompatible.');
+    }
+
+    // Initialize Animation Observer for fade-in effects
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
     // Core Modules
     const themeManager = new ThemeManager();
@@ -17,11 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'Open Source Contributor'
     ]);
 
-
-
     // Start UI Effects
     typewriter.start();
-    
 });
 
 /* ===================================
@@ -203,7 +224,9 @@ class NavigationManager {
         const icon = this.menuBtn.querySelector('i');
         if (icon) {
             icon.setAttribute('data-lucide', isActive ? 'x' : 'menu');
-            lucide.createIcons();
+            if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
+                lucide.createIcons();
+            }
         }
     }
 }
