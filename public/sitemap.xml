@@ -3,7 +3,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://aryanpanwar.in/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,27 +11,27 @@
   <!-- Case Studies -->
   <url>
     <loc>https://aryanpanwar.in/reports/fitwardrobe-case-study.html</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aryanpanwar.in/reports/mithivoices-case-study.html</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aryanpanwar.in/reports/seo-geo-case-study.html</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Blog Index -->
   <url>
-    <loc>https://aryanpanwar.in/blog/index.html</loc>
-    <lastmod>2026-05-15</lastmod>
+    <loc>https://aryanpanwar.in/blog/</loc>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -39,67 +39,67 @@
   <!-- Blog Articles -->
   <url>
     <loc>https://aryanpanwar.in/blog/technical-seo-for-ai-products.html</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aryanpanwar.in/blog/building-llm-orchestration-tools.html</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aryanpanwar.in/blog/what-is-agentic-ai-developer.html</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aryanpanwar.in/blog/modern-embedded-engineer.html</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aryanpanwar.in/blog/agentic-ai-vs-ml.html</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aryanpanwar.in/blog/hardware-logic-in-ai.html</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aryanpanwar.in/blog/embedded-iot-automation.html</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aryanpanwar.in/blog/seo-for-product-managers.html</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aryanpanwar.in/blog/seo-product-management-faq.html</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aryanpanwar.in/blog/agentic-ai-faq.html</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aryanpanwar.in/blog/embedded-engineer-faq.html</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
