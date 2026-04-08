@@ -402,6 +402,7 @@ section:last-child {
   top: -10%;
   right: -10%;
   animation: drift 20s infinite alternate ease-in-out;
+  will-change: transform;
 }
 
 .hero-section::after {
@@ -409,6 +410,7 @@ section:last-child {
   bottom: -10%;
   left: -10%;
   animation: drift 25s infinite alternate-reverse ease-in-out;
+  will-change: transform;
 }
 
 @keyframes drift {
@@ -450,6 +452,7 @@ section:last-child {
   border-radius: 50%;
   box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.4);
   animation: pulse 2s infinite;
+  will-change: transform, opacity;
 }
 
 @keyframes pulse {
@@ -548,6 +551,7 @@ section:last-child {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   background: var(--glass-bg);
   animation: fadeInRight 1s ease-out forwards;
+  will-change: transform, opacity;
 }
 
 .hero-image img {
@@ -679,6 +683,7 @@ section:last-child {
   font-family: var(--font-heading);
   font-size: 0.8rem;
   animation: floating 2s ease-in-out infinite;
+  will-change: transform;
 }
 
 @keyframes floating {
@@ -1721,3 +1726,61 @@ footer {
 /* ===================================
    Section Jumper (GEO/Navigation)
    =================================== */
+
+/* Grounding Summary Label (replaces h4 to preserve heading hierarchy) */
+.grounding-label {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+
+/* ===================================
+   Reduced Motion (Accessibility)
+   =================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero-section::before,
+  .hero-section::after {
+    animation: none;
+  }
+
+  .hero-name {
+    animation: none;
+    background: var(--color-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .pulse-dot {
+    animation: none;
+    opacity: 1;
+  }
+
+  .scroll-indicator {
+    animation: none;
+  }
+
+  .hero-image {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  body {
+    animation: none;
+    opacity: 1;
+  }
+}
