@@ -32,6 +32,43 @@
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the most critical technical SEO factor for AI products?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The most critical factor is ensuring crawlability via Server-Side Rendering (SSR). AI crawlers often time out on client-side JS. Providing clean, pre-rendered HTML or Markdown endpoints (via llms.txt) ensures your product's capabilities are indexed and cited."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do you optimize for AI search citations (GEO)?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Optimization for Generative Engine Optimization (GEO) involves providing high information density, factual depth, and authoritative E-E-A-T signals. Explicitly allowing AI crawlers in robots.txt and using structured data like SoftwareApplication and Organization schema is essential."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Should I allow AI scrapers like GPTBot in my robots.txt?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. While data scraping is a concern, AI crawlers like GPTBot and PerplexityBot are the drivers of modern organic discovery. Blocking them makes your product invisible to users searching through AI interfaces."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does a technical SEO roadmap for AI differ from a blog?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A technical SEO roadmap for AI focuses on system architecture (SSR, SSG), API documentation exposure, and machine-readable context (JSON-LD), whereas a blog roadmap focuses on keyword intent and content clusters."
+              }
+            }
+          ]
+        },
+        {
           "@type": "Article",
           "@id": "https://aryanpanwar.in/blog/technical-seo-for-ai-products.html#article",
           "headline": "Technical SEO for AI Products: 2026 Roadmap",
@@ -247,6 +284,28 @@
         <p>
           The most frequent error is blocking AI crawlers in `robots.txt` out of fear of data scraping, completely ignoring that these same crawlers drive the new wave of discovery. Another major pitfall is hiding all product utility behind a signup form. If a bot cannot navigate past the login screen, it cannot index your product's capabilities.
         </p>
+
+        <section class="faq-section" style="margin-top: 48px;">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <h3>What is the most critical technical SEO factor for AI products?</h3>
+              <p>The most critical factor is ensuring crawlability via Server-Side Rendering (SSR). AI crawlers often time out on client-side JS. Providing clean, pre-rendered HTML or Markdown endpoints (via llms.txt) ensures your product's capabilities are indexed and cited.</p>
+            </div>
+            <div class="faq-item">
+              <h3>How do you optimize for AI search citations (GEO)?</h3>
+              <p>Optimization for Generative Engine Optimization (GEO) involves providing high information density, factual depth, and authoritative E-E-A-T signals. Explicitly allowing AI crawlers in robots.txt and using structured data like SoftwareApplication and Organization schema is essential.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Should I allow AI scrapers like GPTBot in my robots.txt?</h3>
+              <p>Yes. While data scraping is a concern, AI crawlers like GPTBot and PerplexityBot are the drivers of modern organic discovery. Blocking them makes your product invisible to users searching through AI interfaces.</p>
+            </div>
+            <div class="faq-item">
+              <h3>How does a technical SEO roadmap for AI differ from a blog?</h3>
+              <p>A technical SEO roadmap for AI focuses on system architecture (SSR, SSG), API documentation exposure, and machine-readable context (JSON-LD), whereas a blog roadmap focuses on keyword intent and content clusters.</p>
+            </div>
+          </div>
+        </section>
 
         <div class="tldr-box">
           <h2>Technical SEO checklist: What are the key takeaways?</h2>

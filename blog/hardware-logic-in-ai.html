@@ -32,6 +32,43 @@
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Why is Hardware Logic critical for AI workloads?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hardware logic allows algorithms to be implemented directly in silicon (via FPGAs), physically wiring logic gates to match neural network math. This reduces power consumption by over 60% compared to sequential processing."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does Edge AI benefit from custom hardware?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Custom hardware allows complex computer vision and AI models to run on battery-powered edge devices like drones or smart cameras without overheating or rapid battery drain by eliminating cloud latency and minimizing power draw."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "GPU vs FPGA vs ASIC for AI: How do they compare?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "GPUs are flexible but power-hungry; FPGAs offer a high-efficiency middle ground with reprogrammable hardware logic; and ASICs provide maximum efficiency but have zero flexibility once manufactured."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is learning Verilog or VHDL worth it for AI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. While HLS tools exist, extracting maximum performance from an FPGA requires thinking in parallel hardware logic gates rather than sequential software instructions."
+              }
+            }
+          ]
+        },
+        {
           "@type": "Article",
           "@id": "https://aryanpanwar.in/blog/hardware-logic-in-ai.html#article",
           "headline": "Integrating Hardware Logic with AI: 2026 Guide",
