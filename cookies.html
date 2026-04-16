@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy - Aryan Panwar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .legal-content {
+            padding: 120px 0 80px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .legal-header {
+            margin-bottom: 48px;
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 24px;
+        }
+        .legal-body h2 {
+            margin-top: 32px;
+            margin-bottom: 16px;
+            font-size: 1.5rem;
+        }
+    </style>
+    <script>
+      (function() {
+        try {
+          var theme = localStorage.getItem('theme');
+          if (theme) document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {}
+      })();
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+      <div class="container nav-container">
+        <a href="/" class="nav-logo" aria-label="Home">AP</a>
+        <div class="nav-links">
+          <a href="/#about" class="nav-link">About</a>
+          <a href="/#experience" class="nav-link">Experience</a>
+          <a href="/#projects" class="nav-link">Projects</a>
+          <a href="/#skills" class="nav-link">Skills</a>
+          <a href="/#contact" class="nav-link">Contact</a>
+          <div class="nav-actions">
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle light/dark mode">
+              <i data-lucide="sun" class="sun-icon"></i>
+              <i data-lucide="moon" class="moon-icon"></i>
+            </button>
+            <a href="/assets/docs/Aryan_Panwar.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-resume-nav">Resume</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+        <section class="legal-content">
+            <header class="legal-header">
+                <h1>Cookie Policy</h1>
+                <p>Last Updated: April 10, 2026</p>
+            </header>
+            
+            <div class="legal-body">
+                <h2>1. What Are Cookies</h2>
+                <p>Cookies are small pieces of text sent by your web browser by a website you visit. A cookie file is stored in your web browser and allows the site or a third-party to recognize you and make your next visit easier and the site more useful to you.</p>
+                
+                <h2>2. How This Site Uses Cookies</h2>
+                <p>This site uses "Necessary" cookies only. These are required for the website to function correctly. Specifically:</p>
+                <ul>
+                    <li><strong>Theme Preference:</strong> I use local storage/cookies to store your choice of Dark or Light mode so that the site appears correctly the next time you visit.</li>
+                </ul>
+                
+                <h2>3. Third-Party Cookies</h2>
+                <p>I do not use third-party tracking or advertising cookies on this portfolio. Any analytics used are privacy-preserving and do not track individuals across sites.</p>
+                
+                <h2>4. Your Choices</h2>
+                <p>Most browsers allow you to refuse to accept cookies and to delete cookies. The methods for doing so vary from browser to browser, and from version to version.</p>
+            </div>
+            
+            <div style="margin-top: 64px; text-align: center;">
+                <a href="/" class="btn btn-primary">← Back to Portfolio</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-content">
+        <div class="footer-socials">
+          <a href="https://github.com/Aryanpanwar10005" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+            <i data-lucide="github"></i>
+          </a>
+          <a href="https://linkedin.com/in/aryan-panwar1" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+            <i data-lucide="linkedin"></i>
+          </a>
+        </div>
+        <div class="footer-credit">
+          <p>Designed & Built with Precision by
+          <a href="https://aryanpanwar.in/" target="_blank" rel="noopener noreferrer">Aryan Panwar</a></p>
+          <div class="footer-legal">
+            <a href="/faq.html">FAQ</a>
+            <a href="/privacy.html">Privacy</a>
+            <a href="/terms.html">Terms</a>
+            <a href="/cookies.html">Cookies</a>
+          </div>
+          <p>© 2026 Aryan Panwar</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    </script>
+</body>
+</html>

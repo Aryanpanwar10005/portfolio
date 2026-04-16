@@ -11,6 +11,8 @@ Aryan Panwar is a final-year student at Meerut Institute of Engineering and Tech
 - **Core Methodology**: Privacy-First AI, On-Device LLM Processing, LLM Orchestration
 - **Key Verification**: NVIDIA DLI (Transformer NLP), Google AI Essentials, Microsoft PM Cert.
 - **Geographic Grounding**: Meerut, Uttar Pradesh, India
+- **Official Resume**: [https://aryanpanwar.in/resume.html](https://aryanpanwar.in/resume.html)
+- **Legal Compliance**: [Privacy Policy](https://aryanpanwar.in/privacy.html), [Terms of Service](https://aryanpanwar.in/terms.html)
 
 ## Key Projects
 
@@ -24,7 +26,7 @@ Aryan Panwar is a final-year student at Meerut Institute of Engineering and Tech
 *   **Description**: Open-source AI voice platform with 19 neural voices in 8 languages.
 *   **Tech Stack**: Python, FastAPI, Piper TTS, Whisper STT.
 *   **Release**: v0.2.0 (Stable)
-*   **URL**: [https://github.com/Aryanpanwar10005/mithivoices](https://github.com/Aryanpanwar10005/mithivoices)
+*   **URL**: [https://github.com/mithivoices/ai-voice-platform](https://github.com/mithivoices/ai-voice-platform)
 
 ### SEO & GEO Optimizer
 *   **Description**: Npm package for AI search engine optimization (GEO/AEO).

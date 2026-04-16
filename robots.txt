@@ -24,5 +24,12 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 # Sitemaps
 Sitemap: https://aryanpanwar.in/sitemap.xml
+LLMs: https://aryanpanwar.in/llms.txt

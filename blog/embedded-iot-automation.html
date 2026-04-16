@@ -32,6 +32,43 @@
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How does Industrial IoT differ from consumer IoT?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The distinction lies in reliability. IIoT requires deterministic latency and extreme durability because failures in industrial settings can be life-threatening, whereas consumer home IoT issues are merely inconveniences."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What role do Embedded Systems play in Automation?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Embedded systems act as the 'edge' which physically interfaces with the world. They use MCUs, FPGAs, and SoCs to gather analog signals, filter them via hardware logic, and securely transmit data to automation controllers."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "PLC vs Embedded Controllers: Which is better for IoT?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "While PLCs are traditional industry staples, custom embedded controllers offer lower costs, superior connectivity (native MQTT/CoAP), and the ability to perform localized AI/ML inference."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are common challenges in IoT Automation?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Major hurdles include legacy system integration, power management for high-transmission edge nodes, and securing the massive attack surface of thousands of connected devices."
+              }
+            }
+          ]
+        },
+        {
           "@type": "Article",
           "@id": "https://aryanpanwar.in/blog/embedded-iot-automation.html#article",
           "headline": "Industrial IoT Automation: 2026 Use Cases",
