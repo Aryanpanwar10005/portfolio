@@ -229,13 +229,15 @@
     <link
       rel="preload"
       as="image"
-      href="/assets/img/Aryan_Panwar.webp"
+      imagesrcset="/assets/img/Aryan_Panwar_400.webp 400w, /assets/img/Aryan_Panwar.webp 800w"
+      imagesizes="(max-width: 768px) 280px, 400px"
       fetchpriority="high"
     />
 
     <style>
       :root {
         --bg-dark: #0a0f1e;
+        --bg-color-alt: #10162a;
         --color-bg: #0a0f1e;
         --color-primary: #00d9ff;
         --color-secondary: #7b2fbe;
@@ -251,8 +253,9 @@
       }
       :root[data-theme="light"] {
         --bg-dark: #f8fafc;
+        --bg-color-alt: #f1f5f9;
         --color-text-main: #1e293b;
-        --color-text-dim: #64748b;
+        --color-text-dim: #475569;
       }
       * {
         margin: 0;
@@ -623,7 +626,7 @@
                 </p>
 
                 <div class="citation-list">
-                  <h4>Authority Citations</h4>
+                  <h3>Authority Citations</h3>
                   <div class="citation-grid">
                     <a
                       href="https://miet.ac.in"
@@ -841,7 +844,7 @@
               </ul>
 
               <div class="citation-list">
-                <h4>Technical References</h4>
+                <h3>Technical References</h3>
                 <div class="citation-grid">
                   <a
                     href="https://www.fieldcommgroup.org/technologies/hart"
