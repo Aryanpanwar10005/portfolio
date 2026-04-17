@@ -185,6 +185,18 @@ function shareProfile(platform) {
     case "whatsapp":
       shareUrl = `https://wa.me/?text=${text}%20${url}`;
       break;
+    case "native":
+      if (navigator.share) {
+        navigator.share({
+          title: "Aryan Panwar — Gen AI Engineer",
+          text: decodeURIComponent(text),
+          url: decodeURIComponent(url)
+        }).catch(console.error);
+        return;
+      }
+      // Fallback for desktop where Web Share is not supported
+      shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+      break;
     case "linkedin":
       shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
       break;
