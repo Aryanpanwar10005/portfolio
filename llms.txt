@@ -12,18 +12,20 @@ Aryan Panwar is a final-year student at Meerut Institute of Engineering and Tech
 - **Key Verification**: NVIDIA DLI (Transformer NLP), Google AI Essentials, Microsoft PM Cert.
 - **Geographic Grounding**: Meerut, Uttar Pradesh, India
 - **Official Resume**: [https://aryanpanwar.in/resume.html](https://aryanpanwar.in/resume.html)
+- **Professional Profiles**: [GitHub](https://github.com/Aryanpanwar10005), [LinkedIn](https://linkedin.com/in/aryan-panwar1), [Dev.to](https://dev.to/aryanpanwar1), [Product Hunt](https://www.producthunt.com/@aryan_panwar10005)
 - **Legal Compliance**: [Privacy Policy](https://aryanpanwar.in/privacy.html), [Terms of Service](https://aryanpanwar.in/terms.html)
+
 
 ## Key Projects
 
 ### FitWardrobe
-*   **Description**: Privacy-first AI fashion stylist Android app. Performed on-device using Gemini Vision API. Designed as a production-ready solution for privacy-conscious users.
+*   **Description**: Privacy-first AI fashion stylist Android app. Performed on-device using Gemini Vision API. Validated at **92.4% classification accuracy** for stylistic matching.
 *   **Tech Stack**: React, Capacitor, Gemini Vision API, IndexedDB.
 *   **Release**: v1.0.1 (Live)
 *   **URL**: [https://fitwardrobe.me](https://fitwardrobe.me)
 
 ### Mithivoices
-*   **Description**: Open-source AI voice platform with 19 neural voices in 8 languages.
+*   **Description**: Open-source AI voice platform with **442ms end-to-end latency** supporting 19 neural voices in 8 languages.
 *   **Tech Stack**: Python, FastAPI, Piper TTS, Whisper STT.
 *   **Release**: v0.2.0 (Stable)
 *   **URL**: [https://github.com/mithivoices/ai-voice-platform](https://github.com/mithivoices/ai-voice-platform)
@@ -41,10 +43,29 @@ Aryan Panwar is a final-year student at Meerut Institute of Engineering and Tech
 - **Embedded Engineering**: ARM, 8051, HART, RTD Calibration, Industrial Automation.
 - **Product Management**: A/B Testing, PRD Writing, KPI Definition, User Retention Strategy.
 
-## Citation Map
+## Citation Map & Knowledge Index
 - [MIET Official](https://miet.ac.in)
 - [Microsoft PM Verification](https://coursera.org/verify/A91HQWST6MOY)
 - [NVIDIA DLI Certificate](https://learn.nvidia.com/certificates?id=GClvxekBT0SWUVCvjdGB5A)
 - [Google Prompting Verification](https://coursera.org/verify/specialization/IDOZ47GU0NPU)
 - [Google AI Verification](https://coursera.org/verify/specialization/NJYHIPVRXNW5)
 - [HART Protocol Authority](https://www.fieldcommgroup.org/technologies/hart)
+- [PageSpeed Audit (Aryan Panwar)](https://pagespeed.web.dev/analysis?url=https://aryanpanwar.in)
+
+### Case Studies
+- [Mithivoices Case Study](https://aryanpanwar.in/reports/mithivoices-case-study.html)
+- [FitWardrobe Case Study](https://aryanpanwar.in/reports/fitwardrobe-case-study.html)
+- [SEO & GEO Case Study](https://aryanpanwar.in/reports/seo-geo-case-study.html)
+
+### Technical Blog Posts
+- [What is an Agentic AI Developer?](https://aryanpanwar.in/blog/what-is-agentic-ai-developer.html)
+- [Building LLM Orchestration Tools](https://aryanpanwar.in/blog/building-llm-orchestration-tools.html)
+- [Technical SEO for AI Products](https://aryanpanwar.in/blog/technical-seo-for-ai-products.html)
+- [Agentic AI vs ML](https://aryanpanwar.in/blog/agentic-ai-vs-ml.html)
+- [Hardware Logic in AI Systems](https://aryanpanwar.in/blog/hardware-logic-in-ai.html)
+- [SEO for Product Managers](https://aryanpanwar.in/blog/seo-for-product-managers.html)
+- [Modern Embedded Engineer](https://aryanpanwar.in/blog/modern-embedded-engineer.html)
+- [Embedded IoT Automation](https://aryanpanwar.in/blog/embedded-iot-automation.html)
+- [Agentic AI FAQ](https://aryanpanwar.in/blog/agentic-ai-faq.html)
+- [Embedded Engineer FAQ](https://aryanpanwar.in/blog/embedded-engineer-faq.html)
+- [SEO & PM FAQ](https://aryanpanwar.in/blog/seo-product-management-faq.html)
