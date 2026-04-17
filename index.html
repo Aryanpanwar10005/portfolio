@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://aryanpanwar.in; connect-src 'self'; frame-ancestors 'none'; upgrade-insecure-requests;" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://aryanpanwar.in; connect-src 'self'; upgrade-insecure-requests;" />
 
     <!-- Primary Meta Tags -->
     <title>Aryan Panwar — Gen AI Engineer | Shipped 3 AI Products</title>
@@ -318,7 +318,7 @@
     <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
     <link rel="mask-icon" href="/assets/favicons/favicon.svg" color="#00d9ff" />
     <link rel="apple-touch-icon" href="/assets/favicons/favicon.svg" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.min.css" />
 
   </head>
   <body>
@@ -482,7 +482,7 @@
           <div class="hero-image">
             <img
               src="/assets/img/Aryan_Panwar.webp"
-              srcset="/assets/img/Aryan_Panwar.webp 800w"
+              srcset="/assets/img/Aryan_Panwar_400.webp 400w, /assets/img/Aryan_Panwar.webp 800w"
               sizes="(max-width: 768px) 280px, 400px"
               alt="Aryan Panwar — Gen AI Engineer & AI Product Manager professional headshot"
               width="400"
@@ -883,7 +883,7 @@
                 <div class="project-header-top">
                   <div class="live-badge">Live Production</div>
                   <div class="project-links">
-                    <a href="https://fitwardrobe.me/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://fitwardrobe.me/" target="_blank" rel="noopener noreferrer" aria-label="View Live Project">
                       <i data-lucide="external-link"></i>
                     </a>
                   </div>
@@ -911,7 +911,7 @@
                 <div class="project-header-top">
                   <div class="live-badge">Live Platform</div>
                   <div class="project-links">
-                    <a href="https://github.com/mithivoices/ai-voice-platform" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/mithivoices/ai-voice-platform" target="_blank" rel="noopener noreferrer" aria-label="View Source Code on GitHub">
                       <i data-lucide="github"></i>
                     </a>
                   </div>
@@ -939,7 +939,7 @@
                 <div class="project-header-top">
                   <div class="live-badge">Agentic Tool</div>
                   <div class="project-links">
-                    <a href="https://www.npmjs.com/package/seo-geo-optimizer" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.npmjs.com/package/seo-geo-optimizer" target="_blank" rel="noopener noreferrer" aria-label="View Live Project">
                       <i data-lucide="external-link"></i>
                     </a>
                   </div>
@@ -967,7 +967,7 @@
                 <div class="project-header-top">
                   <div class="live-badge">Hardware</div>
                   <div class="project-links">
-                    <a href="https://github.com/Aryanpanwar10005/wireless_ev_charging" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/Aryanpanwar10005/wireless_ev_charging" target="_blank" rel="noopener noreferrer" aria-label="View Source Code on GitHub">
                       <i data-lucide="github"></i>
                     </a>
                   </div>
@@ -995,7 +995,7 @@
                 <div class="project-header-top">
                   <div class="live-badge">Automation</div>
                   <div class="project-links">
-                    <a href="https://github.com/Aryanpanwar10005/smart-stairs" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/Aryanpanwar10005/smart-stairs" target="_blank" rel="noopener noreferrer" aria-label="View Source Code on GitHub">
                       <i data-lucide="github"></i>
                     </a>
                   </div>
@@ -1023,7 +1023,7 @@
                 <div class="project-header-top">
                   <div class="live-badge">Robotics</div>
                   <div class="project-links">
-                    <a href="https://github.com/Aryanpanwar10005/autonomous-robot" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/Aryanpanwar10005/autonomous-robot" target="_blank" rel="noopener noreferrer" aria-label="View Source Code on GitHub">
                       <i data-lucide="github"></i>
                     </a>
                   </div>
@@ -1413,7 +1413,7 @@
           <button class="share-btn" onclick="shareProfile('whatsapp')" aria-label="Share on WhatsApp" style="background: none; border: none; padding: 0; cursor: pointer; color: var(--text-muted); display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">
             <i data-lucide="message-circle" style="width: 24px; height: 24px;"></i>
           </button>
-          <button class="share-btn" onclick="shareProfile('linkedin')" aria-label="Share on LinkedIn" style="background: none; border: none; padding: 0; cursor: pointer; color: var(--text-muted); display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">
+          <button class="share-btn" onclick="shareProfile('native')" aria-label="Share Portfolio" style="background: none; border: none; padding: 0; cursor: pointer; color: var(--text-muted); display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">
             <i data-lucide="share-2" style="width: 24px; height: 24px;"></i>
           </button>
           <button class="share-btn" onclick="shareProfile('copy')" title="Copy Link" id="copyPortfolioBtn" aria-label="Copy Portfolio Link" style="background: none; border: none; padding: 0; cursor: pointer; color: var(--text-muted); display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">
