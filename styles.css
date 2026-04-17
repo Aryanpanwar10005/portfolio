@@ -27,6 +27,7 @@
   /* Core Colors - Dark Mode (Default) */
   --bg-dark: #0a0f1e;
   --color-bg: #0a0f1e; /* Single source of truth for page bg */
+  --bg-color: var(--color-bg); /* Standard alias for consistency */
   --bg-card: rgba(16, 22, 42, 0.7);
   --color-primary: #00d9ff; /* Cyan */
   --color-secondary: #7b2fbe; /* Electric Violet AI Accent */
@@ -54,6 +55,13 @@
   --text-primary: var(--color-text-main);
   --text-secondary: var(--color-text-dim);
   --accent-primary: var(--color-primary);
+
+  /* Standard Aliases for Production Consistency */
+  --primary-color: var(--color-primary);
+  --secondary-color: var(--color-secondary);
+  --text-color: var(--color-text-main);
+  --text-muted: var(--color-text-dim);
+  --card-border: var(--color-border);
 
   /* Typography */
   --font-heading:
@@ -98,6 +106,7 @@
 :root[data-theme="light"] {
   --bg-dark: #f8fafc;
   --color-bg: #f8fafc;
+  --bg-color: var(--color-bg);
   --bg-card: rgba(255, 255, 255, 0.8);
   --color-text-main: #1e293b;
   --color-text-dim: #64748b;

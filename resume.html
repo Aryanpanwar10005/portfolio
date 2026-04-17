@@ -117,23 +117,26 @@
             <i data-lucide="linkedin"></i>
           </a>
         </div>
-        <div class="footer-credit">
-          <p>Designed & Built with Precision by
-          <a href="https://aryanpanwar.in/" target="_blank" rel="noopener noreferrer">Aryan Panwar</a></p>
-          <div class="footer-legal">
-            <a href="/faq.html">FAQ</a>
-            <a href="/privacy.html">Privacy</a>
-            <a href="/terms.html">Terms</a>
-            <a href="/cookies.html">Cookies</a>
+        <div class="footer-credit" style="text-align: center; margin-top: 50px;">
+          <p style="color: var(--text-muted); margin-bottom: 10px;">Designed & Built with Precision by <a href="/" style="color: var(--text-color); font-weight: 500; text-decoration: none;">Aryan Panwar</a></p>
+          <div class="footer-legal" style="display: flex; justify-content: center; gap: 20px; margin-bottom: 15px;">
+            <a href="/faq.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">FAQ</a>
+            <a href="/privacy.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">Privacy</a>
+            <a href="/terms.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">Terms</a>
+            <a href="/cookies.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">Cookies</a>
           </div>
-          <p>© 2026 Aryan Panwar</p>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">© 2026 Aryan Panwar <a href="https://pagespeed.web.dev/analysis?url=https://aryanpanwar.in/" target="_blank" rel="nofollow noopener noreferrer" style="color: var(--text-muted); opacity: 0.7; font-size: 0.75rem; text-decoration: none; margin-left: 8px;" aria-label="PageSpeed analysis for aryanpanwar.in">PageSpeed</a></p>
         </div>
       </div>
     </footer>
 
-    <script src="https://unpkg.com/lucide@0.309.0/dist/umd/lucide.min.js" integrity="sha384-EfConFBO4G8Ypm98w3BQXw4IktC9XbkYRKgAbMf9eSR102iExxq2sc400xpgpU5S" crossorigin="anonymous"></script>
+    <script src="/assets/vendor/lucide.min.js" defer></script>
     <script>
-      lucide.createIcons();
+      document.addEventListener('DOMContentLoaded', () => {
+          if (window.lucide) {
+              lucide.createIcons();
+          }
+      });
       
       // Basic Theme Toggle Logic for this page
       const themeToggle = document.getElementById('themeToggle');
