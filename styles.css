@@ -28,6 +28,7 @@
   --bg-dark: #0a0f1e;
   --color-bg: #0a0f1e; /* Single source of truth for page bg */
   --bg-color: var(--color-bg); /* Standard alias for consistency */
+  --bg-color-alt: #10162a;
   --bg-card: rgba(16, 22, 42, 0.7);
   --color-primary: #00d9ff; /* Cyan */
   --color-secondary: #7b2fbe; /* Electric Violet AI Accent */
@@ -107,9 +108,10 @@
   --bg-dark: #f8fafc;
   --color-bg: #f8fafc;
   --bg-color: var(--color-bg);
+  --bg-color-alt: #f1f5f9;
   --bg-card: rgba(255, 255, 255, 0.8);
   --color-text-main: #1e293b;
-  --color-text-dim: #64748b;
+  --color-text-dim: #475569;
   --color-border: rgba(0, 0, 0, 0.08);
   --glass-bg: rgba(255, 255, 255, 0.7);
   --glass-border: rgba(0, 0, 0, 0.1);
@@ -142,11 +144,6 @@
   background: var(--color-primary);
 }
 
-/* Theme Toggle Icons */
-.theme-toggle .sun-icon { display: none; }
-.theme-toggle .moon-icon { display: block; }
-[data-theme="light"] .theme-toggle .sun-icon { display: block; }
-[data-theme="light"] .theme-toggle .moon-icon { display: none; }
 
 .theme-toggle {
   background: none;
@@ -412,8 +409,7 @@ section:last-child {
   color: var(--color-primary);
 }
 
-.sun-icon,
-.moon-icon {
+.sun-icon, .moon-icon {
   display: none;
 }
 
@@ -422,6 +418,11 @@ section:last-child {
   display: block;
 }
 :root[data-theme="light"] .moon-icon {
+  display: block;
+}
+
+/* Default state (dark) */
+:root:not([data-theme="light"]) .sun-icon {
   display: block;
 }
 
