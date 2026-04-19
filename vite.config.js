@@ -43,6 +43,7 @@ const getReportInputs = () => {
 
 export default defineConfig({
   root: '.',
+  publicDir: 'public',
   build: {
     outDir: 'dist',
     emptyOutDir: true,

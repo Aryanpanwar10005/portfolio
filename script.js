@@ -7,15 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Flag JS as enabled for CSS scoping
   document.documentElement.classList.add("js-enabled");
 
-  // Initialize Lucide Icons with safety guard
-  if (
-    typeof lucide !== "undefined" &&
-    typeof lucide.createIcons === "function"
-  ) {
-    lucide.createIcons();
-  } else {
-    console.warn("Lucide icons library not loaded or incompatible.");
-  }
+  // Note: Lucide JS removed in favor of inlined SVGs for Zero-Third-Party performance.
 
   // Initialize Animation Observer for fade-in effects
   const observerOptions = {
@@ -175,10 +167,10 @@ if (document.querySelector(".blog-content")) {
  * Global Utilities
  */
 function shareProfile(platform) {
-  const url = encodeURIComponent("https://aryanpanwar.in/");
-  const text = encodeURIComponent(
-    "Check out Aryan Panwar — Gen AI Engineer & AI Product Manager",
-  );
+  const currentUrl = window.location.href;
+  const currentTitle = document.title;
+  const url = encodeURIComponent(currentUrl);
+  const text = encodeURIComponent(`Check out ${currentTitle} — Portfolio of Aryan Panwar`);
 
   let shareUrl = "";
   switch (platform) {
@@ -188,33 +180,29 @@ function shareProfile(platform) {
     case "native":
       if (navigator.share) {
         navigator.share({
-          title: "Aryan Panwar — Gen AI Engineer",
-          text: decodeURIComponent(text),
-          url: decodeURIComponent(url)
+          title: currentTitle,
+          text: `Check out this portfolio:`,
+          url: currentUrl
         }).catch(console.error);
         return;
       }
       // Fallback for desktop where Web Share is not supported
       shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
       break;
-    case "linkedin":
-      shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
-      break;
     case "copy":
       const copyBtn = document.getElementById("copyPortfolioBtn");
-      navigator.clipboard.writeText(decodeURIComponent(url)).then(() => {
+      navigator.clipboard.writeText(currentUrl).then(() => {
         if (copyBtn) {
           const originalTitle = copyBtn.getAttribute("title");
           const originalIcon = copyBtn.innerHTML;
           
-          copyBtn.innerHTML = '<i data-lucide="check"></i>';
+          // Use inlined checkmark SVG instead of Lucide
+          copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 24px; height: 24px;"><polyline points="20 6 9 17 4 12"/></svg>';
           copyBtn.setAttribute("title", "Copied!");
-          if (typeof lucide !== "undefined") lucide.createIcons();
           
           setTimeout(() => {
             copyBtn.innerHTML = originalIcon;
             copyBtn.setAttribute("title", originalTitle);
-            if (typeof lucide !== "undefined") lucide.createIcons();
           }, 2000);
         }
       });

@@ -5,8 +5,35 @@
 /* Import Fonts */
 
 /* Font Loading Optimization - Prevent CLS */
+/* Local Fonts */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('/assets/fonts/space-grotesk-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('/assets/fonts/inter-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url('/assets/fonts/jetbrains-mono-400.woff2') format('woff2');
+}
+
+/* Font Loading Optimization - Prevent CLS */
 @font-face {
   font-family: "Space Grotesk Fallback";
+  font-style: normal;
   src: local("Arial");
   size-adjust: 100%;
   ascent-override: 95%;
@@ -17,6 +44,7 @@
 
 @font-face {
   font-family: "Inter Fallback";
+  font-style: normal;
   src: local("Arial");
   size-adjust: 107%;
   ascent-override: 90%;
@@ -1749,33 +1777,33 @@ footer {
     right: 20px;
   }
 
-  .mobile-menu-btn [data-lucide="menu"],
-  .mobile-menu-btn [data-lucide="x"] {
+  .mobile-menu-btn .icon-menu,
+  .mobile-menu-btn .icon-close {
     position: absolute;
     transition: opacity 0.3s ease, transform 0.3s ease;
     pointer-events: none;
   }
 
   /* Default state (Menu visible, Close hidden) */
-  .mobile-menu-btn [data-lucide="menu"] {
+  .mobile-menu-btn .icon-menu {
     opacity: 1;
     visibility: visible;
   }
 
-  .mobile-menu-btn [data-lucide="x"] {
+  .mobile-menu-btn .icon-close {
     opacity: 0;
     visibility: hidden;
     transform: rotate(-90deg);
   }
 
   /* Active state (Menu hidden, Close visible) */
-  .mobile-menu-btn.active [data-lucide="menu"] {
+  .mobile-menu-btn.active .icon-menu {
     opacity: 0;
     visibility: hidden;
     transform: rotate(90deg);
   }
 
-  .mobile-menu-btn.active [data-lucide="x"] {
+  .mobile-menu-btn.active .icon-close {
     opacity: 1;
     visibility: visible;
     transform: rotate(0);
