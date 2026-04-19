@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://aryanpanwar.in; connect-src 'self'; upgrade-insecure-requests;" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://aryanpanwar.in; connect-src 'self'; upgrade-insecure-requests;" />
 
     <!-- Primary Meta Tags -->
     <title>Aryan Panwar — Gen AI Engineer | Shipped 3 AI Products</title>
@@ -76,6 +76,20 @@
       {
         "@context": "https://schema.org",
         "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://aryanpanwar.in/#organization",
+            "name": "Aryan Panwar AI Consulting",
+            "url": "https://aryanpanwar.in",
+            "logo": "https://aryanpanwar.in/assets/img/Aryan_Panwar.webp",
+            "sameAs": [
+              "https://github.com/Aryanpanwar10005",
+              "https://linkedin.com/in/aryan-panwar1",
+              "https://x.com/aryan_panwar1",
+              "https://www.producthunt.com/@aryan_panwar10005",
+              "https://dev.to/aryanpanwar1"
+            ]
+          },
           {
             "@type": "Person",
             "@id": "https://aryanpanwar.in/#person",
@@ -188,12 +202,27 @@
             ]
           },
           {
+            "@type": "Organization",
+            "@id": "https://aryanpanwar.in/#organization",
+            "name": "Aryan Panwar AI Consulting",
+            "url": "https://aryanpanwar.in",
+            "logo": "https://aryanpanwar.in/assets/img/Aryan_Panwar.webp",
+            "sameAs": [
+              "https://github.com/Aryanpanwar10005",
+              "https://linkedin.com/in/aryan-panwar1",
+              "https://x.com/aryan_panwar1",
+              "https://www.producthunt.com/@aryan_panwar10005",
+              "https://dev.to/aryanpanwar1"
+            ]
+          },
+          {
             "@type": "WebPage",
             "@id": "https://aryanpanwar.in/#webpage",
             "url": "https://aryanpanwar.in",
             "name": "Aryan Panwar - Gen AI Engineer & AI Product Manager",
             "isPartOf": { "@id": "https://aryanpanwar.in/#website" },
             "about": { "@id": "https://aryanpanwar.in/#person" },
+            "publisher": { "@id": "https://aryanpanwar.in/#organization" },
             "description": "Professional portfolio of Aryan Panwar, specializing in production LLM orchestration and agentic AI.",
             "inLanguage": "en-US",
             "speakable": {
@@ -205,32 +234,22 @@
       }
     </script>
 
-    <!-- Google Fonts Preconnect & Styles -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-      media="print"
-      onload="this.media = 'all'"
-    />
-    <noscript
-      ><link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-    /></noscript>
+    <!-- Speculation Rules API - 2026 Standard for Instant Navigation -->
+    <script type="speculationrules">
+    {
+      "prerender": [{
+        "source": "list",
+        "urls": ["/blog/"]
+      }]
+    }
+    </script>
 
-    <!-- Preload Hero Image -->
+    <!-- Preload Hero Image with AVIF Compatibility -->
     <link
       rel="preload"
       as="image"
-      imagesrcset="/assets/img/Aryan_Panwar_400.webp 400w, /assets/img/Aryan_Panwar.webp 800w"
-      imagesizes="(max-width: 768px) 280px, 400px"
+      imagesrcset="/assets/img/Aryan_Panwar_300.webp 300w, /assets/img/Aryan_Panwar_400.webp 400w, /assets/img/Aryan_Panwar.webp 800w"
+      imagesizes="(max-width: 480px) 280px, (max-width: 768px) 320px, 400px"
       fetchpriority="high"
     />
 
@@ -410,8 +429,8 @@
               class="theme-toggle"
               aria-label="Toggle light/dark mode"
             >
-              <i data-lucide="sun" class="sun-icon"></i>
-              <i data-lucide="moon" class="moon-icon"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun-icon"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M22 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon-icon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
             </button>
             <a
               href="assets/docs/Aryan_Panwar.pdf"
@@ -429,8 +448,8 @@
             aria-label="Toggle navigation menu"
             aria-expanded="false"
           >
-            <i data-lucide="menu" class="icon-menu"></i>
-            <i data-lucide="x" class="icon-close"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-close"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
           </button>
         </div>
       </nav>
@@ -455,10 +474,7 @@
               ><span class="typewriter-cursor"></span>
             </h2>
             <p class="hero-description direct-answer">
-              I'm a Gen AI Engineer and AI Product Manager who builds production
-              AI systems end-to-end. I specialize in agentic AI, LLM
-              orchestration, and on-device AI. Currently shipping FitWardrobe
-              (live) and Mithivoices (open-source).
+              Aryan Panwar is a <strong>Gen AI Engineer</strong> and <strong>AI Product Manager</strong> who builds production AI systems end-to-end, specializing in <strong>agentic AI</strong>, <strong>LLM orchestration</strong>, and <strong>on-device AI</strong>. He has shipped three successful products, including <strong>FitWardrobe</strong> (live) and <strong>Mithivoices</strong> (open-source), delivering scalable intelligence for modern software applications.
             </p>
             <div class="hero-meta">
               <span>Gen AI Engineer</span>
@@ -476,7 +492,7 @@
                 class="social-link"
                 aria-label="GitHub"
               >
-                <i data-lucide="github"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
               </a>
               <a
                 href="https://www.linkedin.com/in/aryan-panwar1"
@@ -485,7 +501,7 @@
                 class="social-link"
                 aria-label="LinkedIn"
               >
-                <i data-lucide="linkedin"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
               </a>
               <a
                 href="https://x.com/aryan_panwar1"
@@ -494,7 +510,7 @@
                 class="social-link"
                 aria-label="Twitter (X)"
               >
-                <i data-lucide="twitter"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
               </a>
               <a
                 href="https://dev.to/aryanpanwar1"
@@ -503,7 +519,7 @@
                 class="social-link"
                 aria-label="Dev.to"
               >
-                <i data-lucide="book-open"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5z"/><path d="M8 7h6"/><path d="M8 11h8"/><path d="M8 15h6"/></svg>
               </a>
               <a
                 href="https://www.producthunt.com/@aryan_panwar10005"
@@ -512,14 +528,14 @@
                 class="social-link"
                 aria-label="Product Hunt"
               >
-                <i data-lucide="award"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
               </a>
               <a
                 href="mailto:aryanpanwar10005@gmail.com"
                 class="social-link"
                 aria-label="Email"
               >
-                <i data-lucide="mail"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
               </a>
             </div>
           </div>
@@ -527,8 +543,8 @@
           <div class="hero-image">
             <img
               src="/assets/img/Aryan_Panwar.webp"
-              srcset="/assets/img/Aryan_Panwar_400.webp 400w, /assets/img/Aryan_Panwar.webp 800w"
-              sizes="(max-width: 768px) 280px, 400px"
+              srcset="/assets/img/Aryan_Panwar_300.webp 300w, /assets/img/Aryan_Panwar_400.webp 400w, /assets/img/Aryan_Panwar.webp 800w"
+              sizes="(max-width: 480px) 280px, (max-width: 768px) 320px, 400px"
               alt="Aryan Panwar — Gen AI Engineer & AI Product Manager professional headshot"
               width="400"
               height="400"
@@ -540,7 +556,7 @@
 
         <a href="#about" class="scroll-indicator" aria-label="Scroll down">
           <span>SCROLL</span>
-          <i data-lucide="chevron-down"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
         </a>
       </section>
 
@@ -594,54 +610,22 @@
                     "
                   >
                     <li>
-                      <i
-                        data-lucide="check-circle"
-                        style="
-                          width: 14px;
-                          height: 14px;
-                          vertical-align: middle;
-                          margin-right: 4px;
-                        "
-                      ></i>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
                       <strong>Status:</strong> Final-year ECE Student at MIET
                       Meerut (Class of 2026).
                     </li>
                     <li>
-                      <i
-                        data-lucide="check-circle"
-                        style="
-                          width: 14px;
-                          height: 14px;
-                          vertical-align: middle;
-                          margin-right: 4px;
-                        "
-                      ></i>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
                       <strong>Key Credential:</strong> NVIDIA Certified
                       (Transformer-Based NLP) & Google AI Essentials.
                     </li>
                     <li>
-                      <i
-                        data-lucide="check-circle"
-                        style="
-                          width: 14px;
-                          height: 14px;
-                          vertical-align: middle;
-                          margin-right: 4px;
-                        "
-                      ></i>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
                       <strong>Core Product:</strong> FitWardrobe (Privacy-First
                       On-Device AI Fashion App).
                     </li>
                     <li>
-                      <i
-                        data-lucide="check-circle"
-                        style="
-                          width: 14px;
-                          height: 14px;
-                          vertical-align: middle;
-                          margin-right: 4px;
-                        "
-                      ></i>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
                       <strong>Expertise:</strong> LLM APIs (Gemini, Claude,
                       GPT), Python, React, Embedded C++.
                     </li>
@@ -706,35 +690,27 @@
                 <h3>Technical Interests:</h3>
                 <div class="tech-interest-grid">
                   <div class="interest-item">
-                    <span class="interest-icon"
-                      ><i data-lucide="brain-circuit"></i
-                    ></span>
+                    <span class="interest-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle><circle cx="20" cy="21" r=".5"></circle><circle cx="20" cy="8" r=".5"></circle></svg></span>
                     Gen AI Engineering
                   </div>
                   <div class="interest-item">
-                    <span class="interest-icon"><i data-lucide="bot"></i></span>
+                    <span class="interest-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg></span>
                     Agentic AI &amp; LLMs
                   </div>
                   <div class="interest-item">
-                    <span class="interest-icon"
-                      ><i data-lucide="rocket"></i
-                    ></span>
+                    <span class="interest-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"></path><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"></path></svg></span>
                     AI Product Management
                   </div>
                   <div class="interest-item">
-                    <span class="interest-icon"><i data-lucide="cpu"></i></span>
+                    <span class="interest-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu"><path d="M12 20v2"></path><path d="M12 2v2"></path><path d="M17 20v2"></path><path d="M17 2v2"></path><path d="M2 12h2"></path><path d="M2 17h2"></path><path d="M2 7h2"></path><path d="M20 12h2"></path><path d="M20 17h2"></path><path d="M20 7h2"></path><path d="M7 20v2"></path><path d="M7 2v2"></path><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="8" y="8" width="8" height="8" rx="1"></rect></svg></span>
                     IoT &amp; Embedded Systems
                   </div>
                   <div class="interest-item">
-                    <span class="interest-icon"
-                      ><i data-lucide="settings"></i
-                    ></span>
+                    <span class="interest-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"></path><circle cx="12" cy="12" r="3"></circle></svg></span>
                     Industrial Automation
                   </div>
                   <div class="interest-item">
-                    <span class="interest-icon"
-                      ><i data-lucide="code-2"></i
-                    ></span>
+                    <span class="interest-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg></span>
                     Open Source Software
                   </div>
                 </div>
@@ -744,7 +720,7 @@
             <div class="about-right-col">
               <div class="info-cards">
                 <div class="info-card">
-                  <h3><i data-lucide="graduation-cap"></i> Education</h3>
+                  <h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap" style="width: 18px; height: 18px; vertical-align: bottom; margin-right: 8px;"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg> Education</h3>
                   <div class="info-item">
                     <span class="info-title">MIET Meerut</span>
                     <span class="info-meta"
@@ -758,7 +734,7 @@
                 </div>
 
                 <div class="info-card">
-                  <h3><i data-lucide="award"></i> Certifications</h3>
+                  <h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award" style="width: 18px; height: 18px; vertical-align: bottom; margin-right: 8px;"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg> Certifications</h3>
                   <div class="info-item">
                     <span class="info-title"
                       >Enterprise Product Management Fundamentals</span
@@ -831,7 +807,7 @@
         <div class="container container-narrow">
           <div class="section-header">
             <span class="section-number">02.</span>
-            <h2 class="section-title">Where I've Worked</h2>
+            <h2 class="section-title">Professional Experience & Industrial Impact</h2>
           </div>
 
           <div class="experience-list">
@@ -929,7 +905,7 @@
                   <div class="live-badge">Live Production</div>
                   <div class="project-links">
                     <a href="https://fitwardrobe.me/" target="_blank" rel="noopener noreferrer" aria-label="View Live Project">
-                      <i data-lucide="external-link"></i>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
                     </a>
                   </div>
                 </div>
@@ -957,7 +933,7 @@
                   <div class="live-badge">Live Platform</div>
                   <div class="project-links">
                     <a href="https://github.com/mithivoices/ai-voice-platform" target="_blank" rel="noopener noreferrer" aria-label="View Source Code on GitHub">
-                      <i data-lucide="github"></i>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
                     </a>
                   </div>
                 </div>
@@ -985,7 +961,7 @@
                   <div class="live-badge">Agentic Tool</div>
                   <div class="project-links">
                     <a href="https://www.npmjs.com/package/seo-geo-optimizer" target="_blank" rel="noopener noreferrer" aria-label="View Live Project">
-                      <i data-lucide="external-link"></i>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
                     </a>
                   </div>
                 </div>
@@ -1013,7 +989,7 @@
                   <div class="live-badge">Hardware</div>
                   <div class="project-links">
                     <a href="https://github.com/Aryanpanwar10005/wireless_ev_charging" target="_blank" rel="noopener noreferrer" aria-label="View Source Code on GitHub">
-                      <i data-lucide="github"></i>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
                     </a>
                   </div>
                 </div>
@@ -1041,7 +1017,7 @@
                   <div class="live-badge">Automation</div>
                   <div class="project-links">
                     <a href="https://github.com/Aryanpanwar10005/smart-stairs" target="_blank" rel="noopener noreferrer" aria-label="View Source Code on GitHub">
-                      <i data-lucide="github"></i>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
                     </a>
                   </div>
                 </div>
@@ -1069,7 +1045,7 @@
                   <div class="live-badge">Robotics</div>
                   <div class="project-links">
                     <a href="https://github.com/Aryanpanwar10005/autonomous-robot" target="_blank" rel="noopener noreferrer" aria-label="View Source Code on GitHub">
-                      <i data-lucide="github"></i>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
                     </a>
                   </div>
                 </div>
@@ -1235,7 +1211,7 @@
                 </p>
                 <div class="skill-badges">
                   <span class="skill-badge"
-                    ><i data-lucide="github" class="skill-icon"></i> GitHub
+                    ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github skill-icon" style="width: 16px; height: 16px; display: inline-block; vertical-align: text-bottom; margin-right: 4px;"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg> GitHub
                     Actions</span
                   >
                   <span class="skill-badge"
@@ -1380,7 +1356,7 @@
             aria-expanded="false" 
             aria-controls="skillsWrapper">
             <span>Show More Skills</span>
-            <i data-lucide="chevron-down"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down" style="width: 18px; height: 18px; margin-left: 4px;"><path d="m6 9 6 6 6-6"></path></svg>
           </button>
         </div>
       </section>
@@ -1398,21 +1374,21 @@
               <div class="post-meta">AI Strategy & SEO</div>
               <h3>Technical SEO for AI Products: 2026 Roadmap</h3>
               <p>Optimizing for Generative Engine Optimization (GEO) and traditional search presence.</p>
-              <a href="/blog/technical-seo-for-ai-products.html" class="link-arrow">Read Full Analysis <i data-lucide="arrow-right"></i></a>
+              <a href="/blog/technical-seo-for-ai-products.html" class="link-arrow">Read Full Analysis <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" style="width: 16px; height: 16px; vertical-align: middle; margin-left: 4px;"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
             </div>
 
             <div class="post-preview-card">
               <div class="post-meta">Agentic AI</div>
               <h3>Building LLM Orchestration Tools</h3>
               <p>Architecting production-ready systems that manage multiple AI models and agent workflows.</p>
-              <a href="/blog/building-llm-orchestration-tools.html" class="link-arrow">Read Full Analysis <i data-lucide="arrow-right"></i></a>
+              <a href="/blog/building-llm-orchestration-tools.html" class="link-arrow">Read Full Analysis <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" style="width: 16px; height: 16px; vertical-align: middle; margin-left: 4px;"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
             </div>
 
             <div class="post-preview-card">
               <div class="post-meta">Careers & Future</div>
               <h3>What is an Agentic AI Developer?</h3>
               <p>Exploring the evolution from software engineering to LLM orchestration and agentic reasoning.</p>
-              <a href="/blog/what-is-agentic-ai-developer.html" class="link-arrow">Read Full Analysis <i data-lucide="arrow-right"></i></a>
+              <a href="/blog/what-is-agentic-ai-developer.html" class="link-arrow">Read Full Analysis <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
             </div>
           </div>
           
@@ -1427,7 +1403,7 @@
         <div class="container">
           <div class="section-header">
             <span class="section-number">06.</span>
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title">Collaborate and Get In Touch</h2>
           </div>
           <div class="contact-section">
             <p class="contact-description">
@@ -1450,19 +1426,19 @@
     <footer style="padding: 100px 0 60px; border-top: 1px solid var(--card-border); margin-top: 120px; background: var(--bg-color-alt);">
       <div class="container footer-content">
         <div class="footer-socials" style="display: flex; justify-content: center; gap: 24px; margin-bottom: 40px;">
-          <a href="https://github.com/Aryanpanwar10005" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" style="color: var(--text-muted);"><i data-lucide="github"></i></a>
-          <a href="https://linkedin.com/in/aryan-panwar1" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" style="color: var(--text-muted);"><i data-lucide="linkedin"></i></a>
-          <a href="https://dev.to/aryanpanwar1" target="_blank" rel="noopener noreferrer" aria-label="Dev.to Profile" style="color: var(--text-muted);"><i data-lucide="book-open"></i></a>
-          <a href="https://www.producthunt.com/@aryan_panwar10005" target="_blank" rel="noopener noreferrer" aria-label="Product Hunt Profile" style="color: var(--text-muted);"><i data-lucide="award"></i></a>
+          <a href="https://github.com/Aryanpanwar10005" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" style="color: var(--text-muted);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+          <a href="https://linkedin.com/in/aryan-panwar1" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" style="color: var(--text-muted);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://dev.to/aryanpanwar1" target="_blank" rel="noopener noreferrer" aria-label="Dev.to Profile" style="color: var(--text-muted);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5z"/><path d="M8 7h6"/><path d="M8 11h8"/><path d="M8 15h6"/></svg></a>
+          <a href="https://www.producthunt.com/@aryan_panwar10005" target="_blank" rel="noopener noreferrer" aria-label="Product Hunt Profile" style="color: var(--text-muted);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg></a>
           <!-- Share Actions -->
           <button class="share-btn" onclick="shareProfile('whatsapp')" aria-label="Share on WhatsApp" style="background: none; border: none; padding: 0; cursor: pointer; color: var(--text-muted); display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">
-            <i data-lucide="message-circle" style="width: 24px; height: 24px;"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 24px; height: 24px;"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.432 5.631 1.433h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
           </button>
           <button class="share-btn" onclick="shareProfile('native')" aria-label="Share Portfolio" style="background: none; border: none; padding: 0; cursor: pointer; color: var(--text-muted); display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">
-            <i data-lucide="share-2" style="width: 24px; height: 24px;"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 24px; height: 24px;"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
           </button>
           <button class="share-btn" onclick="shareProfile('copy')" title="Copy Link" id="copyPortfolioBtn" aria-label="Copy Portfolio Link" style="background: none; border: none; padding: 0; cursor: pointer; color: var(--text-muted); display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">
-            <i data-lucide="copy" style="width: 24px; height: 24px;"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 24px; height: 24px;"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
           </button>
         </div>
         <div class="footer-credit" style="text-align: center;">
@@ -1490,11 +1466,10 @@
     </div>
 
     <!-- Third Party Scripts -->
-    <script src="/assets/vendor/lucide.min.js" defer></script>
-    <script src="/script.js" defer></script>
+    <script type="module" src="/script.js" defer></script>
     <!-- Back to Top -->
     <button id="backToTop" class="back-to-top" aria-label="Back to top">
-      <i data-lucide="arrow-up"></i>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
     </button>
 
   </body></html>
