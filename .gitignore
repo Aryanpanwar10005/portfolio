@@ -25,10 +25,10 @@ desktop.ini
 dist/
 build/
 .cache/
+styles.min.css
 
 # Logs
 logs/
-Complete_Web_Success_System_v5_FINAL (2).docx
 *.log
 
 # Temporary files
