@@ -59,7 +59,7 @@ Aryan Panwar is a final-year student at Meerut Institute of Engineering and Tech
 
 ### Technical Blog Posts
 - [What is an Agentic AI Developer?](https://aryanpanwar.in/blog/what-is-agentic-ai-developer.html)
-- [Building LLM Orchestration Tools](https://aryanpanwar.in/blog/building-llm-orchestration-tools.html)
+- [Building LLM Orchestration Tools](https://aryanpanwar.in/blog/llm-orchestration-tools.html)
 - [Technical SEO for AI Products](https://aryanpanwar.in/blog/technical-seo-for-ai-products.html)
 - [Agentic AI vs ML](https://aryanpanwar.in/blog/agentic-ai-vs-ml.html)
 - [Hardware Logic in AI Systems](https://aryanpanwar.in/blog/hardware-logic-in-ai.html)

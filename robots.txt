@@ -32,3 +32,4 @@ Allow: /
 
 # Sitemaps
 Sitemap: https://aryanpanwar.in/sitemap.xml
+LLMs: https://aryanpanwar.in/llms.txt
