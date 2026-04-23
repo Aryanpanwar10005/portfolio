@@ -5,36 +5,19 @@ import { fileURLToPath } from 'url';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
-// Helper to get all HTML entry points in blog/
-const getBlogInputs = () => {
-  const blogDir = resolve(__dirname, 'blog');
-  if (!fs.existsSync(blogDir)) return {};
+// Helper to get all HTML entry points in a directory
+const getHtmlInputs = (dirPath, prefix = '') => {
+  const fullPath = resolve(__dirname, dirPath);
+  if (!fs.existsSync(fullPath)) return {};
   
-  const files = fs.readdirSync(blogDir);
+  const files = fs.readdirSync(fullPath);
   const inputs = {};
   
   files.forEach(file => {
     if (file.endsWith('.html')) {
       const name = file.replace('.html', '');
-      inputs[`blog/${name}`] = resolve(__dirname, `blog/${file}`);
-    }
-  });
-  
-  return inputs;
-};
-
-// Helper to get all HTML entry points in reports/
-const getReportInputs = () => {
-  const reportDir = resolve(__dirname, 'reports');
-  if (!fs.existsSync(reportDir)) return {};
-  
-  const files = fs.readdirSync(reportDir);
-  const inputs = {};
-  
-  files.forEach(file => {
-    if (file.endsWith('.html')) {
-      const name = file.replace('.html', '');
-      inputs[`reports/${name}`] = resolve(__dirname, `reports/${file}`);
+      const key = prefix ? `${prefix}/${name}` : name;
+      inputs[key] = resolve(__dirname, dirPath, file);
     }
   });
   
@@ -49,9 +32,9 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
-        ...getBlogInputs(),
-        ...getReportInputs()
+        ...getHtmlInputs('.'),
+        ...getHtmlInputs('blog', 'blog'),
+        ...getHtmlInputs('reports', 'reports')
       }
     }
   }
