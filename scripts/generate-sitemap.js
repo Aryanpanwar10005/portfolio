@@ -15,7 +15,7 @@ const pages = [
   { rel: 'reports/mithivoices-case-study.html', url: '/reports/mithivoices-case-study.html', priority: '0.8', changefreq: 'monthly' },
   { rel: 'reports/seo-geo-case-study.html', url: '/reports/seo-geo-case-study.html', priority: '0.8', changefreq: 'monthly' },
   { rel: 'blog/technical-seo-for-ai-products.html', url: '/blog/technical-seo-for-ai-products.html', priority: '0.8', changefreq: 'monthly' },
-  { rel: 'blog/building-llm-orchestration-tools.html', url: '/blog/building-llm-orchestration-tools.html', priority: '0.8', changefreq: 'monthly' },
+  { rel: 'blog/llm-orchestration-tools.html', url: '/blog/llm-orchestration-tools.html', priority: '0.8', changefreq: 'monthly' },
   { rel: 'blog/what-is-agentic-ai-developer.html', url: '/blog/what-is-agentic-ai-developer.html', priority: '0.8', changefreq: 'monthly' },
   { rel: 'blog/modern-embedded-engineer.html', url: '/blog/modern-embedded-engineer.html', priority: '0.8', changefreq: 'monthly' },
   { rel: 'blog/agentic-ai-vs-ml.html', url: '/blog/agentic-ai-vs-ml.html', priority: '0.8', changefreq: 'monthly' },
