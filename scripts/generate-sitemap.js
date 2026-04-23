@@ -63,7 +63,8 @@ function generateSitemap() {
   xml += '</urlset>';
 
   fs.writeFileSync(path.join(ROOT_DIR, 'sitemap.xml'), xml);
-  console.log('sitemap.xml generated successfully!');
+  fs.writeFileSync(path.join(ROOT_DIR, 'public', 'sitemap.xml'), xml);
+  console.log('sitemap.xml generated successfully in both root and public/!');
 }
 
 generateSitemap();
