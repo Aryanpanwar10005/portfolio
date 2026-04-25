@@ -44,3 +44,4 @@ report.json
 # SEO Audit & Scratch
 seo-audit-results/
 scratch/
+.vite/
