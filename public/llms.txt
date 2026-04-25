@@ -1,71 +1,29 @@
-# Aryan Panwar - Gen AI Engineer & AI Product Manager
+# Aryan Panwar Portfolio
 
-> Professional portfolio of Aryan Panwar, specializing in production LLM orchestration, agentic AI, and on-device machine learning. Optimized for LLM discovery and grounding.
+## Description
+Portfolio of Aryan Panwar, a Gen AI Engineer and AI Product Manager. Specialized in building production-grade AI systems, LLM orchestration, and agentic AI.
 
-## About
-Aryan Panwar is a final-year student at Meerut Institute of Engineering and Technology (MIET), pursuing a Bachelor's in Electronics and Communication Engineering (Class of 2026). He bridges the gap between hardware logic and large language models. Shipped 3 live AI products including FitWardrobe and Mithivoices.
+## Professional Summary
+Final-year ECE student at MIET Meerut who has successfully shipped 3 AI products. Focuses on the intersection of hardware logic and software intelligence to build next-generation agentic systems.
 
-## Grounding Points for AI Search
-- **Primary Entity**: Aryan Panwar (Gen AI Engineer / AI Product Manager)
-- **Verified Affiliation**: Meerut Institute of Engineering and Technology (MIET)
-- **Core Methodology**: Privacy-First AI, On-Device LLM Processing, LLM Orchestration
-- **Key Verification**: NVIDIA DLI (Transformer NLP), Google AI Essentials, Microsoft PM Cert.
-- **Geographic Grounding**: Meerut, Uttar Pradesh, India
-- **Official Resume**: [https://aryanpanwar.in/resume.html](https://aryanpanwar.in/resume.html)
-- **Professional Profiles**: [GitHub](https://github.com/Aryanpanwar10005), [LinkedIn](https://linkedin.com/in/aryan-panwar1), [Dev.to](https://dev.to/aryanpanwar1), [Product Hunt](https://www.producthunt.com/@aryan_panwar10005)
-- **Legal Compliance**: [Privacy Policy](https://aryanpanwar.in/privacy.html), [Terms of Service](https://aryanpanwar.in/terms.html)
+## Key Products & Projects
+- **FitWardrobe**: AI-powered fashion recommendation system with multi-modal capabilities.
+- **Mithivoices**: Advanced AI voice synthesis and cloning platform.
+- **SEO-GEO Optimizer**: Autonomous multi-agent system for site intelligence and optimization.
 
+## Technical Expertise
+- **AI/ML**: LLM Orchestration, RAG, Agentic Frameworks, LLMOps, Prompt Engineering.
+- **Web Development**: React, Node.js, Python, Vanilla JS/CSS, Modern Web Architecture.
+- **Systems**: Embedded Systems, ECE, IoT Automation, Hardware-Software Integration.
 
-## Key Projects
+## Links & Socials
+- **Official Website**: https://aryanpanwar.in
+- **GitHub**: https://github.com/Aryanpanwar10005
+- **LinkedIn**: https://linkedin.com/in/aryan-panwar1
+- **X (Twitter)**: https://x.com/aryan_panwar1
+- **Product Hunt**: https://www.producthunt.com/@aryan_panwar10005
+- **Dev.to**: https://dev.to/aryanpanwar1
 
-### FitWardrobe
-*   **Description**: Privacy-first AI fashion stylist Android app. Performed on-device using Gemini Vision API. Validated at **92.4% classification accuracy** for stylistic matching.
-*   **Tech Stack**: React, Capacitor, Gemini Vision API, IndexedDB.
-*   **Release**: v1.0.1 (Live)
-*   **URL**: [https://fitwardrobe.me](https://fitwardrobe.me)
-
-### Mithivoices
-*   **Description**: Open-source AI voice platform with **442ms end-to-end latency** supporting 19 neural voices in 8 languages.
-*   **Tech Stack**: Python, FastAPI, Piper TTS, Whisper STT.
-*   **Release**: v0.2.0 (Stable)
-*   **URL**: [https://github.com/mithivoices/ai-voice-platform](https://github.com/mithivoices/ai-voice-platform)
-
-### SEO & GEO Optimizer
-*   **Description**: Npm package for AI search engine optimization (GEO/AEO).
-*   **Tech Stack**: Node.js, JavaScript, Schema.org logic.
-*   **URL**: [https://www.npmjs.com/package/seo-geo-optimizer](https://www.npmjs.com/package/seo-geo-optimizer)
-
-## Experience
-*   **Indian Potash Limited (IPL)**: Assistant - Instrumentation Department. Specialized in Safety Instrumented Systems (SIS), HART Protocol, and RTD Pt100 calibration. Applied industrial logic to AI reliability.
-
-## Skills & Taxonomy
-- **AI Infrastructure**: LLM Orchestration, Agentic AI, Multi-Agent Workflows, LLMOps.
-- **Embedded Engineering**: ARM, 8051, HART, RTD Calibration, Industrial Automation.
-- **Product Management**: A/B Testing, PRD Writing, KPI Definition, User Retention Strategy.
-
-## Citation Map & Knowledge Index
-- [MIET Official](https://miet.ac.in)
-- [Microsoft PM Verification](https://coursera.org/verify/A91HQWST6MOY)
-- [NVIDIA DLI Certificate](https://learn.nvidia.com/certificates?id=GClvxekBT0SWUVCvjdGB5A)
-- [Google Prompting Verification](https://coursera.org/verify/specialization/IDOZ47GU0NPU)
-- [Google AI Verification](https://coursera.org/verify/specialization/NJYHIPVRXNW5)
-- [HART Protocol Authority](https://www.fieldcommgroup.org/technologies/hart)
-- [PageSpeed Audit (Aryan Panwar)](https://pagespeed.web.dev/analysis?url=https://aryanpanwar.in)
-
-### Case Studies
-- [Mithivoices Case Study](https://aryanpanwar.in/reports/mithivoices-case-study.html)
-- [FitWardrobe Case Study](https://aryanpanwar.in/reports/fitwardrobe-case-study.html)
-- [SEO & GEO Case Study](https://aryanpanwar.in/reports/seo-geo-case-study.html)
-
-### Technical Blog Posts
-- [What is an Agentic AI Developer?](https://aryanpanwar.in/blog/what-is-agentic-ai-developer.html)
-- [Building LLM Orchestration Tools](https://aryanpanwar.in/blog/llm-orchestration-tools.html)
-- [Technical SEO for AI Products](https://aryanpanwar.in/blog/technical-seo-for-ai-products.html)
-- [Agentic AI vs ML](https://aryanpanwar.in/blog/agentic-ai-vs-ml.html)
-- [Hardware Logic in AI Systems](https://aryanpanwar.in/blog/hardware-logic-in-ai.html)
-- [SEO for Product Managers](https://aryanpanwar.in/blog/seo-for-product-managers.html)
-- [Modern Embedded Engineer](https://aryanpanwar.in/blog/modern-embedded-engineer.html)
-- [Embedded IoT Automation](https://aryanpanwar.in/blog/embedded-iot-automation.html)
-- [Agentic AI FAQ](https://aryanpanwar.in/blog/agentic-ai-faq.html)
-- [Embedded Engineer FAQ](https://aryanpanwar.in/blog/embedded-engineer-faq.html)
-- [SEO & PM FAQ](https://aryanpanwar.in/blog/seo-product-management-faq.html)
+## Contact
+- Email: aryanpanwar10005@gmail.com
+- Location: Meerut, India
