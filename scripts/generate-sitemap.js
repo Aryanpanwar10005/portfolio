@@ -26,7 +26,7 @@ const pages = [
   { rel: 'blog/agentic-ai-faq.html', url: '/blog/agentic-ai-faq.html', priority: '0.8', changefreq: 'monthly' },
   { rel: 'blog/embedded-engineer-faq.html', url: '/blog/embedded-engineer-faq.html', priority: '0.8', changefreq: 'monthly' },
   { rel: 'resume.html', url: '/resume.html', priority: '0.9', changefreq: 'monthly' },
-  { rel: 'public/docs/Aryan_panwar.pdf', url: '/docs/Aryan_panwar.pdf', priority: '0.9', changefreq: 'monthly' },
+  { rel: 'public/docs/Aryan_panwar.pdf', url: '/public/docs/Aryan_panwar.pdf', priority: '0.9', changefreq: 'monthly' },
   { rel: 'privacy.html', url: '/privacy.html', priority: '0.3', changefreq: 'yearly' },
   { rel: 'terms.html', url: '/terms.html', priority: '0.3', changefreq: 'yearly' },
   { rel: 'cookies.html', url: '/cookies.html', priority: '0.3', changefreq: 'yearly' },
