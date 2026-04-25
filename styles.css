@@ -11,7 +11,7 @@
   font-style: normal;
   font-weight: 300 700;
   font-display: swap;
-  src: url('/assets/fonts/space-grotesk-700.woff2') format('woff2');
+  src: url('/assets/fonts/space-grotesk-700.woff2?v=1.1') format('woff2');
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   font-style: normal;
   font-weight: 300 700;
   font-display: swap;
-  src: url('/assets/fonts/inter-400.woff2') format('woff2');
+  src: url('/assets/fonts/inter-400.woff2?v=1.1') format('woff2');
 }
 
 @font-face {
@@ -27,7 +27,7 @@
   font-style: normal;
   font-weight: 400 500;
   font-display: swap;
-  src: url('/assets/fonts/jetbrains-mono-400.woff2') format('woff2');
+  src: url('/assets/fonts/jetbrains-mono-400.woff2?v=1.1') format('woff2');
 }
 
 /* Font Loading Optimization - Prevent CLS */
