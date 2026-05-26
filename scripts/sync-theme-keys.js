@@ -7,11 +7,7 @@ const __dirname = path.dirname(__filename);
 
 const ROOT_DIR = path.resolve(__dirname, '..');
 
-// Optimized Webfont Load Block
-const FONT_LINKS = `  <!-- High-Performance Webfont Load (GEO-Optimized) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">`;
+// Optimized Webfont Load Block (Self-Hosted via fonts.css and styles.css)
 
 function processFile(filePath) {
   if (!fs.existsSync(filePath)) return;
@@ -28,17 +24,8 @@ function processFile(filePath) {
   // Also handle ap_theme inside standard item sets (like 'theme', theme)
   content = content.replace(/localStorage\.setItem\(['"]theme['"]\s*,\s*theme\)/g, "localStorage.setItem('ap_theme', theme)");
 
-  // 2. Inject high-performance preconnect and font links before styles.css link if not present
-  if (!content.includes('fonts.googleapis.com') && !content.includes('fonts.gstatic.com')) {
-    // Search for styles.css link (various formats)
-    const styleLinkRegex = /<link[^>]*href=["'][^"']*styles\.css[^"']*["'][^>]*>/i;
-    const match = content.match(styleLinkRegex);
-    if (match) {
-      const matchedTag = match[0];
-      content = content.replace(matchedTag, `${FONT_LINKS}\n  ${matchedTag}`);
-      console.log(`  -> Successfully injected high-performance Google Fonts & preconnect tags.`);
-    }
-  }
+  // 2. Local Font Self-Hosting Rule enforced (CDN Injection bypassed)
+  // Injection block removed to comply with Zero-Third-Party self-hosted assets goals.
 
   // 3. Write back only if modified
   if (content !== original) {

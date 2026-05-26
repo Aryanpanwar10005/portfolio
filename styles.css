@@ -2,32 +2,85 @@
    Technical Minimalism Design System
    =================================== */
 
-/* Import Fonts */
-
-/* Font Loading Optimization - Prevent CLS */
-/* Local Fonts */
+/* Import Fonts - Self Hosted */
 @font-face {
-  font-family: 'Space Grotesk';
+  font-family: 'DM Sans';
   font-style: normal;
-  font-weight: 300 700;
+  font-weight: 300;
   font-display: swap;
-  src: url('/assets/fonts/space-grotesk-700.woff2?v=1.1') format('woff2');
+  src: url('/assets/fonts/dm-sans-300-normal.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: 'DM Sans';
   font-style: normal;
-  font-weight: 300 700;
+  font-weight: 400;
   font-display: swap;
-  src: url('/assets/fonts/inter-400.woff2?v=1.1') format('woff2');
+  src: url('/assets/fonts/dm-sans-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/assets/fonts/dm-sans-500-normal.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'JetBrains Mono';
   font-style: normal;
-  font-weight: 400 500;
+  font-weight: 400;
   font-display: swap;
-  src: url('/assets/fonts/jetbrains-mono-400.woff2?v=1.1') format('woff2');
+  src: url('/assets/fonts/jetbrains-mono-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/assets/fonts/jetbrains-mono-500-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/plus-jakarta-sans-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/assets/fonts/plus-jakarta-sans-500-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/assets/fonts/plus-jakarta-sans-600-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/fonts/plus-jakarta-sans-700-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/assets/fonts/plus-jakarta-sans-800-normal.woff2') format('woff2');
 }
 
 /* Font Loading Optimization - Prevent CLS */
@@ -2589,25 +2642,24 @@ footer {
   }
 }
 
-/* ===================================
-   Redesign overrides for Blog Spacing & ERGONOMICS
-   =================================== */
-.blog-container {
-  max-width: 720px !important;
+/* Redesign overrides for Blog Spacing & ERGONOMICS using clean cascading class selectors instead of !important */
+.blog-page .blog-container,
+.post-page .blog-container {
+  max-width: 720px;
 }
 .blog-content .direct-answer {
-  background: var(--bg-color-alt) !important;
-  border-left: 4px solid var(--color-primary) !important;
-  color: var(--color-text-main) !important;
+  background: var(--bg-color-alt);
+  border-left: 4px solid var(--color-primary);
+  color: var(--color-text-main);
   border-radius: 0 8px 8px 0;
 }
 .blog-content .tldr-box {
-  background: var(--bg-color-alt) !important;
-  border: 1px solid var(--color-border) !important;
-  border-left: 4px solid var(--color-secondary) !important;
+  background: var(--bg-color-alt);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-secondary);
 }
 .author-verification-block {
-  background: var(--bg-color-alt) !important;
-  border: 1px solid var(--color-border) !important;
+  background: var(--bg-color-alt);
+  border: 1px solid var(--color-border);
 }
 
