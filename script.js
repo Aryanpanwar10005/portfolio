@@ -227,7 +227,7 @@ class ThemeManager {
   init() {
     let savedTheme = "dark";
     try {
-      savedTheme = localStorage.getItem("theme") || "dark";
+      savedTheme = localStorage.getItem("ap_theme") || "dark";
     } catch (e) {
       console.warn("LocalStorage not accessible for theme preference:", e);
     }
@@ -245,7 +245,7 @@ class ThemeManager {
   applyTheme(theme) {
     this.html.setAttribute("data-theme", theme);
     try {
-      localStorage.setItem("theme", theme);
+      localStorage.setItem("ap_theme", theme);
     } catch (e) {
       // Silently fail for the user, but preserve functionality for the session
     }

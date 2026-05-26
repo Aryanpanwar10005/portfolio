@@ -6,19 +6,26 @@
     <title>404: Page Not Found — Aryan Panwar</title>
     <meta name="description" content="Page not found. The requested URL could not be found on Aryan Panwar's portfolio. Return to the home page for AI product engineering insights." />
     <link rel="canonical" href="https://aryanpanwar.in/404.html" />
-    <!-- Fonts: Standardized via styles.css (Self-hosted) -->
     
+    <!-- Fonts: Standardized (GEO-Optimized) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
+    
+    <!-- High-Performance Theme Check -->
+    <script>
+      (function() {
+        try {
+          var theme = localStorage.getItem('ap_theme') || 'dark';
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {}
+      })();
+    </script>
+    
     <style>
-      :root {
-        --bg-dark: #0a0f1e;
-        --color-primary: #00d9ff;
-        --color-text-main: #e2e8f0;
-        --font-heading: 'Space Grotesk', sans-serif;
-        --font-body: 'Inter', sans-serif;
-      }
       body {
-        background-color: var(--bg-dark);
+        background-color: var(--color-bg);
         color: var(--color-text-main);
         font-family: var(--font-body);
         display: flex;
@@ -29,40 +36,50 @@
         margin: 0;
         text-align: center;
         overflow: hidden;
+        transition: background-color 0.3s, color 0.3s;
       }
       .error-container {
-        padding: 2rem;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 20px;
+        padding: 3rem 2rem;
+        background: var(--bg-color-alt);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
         backdrop-filter: blur(10px);
+        max-width: 420px;
+        width: 90%;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
       }
       h1 {
         font-family: var(--font-heading);
-        font-size: 8rem;
-        margin: 0;
-        color: var(--color-primary);
+        font-size: clamp(5rem, 15vw, 7rem);
+        font-weight: 800;
+        margin: 0 0 10px;
+        background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
         line-height: 1;
       }
       p {
-        font-size: 1.25rem;
+        font-size: 1.15rem;
         margin-bottom: 2rem;
-        opacity: 0.8;
+        color: var(--color-text-dim);
       }
       .btn {
         display: inline-block;
-        color: var(--color-primary);
+        background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+        color: #ffffff !important;
         text-decoration: none;
-        border: 1px solid var(--color-primary);
-        padding: 0.75rem 1.5rem;
-        border-radius: 8px;
-        transition: all 0.3s ease;
+        padding: 0.75rem 2rem;
+        border-radius: var(--radius-md);
+        transition: all var(--transition-fast);
         font-family: var(--font-heading);
-        font-weight: 500;
+        font-weight: 600;
+        box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
       }
       .btn:hover {
-        background: rgba(0, 217, 255, 0.1);
+        opacity: 0.9;
         transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
       }
     </style>
   </head>
