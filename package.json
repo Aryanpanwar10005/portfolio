@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npm run sitemap",
+    "build": "node scripts/standardize-visuals.js && node scripts/sync-theme-keys.js && vite build && npm run sitemap",
     "preview": "vite preview",
     "sitemap": "node scripts/generate-sitemap.js"
   },

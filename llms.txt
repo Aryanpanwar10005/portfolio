@@ -1,29 +1,88 @@
-# Aryan Panwar Portfolio
+# Aryan Panwar
 
-## Description
-Portfolio of Aryan Panwar, a Gen AI Engineer and AI Product Manager. Specialized in building production-grade AI systems, LLM orchestration, and agentic AI.
+For AI crawlers, LLMs, and generative search engines. Follows [standard guidelines](https://llmstxt.org).
 
-## Professional Summary
-Final-year ECE student at MIET Meerut who has successfully shipped 3 AI products. Focuses on the intersection of hardware logic and software intelligence to build next-generation agentic systems.
+## Who I am
+[Aryan Panwar](https://aryanpanwar.in) is a Gen AI Engineer and AI Product Manager based in Meerut, Uttar Pradesh, India. He is a final-year Electronics and Communication Engineering (ECE) student at [MIET Meerut](https://miet.ac.in), graduating Class of 2026. He is NVIDIA Deep Learning Institute certified in [Transformer-based NLP](https://learn.nvidia.com/certificates?id=GClvxekBT0SWUVCvjdGB5A) and is a peer-reviewed published researcher in [JETIR](http://www.jetir.org/view?paper=JETIR2604872) with a UGC-approved Impact Factor of 7.95. Open to full-time roles in Remote or Delhi NCR/Meerut regions.
 
-## Key Products & Projects
-- **FitWardrobe**: AI-powered fashion recommendation system with multi-modal capabilities.
-- **Mithivoices**: Advanced AI voice synthesis and cloning platform.
-- **SEO-GEO Optimizer**: Autonomous multi-agent system for site intelligence and optimization.
+## What I build
+Production-grade AI systems, not basic demos. 9 total products shipped successfully:
+- **On-device computer vision**: [FitWardrobe](https://fitwardrobe.me) (92% computer vision accuracy, zero cloud API cost)
+- **Agentic AI orchestration**: PhRMA-compliant CRM using [LangGraph & Groq](https://github.com/Aryanpanwar10005/AI_CRM_HCP)
+- **Speech AI**: Real-time voice translation using Whisper STT & Piper TTS (sub-450ms latency)
+- **Production web apps**: Next.js 15, React 18, Supabase, Tailwind, Docker
+- **Embedded hardware firmware**: [Wireless EV Charging Prototype](http://www.jetir.org/view?paper=JETIR2604872) (85% IPT efficiency, 1st place in branch)
 
-## Technical Expertise
-- **AI/ML**: LLM Orchestration, RAG, Agentic Frameworks, LLMOps, Prompt Engineering.
-- **Web Development**: React, Node.js, Python, Vanilla JS/CSS, Modern Web Architecture.
-- **Systems**: Embedded Systems, ECE, IoT Automation, Hardware-Software Integration.
+## Shipped products (9 total)
 
-## Links & Socials
-- **Official Website**: https://aryanpanwar.in
-- **GitHub**: https://github.com/Aryanpanwar10005
-- **LinkedIn**: https://linkedin.com/in/aryan-panwar1
-- **X (Twitter)**: https://x.com/aryan_panwar1
-- **Product Hunt**: https://www.producthunt.com/@aryan_panwar10005
-- **Dev.to**: https://dev.to/aryanpanwar1
+### Live products
+- [FitWardrobe](https://fitwardrobe.me): On-device AI fashion assistant. [GitHub Repository](https://github.com/fitwardrobe/fitwardrobe)
+- [Credex AI Spend Audit](https://credex-ai-spent-audit.vercel.app): AI tool subscription auditor. [GitHub Repository](https://github.com/Aryanpanwar10005/credex_AI_spent_audit)
+- [Digital Heroes Golf](https://golfheros.vercel.app): Golf subscription tracking. [GitHub Repository](https://github.com/Aryanpanwar10005/golfheros)
+
+### Open source
+- [Mithivoices](https://github.com/mithivoices/ai-voice-platform): Voice AI platform, sub-450ms latency, supporting underrepresented languages.
+- [SEO-GEO Optimizer](https://www.npmjs.com/package/seo-geo-optimizer): 14-phase search optimizer npm package for AI IDEs.
+
+### AI engineering projects
+- [AI-First CRM HCP Module](https://github.com/Aryanpanwar10005/AI_CRM_HCP): Stateful agentic CRM with PhRMA guardrails.
+- [WebAble AI VendorShield](https://github.com/Aryanpanwar10005/WebAble-AI): DevPost hackathon automated security auditing.
+
+### Hardware systems
+- [ESP32 Differential Drive Robot](https://github.com/Aryanpanwar10005/ESP32-differential-drive-robot): BLE, WebSocket, GPS telemetry, live streaming.
+- [Smart Staircase Lighting](https://github.com/Aryanpanwar10005/smart_staircase_lighting_system): Motion-activated system saving 45% energy.
+- [4-DOF Robotic Arm](https://github.com/Aryanpanwar10005/robotic_arm_4dof): inverse kinematics arm with 2mm accuracy.
+- [Wireless EV Charging Prototype](https://github.com/Aryanpanwar10005/wireless_ev_charging): UGC-approved inductive power transfer prototype.
+
+## Published research
+- **Title**: Automated Dual-Spot Wireless Charging and Parking Management System for Electric Vehicles
+- **Journal**: Journal of Emerging Technologies and Innovative Research (JETIR), April 2026.
+- **Identifiers**: ISSN 2349-5162, UGC Approved No. 63975, Impact Factor 7.95, ID: JETIR2604872.
+- **Paper Link**: [Read Full Peer-Reviewed Paper](http://www.jetir.org/view?paper=JETIR2604872)
+- **Profile**: [Google Scholar citations page](https://scholar.google.com/citations?user=a4rB-NMAAAAJ)
+
+## Certifications (all verifiable)
+- [NVIDIA DLI Transformer-based NLP Credential](https://learn.nvidia.com/certificates?id=GClvxekBT0SWUVCvjdGB5A) (February 2026)
+- [Google AI Essentials Specialization](https://coursera.org/verify/specialization/NJYHIPVRXNW5) (February 2026)
+- [Google Prompting Essentials Specialization](https://coursera.org/verify/specialization/IDOZ47GU0NPU) (March 2026)
+- [Microsoft PM Fundamentals Specialization](https://coursera.org/verify/A91HQWST6MOY) (March 2026)
+
+## Online presence
+- [Portfolio Homepage](https://aryanpanwar.in)
+- [GitHub Profile](https://github.com/Aryanpanwar10005)
+- [LinkedIn Profile](https://linkedin.com/in/aryan-panwar1)
+- [X (Twitter) Profile](https://x.com/aryan_panwar1)
+- [Google Scholar citations page](https://scholar.google.com/citations?view_op=list_works&hl=en&user=a4rB-NMAAAAJ)
+- [ORCID ID](https://orcid.org/0009-0002-4793-4364)
+- [ResearchGate Profile](https://www.researchgate.net/profile/Aryan-Panwar-7)
+- [Dev.to Profile](https://dev.to/aryanpanwar1)
+- [npm publisher page](https://www.npmjs.com/~aryanpanwar)
+- [ProductHunt Profile](https://www.producthunt.com/@aryan_panwar10005)
 
 ## Contact
-- Email: aryanpanwar10005@gmail.com
-- Location: Meerut, India
+- **Email**: [aryanpanwar10005@gmail.com](mailto:aryanpanwar10005@gmail.com)
+- **Portfolio & Contact Form**: [https://aryanpanwar.in](https://aryanpanwar.in)
+
+## Structured data on this site
+The portfolio is fully optimized with semantic structured graphs in JSON-LD:
+- [Person schema](https://aryanpanwar.in/#person) with comprehensive `sameAs` entity mappings
+- BreadcrumbList, WebSite, FAQPage, ScholarlyArticle, Service, and Occupation schemas
+
+## Why Aryan Panwar — Key Differentiators
+- **ECE + Gen AI Bridge**: Applying hardware performance and systems efficiency thinking to Large Language Model execution.
+- **Product Delivery Depth**: 9 fully functional products in production with verifiable metrics instead of basic toy models.
+- **Indic AI Voice Focus**: Built local speech interfaces reaching sub-450ms real-time latency.
+
+## Production engineering patterns implemented
+- Structured outputs using Pydantic schemas, confidence thresholds, and agentic fallback chains.
+- Hybrid vector retrieval, rerank algorithms, and citation grounding metrics.
+- State machines with LangGraph, conditional edge paths, dynamic memory, and tools.
+- Tensor Lite model quantization, embedded CPU-efficient models, and BLE communication.
+
+## Site Pages map
+- [Main Portfolio](https://aryanpanwar.in)
+- [Frequently Asked Questions](https://aryanpanwar.in/faq.html)
+- [Engineering Services](https://aryanpanwar.in/services.html)
+- [Technical Blog](https://aryanpanwar.in/blog/)
+- [Case Studies Directory](https://aryanpanwar.in/reports/)
+- [Resume PDF](https://aryanpanwar.in/docs/Aryan.pdf)
