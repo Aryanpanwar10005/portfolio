@@ -214,34 +214,58 @@ const BOTTOM_SCRIPT = `    <!-- Navigation and Theme Script -->
     })();
     </script>`;
 
-function standardizeHTMLFile(filePath) {
-  if (!fs.existsSync(filePath)) return;
+function standardizeHTMLFile(filePath, dryRun = false) {
+  let fileExists = false;
+  try {
+    fileExists = fs.existsSync(filePath);
+  } catch (_) {}
+  if (!fileExists) return;
 
   const relativePath = path.relative(ROOT_DIR, filePath);
-  let content = fs.readFileSync(filePath, 'utf8');
+  let content = "";
+  try {
+    content = fs.readFileSync(filePath, 'utf8');
+  } catch (err) {
+    console.error(`[ERROR] Failed to read ${relativePath}: ${err.message}`);
+    return;
+  }
   let original = content;
 
   console.log(`\nProcessing file: ${relativePath}`);
 
-  // 1. Unify theme key to ap_theme (GDPR compliance and bright-flash prevention)
-  content = content.replace(/localStorage\.getItem\(['"]theme['"]\)/g, "localStorage.getItem('ap_theme')");
-  content = content.replace(/localStorage\.setItem\(['"]theme['"]\s*,\s*/g, "localStorage.setItem('ap_theme', ");
-  content = content.replace(/localStorage\.setItem\(['"]theme['"]\)/g, "localStorage.setItem('ap_theme')");
-  content = content.replace(/localStorage\.setItem\(['"]theme['"]\s*,\s*theme\)/g, "localStorage.setItem('ap_theme', theme)");
-  content = content.replace(/localStorage\.setItem\(['"]theme['"]\s*,\s*nextTheme\)/g, "localStorage.setItem('ap_theme', nextTheme)");
+  // Patterns tracker to emit warnings if transformations aren't matched/applied
+  const appliedTrans = {
+    themeKey: false,
+    spacing: false,
+    navCss: false,
+    themePreRender: false,
+    legacyNavHtml: false,
+    bottomScripts: false
+  };
 
-  // 2. Reduce the massive 200px bottom spacing holes globally to a tight, beautiful 100px total
-  // Replace footer margin-top: 120px; with margin-top: 60px;
-  content = content.replace(/margin-top:\s*120px/g, 'margin-top: 60px');
-  
-  // Replace main section bottom padding of 80px with 40px
-  content = content.replace(/padding:\s*120px\s+0\s+80px/g, 'padding: 120px 0 40px');
-  content = content.replace(/padding-bottom:\s*80px/g, 'padding-bottom: 40px');
+  // 1. Unify theme key to ap_theme (GDPR compliance and bright-flash prevention)
+  if (content.match(/localStorage\.(?:getItem|setItem)\(['"]theme['"]/)) {
+    content = content.replace(/localStorage\.getItem\(['"]theme['"]\)/g, "localStorage.getItem('ap_theme')");
+    content = content.replace(/localStorage\.setItem\(['"]theme['"]\s*,\s*/g, "localStorage.setItem('ap_theme', ");
+    content = content.replace(/localStorage\.setItem\(['"]theme['"]\)/g, "localStorage.setItem('ap_theme')");
+    content = content.replace(/localStorage\.setItem\(['"]theme['"]\s*,\s*theme\)/g, "localStorage.setItem('ap_theme', theme)");
+    content = content.replace(/localStorage\.setItem\(['"]theme['"]\s*,\s*nextTheme\)/g, "localStorage.setItem('ap_theme', nextTheme)");
+    appliedTrans.themeKey = true;
+  }
+
+  // 2. Reduce the massive spacing holes
+  if (content.match(/margin-top:\s*120px/) || content.match(/padding:\s*120px\s+0\s+80px/) || content.match(/padding-bottom:\s*80px/)) {
+    content = content.replace(/margin-top:\s*120px/g, 'margin-top: 60px');
+    content = content.replace(/padding:\s*120px\s+0\s+80px/g, 'padding: 120px 0 40px');
+    content = content.replace(/padding-bottom:\s*80px/g, 'padding-bottom: 40px');
+    appliedTrans.spacing = true;
+  }
 
   // 3. Inject standardized CSS navigation rules inside <style> blocks
   if (content.includes('/* Navigation (Standardized with index.html) */')) {
     content = content.replace(/\/\* Navigation \(Standardized with index.html\) \*\/\s*nav\s*\{/g, '/* Navigation (Standardized with index.html) */\n        body > nav {');
     content = content.replace(/\[data-theme="light"\]\s*nav\s*\{/g, '[data-theme="light"] body > nav {');
+    appliedTrans.navCss = true;
   } else {
     const styleTagRegex = /<style>([\s\S]*?)<\/style>/i;
     const match = content.match(styleTagRegex);
@@ -250,6 +274,7 @@ function standardizeHTMLFile(filePath) {
       const newStyleContent = `${NAV_CSS}\n${originalStyleContent}`;
       content = content.replace(match[0], `<style>${newStyleContent}</style>`);
       console.log(`  -> Standardized Navigation CSS styles injected.`);
+      appliedTrans.navCss = true;
     }
   }
 
@@ -266,6 +291,7 @@ function standardizeHTMLFile(filePath) {
     </script>`;
     content = content.replace(headScriptRegex, standardizedHeadScript);
     console.log(`  -> Head pre-render theme script standardized.`);
+    appliedTrans.themePreRender = true;
   }
 
   // 5. Purge old mobile overlays to prevent visual bloated elements
@@ -307,11 +333,13 @@ function standardizeHTMLFile(filePath) {
       </div>
     </nav>`;
 
-  // Sweep various header/nav wrapper versions
-  content = content.replace(/<header>\s*<nav id="navbar">[\s\S]*?<\/nav>\s*<\/header>/gi, STANDARD_NAV);
-  content = content.replace(/<nav id="navbar">[\s\S]*?<\/nav>/gi, STANDARD_NAV);
-  content = content.replace(/<nav>\s*<div class="nav-inner">[\s\S]*?<\/nav>/gi, STANDARD_NAV);
-  console.log(`  -> Navigation HTML structure standardized.`);
+  if (content.match(/<header>\s*<nav id="navbar">[\s\S]*?<\/nav>\s*<\/header>|<nav id="navbar">[\s\S]*?<\/nav>|<nav>\s*<div class="nav-inner">[\s\S]*?<\/nav>/gi)) {
+    content = content.replace(/<header>\s*<nav id="navbar">[\s\S]*?<\/nav>\s*<\/header>/gi, STANDARD_NAV);
+    content = content.replace(/<nav id="navbar">[\s\S]*?<\/nav>/gi, STANDARD_NAV);
+    content = content.replace(/<nav>\s*<div class="nav-inner">[\s\S]*?<\/nav>/gi, STANDARD_NAV);
+    console.log(`  -> Navigation HTML structure standardized.`);
+    appliedTrans.legacyNavHtml = true;
+  }
 
   // 7. Strip old inline theme togglers script tags from footer
   content = content.replace(/<!-- Zero-Third-Party icons strategy via inlined SVGs -->\s*<script>[\s\S]*?<\/script>/gi, '');
@@ -322,21 +350,48 @@ function standardizeHTMLFile(filePath) {
   const scriptModuleRegexAlt = /<script defer src="\/script\.js" type="module"><\/script>/gi;
   const scriptModuleRegexAlt2 = /<script defer="" src="\/script\.js" type="module"><\/script>/gi;
 
-  if (content.match(scriptModuleRegex)) {
+  if (content.match(scriptModuleRegex) || content.match(scriptModuleRegexAlt) || content.match(scriptModuleRegexAlt2)) {
     content = content.replace(scriptModuleRegex, BOTTOM_SCRIPT);
-    console.log(`  -> Standardized Bottom script modules bound.`);
-  } else if (content.match(scriptModuleRegexAlt)) {
     content = content.replace(scriptModuleRegexAlt, BOTTOM_SCRIPT);
-    console.log(`  -> Standardized Bottom script modules bound.`);
-  } else if (content.match(scriptModuleRegexAlt2)) {
     content = content.replace(scriptModuleRegexAlt2, BOTTOM_SCRIPT);
     console.log(`  -> Standardized Bottom script modules bound.`);
+    appliedTrans.bottomScripts = true;
   }
 
-  // 9. If modified, write back to disk
+  // Emitters warnings for unapplied transformation rules
+  for (const [key, applied] of Object.entries(appliedTrans)) {
+    if (!applied) {
+      console.warn(`  [WARNING] Rule "${key}" was not matched or applied to ${relativePath}`);
+    }
+  }
+
+  // 9. Validate HTML after transformations (compare opening vs closing tag counts for key structural tags)
+  const structuralTags = ['div', 'nav', 'main', 'section', 'script', 'style'];
+  for (const tag of structuralTags) {
+    const openRegex = new RegExp(`<${tag}\\b[^>]*>`, 'gi');
+    const closeRegex = new RegExp(`</${tag}>`, 'gi');
+    const openCount = (content.match(openRegex) || []).length;
+    const closeCount = (content.match(closeRegex) || []).length;
+    if (openCount !== closeCount) {
+      console.error(`  [CRITICAL ERROR] Tag count mismatch for <${tag}> (open: ${openCount}, close: ${closeCount}) after transformations in ${relativePath}! Bailing to avoid file corruption.`);
+      return;
+    }
+  }
+
+  // 10. If modified, write back to disk or simulate in dry-run mode
   if (content !== original) {
-    fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`  -> [SUCCESS] File aligned & optimized perfectly.`);
+    if (dryRun) {
+      console.log(`  -> [DRY RUN] Simulating updates to ${relativePath}. Differences exist!`);
+    } else {
+      // Create backup copy (.bak) before writing
+      try {
+        fs.writeFileSync(filePath + '.bak', original, 'utf8');
+        fs.writeFileSync(filePath, content, 'utf8');
+        console.log(`  -> [SUCCESS] Backup created and file aligned & optimized perfectly.`);
+      } catch (err) {
+        console.error(`  -> [WRITE FAILURE] Failed to write changes to ${relativePath}: ${err.message}`);
+      }
+    }
   } else {
     console.log(`  -> [SYNC] File already fully in visual sync.`);
   }

@@ -37,38 +37,60 @@ function resolveLocalPath(href, currentFileDir) {
   }
 
   let targetPath;
-  if (href.startsWith('/')) {
-    // Treat root relative
-    const cleanPath = href.split('#')[0].split('?')[0];
-    if (cleanPath === '/') {
-      targetPath = path.join(ROOT_DIR, 'index.html');
-    } else {
-      // e.g. /faq.html -> root/faq.html, /blog/ -> root/blog/index.html
-      if (cleanPath.endsWith('/')) {
-        targetPath = path.join(ROOT_DIR, cleanPath, 'index.html');
-      } else if (!path.extname(cleanPath)) {
-        targetPath = path.join(ROOT_DIR, cleanPath + '.html');
+  try {
+    if (href.startsWith('/')) {
+      // Treat root relative
+      const cleanPath = href.split('#')[0].split('?')[0];
+      if (cleanPath === '/') {
+        targetPath = path.join(ROOT_DIR, 'index.html');
       } else {
-        targetPath = path.join(ROOT_DIR, cleanPath);
+        // e.g. /faq.html -> root/faq.html, /blog/ -> root/blog/index.html
+        if (cleanPath.endsWith('/')) {
+          targetPath = path.join(ROOT_DIR, cleanPath, 'index.html');
+        } else if (!path.extname(cleanPath)) {
+          targetPath = path.join(ROOT_DIR, cleanPath + '.html');
+        } else {
+          targetPath = path.join(ROOT_DIR, cleanPath);
+        }
+      }
+    } else {
+      // Relative to current file's directory
+      const cleanPath = href.split('#')[0].split('?')[0];
+      targetPath = path.resolve(currentFileDir, cleanPath);
+      // If it's a directory, look for index.html
+      let dirExists = false;
+      try {
+        dirExists = fs.existsSync(targetPath);
+      } catch (_) {}
+      
+      if (dirExists) {
+        let isDir = false;
+        try {
+          isDir = fs.statSync(targetPath).isDirectory();
+        } catch (_) {}
+        if (isDir) {
+          targetPath = path.join(targetPath, 'index.html');
+        }
+      } else if (!path.extname(cleanPath)) {
+        // Maybe it's missing .html extension
+        let htmlFileExists = false;
+        try {
+          htmlFileExists = fs.existsSync(targetPath + '.html');
+        } catch (_) {}
+        if (htmlFileExists) {
+          targetPath = targetPath + '.html';
+        }
       }
     }
-  } else {
-    // Relative to current file's directory
-    const cleanPath = href.split('#')[0].split('?')[0];
-    targetPath = path.resolve(currentFileDir, cleanPath);
-    // If it's a directory, look for index.html
-    if (fs.existsSync(targetPath) && fs.statSync(targetPath).isDirectory()) {
-      targetPath = path.join(targetPath, 'index.html');
-    } else if (!fs.existsSync(targetPath) && !path.extname(targetPath)) {
-      // Maybe it's missing .html extension
-      if (fs.existsSync(targetPath + '.html')) {
-        targetPath = targetPath + '.html';
-      }
-    }
+  } catch (err) {
+    return { type: 'internal', resolved: targetPath || path.resolve(currentFileDir, href), exists: false, href };
   }
 
   // Remove potential double slash or trailing dot/slash resolves
-  const exists = fs.existsSync(targetPath);
+  let exists = false;
+  try {
+    exists = fs.existsSync(targetPath);
+  } catch (_) {}
   return { type: 'internal', resolved: targetPath, exists, href };
 }
 
@@ -110,14 +132,18 @@ function auditLinks() {
   // Register all active HTML files
   const registerFile = (filePath, category) => {
     const relative = path.relative(ROOT_DIR, filePath).replace(/\\/g, '/');
-    const content = fs.readFileSync(filePath, 'utf8');
-    fileRegistry[relative] = {
-      filePath,
-      category,
-      content,
-      links: extractLinks(content),
-      anchors: extractAnchors(content)
-    };
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+      fileRegistry[relative] = {
+        filePath,
+        category,
+        content,
+        links: extractLinks(content),
+        anchors: extractAnchors(content)
+      };
+    } catch (err) {
+      console.error(`[ERROR] Failed to read or parse file ${relative}: ${err.message}`);
+    }
   };
 
   activeRootFiles.forEach(f => registerFile(path.join(ROOT_DIR, f), 'root'));
@@ -143,10 +169,8 @@ function auditLinks() {
     
     for (const [fileName, zipData] of Object.entries(zipRegistry)) {
       // Find active equivalent
-      let activeKey = fileName;
-      if (fileName !== 'index.html' && fileName !== 'faq.html') {
-        activeKey = `blog/${fileName}`;
-      }
+      const rootPages = new Set(['index.html', 'faq.html', 'services.html', 'cookies.html', 'privacy.html', 'terms.html', '404.html']);
+      let activeKey = rootPages.has(fileName) ? fileName : `blog/${fileName}`;
 
       const activeData = fileRegistry[activeKey];
       if (!activeData) {
@@ -154,12 +178,16 @@ function auditLinks() {
         continue;
       }
 
-      // Set of normalized links in active
-      const activeLinkSet = new Set(activeData.links.map(l => l.toLowerCase()));
+      const caseInsensitive = false; // Configurable flag for case insensitivity
+      
+      // Set of links in active (respecting configuration flag)
+      const activeLinkSet = new Set(
+        activeData.links.map(l => caseInsensitive ? l.toLowerCase() : l)
+      );
       
       zipData.links.forEach(zipLink => {
-        const normZipLink = zipLink.toLowerCase();
-        let isPresent = activeLinkSet.has(normZipLink);
+        const zipLinkVal = caseInsensitive ? zipLink.toLowerCase() : zipLink;
+        let isPresent = activeLinkSet.has(zipLinkVal);
         
         if (!isPresent) {
           const zipResolution = resolveLocalPath(zipLink, ZIP_DIR);

@@ -45,3 +45,5 @@ report.json
 seo-audit-results/
 scratch/
 .vite/
+.chrome-profile/
+*.bak

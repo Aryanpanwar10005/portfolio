@@ -37,9 +37,7 @@
   <meta name="twitter:image:alt" content="Aryan Panwar — Gen AI Engineer & AI Product Manager">
 
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"></noscript>
   <link rel="preload" as="image" href="https://aryanpanwar.in/assets/img/Aryan_Panwar.webp" fetchpriority="high">
@@ -538,6 +536,7 @@ footer strong{color:var(--tx);font-weight:500}
         <span></span><span></span><span></span>
       </button>
     </div>
+  </div>
 </nav>
 
 <main id="main-content">
@@ -755,7 +754,7 @@ footer strong{color:var(--tx);font-weight:500}
       <!-- AI CRM HCP -->
       <article class="feat-card reveal">
         <div class="feat-img">
-          <img src="assets/projects/ai-crm-hcp.png"
+          <img src="assets/projects/ai-crm-hcp.webp"
             alt="AI-First CRM HCP interface showing pharma rep chat assistant and physician database panel"
             width="550" height="320" loading="lazy"
             onerror="this.closest('.feat-img').style.background='linear-gradient(135deg,rgba(124,58,237,.15),rgba(14,165,233,.1))';this.remove()">
@@ -786,7 +785,7 @@ footer strong{color:var(--tx);font-weight:500}
       <!-- Credex AI Spend Audit -->
       <article class="feat-card reveal d1">
         <div class="feat-img">
-          <img src="assets/projects/credex-spend-audit.png"
+          <img src="assets/projects/credex-spend-audit.webp"
             alt="Credex AI Spend Audit subscription dashboard interface displaying monthly savings and cost analysis charts"
             width="550" height="320" loading="lazy"
             onerror="this.closest('.feat-img').style.background='linear-gradient(135deg,rgba(14,165,233,.15),rgba(124,58,237,.1))';this.remove()">
@@ -1071,37 +1070,37 @@ footer strong{color:var(--tx);font-weight:500}
       <p class="s-sub reveal d1">Click any category to expand. Every skill here was used in a shipped product.</p>
     </div>
     <div class="skills-bento">
-      <div class="skill-card open reveal">
+      <div class="skill-card open reveal" onclick="toggleSkill(this)">
         <div class="sk-top"><i class="ti ti-robot sk-icon" aria-hidden="true"></i></div>
         <div class="sk-cat">LLM &amp; Gen AI</div>
         <div class="sk-prev">LangChain · LangGraph · Groq · Cerebras</div>
         <div class="sk-tags"><span class="stag">LangChain</span><span class="stag">LangGraph</span><span class="stag">OpenAI API</span><span class="stag">Gemini API</span><span class="stag">Groq</span><span class="stag">Cerebras</span><span class="stag">Prompt Engineering</span><span class="stag">RAG Pipelines</span><span class="stag">NVIDIA NIM</span><span class="stag">Transformer NLP</span></div>
       </div>
-      <div class="skill-card open reveal d1">
+      <div class="skill-card open reveal d1" onclick="toggleSkill(this)">
         <div class="sk-top"><i class="ti ti-cpu sk-icon" aria-hidden="true"></i></div>
         <div class="sk-cat">AI Engineering</div>
         <div class="sk-prev">Python · TFLite · Computer Vision · Whisper</div>
         <div class="sk-tags"><span class="stag">Python</span><span class="stag">TensorFlow Lite</span><span class="stag">Computer Vision</span><span class="stag">NLP</span><span class="stag">Whisper STT</span><span class="stag">FastAPI</span><span class="stag">SQLAlchemy</span><span class="stag">MLflow</span></div>
       </div>
-      <div class="skill-card open reveal d2">
+      <div class="skill-card open reveal d2" onclick="toggleSkill(this)">
         <div class="sk-top"><i class="ti ti-stack sk-icon" aria-hidden="true"></i></div>
         <div class="sk-cat">Full Stack &amp; Cloud</div>
         <div class="sk-prev">React 18 · Next.js 15 · Supabase · Docker</div>
         <div class="sk-tags"><span class="stag">React 18</span><span class="stag">Next.js 15</span><span class="stag">Redux Toolkit</span><span class="stag">TypeScript</span><span class="stag">Tailwind CSS</span><span class="stag">Node.js</span><span class="stag">Supabase</span><span class="stag">MongoDB</span><span class="stag">MySQL</span><span class="stag">Docker</span><span class="stag">JWT</span></div>
       </div>
-      <div class="skill-card open reveal">
+      <div class="skill-card open reveal" onclick="toggleSkill(this)">
         <div class="sk-top"><i class="ti ti-device-mobile sk-icon" aria-hidden="true"></i></div>
         <div class="sk-cat">On-Device AI</div>
         <div class="sk-prev">TFLite · Edge Inference · Quantization</div>
         <div class="sk-tags"><span class="stag">TensorFlow Lite</span><span class="stag">Edge Inference</span><span class="stag">Model Quantization</span><span class="stag">On-Device ML</span><span class="stag">Raspberry Pi</span><span class="stag">Arduino</span></div>
       </div>
-      <div class="skill-card open reveal d1">
+      <div class="skill-card open reveal d1" onclick="toggleSkill(this)">
         <div class="sk-top"><i class="ti ti-chart-bar sk-icon" aria-hidden="true"></i></div>
         <div class="sk-cat">Product &amp; SEO/GEO/AEO</div>
         <div class="sk-prev">AI PM · SEO · GEO · AEO · JSON-LD</div>
         <div class="sk-tags"><span class="stag">AI Product Management</span><span class="stag">SEO</span><span class="stag">GEO</span><span class="stag">AEO</span><span class="stag">JSON-LD Schema</span><span class="stag">Google Search Console</span><span class="stag">Analytics</span><span class="stag">User Research</span></div>
       </div>
-      <div class="skill-card open reveal d2">
+      <div class="skill-card open reveal d2" onclick="toggleSkill(this)">
         <div class="sk-top"><i class="ti ti-circuit-board sk-icon" aria-hidden="true"></i></div>
         <div class="sk-cat">Hardware &amp; Embedded</div>
         <div class="sk-prev">ECE · SIS Calibration · ESP32 · Robotics</div>
