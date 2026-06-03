@@ -279,7 +279,7 @@ function standardizeHTMLFile(filePath, dryRun = false) {
   }
 
   // 4. Clean up and standardize the inline theme switcher script under <head>
-  const headScriptRegex = /<script>\s*\(function\(\)\s*\{[\s\S]*?theme[\s\S]*?localStorage[\s\S]*?\}\)\(\);\s*<\/script>/i;
+  const headScriptRegex = /<script>\s*\(function\(\)\s*\{[^<]*?theme[^<]*?localStorage[^<]*?\}\)\(\);?\s*<\/script>/i;
   if (content.match(headScriptRegex)) {
     const standardizedHeadScript = `<script>
       (function() {
