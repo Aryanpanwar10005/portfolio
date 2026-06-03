@@ -11,6 +11,7 @@ const BASE_URL = 'https://aryanpanwar.in';
 const pages = [
   { rel: 'index.html', url: '/', priority: '1.0', changefreq: 'weekly' },
   { rel: 'blog/index.html', url: '/blog/', priority: '0.9', changefreq: 'weekly' },
+  { rel: 'reports/index.html', url: '/reports/', priority: '0.9', changefreq: 'weekly' },
   { rel: 'reports/fitwardrobe-case-study.html', url: '/reports/fitwardrobe-case-study.html', priority: '0.8', changefreq: 'monthly' },
   { rel: 'reports/mithivoices-case-study.html', url: '/reports/mithivoices-case-study.html', priority: '0.8', changefreq: 'monthly' },
   { rel: 'reports/seo-geo-case-study.html', url: '/reports/seo-geo-case-study.html', priority: '0.8', changefreq: 'monthly' },
