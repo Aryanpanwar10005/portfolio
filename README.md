@@ -1,82 +1,82 @@
-# Aryan Panwar - Portfolio Website
+# Aryan Panwar — Product Evidence Book & Portfolio
+> **Live Site:** [aryanpanwar.in](https://aryanpanwar.in) | **Target Role:** Associate Product Manager / PM (AI-First Teams)
 
-A professional, technically minimalist portfolio website for an Embedded Systems & Software Engineer. Designed to showcase projects, skills, and experience with engineering precision while achieving top-tier performance and AI search readiness.
-
-![Portfolio Preview](assets/img/og-image.jpg)
-
-## ⚡ Performance & Search Optimization
-
-- **Core Web Vitals**: Fully optimized for fast load times, minimal blocking resources, and zero forced reflows.
-- **Generative Engine Optimization (GEO)**: AI-first architecture, including `llms.txt`, full Schema.org markup (Organization, Person, Article, FAQ), and optimized crawler rules in `robots.txt` ensuring AI engine visibility.
-- **Self-Hosted Assets**: All external libraries, icons and fonts (Lucide, DevIcons) are self-hosted to prevent external latency and redirect chains.
-- **Semantic Structure**: Accessibility-first approach with rigorous validity checks.
-
-## 🎨 Design Philosophy: Technical Minimalism
-
-- **Aesthetic**: Engineering blueprint style, dark mode centric.
-- **Typography**: `JetBrains Mono` (headings) for code-like readability, `IBM Plex Sans` (body) for clarity.
-- **Color Palette**:
-  - Deep Navy Background (`#0A0E27`)
-  - Cyan Accents (`#00D9FF`) for focus points
-  - Muted Slate for secondary text
-- **Interactions**: Subtle, purposeful animations. No unnecessary distractions.
-
-## 🛠️ Tech Stack
-
-- **HTML5**: Semantic structure, accessibility-first approach.
-- **CSS3**: Custom properties (variables), Flexbox/Grid layout, responsive design.
-- **JavaScript**: Vanilla JS (ES6+), minimalist logic, zero dependencies.
-- **Icons**: Self-hosted Lucide and DevIcons for maximum performance.
-
-## 📁 Project Structure
-
-```text
-portfolio/
-├── index.html          # Main HTML entry point
-├── styles.css          # Design system & component styles
-├── script.js           # Core logic (nav, scroll, animations)
-├── blog/               # Technical blog & SEO articles
-├── assets/             # Self-hosted images, icons, and documents
-├── reports/            # Performance and validation reports
-├── CNAME               # Custom domain config for GitHub Pages
-├── sitemap.xml         # XML Sitemap
-├── robots.txt          # Crawler instructions & AI bot whitelist
-├── llms.txt            # Markdown documentation optimized for LLM crawlers
-└── README.md           # Project Documentation
-```
-
-## 🚀 Deployment
-
-### GitHub Pages (Recommended)
-
-1. **Repository Setup**:
-   Ensure this folder is the root of your repository.
-
-2. **Custom Domain**:
-   The `CNAME` file is already configured for `aryanpanwar.in`.
-
-   **DNS Configuration:**
-   - **A Records:** `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - **CNAME Record:** `www` pointing to `YourUsername.github.io`
-
-### Local Development
-
-1. Open `index.html` in any modern browser.
-2. For optimal experience, use a local server like Live Server in VS Code to ensure smooth loading of resources and avoid CORS issues.
-
-## ♿ Accessibility Features
-
-- **Semantic HTML**: Proper use of `<nav>`, `<main>`, `<section>`, `<article>`.
-- **Keyboard Navigation**: Full focus management, visible focus indicators.
-- **Color Contrast**: Compliant with WCAG AA standards.
-- **Reduced Motion**: Respects user system preferences (`prefers-reduced-motion`).
-- **Screen Reader Friendly**: ARIA labels on interactive elements and hidden textual alternatives.
-
-## 📄 License
-
-Open Source. Use as you please, but credit is appreciated.
+This repository contains the source code, content schemas, and routing layers of my personal **Product Evidence Book**. Unlike a standard developer portfolio, this application is designed as a *Proof of Work* highlighting flagship case studies, structured product thinking, and recruiter-focused PM essays.
 
 ---
 
-**Built by Aryan Panwar**  
-[aryanpanwar.in](https://aryanpanwar.in)
+## 📈 Key Outcomes & Success Metrics
+This portfolio was built, audited, and optimized to demonstrate modern growth engineering and search-engine visibility principles:
+
+*   **Largest Contentful Paint (LCP):** Optimized down to **~2.5 seconds** by converting all assets to compressed `.webp` format and implementing custom JSX-to-DOM `{...{ fetchpriority: "high" }}` preload signals on Above-The-Fold hero images.
+*   **Search Engine Visibility (SEO):** Achieved clean canonical indexing by standardizing routing paths and ensuring all metadata queries dynamically resolve to `https://aryanpanwar.in` using `react-helmet-async`.
+*   **Generative Engine Optimization (GEO):** Optimized for discovery in generative engines (Gemini, Perplexity, ChatGPT) by serving structured, absolute-URL JSON-LD graphs (`Person`, `ProfilePage`, `BlogPosting`, `FAQPage`, `BreadcrumbList`) and enabling crawlers via `robots.txt`.
+*   **Crawlable Knowledge Structure:** Served a custom `llms.txt` at the root, mapping out all key project outcomes and takeaways in a token-efficient format tailored for prompt-context windows.
+
+---
+
+## 🛠️ Tech Stack & Architecture
+
+- **Frontend Core:** React 18 + Vite (SPA) for fast, code-split chunk loading.
+- **Styling:** Tailwind CSS + custom glassmorphic panels and dark-mode tokens.
+- **State & Router:** React Router DOM (v6) with client-side 301-equivalent navigation loops to map legacy HTML pages and prevent broken links.
+- **SEO & Injectors:** React Helmet Async for dynamic header management and JSON-LD schema generation.
+
+### Folder Structure
+```
+├── public/
+│   ├── docs/          # Static download assets (e.g., Aryan_Panwar_SWE_Resume.pdf)
+│   ├── robots.txt     # Crawler access rules configured for search/AI bots
+│   ├── sitemap.xml    # Absolute-link sitemap index for search console
+│   └── llms.txt       # AI assistant reading layout
+├── src/
+│   ├── components/    # Reusable UI parts (Seo.tsx, PageHeader.tsx)
+│   ├── content/       # Content schemas (caseStudies.ts, journey.ts, blog.ts)
+│   └── pages/         # Page templates and routing views
+```
+
+---
+
+## 🧭 Product Strategy & Tradeoffs
+
+### 1. Proof of Work Over Boilerplate
+Standard portfolios dump dozens of code repositories. This site prioritizes **evidence**. 
+- **The Tradeoff:** Focus is placed on **10 structured essays** and case studies mapping out real PM frameworks (JTBD, RICE prioritization, opportunity trees) applied during the development of shipped products (such as *FitWardrobe* and *Mithivoices*).
+
+### 2. Client-Side SPA Redirects
+Single Page Apps often suffer from "soft 404" errors where deleted paths load a blank screen with a 200 OK status. 
+- **Solution:** I implemented programmatic redirects in `App.tsx` matching legacy routes (e.g., `/reports/fitwardrobe-case-study.html` redirects instantly to `/case-studies/fitwardrobe`). This preserves inbound link authority (PageRank) from posts shared on DEV.to and other networks.
+
+---
+
+## 💻 Getting Started
+
+Follow these steps to run the portfolio locally:
+
+### 1. Prerequisites
+Ensure you have Node.js (v18+) and npm installed.
+
+### 2. Install Dependencies
+```sh
+npm install
+```
+
+### 3. Run Development Server
+```sh
+npm run dev
+```
+Open your browser and navigate to `http://localhost:8080`.
+
+### 4. Build Production Bundle
+```sh
+npm run build
+```
+The optimized, minified bundle will be generated inside the `dist/` directory.
+
+---
+
+## 👤 Contact & Connect
+- **LinkedIn:** [Aryan Panwar](https://www.linkedin.com/in/aryan-panwar1)
+- **GitHub:** [@Aryanpanwar10005](https://github.com/Aryanpanwar10005)
+- **Product Hunt:** [@aryan_panwar10005](https://www.producthunt.com/@aryan_panwar10005)
+- **Email:** [aryanpanwar10005@gmail.com](mailto:aryanpanwar10005@gmail.com)

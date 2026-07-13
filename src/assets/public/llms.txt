@@ -1,0 +1,24 @@
+# Aryan Panwar — Product Evidence Book
+
+> An aspiring Product Manager's portfolio written as an evidence book: flagship case studies (FitWardrobe, Mithivoices, SEO-GEO Optimizer), product thinking grounded in real projects, essays on AI product management, and career journey by Aryan Panwar.
+
+## Pages
+
+- [Home](/): Overview, featured case study, and the Product Evidence Book map.
+- [Case Studies](/case-studies): Flagship and supporting product case studies — problem, users, tradeoffs, metrics.
+- [My Product Thinking](/thinking): PM frameworks (JTBD, RICE, opportunity trees, north-star) applied to real projects.
+- [Writing](/writing): Essays on positioning AI products, scoping LLM features, and building for agentic users.
+- [Journey](/journey): Career timeline from ECE student to aspiring PM.
+- [About](/about): Short introduction, values, and range.
+- [Resume](/resume): Experience, projects, publications, and education.
+- [FAQ](/faq): Quick answers for recruiters about roles, resumes, projects, and how to get in touch.
+- [Skills & Certifications](/skills): Technical skills, PM toolkit, and verified certifications.
+- [Contact](/contact): Email and social links.
+
+## Examples
+
+- [FitWardrobe case study](/case-studies/fitwardrobe): AI wardrobe stylist — vision-first PM case study.
+- [Mithivoices case study](/case-studies/mithivoices): OSS real-time voice AI stack.
+- [SEO-GEO Optimizer case study](/case-studies/seo-geo-optimizer): npm package for making sites legible to AI answer engines.
+- [JTBD applied to FitWardrobe](/thinking/jtbd-fitwardrobe): How Jobs-to-be-Done reframed the product.
+- [Positioning AI Products for Discovery](/writing/positioning-ai-products-for-discovery): PM playbook for GEO.
