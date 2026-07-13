@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 import { Layout } from "./components/Layout";
+import { Analytics } from "@vercel/analytics/react";
 
 const Index = lazy(() => import("./pages/Index"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -70,6 +71,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <Analytics />
       <RouterProvider router={router} />
     </TooltipProvider>
   </QueryClientProvider>
