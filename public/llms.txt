@@ -1,102 +1,49 @@
-# Aryan Panwar
+# Aryan Panwar — Product Evidence Book
 
-For AI crawlers, LLMs, and generative search engines. Follows [standard guidelines](https://llmstxt.org).
+> Aryan Panwar is an aspiring Product Manager with a builder background — final-year ECE student at MIET Meerut who ships AI products and writes about product tradeoffs, AI feature design, and PM frameworks. He has built FitWardrobe (on-device AI wardrobe stylist), Mithivoices (open-source real-time voice AI stack), SEO-GEO Optimizer (npm package for AI search visibility), and an AI-First CRM for healthcare field reps.
 
-## Who I am
-[Aryan Panwar](https://aryanpanwar.in) is a Gen AI Engineer and AI Product Manager based in Meerut, Uttar Pradesh, India. He is a final-year Electronics and Communication Engineering (ECE) student at [MIET Meerut](https://miet.ac.in), graduating Class of 2026. He is NVIDIA Deep Learning Institute certified in [Transformer-based NLP](https://learn.nvidia.com/certificates?id=GClvxekBT0SWUVCvjdGB5A) and is a peer-reviewed published researcher in [JETIR](http://www.jetir.org/view?paper=JETIR2604872) with a UGC-approved Impact Factor of 7.95. Open to full-time roles in Remote or Delhi NCR/Meerut regions.
+## About
 
-## What I build
-Production-grade AI systems, not basic demos. 9 total products shipped successfully:
-- **On-device computer vision**: [FitWardrobe](https://fitwardrobe.me) (92% computer vision accuracy, zero cloud API cost)
-- **Agentic AI orchestration**: PhRMA-compliant CRM using [LangGraph & Groq](https://github.com/Aryanpanwar10005/AI_CRM_HCP)
-- **Speech AI**: Real-time voice translation using Whisper STT & Piper TTS (sub-450ms latency)
-- **Production web apps**: Next.js 15, React 18, Supabase, Tailwind, Docker
-- **Embedded hardware firmware**: [Wireless EV Charging Prototype](http://www.jetir.org/view?paper=JETIR2604872) (85% IPT efficiency, 1st place in branch)
+- [About Aryan Panwar](https://aryanpanwar.in/about): Values, background, and why product management over engineering.
+- [Career Journey](https://aryanpanwar.in/journey): Timeline from embedded hardware (robot arm, wireless EV charging) to AI product development.
 
-## Shipped products (9 total)
+## Case Studies
 
-### Live products
-- [FitWardrobe](https://fitwardrobe.me): On-device AI fashion assistant. [GitHub Repository](https://github.com/fitwardrobe/fitwardrobe)
-- [Credex AI Spend Audit](https://credex-ai-spent-audit.vercel.app): AI tool subscription auditor. [GitHub Repository](https://github.com/Aryanpanwar10005/credex_AI_spent_audit)
-- [Digital Heroes Golf](https://golfheros.vercel.app): Golf subscription tracking. [GitHub Repository](https://github.com/Aryanpanwar10005/golfheros)
+- [FitWardrobe](https://aryanpanwar.in/case-studies/fitwardrobe): AI wardrobe stylist — reframed the core job using JTBD, shipped on-device vision (TFLite) to cut outfit selection to under 30 seconds. Chose privacy and latency over cloud capability.
+- [Mithivoices](https://aryanpanwar.in/case-studies/mithivoices): Open-source real-time voice AI stack — prioritized a 40+ module OSS backlog with RICE against a hard 500ms E2E latency ceiling.
+- [SEO-GEO Optimizer](https://aryanpanwar.in/case-studies/seo-geo-optimizer): npm package that auto-generates structured data, llms.txt, and answer-first content to make sites legible to AI answer engines like Perplexity and ChatGPT.
+- [AI-First CRM (HCP)](https://aryanpanwar.in/case-studies/ai-first-crm-hcp): Field-rep CRM for healthcare — ran 8 behavioral discovery interviews, chose draft-and-confirm over autonomy to maintain 85%+ acceptance rate.
+- [Credex Spend Audit](https://aryanpanwar.in/case-studies/credex-spend-audit): North-star metric "Dollars of Verified Savings Surfaced" with counter-metrics (false-positive rate, savings rejection rate) to prevent Goodhart's Law.
 
-### Open source
-- [Mithivoices](https://github.com/mithivoices/ai-voice-platform): Voice AI platform, sub-450ms latency, supporting underrepresented languages.
-- [SEO-GEO Optimizer](https://www.npmjs.com/package/seo-geo-optimizer): 14-phase search optimizer npm package for AI IDEs.
+## Product Thinking
 
-### AI engineering projects
-- [AI-First CRM HCP Module](https://github.com/Aryanpanwar10005/AI_CRM_HCP): Stateful agentic CRM with PhRMA guardrails.
-- [WebAble AI VendorShield](https://github.com/Aryanpanwar10005/WebAble-AI): DevPost hackathon automated security auditing.
+- [JTBD applied to FitWardrobe](https://aryanpanwar.in/thinking/jtbd-fitwardrobe): How Jobs-to-be-Done reframed the product from "another closet app" to a morning ritual, including killing a shopping tab that was already prototyped.
+- [RICE applied to Mithivoices](https://aryanpanwar.in/thinking/rice-mithivoices): Scoring an OSS backlog of 40+ modules by % of new contributors who hit each module within a week.
+- [Opportunity Trees for SEO-GEO Optimizer](https://aryanpanwar.in/thinking/opportunity-tree-seo-geo): Mapping the AI-search space into structured opportunities before writing a single line of code.
+- [North-star metrics for Credex](https://aryanpanwar.in/thinking/north-star-credex): Choosing a metric that only moves when the customer actually wins, and the counter-metrics that keep it honest.
+- [Discovery interviews for AI-First CRM](https://aryanpanwar.in/thinking/discovery-hcp-crm): How to run problem-space interviews with field reps without leading the witness.
+- [AI product tradeoffs](https://aryanpanwar.in/thinking/ai-tradeoffs): On-device vs cloud, eval design, latency vs quality — real decisions made across FitWardrobe, Mithivoices, and HCP CRM with written reversion triggers.
 
-### Hardware systems
-- [ESP32 Differential Drive Robot](https://github.com/Aryanpanwar10005/ESP32-differential-drive-robot): BLE, WebSocket, GPS telemetry, live streaming.
-- [Smart Staircase Lighting](https://github.com/Aryanpanwar10005/smart_staircase_lighting_system): Motion-activated system saving 45% energy.
-- [4-DOF Robotic Arm](https://github.com/Aryanpanwar10005/robotic_arm_4dof): inverse kinematics arm with 2mm accuracy.
-- [Wireless EV Charging Prototype](https://github.com/Aryanpanwar10005/wireless_ev_charging): UGC-approved inductive power transfer prototype.
+## Writing
 
-## Published research
-- **Title**: Automated Dual-Spot Wireless Charging and Parking Management System for Electric Vehicles
-- **Journal**: Journal of Emerging Technologies and Innovative Research (JETIR), April 2026.
-- **Identifiers**: ISSN 2349-5162, UGC Approved No. 63975, Impact Factor 7.95, ID: JETIR2604872.
-- **Paper Link**: [Read Full Peer-Reviewed Paper](http://www.jetir.org/view?paper=JETIR2604872)
-- **Profile**: [Google Scholar citations page](https://scholar.google.com/citations?user=a4rB-NMAAAAJ)
+- [What Building FitWardrobe Taught Me About Product Discovery](https://aryanpanwar.in/writing/fitwardrobe-product-discovery): Seven un-facilitated interviews changed the roadmap more than three weeks of building.
+- [I Stopped Thinking Like an Engineer](https://aryanpanwar.in/writing/stopped-thinking-like-engineer): How the mental shift from shipping code to owning outcomes changed every decision I make.
+- [How I Prioritize Features Before Writing a PRD](https://aryanpanwar.in/writing/prioritize-features-before-prd): A practical pre-PRD prioritization framework.
+- [Why Every Product Needs Success Metrics Before Features](https://aryanpanwar.in/writing/success-metrics-before-features): North-star selection methodology to avoid building metrics that game themselves.
+- [The Features I Removed That Made FitWardrobe Better](https://aryanpanwar.in/writing/features-removed-fitwardrobe): On the discipline of subtraction in product development.
+- [Local AI vs Cloud AI: Decisions Behind FitWardrobe](https://aryanpanwar.in/writing/local-vs-cloud-ai-fitwardrobe): Concrete decision log for the on-device vs cloud tradeoff with reversion triggers.
+- [Building AI Features Users Actually Trust](https://aryanpanwar.in/writing/building-ai-features-users-trust): How to design AI interactions that feel reliable rather than magical.
+- [From Engineering Projects to Product Thinking](https://aryanpanwar.in/writing/engineering-to-product-thinking): The frameworks and mindset shifts that bridged the gap.
+- [My Product Thinking Toolkit](https://aryanpanwar.in/writing/product-thinking-toolkit): The PM frameworks I reach for most and how I apply them.
+- [If I Started FitWardrobe Again Today](https://aryanpanwar.in/writing/if-i-started-fitwardrobe-again): What I would do differently knowing what I know now.
 
-## Certifications (all verifiable)
-- [NVIDIA DLI Transformer-based NLP Credential](https://learn.nvidia.com/certificates?id=GClvxekBT0SWUVCvjdGB5A) (February 2026)
-- [Google AI Essentials Specialization](https://coursera.org/verify/specialization/NJYHIPVRXNW5) (February 2026)
-- [Google Prompting Essentials Specialization](https://coursera.org/verify/specialization/IDOZ47GU0NPU) (March 2026)
-- [Microsoft PM Fundamentals Specialization](https://coursera.org/verify/A91HQWST6MOY) (March 2026)
+## Optional
 
-## Online presence
-- [Portfolio Homepage](https://aryanpanwar.in)
-- [GitHub Profile](https://github.com/Aryanpanwar10005)
-- [LinkedIn Profile](https://linkedin.com/in/aryan-panwar1)
-- [X (Twitter) Profile](https://x.com/aryan_panwar1)
-- [Google Scholar citations page](https://scholar.google.com/citations?view_op=list_works&hl=en&user=a4rB-NMAAAAJ)
-- [ORCID ID](https://orcid.org/0009-0002-4793-4364)
-- [ResearchGate Profile](https://www.researchgate.net/profile/Aryan-Panwar-7)
-- [Dev.to Profile](https://dev.to/aryanpanwar1)
-- [npm publisher page](https://www.npmjs.com/~aryanpanwar)
-- [ProductHunt Profile](https://www.producthunt.com/@aryan_panwar10005)
-
-## Contact
-- **Email**: [aryanpanwar10005@gmail.com](mailto:aryanpanwar10005@gmail.com)
-- **Portfolio & Contact Form**: [https://aryanpanwar.in](https://aryanpanwar.in)
-
-## Structured data on this site
-The portfolio is fully optimized with semantic structured graphs in JSON-LD:
-- [Person schema](https://aryanpanwar.in/#person) with comprehensive `sameAs` entity mappings
-- BreadcrumbList, WebSite, FAQPage, ScholarlyArticle, Service, and Occupation schemas
-
-## Why Aryan Panwar — Key Differentiators
-- **ECE + Gen AI Bridge**: Applying hardware performance and systems efficiency thinking to Large Language Model execution.
-- **Product Delivery Depth**: 9 fully functional products in production with verifiable metrics instead of basic toy models.
-- **Indic AI Voice Focus**: Built local speech interfaces reaching sub-450ms real-time latency.
-
-## Production engineering patterns implemented
-- Structured outputs using Pydantic schemas, confidence thresholds, and agentic fallback chains.
-- Hybrid vector retrieval, rerank algorithms, and citation grounding metrics.
-- State machines with LangGraph, conditional edge paths, dynamic memory, and tools.
-- Tensor Lite model quantization, embedded CPU-efficient models, and BLE communication.
-
-## Site Pages map
-- [Main Portfolio](https://aryanpanwar.in)
-- [Frequently Asked Questions](https://aryanpanwar.in/faq.html)
-- [Engineering Services](https://aryanpanwar.in/services.html)
-- [Technical Blog](https://aryanpanwar.in/blog/)
-  - [Embedded IoT Automation](https://aryanpanwar.in/blog/embedded-iot-automation.html)
-  - [What is Agentic AI Developer](https://aryanpanwar.in/blog/what-is-agentic-ai-developer.html)
-  - [LLM Orchestration Tools](https://aryanpanwar.in/blog/llm-orchestration-tools.html)
-  - [Agentic AI vs ML](https://aryanpanwar.in/blog/agentic-ai-vs-ml.html)
-  - [Modern Embedded Engineer](https://aryanpanwar.in/blog/modern-embedded-engineer.html)
-  - [Hardware Logic in AI](https://aryanpanwar.in/blog/hardware-logic-in-ai.html)
-  - [SEO for Product Managers](https://aryanpanwar.in/blog/seo-for-product-managers.html)
-  - [Technical SEO for AI Products](https://aryanpanwar.in/blog/technical-seo-for-ai-products.html)
-  - [Agentic AI FAQ](https://aryanpanwar.in/blog/agentic-ai-faq.html)
-  - [Embedded Engineer FAQ](https://aryanpanwar.in/blog/embedded-engineer-faq.html)
-  - [SEO Product Management FAQ](https://aryanpanwar.in/blog/seo-product-management-faq.html)
-- [Case Studies Directory](https://aryanpanwar.in/reports/)
-  - [FitWardrobe Case Study](https://aryanpanwar.in/reports/fitwardrobe-case-study.html)
-  - [Mithivoices Case Study](https://aryanpanwar.in/reports/mithivoices-case-study.html)
-  - [SEO-GEO Optimizer Case Study](https://aryanpanwar.in/reports/seo-geo-case-study.html)
-- [Resume PDF](https://aryanpanwar.in/docs/Aryan.pdf)
+- [Resume Library](https://aryanpanwar.in/resume): Experience, projects, publications (JETIR2604872), and education.
+  - [Product Management Resume PDF](https://aryanpanwar.in/docs/Aryan_Panwar_PM_Resume.pdf)
+  - [Business Analyst Resume PDF](https://aryanpanwar.in/docs/Aryan_Panwar_BA_Resume.pdf)
+  - [Technical PM Resume PDF](https://aryanpanwar.in/docs/Aryan_Panwar_TPM_Resume.pdf)
+  - [Software Engineering Resume PDF](https://aryanpanwar.in/docs/Aryan_Panwar_SWE_Resume.pdf)
+- [Skills & Certifications](https://aryanpanwar.in/skills): PM toolkit, technical skills (React, Python, TFLite, LLM APIs), and verified certifications.
+- [FAQ for Recruiters](https://aryanpanwar.in/faq): Quick answers on target roles, availability, projects, and how to get in touch.
+- [Contact](https://aryanpanwar.in/contact): LinkedIn, GitHub, and email.
