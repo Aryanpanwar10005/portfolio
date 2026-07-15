@@ -7,6 +7,13 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // === BLOG: old /blog/:slug.html URLs (from previous Vite site, indexed by Google) ===
+      {
+        source: '/blog/:slug.html',
+        destination: '/writing/:slug',
+        permanent: true,
+      },
+      // === BLOG: clean /blog/:slug → /writing/:slug (no .html) ===
       {
         source: '/blog',
         destination: '/writing',
@@ -22,6 +29,24 @@ const nextConfig: NextConfig = {
         destination: '/writing/:slug',
         permanent: true,
       },
+      // === OLD BLOG POSTS: indexed by Google but deleted — redirect to closest match ===
+      {
+        source: '/blog/technical-seo-for-ai-products.html',
+        destination: '/writing/building-ai-features-users-trust',
+        permanent: true,
+      },
+      {
+        source: '/blog/what-is-agentic-ai-developer.html',
+        destination: '/writing/engineering-to-product-thinking',
+        permanent: true,
+      },
+      // === OLD PDF: /docs/Aryan.pdf → current PM resume ===
+      {
+        source: '/docs/Aryan.pdf',
+        destination: '/docs/Aryan_Panwar_PM_Resume.pdf',
+        permanent: true,
+      },
+      // === CASE STUDIES (old .html paths) ===
       {
         source: '/reports',
         destination: '/case-studies',
@@ -42,6 +67,7 @@ const nextConfig: NextConfig = {
         destination: '/case-studies/seo-geo-optimizer',
         permanent: true,
       },
+      // === STATIC .html PAGES ===
       {
         source: '/faq.html',
         destination: '/faq',
@@ -67,6 +93,7 @@ const nextConfig: NextConfig = {
         destination: '/',
         permanent: true,
       },
+      // === PLAYBOOK → THINKING ===
       {
         source: '/playbook',
         destination: '/thinking',
