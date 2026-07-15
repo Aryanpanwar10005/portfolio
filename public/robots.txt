@@ -8,61 +8,44 @@ Allow: /
 # === TRADITIONAL SEARCH ENGINES ===
 User-agent: Googlebot
 Allow: /
-
 User-agent: Bingbot
 Allow: /
 
 # === AI SEARCH & CITATION BOTS ===
 # These power ChatGPT Search, Perplexity, and Claude answers.
-# As a portfolio, citation = visibility — explicitly allow all.
-
 User-agent: OAI-SearchBot
 Allow: /
-
 User-agent: ChatGPT-User
 Allow: /
-
 User-agent: GPTBot
 Allow: /
-
 User-agent: PerplexityBot
 Allow: /
-
 User-agent: ClaudeBot
 Allow: /
-
 User-agent: Claude-SearchBot
 Allow: /
-
 User-agent: anthropic-ai
 Allow: /
-
 User-agent: Google-Extended
 Allow: /
-
 User-agent: cohere-ai
 Allow: /
-
 User-agent: YouBot
 Allow: /
 
 # === SOCIAL PREVIEW BOTS ===
-# Required for link previews on X, LinkedIn, Slack, Discord
-
 User-agent: Twitterbot
 Allow: /
-
 User-agent: facebookexternalhit
 Allow: /
-
 User-agent: LinkedInBot
 Allow: /
-
 User-agent: Slackbot
 Allow: /
-
 User-agent: Discordbot
 Allow: /
 
 # === SITEMAP & LLM DISCOVERY ===
 Sitemap: https://aryanpanwar.in/sitemap.xml
+LLMs: https://aryanpanwar.in/llms.txt
