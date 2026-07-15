@@ -52,7 +52,7 @@ export default function JourneyPage() {
             },
             sameAs: [
               'https://www.linkedin.com/in/aryan-panwar1',
-              'https://github.com/aryanpanwar',
+              'https://github.com/Aryanpanwar10005',
             ],
           })
         }}

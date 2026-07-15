@@ -46,7 +46,7 @@ export default function Home() {
               ],
               "sameAs": [
                 "https://www.linkedin.com/in/aryan-panwar1",
-                "https://github.com/aryanpanwar",
+                "https://github.com/Aryanpanwar10005",
                 "https://www.producthunt.com/@aryan_panwar10005"
               ],
               "hasCredential": {

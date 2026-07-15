@@ -24,7 +24,7 @@ export default function AboutPage() {
             knowsAbout: ['Product Management', 'AI Product Development', 'On-Device AI', 'LLM Engineering'],
             sameAs: [
               'https://www.linkedin.com/in/aryan-panwar1',
-              'https://github.com/aryanpanwar',
+              'https://github.com/Aryanpanwar10005',
             ],
           })
         }}
