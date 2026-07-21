@@ -3,7 +3,7 @@ import { PageHeader } from '@/components/PageHeader'
 
 export const metadata: Metadata = {
   title: "About",
-  description: "A short introduction to Aryan Panwar — ECE student at MIET Meerut, aspiring PM with a builder background, and the values that shape how I ship.",
+  description: "A short introduction to Aryan Panwar — ECE graduate from MIET Meerut (2026), aspiring PM with a builder background, and the values that shape how I ship.",
 }
 
 export default function AboutPage() {
@@ -18,7 +18,7 @@ export default function AboutPage() {
             '@id': 'https://aryanpanwar.in/#person',
             name: 'Aryan Panwar',
             jobTitle: 'Aspiring Product Manager',
-            description: 'Final-year ECE student at MIET Meerut and aspiring Product Manager with a builder background who ships AI products.',
+            description: 'ECE graduate from MIET Meerut (2026) and aspiring Product Manager with a builder background who ships AI products.',
             url: 'https://aryanpanwar.in/about',
             alumniOf: { '@type': 'CollegeOrUniversity', name: 'MIET Meerut' },
             knowsAbout: ['Product Management', 'AI Product Development', 'On-Device AI', 'LLM Engineering'],
@@ -35,7 +35,7 @@ export default function AboutPage() {
       />
       <section className="px-6 md:px-10 pb-24 max-w-2xl mx-auto space-y-14 text-lg text-foreground leading-relaxed">
         <Block label="Who I am">
-          I'm Aryan Panwar — a final-year ECE student at MIET Meerut and an
+          I'm Aryan Panwar — an ECE graduate from MIET Meerut (2026) and an
           aspiring Product Manager. I came to product from the builder side: I
           ship AI products, write about the tradeoffs, and want to spend my
           early PM years in the room where the calls get made.
