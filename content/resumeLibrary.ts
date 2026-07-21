@@ -46,7 +46,7 @@ export const resumeVariants: ResumeVariant[] = [
       education: ["B.Tech ECE — MIET Meerut (2022 — 2026)"],
       achievements: [
         "20+ discovery interviews · 6 diary studies synthesised into a 3-insight product bet.",
-        "Cut FitWardrobe onboarding from 8 screens to 3.",
+        "Grew FitWardrobe to 18.2K impressions and 273 clicks (1.5% CTR) in 6 months — zero paid budget.",
       ],
       publications: ["JETIR — Automated Dual-Spot Wireless Charging (IF 7.95, 2026)."],
     },

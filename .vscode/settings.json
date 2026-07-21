@@ -1,0 +1,32 @@
+{
+  // Tailwind CSS v4 uses @source, @theme, and @utility as first-class
+  // CSS directives. VS Code's built-in CSS validator does not understand
+  // these (it only knows the W3C CSS spec), so it flags them as
+  // "Unknown at rule" warnings — false positives that cannot be fixed
+  // by changing any code.
+  //
+  // This setting disables the built-in CSS validator for this workspace.
+  // If you have the Tailwind CSS IntelliSense extension installed
+  // (bradlc.vscode-tailwindcss), it provides its own CSS validation
+  // that correctly understands Tailwind v4 syntax.
+  "css.validate": false,
+
+  // Also silence SCSS/Less validators for consistency (not used in this
+  // project, but avoids surprises if any .scss file gets added later).
+  "scss.validate": false,
+  "less.validate": false,
+
+  // Tell the Tailwind IntelliSense extension where to find the CSS
+  // entry point so it can resolve @theme tokens and offer completions.
+  "tailwindCSS.experimental.configFile": "app/globals.css",
+
+  // Enable Tailwind class completions inside className strings in TSX.
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+
+  // Treat .tsx files as JSX so the editor highlights className correctly.
+  "files.associations": {
+    "*.tsx": "typescriptreact"
+  }
+}

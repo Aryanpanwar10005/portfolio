@@ -11,7 +11,7 @@ export function Footer() {
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-foreground-muted">
           <Link href="/writing" className="hover:text-primary transition-colors">Blog</Link>
           <Link href="/faq" className="hover:text-primary transition-colors">FAQ</Link>
-          <span className="text-foreground-subtle/70">© {new Date().getFullYear()}</span>
+          <span className="text-foreground-muted">© {new Date().getFullYear()}</span>
         </div>
       </div>
     </footer>

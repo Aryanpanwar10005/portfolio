@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    // Tailwind CSS v4 IntelliSense — provides completions, hover docs,
+    // and correct CSS validation for @source, @theme, @utility directives.
+    "bradlc.vscode-tailwindcss",
+    // TypeScript + TSX support
+    "ms-vscode.vscode-typescript-next",
+    // ESLint for JS/TS linting
+    "dbaeumer.vscode-eslint",
+    // Prettier for formatting
+    "esbenp.prettier-vscode"
+  ]
+}

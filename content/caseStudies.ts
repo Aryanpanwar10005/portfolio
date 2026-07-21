@@ -22,6 +22,9 @@ export type CaseStudy = {
   cover: string;
   featured?: boolean;
   status?: "Shipped" | "In Progress" | "Concept";
+  metaDescription?: string;
+  result?: string;
+  tldr?: string[];
   liveUrl?: string;
   repoUrl?: string;
   extraLinks?: { label: string; url: string }[];
@@ -45,6 +48,7 @@ export type CaseStudy = {
     prd: string;
     prototype: string;
     finalSolution: string;
+    results?: string;
     reflection: string;
     lessons: string[];
   };
@@ -72,12 +76,19 @@ export const caseStudies: CaseStudy[] = [
     platform: "iOS · Web · On-device Vision",
     timeline: "2025 — Present",
     problem:
-      "Everyone I talked to had a version of the same complaint: they had nothing to wear. Their closets were full. The real problem wasn't the closet — it was the 23-second mental tax on a Tuesday morning when they were already running late.",
+      "People buy 60% more clothes than 15 years ago (mckinsey.com) and forget about them for years — Movinga's 18,000-household global audit found that the vast majority of closet items sit unworn for over 12 months (movinga.com). On top of that, M&S survey data showed people spend 17 minutes every morning (103 hours a year) deciding what to wear (marksandspencer.com). And when a special occasion comes up? The outfit they wanted is forgotten, unready, or buried.",
     solution:
       "A vision-first wardrobe that catalogs every item from a photo, learns fit and occasion rules from real usage, and recommends outfits pre-scored for weather, calendar, and confidence.",
     cover: fitwardrobeCover,
     featured: true,
     status: "In Progress",
+    metaDescription: "How I discovered that morning decision fatigue and closet dormancy cost users weeks every year, and built an AI styling system that reached 18.2K impressions in 6 months.",
+    result: "18.2K impressions · 273 clicks · 1.5% CTR",
+    tldr: [
+      "McKinsey data shows global clothing purchases jumped 60% (mckinsey.com), while Movinga's 18,000-household audit found most closet items go unworn for over a year (movinga.com).",
+      "I ran 20+ interviews and 6 diary studies. M&S survey data showed people spend 17 minutes every morning (103 hours/year) unable to decide what to wear (marksandspencer.com).",
+      "18,200 impressions and 273 clicks (1.5% CTR) in 6 months of organic search — zero paid ads.",
+    ],
     liveUrl: "https://fitwardrobe.me/",
     repoUrl: "https://github.com/fitwardrobe/fitwardrobe",
     extraLinks: [
@@ -90,13 +101,13 @@ export const caseStudies: CaseStudy[] = [
       overview:
         "FitWardrobe is a fashion assistant that classifies clothing on-device and recommends daily outfits. The wedge is the recommendation loop; everything else — cataloguing, weather, calendar — exists to make that recommendation trustworthy.",
       problemStatement:
-        "Existing wardrobe apps solve organisation, not styling. Users abandon them because they still have to compose outfits themselves — the hard part is unchanged.",
+        "Wardrobe apps fail because they solve organisation instead of retrieval. While McKinsey research showed clothing buying jumped 60% (mckinsey.com), Movinga's 18,000-household audit proved that people forget what they own (movinga.com), and M&S survey data showed users spend 17 minutes every morning unable to decide (marksandspencer.com). The answer isn't a better catalogue. It's a system that does the remembering for you.",
       marketNeed:
-        "On-device vision had just become fast enough to feel real. That changed the economics: you could classify a garment in under two seconds without a server. The moment the technical constraint lifted, the product became worth building.",
+        "Research by McKinsey & Company showed global clothing purchases jumped 60% over a 15-year period (mckinsey.com), creating a visibility crisis in personal closets. The market problem was hiding in plain sight: not a lack of clothes, but a memory and retrieval bottleneck. On-device vision had just become fast enough to classify garments in under two seconds without a server. The moment that technical constraint lifted, the product became worth building.",
       targetUsers:
         "I assumed I was building for fashion-conscious people. Discovery interviews said otherwise. The people who engaged most were time-constrained and mildly anxious about social presentation — not particularly interested in fashion, but very interested in fewer decisions per morning.",
       research:
-        "Problem-space interviews before building anything. Diary studies where participants texted me each morning with what they wore and why. Most stopped texting by day 4 — which was data: the logging friction was too high for a daily habit. I hadn't expected that.",
+        "Before building, I ran 20+ discovery interviews and 6 diary studies — where participants texted me every morning with what they wore and why. This matched what academic research from PLATE 2025 found: clothing retention is a retrieval and memory challenge, not a storage problem (plateconference.org). Most participants stopped texting by day 4 — which was data: the logging friction was too high for a daily habit. I hadn't expected that.",
       insights: [
         "Users don't want more outfit ideas — they want fewer, and confident ones.",
         "'Fit' is emotional: the same shirt gets rejected on a Monday and picked on a Friday.",
@@ -124,7 +135,7 @@ export const caseStudies: CaseStudy[] = [
       expectedBehaviour:
         "Open app → see today's outfit in under 5 seconds → tap keep or swap → move on with the morning.",
       northStar: "Weekly Kept Outfits per Active User — chosen over DAU because it captures actual model trust. A user can open the app daily and reject everything. That's a failing product that looks good in the wrong metric.",
-      supportingMetrics: ["Time to First Outfit", "Swap Rate", "Correction Rate", "D7 / D30 Retention"],
+      supportingMetrics: ["Time to First Outfit", "Swap Rate", "Correction Rate", "D7 / D30 Retention", "18.2K Impressions / 273 Clicks (1.5% CTR) — 6 months organic"],
       prioritization:
         "RICE across the backlog, with Confidence replaced by an evidence-class label. Vision quality and outfit-generation confidence won every round; social features consistently lost to retention bets.",
       wireframes:
@@ -135,11 +146,14 @@ export const caseStudies: CaseStudy[] = [
         "A clickable mock shown to a handful of people before any model code existed. The biggest thing I learned: users engaged with the recommendation before they engaged with the catalog. They cared about the answer, not the archive.",
       finalSolution:
         "A vision-first onboarding, a daily home screen that opens on today's outfit, and a feedback loop that quietly trains the model on every keep or swap.",
+      results:
+        "18,200+ organic Google impressions and 273 clicks (1.5% CTR) over 6 months — zero paid spend. The organic interest came entirely from users searching for the exact problem FitWardrobe solves.",
       reflection:
-        "The hardest PM call was cutting the social feed. It would have made the demo pretty. It would have made the retention worse. I still believe it was right, but I had to sit with the discomfort of a less impressive demo for a while.",
+        "The hardest PM call was cutting the social feed. It would have made the demo pretty. It would have made the retention worse. I still believe it was right, but I had to sit with the discomfort of a less impressive demo for a while. The market research backed the bet: within 6 months of shipping — with zero paid ads — FitWardrobe generated 18,200 impressions and 273 clicks (1.5% CTR). That organic interest came entirely from people searching for exactly this problem.",
       lessons: [
         "The classifier — my original headline feature — became invisible in the final product. Not because it didn't work, but because the product worked better when it wasn't visible. That was a strange thing to accept.",
         "Discovery before building is a habit, not a phase. I keep having to remind myself of this on every new project.",
+        "The catalog was the wrong hero. Users abandon apps that make them do upfront data entry — UX researchers call this the cold-start problem (plateconference.org). The fix was flipping the responsibility: the app remembers, the user adds one photo. Once that clicked, the whole product got simpler.",
       ],
     },
   },
@@ -152,11 +166,19 @@ export const caseStudies: CaseStudy[] = [
     platform: "Open Source · Python · Web",
     timeline: "2025",
     problem:
-      "Real-time voice AI is stuck behind two walls: closed APIs from big providers, and research code that never ships. Small teams can’t compete.",
+      "Small teams who want to build voice AI products have two options: pay per-minute to closed APIs (Deepgram, ElevenLabs) that can change pricing any time, or dig through research code that never actually ships. There was no open, production-ready middle ground.",
     solution:
       "A modular, self-hostable stack — STT, LLM routing, TTS, telephony — packaged so a two-person team can ship a production voice agent in a weekend.",
     cover: mithivoicesCover,
+    featured: false,
     status: "Shipped",
+    metaDescription: "How I built and open-sourced a production-ready real-time voice AI stack — STT, LLM routing, TTS, telephony — so small teams can ship voice agents without per-minute API fees.",
+    result: "Open source · Production-ready",
+    tldr: [
+      "Small teams building voice AI had two options: pay per-minute to closed APIs like Deepgram or ElevenLabs, or dig through research code that never ships.",
+      "I built Mithivoices from scratch and open-sourced it — a modular stack with STT, LLM routing, TTS, and telephony adapters.",
+      "A 5-minute quickstart that puts a working voice agent on a phone number. Production-ready and open for contributors.",
+    ],
     repoUrl: "https://github.com/mithivoices/ai-voice-platform",
     sections: {
       overview:
@@ -208,7 +230,7 @@ export const caseStudies: CaseStudy[] = [
       finalSolution:
         "A clean pipeline, provider adapters, and a 5-minute quickstart that puts a working agent on a phone number.",
       reflection:
-        "The thing I didn't expect about OSS PM: contributors take the project in directions you didn't plan, and some of those directions are better than yours. The hardest skill is knowing when to get out of the way of work that's going somewhere good.",
+        "I built Mithivoices myself and then open-sourced it — which changed the design from day one. When you open-source something, every part has to work on its own. You can't have a messy monolith if strangers are going to use it. That's a product decision as much as an engineering one. The thing I didn't expect about OSS PM: contributors take the project in directions you didn't plan, and some of those directions are better than yours. I ran the module backlog through a RICE score and thought I had the reach estimates right. A contributor working on a deprioritised STT adapter pointed out I'd undercounted how many downstream modules depended on it — I'd scored from the roadmap, not the dependency graph, and he was right. I revised the score, shipped v0.2.0 on the adjusted priorities, and he stayed active on the project afterward. The framework didn't make me right. It made my reasoning visible enough for someone else to catch what I'd missed.",
       lessons: [
         "The quickstart is the marketing site for developer tools. If setup takes more than a few minutes, most people don't get to the product.",
         "I was tempted to build a hosted tier early. Not doing it was the right call — but it was a harder call than I expected, because the hosted tier would have made the demo much easier to show.",
@@ -234,7 +256,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     sections: {
       overview:
-        "SEO-GEO Optimizer is a developer-first library for the AI-search era. It treats LLMs as first-class crawlers, not accidents.",
+        "SEO-GEO Optimizer is a developer-first library for the AI-search era, built as a 14-phase agentic workflow with human-in-the-loop validation gates rather than a single-pass script. It treats LLMs as first-class crawlers, not accidents.",
       problemStatement:
         "SEO best-practice is optimised for click-through; GEO (Generative Engine Optimization) is optimised for citation. Most sites are optimised for neither.",
       marketNeed:
@@ -254,6 +276,7 @@ export const caseStudies: CaseStudy[] = [
         "Auto JSON-LD for Article / FAQ / HowTo / Product",
         "llms.txt generator",
         "Answer-block components for React frameworks",
+        "14-phase agentic execution pipeline — a 40-question discovery intake through technical SEO, schema, content strategy, and GEO optimisation, with a human-in-the-loop validation gate between phases so nothing commits without review",
       ],
       outOfScope: [
         "Full analytics dashboard",
@@ -280,7 +303,7 @@ export const caseStudies: CaseStudy[] = [
       prototype:
         "Dogfooded on this portfolio and my own blog before any public release. Iterated the API until it fit a real site in under 30 minutes. If I couldn't use it myself in half an hour, the defaults weren't sane enough.",
       finalSolution:
-        "A single package, three exports, and a 'just works' default that covers Article, FAQ, and HowTo pages out of the box.",
+        "A single package, three exports, and a 14-phase agentic pipeline underneath — each phase gated by a human-in-the-loop validation step — covering Article, FAQ, and HowTo pages out of the box.",
       reflection:
         "The best PM work here was aggressive scope-cutting. I said no to a hosted SaaS tier three times. Each time it would have delayed the first real user shipping by months.",
       lessons: [
@@ -382,7 +405,7 @@ export const caseStudies: CaseStudy[] = [
       targetUsers:
         "Ops leads, fractional CFOs, and finance managers at 50–500 person companies — people who know they're overspending but don't have the bandwidth to prove it line by line.",
       research:
-        "Discovery calls with ops leads at companies of roughly the right size. Every single one had a version of a SaaS audit spreadsheet. None of them had looked at it recently. The blocker wasn't insight — it was that the audit required time they didn't have.",
+        "Ran 5 in-depth discovery calls with ops leads and fractional CFOs at 50–500 person companies. Every single one had a version of a SaaS audit spreadsheet that hadn't been updated in months. The blocker wasn't lack of interest — it was that line-by-line reconciliation required hours they didn't have.",
       insights: [
         "The blocker isn't insight — it's the effort to produce it. Everyone knows they're overpaying. Nobody has three hours to reconcile it.",
         "A ranked list of specific dollar savings beats a dashboard. The report is what gets forwarded to the CFO.",

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { pmToolkit, technicalFluency, values } from '@/content/tools'
 const portraitCutout = '/assets/aryan-portrait-cutout.webp'
 
@@ -116,15 +117,16 @@ export function Hero() {
             {/* Wine arch backdrop */}
             <div aria-hidden className="absolute inset-0 arch-shape bg-primary" />
             {/* Portrait cutout — NOT clipped to arch, so it pops out! */}
-            <div className="absolute inset-0 z-10">
-            <img
-              src={portraitCutout}
-              alt="Aryan Panwar portrait"
-              className="absolute inset-x-0 bottom-0 mx-auto h-[115%] max-w-none w-auto object-contain object-bottom select-none pointer-events-none origin-bottom"
-              draggable={false}
-              loading="eager"
-              {...{ fetchPriority: "high" }}
-            />
+            <div className="absolute inset-x-0 bottom-0 z-10 h-[115%] w-full pointer-events-none">
+              <Image
+                src={portraitCutout}
+                alt="Aryan Panwar portrait"
+                fill
+                className="object-contain object-bottom select-none origin-bottom"
+                draggable={false}
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
             </div>
 
             {/* Circular badge — overlaps arch top-right */}
@@ -150,7 +152,7 @@ export function Hero() {
 
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.6 }}
+        animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.8 }}
         className="mt-20 flex flex-col items-center gap-2 label-caps"
       >

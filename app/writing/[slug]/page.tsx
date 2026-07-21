@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { blogPosts, getBlogPost, blogTagToSlug, type BodyBlock } from '@/content/blog'
 import { BackButton } from '@/components/BackButton'
 import { notFound } from 'next/navigation'
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const path = `/writing/${post.slug}`
 
   return {
-    title: `${post.title} | Aryan Panwar`,
+    title: post.title,
     description: post.summary,
     openGraph: {
       title: post.title,
@@ -43,6 +44,29 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 }
 
+function parseTextWithCitations(text: string): React.ReactNode {
+  const pattern = /\(([a-zA-Z0-9][a-zA-Z0-9-]*(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,})\)/g
+  const parts: React.ReactNode[] = []
+  let lastIndex = 0
+  let match: RegExpExecArray | null
+  let key = 0
+  while ((match = pattern.exec(text)) !== null) {
+    if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index))
+    const domain = match[1]
+    parts.push('(')
+    parts.push(
+      <a key={key++} href={`https://${domain}`} target="_blank" rel="noopener noreferrer"
+        className="text-accent underline underline-offset-2 hover:opacity-75 transition-opacity text-[0.9em]">
+        {domain}
+      </a>
+    )
+    parts.push(')')
+    lastIndex = match.index + match[0].length
+  }
+  if (lastIndex < text.length) parts.push(text.slice(lastIndex))
+  return parts.length > 1 ? <>{parts}</> : text
+}
+
 function renderBlock(block: BodyBlock, i: number) {
   switch (block.type) {
     case 'quote':
@@ -51,7 +75,7 @@ function renderBlock(block: BodyBlock, i: number) {
           key={i}
           className="border-l-2 border-primary pl-6 my-10 font-serif-italic text-xl md:text-2xl text-primary leading-relaxed"
         >
-          "{block.text}"
+          "{parseTextWithCitations(block.text)}"
         </blockquote>
       )
     case 'list':
@@ -60,7 +84,7 @@ function renderBlock(block: BodyBlock, i: number) {
           {block.items.map((it, j) => (
             <li key={j} className="pl-6 relative text-lg text-foreground leading-[1.8]">
               <span aria-hidden className="absolute left-0 top-[0.7em] w-3 h-px bg-accent" />
-              {it}
+              {parseTextWithCitations(it)}
             </li>
           ))}
         </ul>
@@ -69,7 +93,7 @@ function renderBlock(block: BodyBlock, i: number) {
     default:
       return (
         <p key={i} className="text-lg text-foreground leading-[1.85]">
-          {block.text}
+          {parseTextWithCitations(block.text)}
         </p>
       )
   }
@@ -174,15 +198,14 @@ export default async function BlogPostPage({ params }: PageProps) {
       </header>
 
       <figure className="mt-12 max-w-4xl mx-auto px-6 md:px-10">
-        <div className="aspect-16/8 overflow-hidden bg-surface-2">
-          <img
+        <div className="relative aspect-16/8 overflow-hidden bg-surface-2">
+          <Image
             src={post.cover}
             alt={post.coverAlt}
-            width={1200}
-            height={630}
-            loading="eager"
-            decoding="async"
-            className="w-full h-full object-cover"
+            fill
+            priority
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 896px"
           />
         </div>
         <figcaption className="mt-3 label-caps text-foreground-subtle text-right">{post.category}</figcaption>
@@ -236,15 +259,13 @@ export default async function BlogPostPage({ params }: PageProps) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               {related.slice(0, 2).map((p) => (
                 <Link key={p.slug} href={`/writing/${p.slug}`} className="group block">
-                  <div className="aspect-16/10 overflow-hidden bg-surface-2">
-                    <img
+                  <div className="relative aspect-16/10 overflow-hidden bg-surface-2">
+                    <Image
                       src={p.cover}
                       alt={p.coverAlt}
-                      width={1200}
-                      height={630}
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full h-full object-cover img-editorial group-hover:scale-[1.02] transition-transform duration-700"
+                      fill
+                      className="object-cover img-editorial group-hover:scale-[1.02] transition-transform duration-700"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
                   <p className="mt-4 label-caps text-primary">{p.category}</p>

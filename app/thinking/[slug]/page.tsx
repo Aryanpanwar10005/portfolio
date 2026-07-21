@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const path = `/thinking/${entry.slug}`
 
   return {
-    title: `${entry.title} | Aryan Panwar`,
+    title: entry.title,
     description: entry.summary,
     openGraph: {
       title: entry.title,

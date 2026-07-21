@@ -76,6 +76,7 @@ export const blogPosts: BlogPost[] = [
         body: [
           { type: 'p', text: "V0 could tell you a shirt was a shirt. It could not tell you what to wear on Tuesday. I had built a capable classifier and called it a product, and the first five people I showed it to were polite about it in the way that friends are polite about a bad haircut." },
           { type: 'p', text: "The actual pain — the reason people spend ten minutes staring at a closet at 8 a.m. — wasn't 'I don't know what this garment is.' It was 'I don't know what these garments look like together, given the weather, given the meeting, given yesterday.' My classifier answered a question nobody was asking." },
+          { type: 'p', text: "The scale of this problem is bigger than I realised at the time. A Marks & Spencer consumer survey of 2,000 adults found the average person spends 17 minutes every morning deciding what to wear — that's 103 hours a year, more than two full work weeks (marksandspencer.com). The problem isn't a lack of clothes. It's a memory and retrieval problem." },
         ],
       },
       {
@@ -104,6 +105,7 @@ export const blogPosts: BlogPost[] = [
         body: [
           { type: 'p', text: "The scoped-down v1 shipped in nine days. Day-7 retention with the same test group moved from roughly one in five to closer to three in five. The classifier still ran on every photo — but nobody talked about it, because they were too busy telling me the app 'just knew' what to suggest." },
           { type: 'p', text: 'The engineering had not changed. The product had.' },
+          { type: 'p', text: "Six months later, with zero paid ads, FitWardrobe reached 18,200 impressions and 273 clicks (1.5% CTR) through organic search alone. Every one of those searches was from someone with exactly the problem I had stopped trying to solve with a classifier." },
         ],
       },
       {
@@ -182,7 +184,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'prioritize-features-before-prd',
-    title: 'How I Prioritize Features Before Writing a PRD',
+    title: 'How to Prioritize Product Features Before Writing a PRD',
     question: 'How do I decide what gets built?',
     takeaway: "He doesn't build everything.",
     summary:
@@ -680,6 +682,7 @@ export const blogPosts: BlogPost[] = [
         label: 'What "would do differently" posts usually get wrong',
         body: [
           { type: 'p', text: "FitWardrobe is live and used daily. It works. That doesn't make it the right version. The temptation with these posts is to be either humble-brag ('I nailed it, only tiny tweaks') or performative-flagellation ('I got everything wrong'). Neither is useful. The honest answer is that the frame was right and the sequence was wrong." },
+          { type: 'p', text: "The frame was validated by more than just my interviews. Movinga's global audit of 18,000 households across 20 countries showed that the vast majority of closet items go unworn for over a year (movinga.com). The product bet was right. The build sequence was wrong." },
         ],
       },
       {
