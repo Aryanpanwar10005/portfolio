@@ -9,7 +9,7 @@ import { trackEvent } from '@/lib/analytics'
 type Theme = 'light' | 'dark'
 
 export function ThemeToggle({ className }: { className?: string }) {
-  const [theme, setTheme] = useState<Theme>('dark')
+  const [theme, setTheme] = useState<Theme>('light')
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -20,10 +20,10 @@ export function ThemeToggle({ className }: { className?: string }) {
     // its placeholder state regardless of storage errors.
     try {
       const stored = window.localStorage.getItem('theme')
-      const resolved: Theme = stored === 'light' ? 'light' : 'dark'
+      const resolved: Theme = stored === 'dark' ? 'dark' : 'light'
       setTheme(resolved)
     } catch {
-      // Keep dark fallback already set by useState
+      // Keep light fallback already set by useState
     } finally {
       setMounted(true)
     }
