@@ -1,6 +1,6 @@
 # Aryan Panwar — Product Evidence Book
 
-> Aryan Panwar is an aspiring Product Manager with a builder background — final-year ECE student at MIET Meerut who ships AI products and writes about product tradeoffs, AI feature design, and PM frameworks. He has built FitWardrobe (on-device AI wardrobe stylist), Mithivoices (open-source real-time voice AI stack), SEO-GEO Optimizer (npm package for AI search visibility), and an AI-First CRM for healthcare field reps.
+> Aryan Panwar is an aspiring Product Manager with a builder background — ECE graduate from MIET Meerut (2026) who ships AI products and writes about product tradeoffs, AI feature design, and PM frameworks. He has built FitWardrobe (on-device AI wardrobe stylist), Mithivoices (open-source real-time voice AI stack), SEO-GEO Optimizer (npm package for AI search visibility), and an AI-First CRM for healthcare field reps.
 
 ## About
 

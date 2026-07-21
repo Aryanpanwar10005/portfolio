@@ -142,7 +142,7 @@ export const resumeFaqCategories: ResumeFaqCategory[] = [
     questions: [
       {
         q: "Who are you?",
-        a: "I'm Aryan Panwar, a final-year B.Tech Electronics & Communication student at MIET Meerut. I started as a builder — shipping hardware projects, AI apps, and web products — and gradually moved toward the problem-framing side of product work. Today I'm focused on breaking into Product Management, especially in AI-first teams.",
+        a: "I'm Aryan Panwar, an ECE graduate from MIET Meerut (2026). I started as a builder — shipping hardware projects, AI apps, and web products — and gradually moved toward the problem-framing side of product work. Today I'm focused on breaking into Product Management, especially in AI-first teams.",
       },
       {
         q: "What roles are you looking for?",

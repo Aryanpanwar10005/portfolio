@@ -16,7 +16,7 @@ export const skillCategories: SkillCategory[] = [
     slug: "pm-toolkit",
     title: "PM Toolkit",
     blurb: "How I think, prioritise, and communicate with teams.",
-    items: ["Notion", "Figma", "Linear", "Jira", "Confluence", "PostHog / GA4", "Advanced Excel", "Salesforce", "Miro"],
+    items: ["Notion", "Figma", "Linear", "Jira", "Confluence", "PostHog / GA4", "SQL", "Advanced Excel", "Salesforce", "Miro"],
   },
   {
     slug: "llm-gen-ai",
@@ -35,7 +35,7 @@ export const skillCategories: SkillCategory[] = [
     slug: "ai-engineering",
     title: "AI Engineering",
     blurb: "Turning models into products that actually behave.",
-    items: ["Fine-tuning", "Embeddings", "Vector DBs (Pinecone / pgvector)", "Agents", "Evals & guardrails"],
+    items: ["Fine-tuning", "Embeddings", "Vector DBs (Pinecone / pgvector)", "Agents", "Evals & Human-in-the-Loop Gates"],
   },
   {
     slug: "full-stack",
