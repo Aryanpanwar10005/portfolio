@@ -1,6 +1,7 @@
 "use client"
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { PageHeader } from '@/components/PageHeader'
 import {
@@ -46,8 +47,8 @@ export default function CaseStudiesIndex() {
               className="grid grid-cols-1 lg:grid-cols-12 gap-8"
             >
               <Link href={`/case-studies/${c.slug}`} className="lg:col-span-7 block group">
-                <div className="aspect-16/10 overflow-hidden bg-surface-2">
-                  <img src={c.cover} alt={`${c.title} case study preview`} className="w-full h-full object-cover img-editorial group-hover:scale-[1.02] transition-transform duration-700" />
+                <div className="relative aspect-16/10 overflow-hidden bg-surface-2">
+                  <Image src={c.cover} alt={`${c.title} case study preview`} fill className="object-cover img-editorial group-hover:scale-[1.02] transition-transform duration-700" sizes="(max-width: 1024px) 100vw, 50vw" />
                 </div>
               </Link>
               <div className="lg:col-span-5">
@@ -71,8 +72,8 @@ export default function CaseStudiesIndex() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {supportingCaseStudies.map((c) => (
             <Link key={c.slug} href={`/case-studies/${c.slug}`} className="group block">
-              <div className="aspect-16/10 overflow-hidden bg-surface-2 mb-5">
-                <img src={c.cover} alt={`${c.title} case study preview`} className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700" />
+              <div className="relative aspect-16/10 overflow-hidden bg-surface-2 mb-5">
+                <Image src={c.cover} alt={`${c.title} case study preview`} fill className="object-cover group-hover:scale-[1.02] transition-transform duration-700" sizes="(max-width: 768px) 100vw, 50vw" />
               </div>
               <p className="label-caps text-accent mb-2">{c.status}</p>
               <h3 className="font-display text-2xl text-foreground group-hover:text-primary transition-colors">{c.title}</h3>
@@ -98,11 +99,12 @@ export default function CaseStudiesIndex() {
             >
               <div className="aspect-16/10 overflow-hidden bg-primary/10 relative">
                 {p.cover ? (
-                  <img
+                  <Image
                     src={p.cover}
                     alt={`${p.title} cover`}
-                    loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700"
+                    fill
+                    className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 ) : (
                   <div

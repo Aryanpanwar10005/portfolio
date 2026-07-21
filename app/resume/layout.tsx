@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Resume Library | Aryan Panwar',
-  description: 'Download the standard one-page resume or explore detailed credentials tailored for PM roles.',
+  title: 'Resume Library',
+  description: 'Role-targeted resumes for PM, AI PM, Founder’s Office, and Business Analyst positions.',
   alternates: {
     canonical: '/resume',
   },

@@ -28,7 +28,7 @@
 
 - [What Building FitWardrobe Taught Me About Product Discovery](https://aryanpanwar.in/writing/fitwardrobe-product-discovery): Seven un-facilitated interviews changed the roadmap more than three weeks of building.
 - [I Stopped Thinking Like an Engineer](https://aryanpanwar.in/writing/stopped-thinking-like-engineer): How the mental shift from shipping code to owning outcomes changed every decision I make.
-- [How I Prioritize Features Before Writing a PRD](https://aryanpanwar.in/writing/prioritize-features-before-prd): A practical pre-PRD prioritization framework.
+- [How to Prioritize Product Features Before Writing a PRD](https://aryanpanwar.in/writing/prioritize-features-before-prd): A practical pre-PRD prioritization framework.
 - [Why Every Product Needs Success Metrics Before Features](https://aryanpanwar.in/writing/success-metrics-before-features): North-star selection methodology to avoid building metrics that game themselves.
 - [The Features I Removed That Made FitWardrobe Better](https://aryanpanwar.in/writing/features-removed-fitwardrobe): On the discipline of subtraction in product development.
 - [Local AI vs Cloud AI: Decisions Behind FitWardrobe](https://aryanpanwar.in/writing/local-vs-cloud-ai-fitwardrobe): Concrete decision log for the on-device vs cloud tradeoff with reversion triggers.
@@ -39,6 +39,7 @@
 
 ## Optional
 
+- [Portfolio Content (llms-full.txt)](https://aryanpanwar.in/llms-full.txt): A concatenated markdown dump of the Case Studies, Product Thinking, and Writing sections for deep context ingestion.
 - [Resume Library](https://aryanpanwar.in/resume): Experience, projects, publications (JETIR2604872), and education.
   - [Product Management Resume PDF](https://aryanpanwar.in/docs/Aryan_Panwar_PM_Resume.pdf)
   - [Business Analyst Resume PDF](https://aryanpanwar.in/docs/Aryan_Panwar_BA_Resume.pdf)

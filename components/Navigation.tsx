@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Download } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -44,9 +45,11 @@ export function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-4 flex items-center justify-between gap-6">
         <Link href="/" className="flex items-center gap-3 group shrink-0">
-          <img
+          <Image
             src="/assets/ap-logo.webp"
             alt="Aryan Panwar monogram"
+            width={44}
+            height={44}
             className="w-11 h-11 object-contain"
           />
           <span className="hidden lg:flex flex-col leading-tight">

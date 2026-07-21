@@ -10,7 +10,7 @@ export const resumeData = {
       bullets: [
         "Owned discovery, PRDs, prioritisation, and design QA end-to-end for an AI wardrobe stylist.",
         "Ran 20+ discovery interviews and 6 diary studies; synthesised into a 3-insight product bet.",
-        "Cut onboarding from 8 screens to 3 by making the first outfit the reward, not a tutorial.",
+        "Grew product to 18.2K impressions and 273 clicks (1.5% CTR) in 6 months with zero paid ads — evidence of organic reach and initial demand signal.",
       ],
     },
     {

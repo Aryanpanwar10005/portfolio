@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { blogPosts } from '@/content/blog'
 
 export function BlogSection() {
@@ -34,11 +35,13 @@ export function BlogSection() {
               transition={{ duration: 0.6 }}
             >
               <Link href={`/writing/${p.slug}`} className="block group">
-                <div className="aspect-[16/10] overflow-hidden bg-surface-3">
-                  <img
+                <div className="relative aspect-16/10 overflow-hidden bg-surface-3">
+                  <Image
                     src={p.cover}
                     alt={p.coverAlt}
-                    className="w-full h-full object-cover img-editorial group-hover:scale-[1.02] transition-transform duration-700"
+                    fill
+                    className="object-cover img-editorial group-hover:scale-[1.02] transition-transform duration-700"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
                 <div className="mt-5 flex items-center gap-3 label-caps flex-wrap">

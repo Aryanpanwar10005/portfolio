@@ -1,6 +1,7 @@
 "use client"
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { BackButton } from '@/components/BackButton'
 import { blogTagToSlug, type blogPosts } from '@/content/blog'
@@ -42,15 +43,13 @@ export function BlogTagClient({ tag, matches, tags }: BlogTagClientProps) {
             transition={{ duration: 0.5 }}
           >
             <Link href={`/writing/${p.slug}`} className="group block">
-              <div className="aspect-16/10 overflow-hidden bg-surface-2">
-                <img
+              <div className="relative aspect-16/10 overflow-hidden bg-surface-2">
+                <Image
                   src={p.cover}
                   alt={p.coverAlt}
-                  width={1600}
-                  height={1000}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover img-editorial group-hover:scale-[1.02] transition-transform duration-700"
+                  fill
+                  className="object-cover img-editorial group-hover:scale-[1.02] transition-transform duration-700"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               <div className="mt-5 flex flex-wrap gap-3 label-caps">

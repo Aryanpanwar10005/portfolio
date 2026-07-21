@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { PageHeader } from '@/components/PageHeader'
 import { blogPosts, allBlogTags, allBlogCategories, blogTagToSlug, type BlogCategory } from '@/content/blog'
@@ -57,11 +58,14 @@ export default function BlogIndex() {
             className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
           >
             <Link href={`/writing/${featured.slug}`} className="lg:col-span-7 block group">
-              <div className="aspect-16/10 overflow-hidden bg-surface-2">
-                <img
+              <div className="relative aspect-16/10 overflow-hidden bg-surface-2">
+                <Image
                   src={featured.cover}
                   alt={featured.coverAlt}
-                  className="w-full h-full object-cover img-editorial group-hover:scale-[1.02] transition-transform duration-700"
+                  fill
+                  className="object-cover img-editorial group-hover:scale-[1.02] transition-transform duration-700"
+                  sizes="(max-width: 1024px) 100vw, 60vw"
+                  priority
                 />
               </div>
             </Link>
@@ -121,11 +125,13 @@ export default function BlogIndex() {
               transition={{ duration: 0.5 }}
             >
               <Link href={`/writing/${p.slug}`} className="group block">
-                <div className="aspect-16/10 overflow-hidden bg-surface-2">
-                  <img
+                <div className="relative aspect-16/10 overflow-hidden bg-surface-2">
+                  <Image
                     src={p.cover}
                     alt={p.coverAlt}
-                    className="w-full h-full object-cover img-editorial group-hover:scale-[1.02] transition-transform duration-700"
+                    fill
+                    className="object-cover img-editorial group-hover:scale-[1.02] transition-transform duration-700"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
                 <div className="mt-5 flex flex-wrap gap-3 label-caps">

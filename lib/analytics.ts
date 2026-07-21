@@ -14,7 +14,6 @@ declare global {
     dataLayer?: Array<Record<string, unknown>>
     plausible?: (event: string, opts?: { props?: EventProps }) => void
     umami?: { track: (event: string, props?: EventProps) => void }
-    posthog?: { capture: (event: string, props?: EventProps) => void }
     clarity?: (...args: unknown[]) => void
   }
 }
@@ -57,7 +56,6 @@ export function trackEvent(event: string, props: EventProps = {}) {
     window.dataLayer?.push({ event, ...enriched })
     window.plausible?.(event, { props: enriched })
     window.umami?.track(event, enriched)
-    window.posthog?.capture(event, enriched)
     window.clarity?.('event', event)
     window.dispatchEvent(new CustomEvent('app:analytics', { detail: { event, props: enriched } }))
     if (process.env.NODE_ENV === 'development') {

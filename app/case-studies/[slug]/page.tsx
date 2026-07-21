@@ -19,11 +19,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const path = `/case-studies/${study.slug}`
 
   return {
-    title: `${study.title} | Aryan Panwar`,
-    description: study.tagline,
+    title: study.title,
+    description: study.metaDescription ?? study.tagline,
     openGraph: {
-      title: study.title,
-      description: study.tagline,
+      title: `${study.title} — PM Case Study`,
+      description: study.metaDescription ?? study.tagline,
       url: `https://aryanpanwar.in${path}`,
       images: [
         {

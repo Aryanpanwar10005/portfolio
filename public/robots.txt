@@ -46,6 +46,5 @@ Allow: /
 User-agent: Discordbot
 Allow: /
 
-# === SITEMAP & LLM DISCOVERY ===
+# === SITEMAP DISCOVERY ===
 Sitemap: https://aryanpanwar.in/sitemap.xml
-LLMs: https://aryanpanwar.in/llms.txt

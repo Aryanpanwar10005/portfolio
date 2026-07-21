@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { caseStudies } from '@/content/caseStudies'
 
 const fade = {
@@ -31,24 +32,28 @@ export function FeaturedCase() {
           <motion.div {...fade} className="lg:col-span-8 relative">
             {/* Laptop frame */}
             <div className="relative bg-foreground rounded-t-lg p-3 md:p-4 shadow-2xl">
-              <div className="aspect-[16/10] overflow-hidden rounded-sm">
-                <img
+              <div className="relative aspect-16/10 overflow-hidden rounded-sm">
+                <Image
                   src={featured.cover}
                   alt={`${featured.title} desktop preview`}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 66vw"
                 />
               </div>
             </div>
-            <div className="h-3 bg-foreground/80 rounded-b-2xl mx-[-1rem]" />
+            <div className="h-3 bg-foreground/80 rounded-b-2xl -mx-4" />
 
             {/* Mobile mockup overlay */}
             <div className="hidden md:block absolute -bottom-16 -right-4 w-40 lg:w-52">
-              <div className="bg-foreground rounded-[2rem] p-2 shadow-2xl border border-foreground/40">
-                <div className="aspect-[9/19] overflow-hidden rounded-[1.6rem]">
-                  <img
+              <div className="bg-foreground rounded-4xl p-2 shadow-2xl border border-foreground/40">
+                <div className="relative aspect-9/19 overflow-hidden rounded-[1.6rem]">
+                  <Image
                     src={featured.cover}
                     alt={`${featured.title} mobile preview`}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 767px) 0vw, 20vw"
                   />
                 </div>
               </div>

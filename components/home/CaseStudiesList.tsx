@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { flagshipCaseStudies } from '@/content/caseStudies'
 
 export function CaseStudiesList() {
@@ -30,11 +31,13 @@ export function CaseStudiesList() {
               className={`grid grid-cols-1 lg:grid-cols-12 gap-8 items-center ${i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''}`}
             >
               <Link href={`/case-studies/${c.slug}`} className="lg:col-span-7 block group overflow-hidden">
-                <div className="aspect-[16/10] overflow-hidden bg-surface-2">
-                  <img
+                <div className="relative aspect-16/10 overflow-hidden bg-surface-2">
+                  <Image
                     src={c.cover}
                     alt={`${c.title} case study cover`}
-                    className="w-full h-full object-cover img-editorial group-hover:scale-[1.02] transition-transform duration-700"
+                    fill
+                    className="object-cover img-editorial group-hover:scale-[1.02] transition-transform duration-700"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
               </Link>

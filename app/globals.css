@@ -136,11 +136,11 @@
   --popover: 348 10% 11%;
   --popover-foreground: 34 40% 94%;
 
-  /* Deep Wine, lifted just enough to hold contrast on charcoal */
-  --primary: 349 58% 42%;        /* ~#A82F44 */
-  --primary-foreground: 34 40% 96%;
-  --primary-hover: 349 58% 50%;  /* ~#C4394F */
-  --primary-deep: 349 55% 34%;   /* ~#872637 */
+  /* Deep Wine — lifted to clear WCAG AA 3:1 on dark charcoal (was 42% = 2.77:1) */
+  --primary: 349 60% 50%;        /* ~#C23A52 — contrast 3.9:1 on #171213 */
+  --primary-foreground: 34 60% 98%; /* near-white — clears 4.5:1 on red backgrounds */
+  --primary-hover: 349 60% 57%;  /* ~#D44560 */
+  --primary-deep: 349 57% 41%;   /* ~#A42D43 */
 
   --secondary: 348 8% 17%;
   --secondary-foreground: 34 40% 94%;
