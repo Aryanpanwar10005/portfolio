@@ -12,7 +12,7 @@ export function BlogSection() {
       <div className="max-w-7xl mx-auto">
         <div className="mb-12 flex items-end justify-between flex-wrap gap-4">
           <div>
-            <p className="label-caps mb-3">07 · Writing</p>
+            <p className="label-caps mb-3">05 · Writing</p>
             <h2 className="font-display text-section text-foreground">
               Product evidence, <span className="font-serif-italic text-primary">in essays.</span>
             </h2>

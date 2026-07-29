@@ -8,7 +8,7 @@ export function CTASection() {
   return (
     <section className="section-padding">
       <div className="max-w-6xl mx-auto">
-        <p className="label-caps mb-8">09 · Let's Talk</p>
+        <p className="label-caps mb-8">08 · Let&apos;s Talk</p>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -16,12 +16,12 @@ export function CTASection() {
           transition={{ duration: 0.9 }}
           className="font-display text-hero text-foreground leading-[1.02] max-w-5xl"
         >
-          Let's build something <span className="font-serif-italic text-primary">meaningful.</span>
+          Let&apos;s build something <span className="font-serif-italic text-primary">meaningful.</span>
         </motion.h2>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
           <p className="text-lg text-foreground-muted max-w-lg leading-relaxed">
-            I'm looking for a product team where the bar is high and the users are real.
+            I&apos;m looking for a product team where the bar is high and the users are real.
             If that sounds like you, get in touch.
           </p>
 

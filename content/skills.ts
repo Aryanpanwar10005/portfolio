@@ -7,16 +7,22 @@ export type SkillCategory = {
 
 export const skillCategories: SkillCategory[] = [
   {
+    slug: "pm-toolkit",
+    title: "PM Toolkit",
+    blurb: "How I think, prioritise, and communicate with teams.",
+    items: ["Notion", "Figma", "Linear", "Jira", "Confluence", "PostHog / GA4", "SQL", "Advanced Excel", "Salesforce", "Miro"],
+  },
+  {
     slug: "ba-delivery",
     title: "Business Analysis & Delivery",
     blurb: "Bridging the gap between messy stakeholder asks and technical execution.",
     items: ["BRD & FRD Authoring", "UAT Planning", "Gap & Root-Cause Analysis", "Risk & Dependency Management", "Release Management", "Agile / Scrum"],
   },
   {
-    slug: "pm-toolkit",
-    title: "PM Toolkit",
-    blurb: "How I think, prioritise, and communicate with teams.",
-    items: ["Notion", "Figma", "Linear", "Jira", "Confluence", "PostHog / GA4", "SQL", "Advanced Excel", "Salesforce", "Miro"],
+    slug: "product-seo-geo",
+    title: "Product · SEO · GEO",
+    blurb: "Growth loops for products that need to be found — by humans and by LLMs.",
+    items: ["Analytics instrumentation", "Funnel Analysis", "A/B testing", "User Research", "SEO-GEO strategy", "Content ops"],
   },
   {
     slug: "llm-gen-ai",
@@ -48,12 +54,6 @@ export const skillCategories: SkillCategory[] = [
     title: "On-Device AI",
     blurb: "Bringing inference to the edge, where latency and privacy matter.",
     items: ["TensorFlow Lite", "ONNX Runtime", "Edge inference", "Model compression"],
-  },
-  {
-    slug: "product-seo-geo",
-    title: "Product · SEO · GEO",
-    blurb: "Growth loops for products that need to be found — by humans and by LLMs.",
-    items: ["Analytics instrumentation", "Funnel Analysis", "A/B testing", "User Research", "SEO-GEO strategy", "Content ops"],
   },
   {
     slug: "hardware-embedded",

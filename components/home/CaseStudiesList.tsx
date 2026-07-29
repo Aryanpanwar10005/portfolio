@@ -10,13 +10,13 @@ export function CaseStudiesList() {
     <section className="section-padding">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
-          <p className="label-caps mb-3">05 · Flagship Case Studies</p>
+          <p className="label-caps mb-3">02 · Flagship Case Studies</p>
           <h2 className="font-display text-section text-foreground max-w-3xl">
             Three products, <span className="font-serif-italic text-primary">told the PM way.</span>
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-foreground-muted">
-            Problem, users, tradeoffs, metrics, and what I'd do next — for the three
-            projects I've thought about hardest.
+            Problem, users, tradeoffs, metrics, and what I&apos;d do next — for the three
+            projects I&apos;ve thought about hardest.
           </p>
         </div>
 
@@ -79,7 +79,7 @@ export function CaseStudiesList() {
           >
             <p className="font-serif-italic text-xl text-foreground-muted">
               Supporting case studies and the full archive live on the{' '}
-              <a href="/case-studies" className="text-primary border-b border-primary">Case Studies page</a>.
+              <Link href="/case-studies" className="text-primary border-b border-primary">Case Studies page</Link>.
             </p>
           </motion.div>
         </div>

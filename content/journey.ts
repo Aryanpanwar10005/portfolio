@@ -2,6 +2,7 @@ export type Milestone = {
   year: string;
   title: string;
   description: string;
+  link?: { label: string; url: string };
 };
 
 export const journey: Milestone[] = [
@@ -25,9 +26,9 @@ export const journey: Milestone[] = [
   },
   {
     year: "Jun–Aug 2025",
-    title: "Instrumentation Intern, Indian Potash Ltd",
+    title: "Operations & Instrumentation Intern, Indian Potash Ltd",
     description:
-      "Calibrated Safety Instrumented Systems at the Muzaffarnagar plant. First real exposure to reliability-critical environments where the cost of failure is measured in lives, not churn. Changed how I think about edge cases in every product since.",
+      "Spent 10 weeks inside IPL's molasses distillery in Rohana Kalan, Muzaffarnagar — learned how industrial automation systems (PLC/DCS, boilers, sensor arrays) operate across full production. Developed first-principles respect for safety compliance and enterprise operational constraints.",
   },
   {
     year: "Dec 2025",
@@ -46,12 +47,20 @@ export const journey: Milestone[] = [
     title: "Published research + 1st place at branch expo",
     description:
       "‘Automated Dual-Spot Wireless Charging and Parking Management System for EVs’ published in JETIR (IF 7.95, Vol 13 · Issue 4, ID JETIR2604872, Apr 27 2026) — 85% wireless charging efficiency, 1st place at the MIET branch expo. The paper's structure — assumption, method, result, discussion — quietly became how I write PRDs.",
+    link: {
+      label: "Read Published Paper (JETIR ↗)",
+      url: "https://www.jetir.org/view?paper=JETIR2604872",
+    },
   },
   {
     year: "2026",
     title: "Released SEO-GEO Optimizer + started writing in public",
     description:
       "Published an npm package that makes sites legible to AI answer engines (Google AI Overviews, ChatGPT, Perplexity). Shipped 11+ essays on positioning AI products, orchestrating LLMs in production, and designing for agentic users.",
+    link: {
+      label: "View npm Package ↗",
+      url: "https://www.npmjs.com/package/seo-geo-optimizer",
+    },
   },
   {
     year: "Next",

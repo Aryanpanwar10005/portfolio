@@ -9,7 +9,7 @@
 
 ## Case Studies
 
-- [FitWardrobe](https://aryanpanwar.in/case-studies/fitwardrobe): AI wardrobe stylist — reframed the core job using JTBD, shipped on-device vision (TFLite) to cut outfit selection to under 30 seconds. Chose privacy and latency over cloud capability.
+- [FitWardrobe](https://aryanpanwar.in/case-studies/fitwardrobe): AI wardrobe stylist — analyzed McKinsey/Movinga research on closet dormancy, grew to 20.8K organic impressions and 315 clicks (1.5% CTR), solved cataloguing friction from pilot feedback, preparing upcoming Beta launch at https://fitwardrobe.me.
 - [Mithivoices](https://aryanpanwar.in/case-studies/mithivoices): Open-source real-time voice AI stack — prioritized a 40+ module OSS backlog with RICE against a hard 500ms E2E latency ceiling.
 - [SEO-GEO Optimizer](https://aryanpanwar.in/case-studies/seo-geo-optimizer): npm package that auto-generates structured data, llms.txt, and answer-first content to make sites legible to AI answer engines like Perplexity and ChatGPT.
 - [AI-First CRM (HCP)](https://aryanpanwar.in/case-studies/ai-first-crm-hcp): Field-rep CRM for healthcare — ran 8 behavioral discovery interviews, chose draft-and-confirm over autonomy to maintain 85%+ acceptance rate.

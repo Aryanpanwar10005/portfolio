@@ -39,17 +39,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  // Dynamic Blog Tags
-  const allTags = new Set<string>()
+  // Dynamic Blog Tags (Filter out thin 1-post tags from sitemap to optimize crawl budget)
+  const tagCounts = new Map<string, number>()
   blogPosts.forEach(post => {
-    post.tags.forEach(tag => allTags.add(tag))
+    post.tags.forEach(tag => {
+      tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1)
+    })
   })
   
-  const tagPages = Array.from(allTags).map((tag) => ({
-    url: `${baseUrl}/writing/tag/${blogTagToSlug(tag)}`,
-    lastModified: new Date(),
-    priority: 0.6,
-  }))
+  const tagPages = Array.from(tagCounts.entries())
+    .filter(([, count]) => count >= 2)
+    .map(([tag]) => ({
+      url: `${baseUrl}/writing/tag/${blogTagToSlug(tag)}`,
+      lastModified: new Date(),
+      priority: 0.6,
+    }))
 
   // Dynamic Thinking (Playbooks)
   const thinkingPages = playbooks.map((playbook) => ({

@@ -16,7 +16,7 @@ export function PlaybookPreview() {
             </h2>
             <p className="mt-3 max-w-xl text-lg text-foreground-muted">
               Every entry starts with a product I shipped — not with theory.
-              JTBD applied to FitWardrobe, RICE applied to Mithivoices, and so on.
+              JTBD, RICE scoring, opportunity trees, and metrics — applied to real products.
             </p>
           </div>
           <Link href="/thinking" className="text-primary font-medium border-b border-primary pb-1">
