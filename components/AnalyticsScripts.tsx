@@ -1,7 +1,7 @@
 import Script from "next/script";
 
 const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID || process.env.VITE_GA4_ID;
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || process.env.VITE_GTM_ID || "GTM-PHZ2RNTL";
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || process.env.VITE_GTM_ID;
 const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || process.env.VITE_CLARITY_ID;
 
 export function AnalyticsScripts() {
