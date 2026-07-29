@@ -1,15 +1,15 @@
 import Script from "next/script";
 
-const GA4_ID = process.env.VITE_GA4_ID || process.env.NEXT_PUBLIC_GA4_ID;
-const GTM_ID = process.env.VITE_GTM_ID || process.env.NEXT_PUBLIC_GTM_ID;
-const CLARITY_ID = process.env.VITE_CLARITY_ID || process.env.NEXT_PUBLIC_CLARITY_ID;
+const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID || process.env.VITE_GA4_ID;
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || process.env.VITE_GTM_ID || "GTM-PHZ2RNTL";
+const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || process.env.VITE_CLARITY_ID;
 
 export function AnalyticsScripts() {
   return (
     <>
       {/* Google Tag Manager */}
       {GTM_ID && (
-        <Script id="gtm-script" strategy="lazyOnload">
+        <Script id="gtm-script" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
