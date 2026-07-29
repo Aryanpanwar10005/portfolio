@@ -8,12 +8,12 @@ export function JourneySection() {
     <section className="section-padding">
       <div className="max-w-4xl mx-auto">
         <div className="mb-16">
-          <p className="label-caps mb-3">07 · Journey</p>
+          <p className="label-caps mb-3">06 · Journey</p>
           <h2 className="font-display text-section text-foreground">
             From builder <span className="font-serif-italic text-primary">to PM.</span>
           </h2>
           <p className="mt-3 max-w-xl text-lg text-foreground-muted">
-            The milestones — hardware, research, shipped AI products, and where I'm heading next.
+            The milestones — hardware, research, shipped AI products, and where I&apos;m heading next.
           </p>
         </div>
 
@@ -31,6 +31,16 @@ export function JourneySection() {
               <p className="label-caps text-accent mb-1">{m.year}</p>
               <h3 className="font-display text-2xl md:text-3xl text-foreground">{m.title}</h3>
               <p className="mt-2 text-foreground-muted max-w-2xl leading-relaxed">{m.description}</p>
+              {m.link && (
+                <a
+                  href={m.link.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 mt-3 text-sm font-medium text-primary hover:text-primary-hover underline underline-offset-4 decoration-primary/40 transition-colors"
+                >
+                  {m.link.label}
+                </a>
+              )}
             </motion.div>
           ))}
         </div>

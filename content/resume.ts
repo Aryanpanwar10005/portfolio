@@ -1,6 +1,6 @@
 export const resumeData = {
   summary:
-    "Aspiring Product Manager with a builder background. I ship AI products, write about them, and want to spend my early PM years in the room where the tradeoffs are made.",
+    "Aspiring Product Manager with a builder background — hardware, AI, and web — who found that the most interesting problem is always upstream of the code. Five products built, 20+ discovery interviews, and one organic traction story later, I'm ready for the room where the tradeoffs get made.",
   target: "Associate Product Manager / PM roles at AI-first or AI-adjacent product teams.",
   experience: [
     {
@@ -10,7 +10,7 @@ export const resumeData = {
       bullets: [
         "Owned discovery, PRDs, prioritisation, and design QA end-to-end for an AI wardrobe stylist.",
         "Ran 20+ discovery interviews and 6 diary studies; synthesised into a 3-insight product bet.",
-        "Grew product to 18.2K impressions and 273 clicks (1.5% CTR) in 6 months with zero paid ads — evidence of organic reach and initial demand signal.",
+        "Generated 20.8K organic search impressions and 315 clicks (1.5% CTR, avg position 14.9) in 6 months with zero paid spend — evidence of organic search visibility and demand signal.",
       ],
     },
     {
@@ -24,12 +24,12 @@ export const resumeData = {
       ],
     },
     {
-      role: "Instrumentation Engineer Intern",
+      role: "Operations & Instrumentation Intern",
       company: "Indian Potash Limited",
       period: "Jun — Aug 2025",
       bullets: [
-        "First taste of enterprise product constraints — safety, compliance, and change-management as first-class requirements.",
-        "Documented sensor workflows and proposed 3 low-lift automations to the plant ops team.",
+        "Spent 10 weeks inside IPL's distillery learning how industrial automation actually works at scale — PLC/DCS systems, boiler controls, sensor arrays, and the full production pipeline from fermentation to co-gen.",
+        "Calibrated flow, pressure, and temperature sensors across live systems; came away with a clear-eyed view of what 'safety-first' means when a sensor failure has real consequences.",
       ],
     },
   ],
@@ -44,7 +44,7 @@ export const resumeData = {
     {
       title: "Automated Dual-Spot Wireless Charging",
       venue: "JETIR — ID JETIR2604872",
-      url: "http://www.jetir.org/view?paper=JETIR2604872",
+      url: "https://www.jetir.org/view?paper=JETIR2604872",
       year: "2026",
     },
   ],

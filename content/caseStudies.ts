@@ -82,12 +82,12 @@ export const caseStudies: CaseStudy[] = [
     cover: fitwardrobeCover,
     featured: true,
     status: "In Progress",
-    metaDescription: "How I discovered that morning decision fatigue and closet dormancy cost users weeks every year, and built an AI styling system that reached 18.2K impressions in 6 months.",
-    result: "18.2K impressions · 273 clicks · 1.5% CTR",
+    metaDescription: "How I analyzed McKinsey & Movinga research on closet dormancy, built an AI wardrobe testing version, solved pilot user friction, and prepared the upcoming Beta release for fitwardrobe.me.",
+    result: "20.8K impressions · 315 clicks · Beta Launching Soon",
     tldr: [
-      "McKinsey data shows global clothing purchases jumped 60% (mckinsey.com), while Movinga's 18,000-household audit found most closet items go unworn for over a year (movinga.com).",
-      "I ran 20+ interviews and 6 diary studies. M&S survey data showed people spend 17 minutes every morning (103 hours/year) unable to decide what to wear (marksandspencer.com).",
-      "18,200 impressions and 273 clicks (1.5% CTR) in 6 months of organic search — zero paid ads.",
+      "Situation & Research: McKinsey data shows global clothing purchases jumped 60% (mckinsey.com), Movinga's 18K household audit found items sit unworn for 12+ months (movinga.com), and M&S data showed users spend 17 mins/day (103 hrs/yr) deciding what to wear.",
+      "Task & Action: Framed the core problem — apps solve closet organization instead of daily retrieval. Built an on-device AI testing version, identified cold-start logging friction during pilot testing, and iterated to an instant recommendation loop.",
+      "Result & Next Step: Polishing the experience based on test feedback and launching the Beta/Early Access version very soon. Early users can claim access at https://fitwardrobe.me (validated by 20.8K organic impressions in 6 months).",
     ],
     liveUrl: "https://fitwardrobe.me/",
     repoUrl: "https://github.com/fitwardrobe/fitwardrobe",
@@ -96,10 +96,14 @@ export const caseStudies: CaseStudy[] = [
         label: "Dev.to Case Essay",
         url: "https://dev.to/aryan_panwar1/how-i-built-an-seo-skill-for-ai-ides-because-my-cursor-kept-getting-it-wrong-3dki",
       },
+      {
+        label: "Claim Beta Access",
+        url: "https://fitwardrobe.me/",
+      },
     ],
     sections: {
       overview:
-        "FitWardrobe is a fashion assistant that classifies clothing on-device and recommends daily outfits. The wedge is the recommendation loop; everything else — cataloguing, weather, calendar — exists to make that recommendation trustworthy.",
+        "FitWardrobe is an AI fashion assistant that classifies clothing on-device and recommends daily outfits in under 30 seconds. Built following a complete S.T.A.R. product cycle: analyzing industry research, framing the retrieval problem, building a pilot testing version, solving real user logging friction, and preparing the imminent Beta launch at fitwardrobe.me.",
       problemStatement:
         "Wardrobe apps fail because they solve organisation instead of retrieval. While McKinsey research showed clothing buying jumped 60% (mckinsey.com), Movinga's 18,000-household audit proved that people forget what they own (movinga.com), and M&S survey data showed users spend 17 minutes every morning unable to decide (marksandspencer.com). The answer isn't a better catalogue. It's a system that does the remembering for you.",
       marketNeed:
@@ -107,7 +111,7 @@ export const caseStudies: CaseStudy[] = [
       targetUsers:
         "I assumed I was building for fashion-conscious people. Discovery interviews said otherwise. The people who engaged most were time-constrained and mildly anxious about social presentation — not particularly interested in fashion, but very interested in fewer decisions per morning.",
       research:
-        "Before building, I ran 20+ discovery interviews and 6 diary studies — where participants texted me every morning with what they wore and why. This matched what academic research from PLATE 2025 found: clothing retention is a retrieval and memory challenge, not a storage problem (plateconference.org). Most participants stopped texting by day 4 — which was data: the logging friction was too high for a daily habit. I hadn't expected that.",
+        "Before building, I ran 20+ discovery interviews and 6 diary studies — where participants texted me every morning with what they wore and why. This matched what academic research from PLATE 2025 found: clothing retention is a retrieval and memory challenge, not a storage problem (plateconference.org). When pilot users tested early builds, most stopped logging by day 4 — revealing high cataloguing friction. That feedback reshaped our solution to focus on automated single-photo recommendations rather than manual entry.",
       insights: [
         "Users don't want more outfit ideas — they want fewer, and confident ones.",
         "'Fit' is emotional: the same shirt gets rejected on a Monday and picked on a Friday.",
@@ -135,7 +139,7 @@ export const caseStudies: CaseStudy[] = [
       expectedBehaviour:
         "Open app → see today's outfit in under 5 seconds → tap keep or swap → move on with the morning.",
       northStar: "Weekly Kept Outfits per Active User — chosen over DAU because it captures actual model trust. A user can open the app daily and reject everything. That's a failing product that looks good in the wrong metric.",
-      supportingMetrics: ["Time to First Outfit", "Swap Rate", "Correction Rate", "D7 / D30 Retention", "18.2K Impressions / 273 Clicks (1.5% CTR) — 6 months organic"],
+      supportingMetrics: ["Time to First Outfit", "Swap Rate", "Correction Rate", "D7 / D30 Retention", "20.8K Impressions / 315 Clicks (1.5% CTR, avg position 14.9) — 6 months organic"],
       prioritization:
         "RICE across the backlog, with Confidence replaced by an evidence-class label. Vision quality and outfit-generation confidence won every round; social features consistently lost to retention bets.",
       wireframes:
@@ -147,9 +151,9 @@ export const caseStudies: CaseStudy[] = [
       finalSolution:
         "A vision-first onboarding, a daily home screen that opens on today's outfit, and a feedback loop that quietly trains the model on every keep or swap.",
       results:
-        "18,200+ organic Google impressions and 273 clicks (1.5% CTR) over 6 months — zero paid spend. The organic interest came entirely from users searching for the exact problem FitWardrobe solves.",
+        "20,800+ organic Google impressions and 315 clicks (1.5% CTR, avg position 14.9) over 6 months — zero paid spend. Following pilot testing — which surfaced cataloguing friction — and subsequent UI refinements, we are preparing the Beta launch at fitwardrobe.me.",
       reflection:
-        "The hardest PM call was cutting the social feed. It would have made the demo pretty. It would have made the retention worse. I still believe it was right, but I had to sit with the discomfort of a less impressive demo for a while. The market research backed the bet: within 6 months of shipping — with zero paid ads — FitWardrobe generated 18,200 impressions and 273 clicks (1.5% CTR). That organic interest came entirely from people searching for exactly this problem.",
+        "By analyzing industry research (McKinsey, Movinga, M&S) and gathering pilot feedback, we identified cataloguing friction and iterated on product improvements, generating 20,800+ organic impressions without paid acquisition. We are now preparing to open early access for users at https://fitwardrobe.me.",
       lessons: [
         "The classifier — my original headline feature — became invisible in the final product. Not because it didn't work, but because the product worked better when it wasn't visible. That was a strange thing to accept.",
         "Discovery before building is a habit, not a phase. I keep having to remind myself of this on every new project.",

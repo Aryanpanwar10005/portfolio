@@ -8,7 +8,7 @@ const portraitCutout = '/assets/aryan-portrait-cutout.webp'
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-32 md:pt-40 pb-20 md:pb-32">
+    <section className="relative overflow-hidden pt-20 md:pt-28 pb-16 md:pb-28">
       <div className="relative max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
         <div className="lg:col-span-7 order-2 lg:order-1 relative z-10">
           <motion.p
@@ -35,8 +35,8 @@ export function Hero() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="mt-8 max-w-xl text-lg text-foreground-muted leading-relaxed"
           >
-            I'm Aryan Panwar — an aspiring Product Manager with a builder background.
-            This isn't a portfolio; it's evidence. Case studies from products I've
+            I&apos;m Aryan Panwar — an aspiring Product Manager with a builder background.
+            This isn&apos;t a portfolio; it&apos;s evidence. Case studies from products I&apos;ve
             shipped, the tradeoffs I made along the way, and the writing that shows
             how I think about product.
           </motion.p>
@@ -48,14 +48,14 @@ export function Hero() {
             className="mt-10 flex flex-wrap gap-4"
           >
             <Link href="/case-studies"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3.5 text-sm font-medium hover:bg-primary-hover transition-colors"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3.5 text-sm font-medium hover:bg-primary-hover transition-colors shadow-sm"
             >
               Read case studies <span aria-hidden>→</span>
             </Link>
-            <Link href="/thinking"
-              className="inline-flex items-center gap-2 border border-foreground/30 text-foreground px-6 py-3.5 text-sm font-medium hover:border-primary hover:text-primary transition-colors"
+            <Link href="/resume"
+              className="inline-flex items-center gap-2 border-2 border-primary/80 text-primary px-6 py-3.5 text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all shadow-sm"
             >
-              My Product Thinking
+              Resume <span aria-hidden>→</span>
             </Link>
           </motion.div>
 
@@ -111,28 +111,28 @@ export function Hero() {
         </div>
 
         {/* Portrait composition: wine arch + cutout + signature + badge */}
-        <div className="order-1 lg:order-2 lg:col-span-5 relative w-full max-w-sm sm:max-w-md lg:max-w-[380px] xl:max-w-[460px] 2xl:max-w-none mx-auto lg:mx-0 lg:justify-self-end lg:sticky lg:top-32">
+        <div className="order-1 lg:order-2 lg:col-span-5 relative w-full max-w-90 sm:max-w-md lg:max-w-110 xl:max-w-130 2xl:max-w-none mx-auto lg:mx-0 lg:justify-self-end lg:sticky lg:top-28">
           <div className="relative aspect-4/5 w-full">
             {/* Clip portrait to arch shape */}
             {/* Wine arch backdrop */}
             <div aria-hidden className="absolute inset-0 arch-shape bg-primary" />
             {/* Portrait cutout — NOT clipped to arch, so it pops out! */}
-            <div className="absolute inset-x-0 bottom-0 z-10 h-[115%] w-full pointer-events-none">
+            <div className="absolute inset-x-0 bottom-0 z-10 h-[142%] w-full pointer-events-none">
               <Image
                 src={portraitCutout}
                 alt="Aryan Panwar portrait"
                 fill
-                className="object-contain object-bottom select-none origin-bottom"
+                className="object-contain object-bottom select-none origin-bottom scale-120"
                 draggable={false}
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
 
-            {/* Circular badge — overlaps arch top-right */}
+            {/* Circular badge — anchored on arch shoulder top-right */}
             <div
               aria-hidden
-              className="absolute -top-6 -right-4 md:-top-8 md:-right-8 lg:-top-10 lg:-right-10 w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full border border-accent/60 flex items-center justify-center bg-background"
+              className="absolute top-2 -right-2 md:top-4 md:-right-4 lg:top-6 lg:-right-6 z-20 w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full border border-accent/60 flex items-center justify-center bg-background shadow-md"
             >
               <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full">
                 <defs>

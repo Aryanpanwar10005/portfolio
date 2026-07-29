@@ -52,7 +52,7 @@ export const publications = [
       "Automated Dual-Spot Wireless Charging and Parking Management System for Electric Vehicles",
     venue: "JETIR — Journal of Emerging Technologies and Innovative Research",
     meta: "Vol 13 · Issue 4 · April 2026 · Impact Factor 7.95 · ISSN 2349-5162",
-    url: "http://www.jetir.org/view?paper=JETIR2604872",
+    url: "https://www.jetir.org/view?paper=JETIR2604872",
     note: "1st place — College Branch Expo. IPT-based prototype at 85% wireless charging efficiency.",
   },
 ];

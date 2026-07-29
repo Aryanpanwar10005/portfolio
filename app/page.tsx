@@ -1,8 +1,7 @@
 import { Hero } from "@/components/home/Hero";
-import { FeaturedCase } from "@/components/home/FeaturedCase";
+import { CaseStudiesList } from "@/components/home/CaseStudiesList";
 import { ProductThinking } from "@/components/home/ProductThinking";
 import { PlaybookPreview } from "@/components/home/PlaybookPreview";
-import { CaseStudiesList } from "@/components/home/CaseStudiesList";
 import { BlogSection } from "@/components/home/BlogSection";
 import { JourneySection } from "@/components/home/JourneySection";
 import { Philosophy } from "@/components/home/Philosophy";
@@ -60,10 +59,9 @@ export default function Home() {
         }}
       />
       <Hero />
-      <FeaturedCase />
+      <CaseStudiesList />
       <ProductThinking />
       <PlaybookPreview />
-      <CaseStudiesList />
       <BlogSection />
       <JourneySection />
       <Philosophy />

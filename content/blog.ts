@@ -105,7 +105,7 @@ export const blogPosts: BlogPost[] = [
         body: [
           { type: 'p', text: "The scoped-down v1 shipped in nine days. Day-7 retention with the same test group moved from roughly one in five to closer to three in five. The classifier still ran on every photo — but nobody talked about it, because they were too busy telling me the app 'just knew' what to suggest." },
           { type: 'p', text: 'The engineering had not changed. The product had.' },
-          { type: 'p', text: "Six months later, with zero paid ads, FitWardrobe reached 18,200 impressions and 273 clicks (1.5% CTR) through organic search alone. Every one of those searches was from someone with exactly the problem I had stopped trying to solve with a classifier." },
+          { type: 'p', text: "Six months later, with zero paid ads, FitWardrobe reached 20,800 impressions and 315 clicks (1.5% CTR, avg position 14.9) through organic search alone — reflecting organic search demand for solving daily wardrobe retrieval rather than another image classifier." },
         ],
       },
       {

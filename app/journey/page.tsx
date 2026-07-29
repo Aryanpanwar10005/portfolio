@@ -77,6 +77,16 @@ export default function JourneyPage() {
               <p className="label-caps text-accent mb-1">{m.year}</p>
               <h2 className="font-display text-large text-foreground">{m.title}</h2>
               <p className="mt-3 text-lg text-foreground-muted leading-relaxed max-w-2xl">{m.description}</p>
+              {m.link && (
+                <a
+                  href={m.link.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 mt-4 text-sm font-medium text-primary hover:text-primary-hover underline underline-offset-4 decoration-primary/40 transition-colors"
+                >
+                  {m.link.label}
+                </a>
+              )}
             </motion.div>
           ))}
         </div>
