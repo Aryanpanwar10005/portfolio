@@ -48,6 +48,7 @@ export function AnalyticsScripts() {
       {/* Cloudflare Web Analytics */}
       <Script 
         defer 
+        type="module"
         src="https://static.cloudflareinsights.com/beacon.min.js" 
         data-cf-beacon='{"token": "717c7853d78d4483b20032758aa0d03e", "spa": true}' 
       />
