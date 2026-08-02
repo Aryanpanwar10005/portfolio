@@ -45,6 +45,12 @@ export function AnalyticsScripts() {
         </Script>
       )}
 
+      {/* Cloudflare Web Analytics */}
+      <Script 
+        defer 
+        src="https://static.cloudflareinsights.com/beacon.min.js" 
+        data-cf-beacon='{"token": "717c7853d78d4483b20032758aa0d03e", "spa": true}' 
+      />
     </>
   );
 }
