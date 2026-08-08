@@ -1,9 +1,36 @@
+import type { Metadata } from 'next'
 import { blogPosts, allBlogTags, blogTagToSlug } from '@/content/blog'
 import { notFound } from 'next/navigation'
 import { BlogTagClient } from '@/components/BlogTagClient'
 
 interface PageProps {
   params: Promise<{ tag: string }>
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const resolvedParams = await params
+  const tagSlug = resolvedParams.tag
+  const tags = allBlogTags()
+  const tag = tags.find((t) => blogTagToSlug(t) === tagSlug)
+
+  if (!tag) {
+    return {}
+  }
+
+  const path = `/writing/tag/${tagSlug}`
+
+  return {
+    title: `${tag} Essays`,
+    description: `Essays and product reflections tagged with ${tag} by Aryan Panwar.`,
+    alternates: {
+      canonical: path,
+    },
+    openGraph: {
+      title: `${tag} Essays | Aryan Panwar`,
+      description: `Essays and product reflections tagged with ${tag} by Aryan Panwar.`,
+      url: `https://aryanpanwar.in${path}`,
+    },
+  }
 }
 
 export default async function BlogTagPage({ params }: PageProps) {

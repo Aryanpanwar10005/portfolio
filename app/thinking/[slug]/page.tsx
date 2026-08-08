@@ -48,16 +48,36 @@ export default async function PlaybookEntryPage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Article',
-            headline: entry.title,
-            description: entry.summary,
-            datePublished: '2025-01-01',
-            author: { '@type': 'Person', name: 'Aryan Panwar' },
-            mainEntityOfPage: `https://aryanpanwar.in${path}`,
-            articleSection: 'Product Thinking',
-          })
+          __html: JSON.stringify([
+            {
+              '@context': 'https://schema.org',
+              '@type': 'Article',
+              headline: entry.title,
+              description: entry.summary,
+              datePublished: '2025-01-01',
+              author: {
+                '@type': 'Person',
+                name: 'Aryan Panwar',
+                url: 'https://aryanpanwar.in/about',
+              },
+              publisher: {
+                '@type': 'Person',
+                name: 'Aryan Panwar',
+                url: 'https://aryanpanwar.in/',
+              },
+              mainEntityOfPage: `https://aryanpanwar.in${path}`,
+              articleSection: 'Product Thinking',
+            },
+            {
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://aryanpanwar.in/' },
+                { '@type': 'ListItem', position: 2, name: 'Product Thinking', item: 'https://aryanpanwar.in/thinking' },
+                { '@type': 'ListItem', position: 3, name: entry.title, item: `https://aryanpanwar.in${path}` },
+              ],
+            },
+          ])
         }}
       />
       <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mb-8">

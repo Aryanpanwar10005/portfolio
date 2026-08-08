@@ -36,9 +36,6 @@ export const metadata: Metadata = {
   description: "Product Evidence Book by Aryan Panwar — case studies, product thinking, and writing from an aspiring PM with a builder background.",
   authors: [{ name: "Aryan Panwar" }],
   metadataBase: new URL("https://aryanpanwar.in"),
-  alternates: {
-    canonical: "https://aryanpanwar.in",
-  },
   icons: {
     icon: "/favicon.webp",
     shortcut: "/favicon.webp",

@@ -134,13 +134,22 @@ export default async function BlogPostPage({ params }: PageProps) {
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.summary,
-    image: post.cover,
+    image: post.cover?.startsWith('http') ? post.cover : `https://aryanpanwar.in${post.cover}`,
     datePublished: post.publishedAtISO,
     dateModified: post.publishedAtISO,
     keywords: post.tags.join(', '),
     articleSection: post.category,
     wordCount: wordCount(post),
-    author: { '@type': 'Person', name: 'Aryan Panwar' },
+    author: {
+      '@type': 'Person',
+      name: 'Aryan Panwar',
+      url: 'https://aryanpanwar.in/about',
+    },
+    publisher: {
+      '@type': 'Person',
+      name: 'Aryan Panwar',
+      url: 'https://aryanpanwar.in/',
+    },
     mainEntityOfPage: `https://aryanpanwar.in${path}`,
   }
 

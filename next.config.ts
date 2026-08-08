@@ -1,35 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-
   experimental: {
     turbopackLocalPostcssConfig: true,
   },
   async redirects() {
     return [
-      // === BLOG: old /blog/:slug.html URLs (from previous Vite site, indexed by Google) ===
-      {
-        source: '/blog/:slug.html',
-        destination: '/writing/:slug',
-        permanent: true,
-      },
-      // === BLOG: clean /blog/:slug → /writing/:slug (no .html) ===
-      {
-        source: '/blog',
-        destination: '/writing',
-        permanent: true,
-      },
-      {
-        source: '/blog/tag/:tag',
-        destination: '/writing/tag/:tag',
-        permanent: true,
-      },
-      {
-        source: '/blog/:slug',
-        destination: '/writing/:slug',
-        permanent: true,
-      },
-      // === OLD BLOG POSTS: indexed by Google but deleted — redirect to closest match ===
+      // === 1. HIGH-VALUE SPECIFIC REDIRECTS (Evaluated FIRST) ===
       {
         source: '/blog/technical-seo-for-ai-products.html',
         destination: '/writing/building-ai-features-users-trust',
@@ -40,18 +17,18 @@ const nextConfig: NextConfig = {
         destination: '/writing/engineering-to-product-thinking',
         permanent: true,
       },
-      // === OLD PDF: /docs/Aryan.pdf → current PM resume ===
+      {
+        source: '/blog/seo-for-product-managers.html',
+        destination: '/writing/building-ai-features-users-trust',
+        permanent: true,
+      },
       {
         source: '/docs/Aryan.pdf',
         destination: '/docs/Aryan_Panwar_PM_Resume.pdf',
         permanent: true,
       },
-      // === CASE STUDIES (old .html paths) ===
-      {
-        source: '/reports',
-        destination: '/case-studies',
-        permanent: true,
-      },
+
+      // === 2. CASE STUDIES (old .html & reports paths) ===
       {
         source: '/reports/fitwardrobe-case-study.html',
         destination: '/case-studies/fitwardrobe',
@@ -67,7 +44,13 @@ const nextConfig: NextConfig = {
         destination: '/case-studies/seo-geo-optimizer',
         permanent: true,
       },
-      // === STATIC .html PAGES ===
+      {
+        source: '/reports',
+        destination: '/case-studies',
+        permanent: true,
+      },
+
+      // === 3. STATIC .html LEGACY PAGES ===
       {
         source: '/faq.html',
         destination: '/faq',
@@ -93,7 +76,8 @@ const nextConfig: NextConfig = {
         destination: '/',
         permanent: true,
       },
-      // === PLAYBOOK → THINKING ===
+
+      // === 4. PLAYBOOK → THINKING ===
       {
         source: '/playbook',
         destination: '/thinking',
@@ -102,6 +86,18 @@ const nextConfig: NextConfig = {
       {
         source: '/playbook/:slug',
         destination: '/thinking/:slug',
+        permanent: true,
+      },
+
+      // === 5. BLOG SECTION ROOT & TAGS ===
+      {
+        source: '/blog',
+        destination: '/writing',
+        permanent: true,
+      },
+      {
+        source: '/blog/tag/:tag',
+        destination: '/writing/tag/:tag',
         permanent: true,
       },
     ];
