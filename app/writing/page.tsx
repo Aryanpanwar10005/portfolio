@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 import { PageHeader } from '@/components/PageHeader'
 import { blogPosts, allBlogTags, allBlogCategories, blogTagToSlug, type BlogCategory } from '@/content/blog'
 
-const ALL: 'All' = 'All'
+const ALL = 'All' as const
 
 export default function BlogIndex() {
   const [active, setActive] = useState<BlogCategory | typeof ALL>(ALL)

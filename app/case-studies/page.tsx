@@ -86,7 +86,7 @@ export default function CaseStudiesIndex() {
       <section className="px-6 md:px-10 pb-24 pt-16 max-w-7xl mx-auto border-t border-border">
         <p className="label-caps mb-3">Archive</p>
         <h2 className="font-display text-large text-foreground mb-8">
-          Things I've <span className="font-serif-italic text-primary">built.</span>
+          Things I&apos;ve <span className="font-serif-italic text-primary">built.</span>
         </h2>
         <p className="text-foreground-muted max-w-2xl mb-10">
           Supporting products, hardware prototypes, and published research - evidence that the PM instinct is grounded in shipping real systems.

@@ -59,7 +59,7 @@ export default function AboutPage() {
       />
       <section className="px-6 md:px-10 pb-24 max-w-2xl mx-auto space-y-14 text-lg text-foreground leading-relaxed">
         <Block label="Who I am">
-          I'm Aryan Panwar, an ECE graduate from MIET Meerut (2026) and an AI
+          I&apos;m Aryan Panwar, an ECE graduate from MIET Meerut (2026) and an AI
           Product Manager. I came to product from the builder side: I ship agentic
           AI systems, write about the tradeoffs, and want to spend my early PM
           years in the room where the calls get made.
@@ -67,7 +67,7 @@ export default function AboutPage() {
         <Block label="Why PM">
           Because the interesting problems live at the intersection of user,
           business, and technology - and PM is the seat where you actually get
-          to make the tradeoffs. I'd rather own an outcome than a feature.
+          to make the tradeoffs. I&apos;d rather own an outcome than a feature.
         </Block>
         <Block label="Values">
           User first, always. Evidence over opinion. Restraint is a feature.

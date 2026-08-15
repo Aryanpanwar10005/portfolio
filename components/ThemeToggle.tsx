@@ -21,7 +21,9 @@ export function ThemeToggle({ className }: { className?: string }) {
     try {
       const stored = window.localStorage.getItem('theme')
       const resolved: Theme = stored === 'dark' ? 'dark' : 'light'
-      setTheme(resolved)
+      setTimeout(() => {
+        setTheme(resolved)
+      }, 0)
     } catch {
       // Keep light fallback already set by useState
     } finally {
