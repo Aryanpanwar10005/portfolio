@@ -19,7 +19,7 @@ export default function CaseStudiesIndex() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'CollectionPage',
-            name: 'Case Studies — Aryan Panwar',
+            name: 'Case Studies - Aryan Panwar',
             url: 'https://aryanpanwar.in/case-studies',
             hasPart: [...flagshipCaseStudies, ...supportingCaseStudies].map((c) => ({
               '@type': 'CreativeWork',
@@ -89,7 +89,7 @@ export default function CaseStudiesIndex() {
           Things I've <span className="font-serif-italic text-primary">built.</span>
         </h2>
         <p className="text-foreground-muted max-w-2xl mb-10">
-          Supporting products, hardware prototypes, and published research — evidence that the PM instinct is grounded in shipping real systems.
+          Supporting products, hardware prototypes, and published research - evidence that the PM instinct is grounded in shipping real systems.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {archivedProjects.map((p) => (

@@ -14,7 +14,7 @@ export default function PlaybookIndex() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'CollectionPage',
-            name: 'My Product Thinking — Aryan Panwar',
+            name: 'My Product Thinking - Aryan Panwar',
             url: 'https://aryanpanwar.in/thinking',
             hasPart: playbook.map((p) => ({
               '@type': 'CreativeWork',

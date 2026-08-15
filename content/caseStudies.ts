@@ -22,6 +22,7 @@ export type CaseStudy = {
   cover: string;
   featured?: boolean;
   status?: "Shipped" | "In Progress" | "Concept";
+  publishedAtISO?: string;
   metaDescription?: string;
   result?: string;
   tldr?: string[];
@@ -74,9 +75,10 @@ export const caseStudies: CaseStudy[] = [
     tagline: "An AI wardrobe stylist that turns a closet full of clothes into daily outfits people actually wear.",
     role: "Founder & Product Manager",
     platform: "iOS · Web · On-device Vision",
-    timeline: "2025 — Present",
+    timeline: "2025 - Present",
+    publishedAtISO: "2025-01-01",
     problem:
-      "People buy 60% more clothes than 15 years ago (mckinsey.com) and forget about them for years — Movinga's 18,000-household global audit found that the vast majority of closet items sit unworn for over 12 months (movinga.com). On top of that, M&S survey data showed people spend 17 minutes every morning (103 hours a year) deciding what to wear (marksandspencer.com). And when a special occasion comes up? The outfit they wanted is forgotten, unready, or buried.",
+      "People buy 60% more clothes than 15 years ago (mckinsey.com) and forget about them for years - Movinga's 18,000-household global audit found that the vast majority of closet items sit unworn for over 12 months (movinga.com). On top of that, M&S survey data showed people spend 17 minutes every morning (103 hours a year) deciding what to wear (marksandspencer.com). And when a special occasion comes up? The outfit they wanted is forgotten, unready, or buried.",
     solution:
       "A vision-first wardrobe that catalogs every item from a photo, learns fit and occasion rules from real usage, and recommends outfits pre-scored for weather, calendar, and confidence.",
     cover: fitwardrobeCover,
@@ -86,7 +88,7 @@ export const caseStudies: CaseStudy[] = [
     result: "20.8K impressions · 315 clicks · Beta Launching Soon",
     tldr: [
       "Situation & Research: McKinsey data shows global clothing purchases jumped 60% (mckinsey.com), Movinga's 18K household audit found items sit unworn for 12+ months (movinga.com), and M&S data showed users spend 17 mins/day (103 hrs/yr) deciding what to wear.",
-      "Task & Action: Framed the core problem — apps solve closet organization instead of daily retrieval. Built an on-device AI testing version, identified cold-start logging friction during pilot testing, and iterated to an instant recommendation loop.",
+      "Task & Action: Framed the core problem - apps solve closet organization instead of daily retrieval. Built an on-device AI testing version, identified cold-start logging friction during pilot testing, and iterated to an instant recommendation loop.",
       "Result & Next Step: Polishing the experience based on test feedback and launching the Beta/Early Access version very soon. Early users can claim access at https://fitwardrobe.me (validated by 20.8K organic impressions in 6 months).",
     ],
     liveUrl: "https://fitwardrobe.me/",
@@ -109,16 +111,16 @@ export const caseStudies: CaseStudy[] = [
       marketNeed:
         "Research by McKinsey & Company showed global clothing purchases jumped 60% over a 15-year period (mckinsey.com), creating a visibility crisis in personal closets. The market problem was hiding in plain sight: not a lack of clothes, but a memory and retrieval bottleneck. On-device vision had just become fast enough to classify garments in under two seconds without a server. The moment that technical constraint lifted, the product became worth building.",
       targetUsers:
-        "I assumed I was building for fashion-conscious people. Discovery interviews said otherwise. The people who engaged most were time-constrained and mildly anxious about social presentation — not particularly interested in fashion, but very interested in fewer decisions per morning.",
+        "I assumed I was building for fashion-conscious people. Discovery interviews said otherwise. The people who engaged most were time-constrained and mildly anxious about social presentation - not particularly interested in fashion, but very interested in fewer decisions per morning.",
       research:
-        "Before building, I ran 20+ discovery interviews and 6 diary studies — where participants texted me every morning with what they wore and why. This matched what academic research from PLATE 2025 found: clothing retention is a retrieval and memory challenge, not a storage problem (plateconference.org). When pilot users tested early builds, most stopped logging by day 4 — revealing high cataloguing friction. That feedback reshaped our solution to focus on automated single-photo recommendations rather than manual entry.",
+        "Before building, I ran 20+ discovery interviews and 6 diary studies - where participants texted me every morning with what they wore and why. This matched what academic research from PLATE 2025 found: clothing retention is a retrieval and memory challenge, not a storage problem (plateconference.org). When pilot users tested early builds, most stopped logging by day 4 - revealing high cataloguing friction. That feedback reshaped our solution to focus on automated single-photo recommendations rather than manual entry.",
       insights: [
-        "Users don't want more outfit ideas — they want fewer, and confident ones.",
+        "Users don't want more outfit ideas - they want fewer, and confident ones.",
         "'Fit' is emotional: the same shirt gets rejected on a Monday and picked on a Friday.",
         "Cataloguing feels like homework. If it takes more than 10 seconds per item, it doesn't happen.",
       ],
       opportunity:
-        "The right surface isn't a better closet — it's a morning ritual. Get a user a good outfit in under 30 seconds after opening the app.",
+        "The right surface isn't a better closet - it's a morning ritual. Get a user a good outfit in under 30 seconds after opening the app.",
       scope: [
         "Photo-to-item vision pipeline (on-device background removal + attributes)",
         "Daily outfit generator with weather + calendar signals",
@@ -133,31 +135,31 @@ export const caseStudies: CaseStudy[] = [
         "The riskiest assumption was that people would accept 3–5 recommendations instead of an infinite scroll. Everything I'd built before had given users more options, not fewer. I wasn't sure the constraint would feel like confidence rather than limitation until I watched a pilot user tap 'keep' without scrolling.",
       successCriteria: [
         "Target: D7 return rate meaningfully above the onboarding cohort baseline.",
-        "Target: kept-outfit rate above half of daily recommendations — the model earning trust, not just generating variety.",
+        "Target: kept-outfit rate above half of daily recommendations - the model earning trust, not just generating variety.",
         "Kill condition: if correction rate rises above swap rate, the model is creating cleanup work, not saving time.",
       ],
       expectedBehaviour:
         "Open app → see today's outfit in under 5 seconds → tap keep or swap → move on with the morning.",
-      northStar: "Weekly Kept Outfits per Active User — chosen over DAU because it captures actual model trust. A user can open the app daily and reject everything. That's a failing product that looks good in the wrong metric.",
-      supportingMetrics: ["Time to First Outfit", "Swap Rate", "Correction Rate", "D7 / D30 Retention", "20.8K Impressions / 315 Clicks (1.5% CTR, avg position 14.9) — 6 months organic"],
+      northStar: "Weekly Kept Outfits per Active User - chosen over DAU because it captures actual model trust. A user can open the app daily and reject everything. That's a failing product that looks good in the wrong metric.",
+      supportingMetrics: ["Time to First Outfit", "Swap Rate", "Correction Rate", "D7 / D30 Retention", "20.8K Impressions / 315 Clicks (1.5% CTR, avg position 14.9) - 6 months organic"],
       prioritization:
         "RICE across the backlog, with Confidence replaced by an evidence-class label. Vision quality and outfit-generation confidence won every round; social features consistently lost to retention bets.",
       wireframes:
-        "A Figma clickthrough showing a single 'what should I wear?' response — no catalog, no UI chrome, just an answer. I measured one thing: whether the test user tapped again without being asked. Most did. That was enough to start building.",
+        "A Figma clickthrough showing a single 'what should I wear?' response - no catalog, no UI chrome, just an answer. I measured one thing: whether the test user tapped again without being asked. Most did. That was enough to start building.",
       prd:
-        "One-page per release. The non-goals section was the one I took most seriously — it had to name the things I was explicitly choosing not to build. If I couldn't articulate why something was out of scope, it wasn't actually out of scope.",
+        "One-page per release. The non-goals section was the one I took most seriously - it had to name the things I was explicitly choosing not to build. If I couldn't articulate why something was out of scope, it wasn't actually out of scope.",
       prototype:
         "A clickable mock shown to a handful of people before any model code existed. The biggest thing I learned: users engaged with the recommendation before they engaged with the catalog. They cared about the answer, not the archive.",
       finalSolution:
         "A vision-first onboarding, a daily home screen that opens on today's outfit, and a feedback loop that quietly trains the model on every keep or swap.",
       results:
-        "20,800+ organic Google impressions and 315 clicks (1.5% CTR, avg position 14.9) over 6 months — zero paid spend. Following pilot testing — which surfaced cataloguing friction — and subsequent UI refinements, we are preparing the Beta launch at fitwardrobe.me.",
+        "20,800+ organic Google impressions and 315 clicks (1.5% CTR, avg position 14.9) over 6 months - zero paid spend. Following pilot testing - which surfaced cataloguing friction - and subsequent UI refinements, we are preparing the Beta launch at fitwardrobe.me.",
       reflection:
         "By analyzing industry research (McKinsey, Movinga, M&S) and gathering pilot feedback, we identified cataloguing friction and iterated on product improvements, generating 20,800+ organic impressions without paid acquisition. We are now preparing to open early access for users at https://fitwardrobe.me.",
       lessons: [
-        "The classifier — my original headline feature — became invisible in the final product. Not because it didn't work, but because the product worked better when it wasn't visible. That was a strange thing to accept.",
+        "The classifier - my original headline feature - became invisible in the final product. Not because it didn't work, but because the product worked better when it wasn't visible. That was a strange thing to accept.",
         "Discovery before building is a habit, not a phase. I keep having to remind myself of this on every new project.",
-        "The catalog was the wrong hero. Users abandon apps that make them do upfront data entry — UX researchers call this the cold-start problem (plateconference.org). The fix was flipping the responsibility: the app remembers, the user adds one photo. Once that clicked, the whole product got simpler.",
+        "The catalog was the wrong hero. Users abandon apps that make them do upfront data entry - UX researchers call this the cold-start problem (plateconference.org). The fix was flipping the responsibility: the app remembers, the user adds one photo. Once that clicked, the whole product got simpler.",
       ],
     },
   },
@@ -169,18 +171,19 @@ export const caseStudies: CaseStudy[] = [
     role: "Product Manager & Contributor",
     platform: "Open Source · Python · Web",
     timeline: "2025",
+    publishedAtISO: "2025-01-01",
     problem:
       "Small teams who want to build voice AI products have two options: pay per-minute to closed APIs (Deepgram, ElevenLabs) that can change pricing any time, or dig through research code that never actually ships. There was no open, production-ready middle ground.",
     solution:
-      "A modular, self-hostable stack — STT, LLM routing, TTS, telephony — packaged so a two-person team can ship a production voice agent in a weekend.",
+      "A modular, self-hostable stack - STT, LLM routing, TTS, telephony - packaged so a two-person team can ship a production voice agent in a weekend.",
     cover: mithivoicesCover,
     featured: false,
     status: "Shipped",
-    metaDescription: "How I built and open-sourced a production-ready real-time voice AI stack — STT, LLM routing, TTS, telephony — so small teams can ship voice agents without per-minute API fees.",
+    metaDescription: "How I built and open-sourced a production-ready real-time voice AI stack - STT, LLM routing, TTS, telephony - so small teams can ship voice agents without per-minute API fees.",
     result: "Open source · Production-ready",
     tldr: [
       "Small teams building voice AI had two options: pay per-minute to closed APIs like Deepgram or ElevenLabs, or dig through research code that never ships.",
-      "I built Mithivoices from scratch and open-sourced it — a modular stack with STT, LLM routing, TTS, and telephony adapters.",
+      "I built Mithivoices from scratch and open-sourced it - a modular stack with STT, LLM routing, TTS, and telephony adapters.",
       "A 5-minute quickstart that puts a working voice agent on a phone number. Production-ready and open for contributors.",
     ],
     repoUrl: "https://github.com/mithivoices/ai-voice-platform",
@@ -194,14 +197,14 @@ export const caseStudies: CaseStudy[] = [
       targetUsers:
         "Indie hackers, small SaaS teams, and researchers who want to ship, not train.",
       research:
-        "Went deep on a stack of GitHub repos that had stalled — looking for where they broke. Talked to builders who had abandoned voice projects mid-way. Interruption handling and latency were the two things that killed otherwise-working demos, across almost every conversation.",
+        "Went deep on a stack of GitHub repos that had stalled - looking for where they broke. Talked to builders who had abandoned voice projects mid-way. Interruption handling and latency were the two things that killed otherwise-working demos, across almost every conversation.",
       insights: [
-        "Builders don't want more models — they want opinionated defaults that let them skip the research phase entirely.",
+        "Builders don't want more models - they want opinionated defaults that let them skip the research phase entirely.",
         "Sub-500ms end-to-end latency is the difference between 'demo' and 'usable.'",
         "Swap-ability of STT/LLM/TTS is a hard requirement. Projects built on single-provider stacks break the moment pricing changes.",
       ],
       opportunity:
-        "Ship the fastest, most swappable OSS voice stack — and let community modules cover the long tail.",
+        "Ship the fastest, most swappable OSS voice stack - and let community modules cover the long tail.",
       scope: [
         "Latency-first pipeline architecture",
         "Pluggable STT / LLM / TTS providers",
@@ -215,7 +218,7 @@ export const caseStudies: CaseStudy[] = [
       assumptions:
         "The biggest bet was that contributors would show up if the core was opinionated enough. Open-source projects that try to please everyone often end up serving no one. I picked a default stack and was prepared to be wrong about the choices.",
       successCriteria: [
-        "Target: first voice agent shipped by a stranger within 30 days of v1 — if someone outside the project can install and run it, the quickstart is good enough.",
+        "Target: first voice agent shipped by a stranger within 30 days of v1 - if someone outside the project can install and run it, the quickstart is good enough.",
         "Target: median end-to-end latency under 500ms in the reference agent.",
         "Kill condition: if the quickstart takes longer than 15 minutes for a developer who reads the README once, the defaults are not sane enough.",
       ],
@@ -226,18 +229,18 @@ export const caseStudies: CaseStudy[] = [
       prioritization:
         "Every roadmap item was scored against 'does this reduce time-to-first-agent?' Anything that didn't was closed without ceremony.",
       wireframes:
-        "The README was the prototype. I wrote it before I wrote any code — describing how a developer would install and run a voice agent in a weekend. If the README made it sound easy, the API needed to make it easy. Everything I built was measured against whether the quickstart stayed honest.",
+        "The README was the prototype. I wrote it before I wrote any code - describing how a developer would install and run a voice agent in a weekend. If the README made it sound easy, the API needed to make it easy. Everything I built was measured against whether the quickstart stayed honest.",
       prd:
-        "Module-level RFCs in the repo rather than a top-level PRD. Each module — STT adapter, interruption handler, TTS wrapper — had its own one-pager: the interface it exposed, what it didn't do, and what the open questions were.",
+        "Module-level RFCs in the repo rather than a top-level PRD. Each module - STT adapter, interruption handler, TTS wrapper - had its own one-pager: the interface it exposed, what it didn't do, and what the open questions were.",
       prototype:
         "A live agent on a real phone number. Every architectural decision had to survive an actual call. If it felt wrong on a call, it didn't matter that it looked right in a spec.",
       finalSolution:
         "A clean pipeline, provider adapters, and a 5-minute quickstart that puts a working agent on a phone number.",
       reflection:
-        "I built Mithivoices myself and then open-sourced it — which changed the design from day one. When you open-source something, every part has to work on its own. You can't have a messy monolith if strangers are going to use it. That's a product decision as much as an engineering one. The thing I didn't expect about OSS PM: contributors take the project in directions you didn't plan, and some of those directions are better than yours. I ran the module backlog through a RICE score and thought I had the reach estimates right. A contributor working on a deprioritised STT adapter pointed out I'd undercounted how many downstream modules depended on it — I'd scored from the roadmap, not the dependency graph, and he was right. I revised the score, shipped v0.2.0 on the adjusted priorities, and he stayed active on the project afterward. The framework didn't make me right. It made my reasoning visible enough for someone else to catch what I'd missed.",
+        "I built Mithivoices myself and then open-sourced it - which changed the design from day one. When you open-source something, every part has to work on its own. You can't have a messy monolith if strangers are going to use it. That's a product decision as much as an engineering one. The thing I didn't expect about OSS PM: contributors take the project in directions you didn't plan, and some of those directions are better than yours. I ran the module backlog through a RICE score and thought I had the reach estimates right. A contributor working on a deprioritised STT adapter pointed out I'd undercounted how many downstream modules depended on it - I'd scored from the roadmap, not the dependency graph, and he was right. I revised the score, shipped v0.2.0 on the adjusted priorities, and he stayed active on the project afterward. The framework didn't make me right. It made my reasoning visible enough for someone else to catch what I'd missed.",
       lessons: [
         "The quickstart is the marketing site for developer tools. If setup takes more than a few minutes, most people don't get to the product.",
-        "I was tempted to build a hosted tier early. Not doing it was the right call — but it was a harder call than I expected, because the hosted tier would have made the demo much easier to show.",
+        "I was tempted to build a hosted tier early. Not doing it was the right call - but it was a harder call than I expected, because the hosted tier would have made the demo much easier to show.",
       ],
     },
   },
@@ -245,18 +248,30 @@ export const caseStudies: CaseStudy[] = [
     slug: "seo-geo-optimizer",
     tier: "flagship",
     title: "SEO-GEO Optimizer",
-    tagline: "An npm package that makes any site legible to both Google and the new generation of AI answer engines.",
+    tagline: "Stop AI IDEs giving stale SEO advice - a 14-phase agentic skill for Cursor, Windsurf, and Copilot.",
     role: "Creator & PM",
-    platform: "npm · Node · Next.js",
+    platform: "npm · Node · Cursor · Windsurf · Copilot",
     timeline: "2026",
+    publishedAtISO: "2026-01-01",
     problem:
-      "AI answer engines (Perplexity, ChatGPT search, Google AI Overviews) are quietly becoming the front page of the web — but almost no site is optimised for them.",
+      "AI IDEs give outdated SEO advice. When Windsurf told me to optimize for FID - a Core Web Vital Google deprecated in March 2024 - I realized LLMs have no reliable way to stay current with search standards. Meanwhile, the $1B+ Generative Engine Optimization (GEO) market is growing rapidly, but developer tooling is lagging behind.",
     solution:
-      "A drop-in library that generates GEO-aware structured data, llms.txt, semantic anchors, and citation-friendly content blocks — with zero config for the common case.",
+      "I built `seo-geo-optimizer`, an agent-native npm package. Instead of a passive library, it's a 14-phase agentic workflow. Running `npx seo-geo-optimizer` auto-detects the IDE (Cursor, Windsurf, Copilot) and installs strict instruction files that guide the AI through technical SEO, schema generation, and AI legibility audits.",
     cover: seoGeoCover,
     status: "Shipped",
+    metaDescription: "I built a 14-phase agentic npm skill to stop AI IDEs giving stale SEO advice. Covers technical SEO, schema, and Generative Engine Optimization (GEO). 411 installs.",
+    result: "411 organic downloads with zero paid distribution. The package is now listed on PrimeSkills AI Store and mcpskills.io, providing developers a 'one prompt, full audit' solution for AI search visibility.",
+    tldr: [
+      "Built a 14-phase agentic npm skill that auto-installs SEO/GEO rules into Cursor, Windsurf, and Copilot.",
+      "Solved AI hallucination: prevents IDEs from giving outdated SEO advice (like optimizing for deprecated FID).",
+      "411 organic downloads with zero marketing; featured on PrimeSkills AI Store."
+    ],
+    repoUrl: "https://github.com/Aryanpanwar10005/seo-geo-optimizer",
     extraLinks: [
       { label: "npm package", url: "https://www.npmjs.com/package/seo-geo-optimizer" },
+      { label: "GitHub Repo", url: "https://github.com/Aryanpanwar10005/seo-geo-optimizer" },
+      { label: "Dev.to Writeup", url: "https://dev.to/aryanpanwar1/how-i-built-an-seo-skill-for-ai-ides-because-my-cursor-kept-getting-it-wrong-5hd1" },
+      { label: "Product Hunt", url: "https://www.producthunt.com/products/seo-geo-optmization/launches/seo-geo-optimizer" }
     ],
     sections: {
       overview:
@@ -264,11 +279,11 @@ export const caseStudies: CaseStudy[] = [
       problemStatement:
         "SEO best-practice is optimised for click-through; GEO (Generative Engine Optimization) is optimised for citation. Most sites are optimised for neither.",
       marketNeed:
-        "I searched for my own portfolio on Perplexity and it returned someone else's work. Not a paraphrased version — a different person entirely. That was the immediate problem. The deeper one: I had no reliable way to make a site legible to something that wasn't a traditional crawler.",
+        "I searched for my own portfolio on Perplexity and it returned someone else's work. Not a paraphrased version - a different person entirely. That was the immediate problem. The deeper one: I had no reliable way to make a site legible to something that wasn't a traditional crawler.",
       targetUsers:
-        "Indie devs and small teams shipping content-heavy sites — docs, blogs, marketing pages — who want AI citations without hiring an SEO agency.",
+        "Indie devs and small teams shipping content-heavy sites - docs, blogs, marketing pages - who want AI citations without hiring an SEO agency.",
       research:
-        "Spent time with pages that were getting cited by AI engines and pages that weren't, looking for the difference. The pattern that appeared most consistently: cited pages gave the answer in the first paragraph. Not a teaser — the actual answer. The rest of the page could elaborate.",
+        "Spent time with pages that were getting cited by AI engines and pages that weren't, looking for the difference. The pattern that appeared most consistently: cited pages gave the answer in the first paragraph. Not a teaser - the actual answer. The rest of the page could elaborate.",
       insights: [
         "AI engines reward clarity, not keyword density. This sounds obvious until you realise most content is optimised for the latter.",
         "Structured data is the floor now, not the differentiator. What the data says is still the question.",
@@ -280,7 +295,7 @@ export const caseStudies: CaseStudy[] = [
         "Auto JSON-LD for Article / FAQ / HowTo / Product",
         "llms.txt generator",
         "Answer-block components for React frameworks",
-        "14-phase agentic execution pipeline — a 40-question discovery intake through technical SEO, schema, content strategy, and GEO optimisation, with a human-in-the-loop validation gate between phases so nothing commits without review",
+        "14-phase agentic execution pipeline - a 40-question discovery intake through technical SEO, schema, content strategy, and GEO optimisation, with a human-in-the-loop validation gate between phases so nothing commits without review",
       ],
       outOfScope: [
         "Full analytics dashboard",
@@ -288,15 +303,15 @@ export const caseStudies: CaseStudy[] = [
         "Manual keyword research tools",
       ],
       assumptions:
-        "The bet was that developers would install an npm package rather than read a blog post and implement manually. That's not obvious — the blog-and-copy approach has always won for SEO tooling. I believed the developer-native packaging would convert better for this audience specifically.",
+        "The bet was that developers would install an npm package rather than read a blog post and implement manually. That's not obvious - the blog-and-copy approach has always won for SEO tooling. I believed the developer-native packaging would convert better for this audience specifically.",
       successCriteria: [
-        "Target: weekly downloads trending upward within 90 days — not a specific number, but evidence that word was spreading without paid distribution.",
+        "Target: weekly downloads trending upward within 90 days - not a specific number, but evidence that word was spreading without paid distribution.",
         "Target: at least one case study of a user site cited by an AI engine within 60 days of launch.",
         "Kill condition: if install-to-first-citation takes longer than a month for the median user, the defaults aren't doing enough.",
       ],
       expectedBehaviour:
         "npm install → wrap layout → done. First AI citation within a month.",
-      northStar: "Sites Cited by AI Engines After Install — not downloads, not stars. Citations are the proof of value.",
+      northStar: "Sites Cited by AI Engines After Install - not downloads, not stars. Citations are the proof of value.",
       supportingMetrics: ["Weekly Downloads", "GitHub Issues Closed / Opened", "Time-to-First-Structured-Page"],
       prioritization:
         "Everything was scored against 'does this show up in a real answer engine result?' Citations were the only currency.",
@@ -307,7 +322,7 @@ export const caseStudies: CaseStudy[] = [
       prototype:
         "Dogfooded on this portfolio and my own blog before any public release. Iterated the API until it fit a real site in under 30 minutes. If I couldn't use it myself in half an hour, the defaults weren't sane enough.",
       finalSolution:
-        "A single package, three exports, and a 14-phase agentic pipeline underneath — each phase gated by a human-in-the-loop validation step — covering Article, FAQ, and HowTo pages out of the box.",
+        "A single package, three exports, and a 14-phase agentic pipeline underneath - each phase gated by a human-in-the-loop validation step - covering Article, FAQ, and HowTo pages out of the box.",
       reflection:
         "The best PM work here was aggressive scope-cutting. I said no to a hosted SaaS tier three times. Each time it would have delayed the first real user shipping by months.",
       lessons: [
@@ -324,6 +339,7 @@ export const caseStudies: CaseStudy[] = [
     role: "Product & AI Engineer",
     platform: "Web · LangGraph · Python",
     timeline: "2025",
+    publishedAtISO: "2025-01-01",
     problem:
       "Field reps talking to HCPs (healthcare providers) juggle 4+ tools per visit. Notes get lost, follow-ups slip, and the CRM becomes homework instead of a co-pilot.",
     solution:
@@ -343,11 +359,11 @@ export const caseStudies: CaseStudy[] = [
       research:
         "Shadowed reps between visits. The pattern that appeared across every conversation: the CRM was filled at night, from memory, hours after the visits. One rep said this at 11am, while actively typing notes into his phone to transcribe later. He didn't see the irony until I pointed it out.",
       insights: [
-        "The best CRM is one the user never types into — but trust has to be earned before they'll stop typing.",
+        "The best CRM is one the user never types into - but trust has to be earned before they'll stop typing.",
         "Trust in AI notes is earned in the first few interactions, or not at all. Early accuracy matters more than average accuracy.",
       ],
       opportunity:
-        "Move CRM from a system of record to a system of action — the rep talks, the system captures and drafts the next step.",
+        "Move CRM from a system of record to a system of action - the rep talks, the system captures and drafts the next step.",
       scope: [
         "LangGraph agent for note capture + summarisation",
         "Next-best-action recommendation surface",
@@ -355,20 +371,20 @@ export const caseStudies: CaseStudy[] = [
       ],
       outOfScope: ["Full CRM replacement", "Native mobile app", "Multi-tenant admin"],
       assumptions:
-        "The most uncertain bet: that reps would trust a draft they could edit more than a form they controlled. That trust is earned quickly or not at all — the research said the first three interactions determined whether a rep adopted the tool or worked around it.",
+        "The most uncertain bet: that reps would trust a draft they could edit more than a form they controlled. That trust is earned quickly or not at all - the research said the first three interactions determined whether a rep adopted the tool or worked around it.",
       successCriteria: [
-        "Target: note capture time per visit drops meaningfully — enough that reps notice without being told to notice.",
-        "Target: draft acceptance rate above 80% — meaning fewer than 3 significant edits per note. Below that, the model is creating cleanup work.",
+        "Target: note capture time per visit drops meaningfully - enough that reps notice without being told to notice.",
+        "Target: draft acceptance rate above 80% - meaning fewer than 3 significant edits per note. Below that, the model is creating cleanup work.",
         "Kill condition: if reps are re-typing the AI draft instead of editing it, the review surface has failed regardless of accuracy.",
       ],
       expectedBehaviour:
         "Rep finishes visit → opens app → reviews and confirms a pre-drafted summary → next-best-action is queued.",
-      northStar: "Rep-Confirmed Interactions per Week — not model accuracy, because a highly accurate model that reps don't use changes nothing.",
+      northStar: "Rep-Confirmed Interactions per Week - not model accuracy, because a highly accurate model that reps don't use changes nothing.",
       supportingMetrics: ["Draft Acceptance Rate", "Note Capture Time", "Next-Action Follow-Through"],
       prioritization:
         "Everything was measured against rep time saved per visit. Manager dashboards were explicitly deprioritised for v1.",
       wireframes:
-        "Two rounds of flows with reps. The confirm-vs-edit ratio drove every layout choice — we measured how often a rep accepted a draft versus edited it, and used that to decide how much to surface versus hide.",
+        "Two rounds of flows with reps. The confirm-vs-edit ratio drove every layout choice - we measured how often a rep accepted a draft versus edited it, and used that to decide how much to surface versus hide.",
       prd:
         "One-page PRDs per agent node, plus a shared eval spec for the whole graph. Keeping the eval spec separate meant we could update it without touching the product spec.",
       prototype:
@@ -376,23 +392,24 @@ export const caseStudies: CaseStudy[] = [
       finalSolution:
         "A stateful LangGraph agent, a light review UI, and a next-best-action queue synced to the existing CRM of record.",
       reflection:
-        "The hardest call was turning off a feature reps actually liked — the assistant would sometimes add context it had inferred from previous visits. Accurate. Creepy. We turned it off because trust was more important than capability in month one.",
+        "The hardest call was turning off a feature reps actually liked - the assistant would sometimes add context it had inferred from previous visits. Accurate. Creepy. We turned it off because trust was more important than capability in month one.",
       lessons: [
         "The review surface is the product. The same model weights, with a bad confirmation UI, would have had a fraction of the adoption.",
-        "I spent two weeks improving accuracy by a few points. Those points were invisible to users. The read-back UI — one day of work — moved adoption more than those two weeks did.",
+        "I spent two weeks improving accuracy by a few points. Those points were invisible to users. The read-back UI - one day of work - moved adoption more than those two weeks did.",
       ],
     },
   },
   {
     slug: "credex-spend-audit",
     tier: "supporting",
-    title: "Credex — AI Spend Audit",
+    title: "Credex - AI Spend Audit",
     tagline: "An AI auditor that reads a company’s SaaS invoices and flags every dollar leaking out of the stack.",
     role: "Product & AI Engineer",
     platform: "Web · LLM Pipelines",
     timeline: "2025",
+    publishedAtISO: "2025-01-01",
     problem:
-      "Companies waste an estimated 30% of their SaaS spend on unused seats, duplicated tools, and forgotten renewals — and nobody has time to audit line-by-line.",
+      "Companies waste an estimated 30% of their SaaS spend on unused seats, duplicated tools, and forgotten renewals - and nobody has time to audit line-by-line.",
     solution:
       "An AI pipeline that ingests invoices and usage exports, reconciles them against seats and features, and produces a ranked list of savings opportunities.",
     cover: credexCover,
@@ -405,13 +422,13 @@ export const caseStudies: CaseStudy[] = [
       problemStatement:
         "Finance sees the invoices; IT sees the usage; nobody joins the two. The result is quiet, compounding waste.",
       marketNeed:
-        "The enterprise SaaS management category (Vendr, Zylo) works well for large companies. For teams too small for those platforms but too big for spreadsheets, there was nothing purpose-built. That gap had always existed — the new thing was that AI could now read and reconcile invoices without manual extraction.",
+        "The enterprise SaaS management category (Vendr, Zylo) works well for large companies. For teams too small for those platforms but too big for spreadsheets, there was nothing purpose-built. That gap had always existed - the new thing was that AI could now read and reconcile invoices without manual extraction.",
       targetUsers:
-        "Ops leads, fractional CFOs, and finance managers at 50–500 person companies — people who know they're overspending but don't have the bandwidth to prove it line by line.",
+        "Ops leads, fractional CFOs, and finance managers at 50–500 person companies - people who know they're overspending but don't have the bandwidth to prove it line by line.",
       research:
-        "Ran 5 in-depth discovery calls with ops leads and fractional CFOs at 50–500 person companies. Every single one had a version of a SaaS audit spreadsheet that hadn't been updated in months. The blocker wasn't lack of interest — it was that line-by-line reconciliation required hours they didn't have.",
+        "Ran 5 in-depth discovery calls with ops leads and fractional CFOs at 50–500 person companies. Every single one had a version of a SaaS audit spreadsheet that hadn't been updated in months. The blocker wasn't lack of interest - it was that line-by-line reconciliation required hours they didn't have.",
       insights: [
-        "The blocker isn't insight — it's the effort to produce it. Everyone knows they're overpaying. Nobody has three hours to reconcile it.",
+        "The blocker isn't insight - it's the effort to produce it. Everyone knows they're overpaying. Nobody has three hours to reconcile it.",
         "A ranked list of specific dollar savings beats a dashboard. The report is what gets forwarded to the CFO.",
       ],
       opportunity:
@@ -428,18 +445,18 @@ export const caseStudies: CaseStudy[] = [
       assumptions:
         "The central bet: that an ops lead would connect read-only integrations if the payoff was shown as a specific dollar number. People protect their data. I wasn't sure 'estimated savings' would be compelling enough until a pilot user forwarded their report to their CFO on the same day they ran it.",
       successCriteria: [
-        "Target: each audit surfaces a meaningful savings opportunity — enough that forwarding the report to a CFO feels worth doing.",
+        "Target: each audit surfaces a meaningful savings opportunity - enough that forwarding the report to a CFO feels worth doing.",
         "Target: most pilots who run a full audit convert to monthly monitoring without prompting.",
         "Kill condition: if the report doesn't get forwarded in the first week, the artifact isn't valuable enough to drive organic growth.",
       ],
       expectedBehaviour:
         "Connect integrations → run audit → get a ranked list of savings within 24 hours.",
-      northStar: "Dollars of Verified Savings Surfaced — because this is the number that earns a second conversation with the CFO.",
+      northStar: "Dollars of Verified Savings Surfaced - because this is the number that earns a second conversation with the CFO.",
       supportingMetrics: ["Audit Completion Rate", "Time to First Report", "Conversion to Monitoring"],
       prioritization:
         "Every feature was scored against 'does this add another verified savings line?' Everything else waited.",
       wireframes:
-        "Report-first design from the start. I built what the report would look like before I built the pipeline that would generate it. The layout was designed to be forwarded — scannable in under two minutes, with a clear headline number.",
+        "Report-first design from the start. I built what the report would look like before I built the pipeline that would generate it. The layout was designed to be forwarded - scannable in under two minutes, with a clear headline number.",
       prd:
         "One-page PRD per pipeline stage plus a shared savings-rubric doc. The rubric was the most debated artifact: what counts as a verified saving versus an estimate.",
       prototype:
@@ -470,7 +487,7 @@ export const archivedProjects: ArchiveProject[] = [
   },
   {
     slug: "webable-vendorshield",
-    title: "WebAble AI — VendorShield",
+    title: "WebAble AI - VendorShield",
     tag: "DevPost hackathon",
     problem:
       "Vendor-security audit platform that uses AI to generate and manage security reports with MongoDB persistence, PDF export, and a Docker-containerised full stack.",
@@ -485,7 +502,7 @@ export const archivedProjects: ArchiveProject[] = [
     title: "Hyperliquid Trader Analysis",
     tag: "Data science",
     problem:
-      "Analysis of 211,000+ Hyperliquid trade records against the BTC Fear & Greed Index — surfacing market-regime edges and trader-performance patterns.",
+      "Analysis of 211,000+ Hyperliquid trade records against the BTC Fear & Greed Index - surfacing market-regime edges and trader-performance patterns.",
     stack: ["Python", "Pandas", "Jupyter", "Matplotlib"],
     metric: "211K+ records",
     year: "2025",
@@ -498,7 +515,7 @@ export const archivedProjects: ArchiveProject[] = [
     title: "ESP32 Differential Drive Robot",
     tag: "Embedded",
     problem:
-      "Production firmware for an autonomous robot — GPS tracking, BLE authentication, WebSocket telemetry, and live ESP32-CAM video streaming.",
+      "Production firmware for an autonomous robot - GPS tracking, BLE authentication, WebSocket telemetry, and live ESP32-CAM video streaming.",
     stack: ["C++", "ESP32", "PlatformIO", "BLE", "GPS"],
     year: "2024",
     cover: robotCover,
@@ -514,7 +531,7 @@ export const archivedProjects: ArchiveProject[] = [
     title: "Wireless EV Charging Prototype",
     tag: "Published · JETIR",
     problem:
-      "IPT-based wireless EV charging prototype with dual-spot parking management — 85% charging efficiency. 1st place at college branch expo, published in JETIR (IF 7.95).",
+      "IPT-based wireless EV charging prototype with dual-spot parking management - 85% charging efficiency. 1st place at college branch expo, published in JETIR (IF 7.95).",
     stack: ["C++", "Arduino", "Power Electronics", "IPT"],
     metric: "85% efficiency",
     year: "2026",
@@ -528,7 +545,7 @@ export const archivedProjects: ArchiveProject[] = [
     title: "4-DOF Robotic Arm",
     tag: "Robotics",
     problem:
-      "High-precision robotic arm using inverse-kinematics algorithms — 2 mm positioning accuracy for automated pick-and-place tasks with Arduino and servo motors.",
+      "High-precision robotic arm using inverse-kinematics algorithms - 2 mm positioning accuracy for automated pick-and-place tasks with Arduino and servo motors.",
     stack: ["C++", "Arduino", "Servo Motors", "IK"],
     metric: "2 mm accuracy",
     year: "2024",
@@ -544,7 +561,7 @@ export const archivedProjects: ArchiveProject[] = [
     title: "Smart Staircase Lighting",
     tag: "Hardware",
     problem:
-      "Automated IR motion-triggered lighting with Arduino control — 45% energy reduction versus always-on traditional systems.",
+      "Automated IR motion-triggered lighting with Arduino control - 45% energy reduction versus always-on traditional systems.",
     stack: ["C++", "Arduino", "IR Sensors"],
     metric: "45% energy saved",
     year: "2023",

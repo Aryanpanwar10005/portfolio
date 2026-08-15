@@ -17,7 +17,7 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="label-caps mb-6"
           >
-            A Product Evidence Book · Aspiring PM
+            A Product Evidence Book | AI Product Manager
           </motion.p>
 
           <motion.h1
@@ -26,7 +26,7 @@ export function Hero() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="font-display text-hero text-foreground lg:max-w-[14ch]"
           >
-            I ship products <span className="font-serif-italic text-primary">to learn</span> how to be a great PM.
+            I ship agentic AI products <span className="font-serif-italic text-primary">to learn</span> how to be a great PM.
           </motion.h1>
 
           <motion.p
@@ -35,9 +35,9 @@ export function Hero() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="mt-8 max-w-xl text-lg text-foreground-muted leading-relaxed"
           >
-            I&apos;m Aryan Panwar — an aspiring Product Manager with a builder background.
-            This isn&apos;t a portfolio; it&apos;s evidence. Case studies from products I&apos;ve
-            shipped, the tradeoffs I made along the way, and the writing that shows
+            I&apos;m Aryan Panwar. I&apos;m an AI Product Manager with a builder background.
+            This isn&apos;t a portfolio: it&apos;s an evidence book. Case studies from agentic systems I&apos;ve
+            shipped, the tradeoffs I made, and the writing that shows
             how I think about product.
           </motion.p>
 
@@ -116,7 +116,7 @@ export function Hero() {
             {/* Clip portrait to arch shape */}
             {/* Wine arch backdrop */}
             <div aria-hidden className="absolute inset-0 arch-shape bg-primary" />
-            {/* Portrait cutout — NOT clipped to arch, so it pops out! */}
+            {/* Portrait cutout - NOT clipped to arch, so it pops out! */}
             <div className="absolute inset-x-0 bottom-0 z-10 h-[142%] w-full pointer-events-none">
               <Image
                 src={portraitCutout}
@@ -129,7 +129,7 @@ export function Hero() {
               />
             </div>
 
-            {/* Circular badge — anchored on arch shoulder top-right */}
+            {/* Circular badge - anchored on arch shoulder top-right */}
             <div
               aria-hidden
               className="absolute top-2 -right-2 md:top-4 md:-right-4 lg:top-6 lg:-right-6 z-20 w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full border border-accent/60 flex items-center justify-center bg-background shadow-md"

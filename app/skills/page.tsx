@@ -66,7 +66,7 @@ export default function SkillsPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'ItemList',
-            name: 'Certifications — Aryan Panwar',
+            name: 'Certifications - Aryan Panwar',
             itemListElement: certifications.map((c, i) => ({
               '@type': 'ListItem',
               position: i + 1,

@@ -15,8 +15,8 @@ export function PlaybookPreview() {
               Frameworks, <span className="font-serif-italic text-primary">grounded</span> in real projects.
             </h2>
             <p className="mt-3 max-w-xl text-lg text-foreground-muted">
-              Every entry starts with a product I shipped — not with theory.
-              JTBD, RICE scoring, opportunity trees, and metrics — applied to real products.
+              Every entry starts with a product I shipped - not with theory.
+              JTBD, RICE scoring, opportunity trees, and metrics - applied to real products.
             </p>
           </div>
           <Link href="/thinking" className="text-primary font-medium border-b border-primary pb-1">

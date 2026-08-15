@@ -17,7 +17,7 @@ export function BlogSection() {
               Product evidence, <span className="font-serif-italic text-primary">in essays.</span>
             </h2>
             <p className="mt-4 max-w-2xl text-lg text-foreground-muted">
-              Each post answers one PM hiring question — grounded in a real product I built, not a framework I memorised.
+              Each post answers one PM hiring question - grounded in a real product I built, not a framework I memorised.
             </p>
           </div>
           <Link href="/writing" className="text-primary font-medium border-b border-primary pb-1">

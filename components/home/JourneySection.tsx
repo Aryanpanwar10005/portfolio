@@ -13,7 +13,7 @@ export function JourneySection() {
             From builder <span className="font-serif-italic text-primary">to PM.</span>
           </h2>
           <p className="mt-3 max-w-xl text-lg text-foreground-muted">
-            The milestones — hardware, research, shipped AI products, and where I&apos;m heading next.
+            The milestones - hardware, research, shipped AI products, and where I&apos;m heading next.
           </p>
         </div>
 

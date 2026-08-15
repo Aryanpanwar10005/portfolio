@@ -91,7 +91,7 @@ function Card({
 
       {v.isPlaceholder && (
         <p className="mt-4 text-[11px] text-foreground-muted">
-          Sample PDF while the tailored version is being uploaded — on-page summary reflects the current version.
+          Sample PDF while the tailored version is being uploaded - on-page summary reflects the current version.
         </p>
       )}
     </motion.article>

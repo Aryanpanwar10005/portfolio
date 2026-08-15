@@ -5,7 +5,7 @@ import { useRef } from "react";
 
 /**
  * Fanned "paper stack" mock. Three faux pages with subtle mouse-parallax tilt.
- * Pure CSS/SVG — no PDF render, no fake data that could mislead.
+ * Pure CSS/SVG - no PDF render, no fake data that could mislead.
  */
 export function ResumePreviewStack() {
   const ref = useRef<HTMLDivElement>(null);

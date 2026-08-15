@@ -45,26 +45,46 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 function parseTextWithCitations(text: string): React.ReactNode {
-  const pattern = /\(([a-zA-Z0-9][a-zA-Z0-9-]*(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,})\)/g
+  const pattern = /\[([^\]]+)\]\(([^)]+)\)|\(([a-zA-Z0-9][a-zA-Z0-9-]*(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,})\)/g
   const parts: React.ReactNode[] = []
   let lastIndex = 0
   let match: RegExpExecArray | null
   let key = 0
   while ((match = pattern.exec(text)) !== null) {
     if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index))
-    const domain = match[1]
-    parts.push('(')
-    parts.push(
-      <a key={key++} href={`https://${domain}`} target="_blank" rel="noopener noreferrer"
-        className="text-accent underline underline-offset-2 hover:opacity-75 transition-opacity text-[0.9em]">
-        {domain}
-      </a>
-    )
-    parts.push(')')
+    
+    if (match[1] && match[2]) {
+      // It's a markdown link [label](url)
+      const label = match[1]
+      const url = match[2]
+      parts.push(
+        (url.startsWith('/') && !url.startsWith('//') || url.startsWith('./') || url.startsWith('../') || url.startsWith('#')) ? (
+          <Link key={key++} href={url} className="text-primary underline underline-offset-2 hover:opacity-75 transition-opacity font-medium">
+            {label}
+          </Link>
+        ) : (
+          <a key={key++} href={url} target="_blank" rel="noopener noreferrer"
+            className="text-primary underline underline-offset-2 hover:opacity-75 transition-opacity font-medium">
+            {label}
+          </a>
+        )
+      )
+    } else if (match[3]) {
+      // It's a domain citation (domain.com)
+      const domain = match[3]
+      parts.push('(')
+      parts.push(
+        <a key={key++} href={`https://${domain}`} target="_blank" rel="noopener noreferrer"
+          className="text-accent underline underline-offset-2 hover:opacity-75 transition-opacity text-[0.9em]">
+          {domain}
+        </a>
+      )
+      parts.push(')')
+    }
     lastIndex = match.index + match[0].length
   }
   if (lastIndex < text.length) parts.push(text.slice(lastIndex))
-  return parts.length > 1 ? <>{parts}</> : text
+  return parts.length > 0 ? <>{parts}</> : text
 }
 
 function renderBlock(block: BodyBlock, i: number) {
@@ -75,7 +95,7 @@ function renderBlock(block: BodyBlock, i: number) {
           key={i}
           className="border-l-2 border-primary pl-6 my-10 font-serif-italic text-xl md:text-2xl text-primary leading-relaxed"
         >
-          "{parseTextWithCitations(block.text)}"
+          &quot;{parseTextWithCitations(block.text)}&quot;
         </blockquote>
       )
     case 'list':
@@ -199,7 +219,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           <p className="font-display text-2xl text-foreground font-semibold leading-snug">{post.question}</p>
           <div className="mt-4 pt-4 border-t border-primary/10">
             <p className="text-xs font-semibold tracking-wider text-primary/80 uppercase mb-1">Recruiter takeaway</p>
-            <p className="text-lg text-foreground font-serif-italic">"{post.takeaway}"</p>
+            <p className="text-lg text-foreground font-serif-italic">&quot;{post.takeaway}&quot;</p>
           </div>
         </div>
 
