@@ -51,3 +51,7 @@ public/file.svg
 public/globe.svg
 public/next.svg
 public/window.svg
+
+# Local config files
+.vscode/
+.agents/
