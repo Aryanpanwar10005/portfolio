@@ -24,7 +24,9 @@ export function Navigation() {
   const pathname = usePathname()
 
   useEffect(() => {
-    setMobileOpen(false)
+    setTimeout(() => {
+      setMobileOpen(false)
+    }, 0)
   }, [pathname])
 
   useEffect(() => {

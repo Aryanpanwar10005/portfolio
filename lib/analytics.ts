@@ -44,7 +44,6 @@ export function trackEvent(event: string, props: EventProps = {}) {
         return v === undefined || v === null || v === ''
       })
       if (missing.length > 0) {
-        // eslint-disable-next-line no-console
         console.warn(
           `[analytics] event "${event}" is missing required field(s): ${missing.join(', ')}`,
           enriched,
@@ -59,7 +58,6 @@ export function trackEvent(event: string, props: EventProps = {}) {
     window.clarity?.('event', event)
     window.dispatchEvent(new CustomEvent('app:analytics', { detail: { event, props: enriched } }))
     if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
       console.debug('[analytics]', event, enriched)
     }
   } catch {
