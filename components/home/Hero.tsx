@@ -8,7 +8,7 @@ const portraitCutout = '/assets/aryan-portrait-cutout.webp'
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-20 md:pt-28 pb-16 md:pb-28">
+    <section className="relative overflow-hidden pt-20 md:pt-28 pb-4 md:pb-8">
       <div className="relative max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
         <div className="lg:col-span-7 order-2 lg:order-1 relative z-10">
           <motion.p
@@ -150,15 +150,7 @@ export function Hero() {
         </div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.8 }}
-        className="mt-20 flex flex-col items-center gap-2 label-caps"
-      >
-        <span>Scroll</span>
-        <div className="w-px h-10 bg-foreground/30" />
-      </motion.div>
+
     </section>
   )
 }
