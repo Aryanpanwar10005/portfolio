@@ -59,7 +59,7 @@ export const blogPosts: BlogPost[] = [
     cover: coverDiscovery,
     coverAlt: 'Editorial illustration: hangers behind a magnifying lens on deep-wine background',
     takeaways: [
-      "The clever technical bet — on-device classification — was never the product. Daily outfit anxiety was.",
+      "The clever technical bet - on-device classification - was never the product. Daily outfit anxiety was.",
       'Seven un-facilitated conversations changed the roadmap more than three weeks of building.',
       "The version I shipped had less functionality than the one I originally spec'd, and held onto users better.",
     ],
@@ -67,7 +67,7 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'How it started',
         body: [
-          { type: 'p', text: "FitWardrobe is a fashion assistant that classifies clothing on the user's phone — no cloud, no login. I built it because on-device inference was the interesting engineering problem, and I wanted to prove I could ship a real TFLite model to a real user without a GPU bill." },
+          { type: 'p', text: "FitWardrobe is a fashion assistant that classifies clothing on the user's phone - no cloud, no login. I built it because on-device inference was the interesting engineering problem, and I wanted to prove I could ship a real TFLite model to a real user without a GPU bill." },
           { type: 'p', text: "The first person I showed it to looked at the screen for a few seconds, said 'oh cool,' and put her phone down. I kept talking for another minute before I realized she was done." },
         ],
       },
@@ -75,14 +75,14 @@ export const blogPosts: BlogPost[] = [
         label: 'What I got wrong first',
         body: [
           { type: 'p', text: "V0 could tell you a shirt was a shirt. It could not tell you what to wear on Tuesday. I had built a capable classifier and called it a product, and the first five people I showed it to were polite about it in the way that friends are polite about a bad haircut." },
-          { type: 'p', text: "The actual pain — the reason people spend ten minutes staring at a closet at 8 a.m. — wasn't 'I don't know what this garment is.' It was 'I don't know what these garments look like together, given the weather, given the meeting, given yesterday.' My classifier answered a question nobody was asking." },
-          { type: 'p', text: "The scale of this problem is bigger than I realised at the time. A Marks & Spencer consumer survey of 2,000 adults found the average person spends 17 minutes every morning deciding what to wear — that's 103 hours a year, more than two full work weeks (marksandspencer.com). The problem isn't a lack of clothes. It's a memory and retrieval problem." },
+          { type: 'p', text: "The actual pain - the reason people spend ten minutes staring at a closet at 8 a.m. - wasn't 'I don't know what this garment is.' It was 'I don't know what these garments look like together, given the weather, given the meeting, given yesterday.' My classifier answered a question nobody was asking." },
+          { type: 'p', text: "The scale of this problem is bigger than I realised at the time. A Marks & Spencer consumer survey of 2,000 adults found the average person spends 17 minutes every morning deciding what to wear - that's 103 hours a year, more than two full work weeks (marksandspencer.com). The problem isn't a lack of clothes. It's a memory and retrieval problem." },
         ],
       },
       {
         label: 'Seven conversations',
         body: [
-          { type: 'p', text: "I stopped shipping for two weeks and ran seven interviews — nothing formal, just fifteen minutes and one prompt: 'walk me through the last time you couldn\'t decide what to wear.' I did not show them the app. I did not defend the app. I only listened." },
+          { type: 'p', text: "I stopped shipping for two weeks and ran seven interviews - nothing formal, just fifteen minutes and one prompt: 'walk me through the last time you couldn\'t decide what to wear.' I did not show them the app. I did not defend the app. I only listened." },
           { type: 'list', items: [
             'Six of seven mentioned weather within the first minute.',
             'Four described a specific \"safe outfit\" they fall back on when tired.',
@@ -96,23 +96,23 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'The uncomfortable choice',
         body: [
-          { type: 'p', text: "I had to choose between two products. Product A kept the classifier as the hero and layered outfit-building on top — protecting my sunk cost. Product B demoted the classifier to a silent helper and made the hero surface a single button: 'what should I wear today?'" },
+          { type: 'p', text: "I had to choose between two products. Product A kept the classifier as the hero and layered outfit-building on top - protecting my sunk cost. Product B demoted the classifier to a silent helper and made the hero surface a single button: 'what should I wear today?'" },
           { type: 'p', text: "I chose B. It meant most of the visible AI I had built became invisible. The demo would be less impressive to other engineers and more useful to actual people. I wrote 'make it boring' at the top of the new spec. I hated writing it. I shipped it nine days later." },
         ],
       },
       {
         label: 'What actually happened',
         body: [
-          { type: 'p', text: "The scoped-down v1 shipped in nine days. Day-7 retention with the same test group moved from roughly one in five to closer to three in five. The classifier still ran on every photo — but nobody talked about it, because they were too busy telling me the app 'just knew' what to suggest." },
+          { type: 'p', text: "The scoped-down v1 shipped in nine days. Day-7 retention with the same test group moved from roughly one in five to closer to three in five. The classifier still ran on every photo - but nobody talked about it, because they were too busy telling me the app 'just knew' what to suggest." },
           { type: 'p', text: 'The engineering had not changed. The product had.' },
-          { type: 'p', text: "Six months later, with zero paid ads, FitWardrobe reached 20,800 impressions and 315 clicks (1.5% CTR, avg position 14.9) through organic search alone — reflecting organic search demand for solving daily wardrobe retrieval rather than another image classifier." },
+          { type: 'p', text: "Six months later, with zero paid ads, FitWardrobe reached 20,800 impressions and 315 clicks (1.5% CTR, avg position 14.9) through organic search alone - reflecting organic search demand for solving daily wardrobe retrieval rather than another image classifier." },
         ],
       },
       {
         label: "What I'm still figuring out",
         body: [
           { type: 'p', text: "The mistake I keep re-learning: I fell for my own cleverness. On-device inference was a real advantage, but it was an implementation detail, not a value proposition. Users don't care where the model runs. They care whether the answer is right, fast, and doesn't make them feel stupid." },
-          { type: 'p', text: "I still open editors too fast. The two-week pause before FitWardrobe's pivot was the only time I stopped myself — and I had to make myself do it." },
+          { type: 'p', text: "I still open editors too fast. The two-week pause before FitWardrobe's pivot was the only time I stopped myself - and I had to make myself do it." },
         ],
       },
     ],
@@ -124,7 +124,7 @@ export const blogPosts: BlogPost[] = [
     question: 'How did my mindset evolve from builder to PM?',
     takeaway: 'He understands the PM mindset shift.',
     summary:
-      'The moment my technical instinct stopped being an asset and started being a tax — and the three questions I now ask before I let myself open a code editor.',
+      'The moment my technical instinct stopped being an asset and started being a tax - and the three questions I now ask before I let myself open a code editor.',
     category: 'Career',
     tags: ['PM Mindset', 'Career', 'Engineering to PM'],
     readingTime: '6 min read',
@@ -141,20 +141,20 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'The habit that kept breaking things',
         body: [
-          { type: 'p', text: "I trained as an engineer. For four years, being useful meant shipping code. When I started scoping products end-to-end — Mithivoices, the CRM, FitWardrobe — my instinct was still to open an editor within an hour of hearing an idea. That instinct kept betraying me." },
+          { type: 'p', text: "I trained as an engineer. For four years, being useful meant shipping code. When I started scoping products end-to-end - Mithivoices, the CRM, FitWardrobe - my instinct was still to open an editor within an hour of hearing an idea. That instinct kept betraying me." },
         ],
       },
       {
         label: 'Mithivoices, or: what I built first',
         body: [
           { type: 'p', text: "On Mithivoices I built a real-time WebSocket pipeline before I had a single answer to 'who needs sub-450ms voice translation, and what breaks in their life today because they don\'t have it?' The pipeline worked. Nobody I could name was waiting for it." },
-          { type: 'p', text: "The engineering mindset — 'I can build this, therefore I should' — is a superpower when the problem is well-defined and a liability when it isn\'t. Most product problems aren't." },
+          { type: 'p', text: "The engineering mindset - 'I can build this, therefore I should' - is a superpower when the problem is well-defined and a liability when it isn\'t. Most product problems aren't." },
         ],
       },
       {
         label: 'Two things that actually landed',
         body: [
-          { type: 'p', text: "I read a lot of PM writing that felt hollow — vague talk about 'customer obsession' without a description of the muscle involved. Two things landed. First: Marty Cagan's framing of discovery and delivery as two different jobs, not two phases of the same job. Second: watching senior PMs reject strong technical answers in interviews because the candidate had skipped the user entirely." },
+          { type: 'p', text: "I read a lot of PM writing that felt hollow - vague talk about 'customer obsession' without a description of the muscle involved. Two things landed. First: Marty Cagan's framing of discovery and delivery as two different jobs, not two phases of the same job. Second: watching senior PMs reject strong technical answers in interviews because the candidate had skipped the user entirely." },
           { type: 'p', text: 'Neither gave me a framework. Both told me a habit was missing.' },
         ],
       },
@@ -169,13 +169,13 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'What changed',
         body: [
-          { type: 'p', text: "I said no to myself earlier, which is cheaper than saying no to a team later. I threw away less work. And counterintuitively, my technical background became more useful, not less — once I stopped defaulting to 'can I build this?', I could use engineering intuition where it actually paid: spotting when a plan hid a hard latency problem, or when a 'simple' AI feature was one prompt away from an unbounded eval nightmare." },
+          { type: 'p', text: "I said no to myself earlier, which is cheaper than saying no to a team later. I threw away less work. And counterintuitively, my technical background became more useful, not less - once I stopped defaulting to 'can I build this?', I could use engineering intuition where it actually paid: spotting when a plan hid a hard latency problem, or when a 'simple' AI feature was one prompt away from an unbounded eval nightmare." },
         ],
       },
       {
         label: 'What I still get wrong',
         body: [
-          { type: 'p', text: "I still build too fast sometimes. The habit is maybe two-thirds formed. What's different now is that I notice it happening — usually around the second hour of writing code for something I haven't validated yet. That awareness doesn't always stop me. But it means the damage is smaller." },
+          { type: 'p', text: "I still build too fast sometimes. The habit is maybe two-thirds formed. What's different now is that I notice it happening - usually around the second hour of writing code for something I haven't validated yet. That awareness doesn't always stop me. But it means the damage is smaller." },
           { type: 'p', text: "The shift wasn't 'stop being technical.' It was 'stop leading with the part of the work I enjoy.' Those are very different instructions." },
         ],
       },
@@ -188,7 +188,7 @@ export const blogPosts: BlogPost[] = [
     question: 'How do I decide what gets built?',
     takeaway: "He doesn't build everything.",
     summary:
-      'The one-page pre-PRD I run before any spec — and why the "must-have" column is the one that decides whether the product ships on time.',
+      'The one-page pre-PRD I run before any spec - and why the "must-have" column is the one that decides whether the product ships on time.',
     category: 'Prioritization',
     tags: ['Prioritization', 'PRD', 'RICE', 'Trade-offs', 'Scope'],
     readingTime: '6 min read',
@@ -205,7 +205,7 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'Twenty-three features',
         body: [
-          { type: 'p', text: "On the AI-First CRM for pharma reps, the initial feature list had somewhere around twenty features — voice logging, offline sync, physician deduping, compliance flags, an assistant, an audit trail, and more. Every one was defensible in isolation. The team could not build all of them." },
+          { type: 'p', text: "On the AI-First CRM for pharma reps, the initial feature list had somewhere around twenty features - voice logging, offline sync, physician deduping, compliance flags, an assistant, an audit trail, and more. Every one was defensible in isolation. The team could not build all of them." },
           { type: 'p', text: "One of those was a compliance flag system. An engineer had already started sketching a database schema for it before I remembered we had no compliance requirements in v1. I had written it on the list because it sounded right, not because anyone had asked for it." },
         ],
       },
@@ -219,8 +219,8 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'What actually changed how I worked',
         body: [
-          { type: 'p', text: "Shape Up changed what I did in practice. Specifically the 'appetite' concept — you decide how much time something is worth before you estimate it. That reordering sounds small. It isn't. It forces a scope conversation instead of an estimate, which is a completely different meeting." },
-          { type: 'p', text: "I also kept the discipline of writing a number from RICE — not for precision, but for commitment. Writing down an estimate forces you to have an opinion, which is the thing most feature discussions are quietly avoiding." },
+          { type: 'p', text: "Shape Up changed what I did in practice. Specifically the 'appetite' concept - you decide how much time something is worth before you estimate it. That reordering sounds small. It isn't. It forces a scope conversation instead of an estimate, which is a completely different meeting." },
+          { type: 'p', text: "I also kept the discipline of writing a number from RICE - not for precision, but for commitment. Writing down an estimate forces you to have an opinion, which is the thing most feature discussions are quietly avoiding." },
         ],
       },
       {
@@ -229,7 +229,7 @@ export const blogPosts: BlogPost[] = [
           { type: 'p', text: "I now run a one-page check before I open the PRD template. Four columns for every candidate feature." },
           { type: 'list', items: [
             "User commitment: the specific behaviour I'm asking a user to change or adopt. If I can't name it, the feature is cut.",
-            'Evidence class: what I actually know — interview quote, analytics, competitor benchmark, or hunch. Hunches are allowed, but they get labelled honestly.',
+            'Evidence class: what I actually know - interview quote, analytics, competitor benchmark, or hunch. Hunches are allowed, but they get labelled honestly.',
             'Appetite: time the feature is worth, decided before we estimate. If the estimate exceeds appetite, we shrink scope, not schedule.',
             'Kill signal: the metric or observation that would make me drop it after launch.',
           ]},
@@ -240,14 +240,14 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'What shipped',
         body: [
-          { type: 'p', text: "The v1 CRM shipped with six features. Two more were added in the second cycle after real usage — one that hadn't been on the pre-PRD at all, one that had been cut and came back with actual evidence behind it. Nothing that shipped in v1 got removed. That's the metric I care about: not a perfect roadmap, but no regrettable builds." },
+          { type: 'p', text: "The v1 CRM shipped with six features. Two more were added in the second cycle after real usage - one that hadn't been on the pre-PRD at all, one that had been cut and came back with actual evidence behind it. Nothing that shipped in v1 got removed. That's the metric I care about: not a perfect roadmap, but no regrettable builds." },
         ],
       },
       {
         label: 'Where I still fail at this',
         body: [
           { type: 'p', text: "The hardest habit is being honest in the evidence column when I'm the one who wants the feature. I still catch myself inflating a hunch to 'preliminary research.' The mitigation is a peer: I ask an engineer or a fellow builder to read the page and only comment on the evidence column. It takes fifteen minutes and saves weeks." },
-          { type: 'p', text: "If I started the CRM again, I'd run the pre-PRD before the first stakeholder meeting instead of after. The list of twenty-odd features was itself a symptom — a sign I had absorbed everyone's wishes without weighing any of them." },
+          { type: 'p', text: "If I started the CRM again, I'd run the pre-PRD before the first stakeholder meeting instead of after. The list of twenty-odd features was itself a symptom - a sign I had absorbed everyone's wishes without weighing any of them." },
         ],
       },
     ],
@@ -259,7 +259,7 @@ export const blogPosts: BlogPost[] = [
     question: 'How do I know a feature is successful?',
     takeaway: 'He thinks in outcomes.',
     summary:
-      'The Credex feature I almost shipped without a definition of \"worked\" — and the two-column doc I now use so I never do that again.',
+      'The Credex feature I almost shipped without a definition of \"worked\" - and the two-column doc I now use so I never do that again.',
     category: 'Metrics',
     tags: ['Metrics', 'North Star', 'KPIs', 'Outcomes', 'Credex'],
     readingTime: '6 min read',
@@ -276,7 +276,7 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'The feature that almost shipped without a definition',
         body: [
-          { type: 'p', text: "Credex is a spend-audit app for engineering managers — you connect your SaaS subscriptions and it flags overlap and savings. One of the earliest requests was a 'share this report' feature. It came through a Slack message from a beta user who had copy-pasted their report into an email to their CFO and asked if we could make that easier. Three people in the thread said 'yes ship this.' I put it on the roadmap before I had a success metric." },
+          { type: 'p', text: "Credex is a spend-audit app for engineering managers - you connect your SaaS subscriptions and it flags overlap and savings. One of the earliest requests was a 'share this report' feature. It came through a Slack message from a beta user who had copy-pasted their report into an email to their CFO and asked if we could make that easier. Three people in the thread said 'yes ship this.' I put it on the roadmap before I had a success metric." },
           { type: 'p', text: "That's the problem." },
         ],
       },
@@ -284,23 +284,23 @@ export const blogPosts: BlogPost[] = [
         label: "The sentence I couldn't finish",
         body: [
           { type: 'p', text: "We were three days from starting when I noticed I couldn't answer 'how will we know if we should keep it?' Nobody in the conversation could. We were about to build something we couldn't evaluate." },
-          { type: 'p', text: "Without a success metric, 'worked' gets defined by whoever needed the feature to have worked — usually me, three weeks later, defending the build." },
+          { type: 'p', text: "Without a success metric, 'worked' gets defined by whoever needed the feature to have worked - usually me, three weeks later, defending the build." },
         ],
       },
       {
         label: 'Two different features wearing the same name',
         body: [
-          { type: 'p', text: "I looked at the surface I actually cared about — reports created per active user — and asked what a share feature was supposed to move. Two candidate outcomes: more reports created by invited teammates, or higher return-visit rate for the original author. The two candidates were not the same product." },
+          { type: 'p', text: "I looked at the surface I actually cared about - reports created per active user - and asked what a share feature was supposed to move. Two candidate outcomes: more reports created by invited teammates, or higher return-visit rate for the original author. The two candidates were not the same product." },
           { type: 'p', text: 'That was the moment the feature stopped being obvious. It had been carrying two contradictory jobs in the same name.' },
         ],
       },
       {
         label: 'The two-column table',
         body: [
-          { type: 'p', text: "I picked outcome A — teammate-created reports — because it mapped to the North Star metric (audits completed per week). I wrote it into the spec as a two-column table: outcome metric on the left, guardrail on the right." },
+          { type: 'p', text: "I picked outcome A - teammate-created reports - because it mapped to the North Star metric (audits completed per week). I wrote it into the spec as a two-column table: outcome metric on the left, guardrail on the right." },
           { type: 'list', items: [
             'Outcome: a meaningful increase in weekly reports created via share link, measured three weeks after launch.',
-            "Guardrail: no drop in report completion rate — if people share half-finished audits and never come back, we've made the product feel worse.",
+            "Guardrail: no drop in report completion rate - if people share half-finished audits and never come back, we've made the product feel worse.",
             'Kill decision: if outcome misses AND guardrail regresses, the feature comes out. No debate.',
           ]},
           { type: 'p', text: "The guardrail was the one we argued about. An engineer thought 'no drop in completion rate' was too conservative. I didn't budge. Looking back, he was probably right to push and I was right to hold. Both things can be true." },
@@ -309,7 +309,7 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'What the data showed',
         body: [
-          { type: 'p', text: "The share feature shipped in a week. Reports created via share links rose, but not enough to call it a clear win. The guardrail held. We kept the feature and scoped a follow-up to fix where the loop was leaking — an invite state that let recipients start where the sharer left off." },
+          { type: 'p', text: "The share feature shipped in a week. Reports created via share links rose, but not enough to call it a clear win. The guardrail held. We kept the feature and scoped a follow-up to fix where the loop was leaking - an invite state that let recipients start where the sharer left off." },
           { type: 'p', text: "The target wasn't hit. The framework still worked, because it turned a feel-good feature into a testable one and told us what to build next." },
         ],
       },
@@ -317,7 +317,7 @@ export const blogPosts: BlogPost[] = [
         label: 'The trade-off I still watch',
         body: [
           { type: 'p', text: "Defining a metric feels like tempting fate. If you don't name a number, nothing 'fails.' That comfort is exactly why teams under-ship on outcomes." },
-          { type: 'p', text: "I still find the conversation uncomfortable when it's a feature I want to build. The two-column table doesn't fix that — it just makes the discomfort visible, which is a different thing. If I built Credex from scratch, the table would be the first block in every PRD, above the problem statement." },
+          { type: 'p', text: "I still find the conversation uncomfortable when it's a feature I want to build. The two-column table doesn't fix that - it just makes the discomfort visible, which is a different thing. If I built Credex from scratch, the table would be the first block in every PRD, above the problem statement." },
         ],
       },
     ],
@@ -329,7 +329,7 @@ export const blogPosts: BlogPost[] = [
     question: 'Can I say "no"?',
     takeaway: 'He understands prioritization.',
     summary:
-      'A short list of things I built, shipped, then deleted from FitWardrobe — and what each removal taught me about the difference between a capability and a product.',
+      'A short list of things I built, shipped, then deleted from FitWardrobe - and what each removal taught me about the difference between a capability and a product.',
     category: 'Prioritization',
     tags: ['Prioritization', 'Say No', 'FitWardrobe', 'Simplicity'],
     readingTime: '5 min read',
@@ -359,15 +359,15 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'One hour with a stopwatch',
         body: [
-          { type: 'p', text: "I watched five session recordings back-to-back. Users hit the 'what should I wear?' button first every time. The manual outfit builder averaged one visit per week per user. The style score got a single tap per install. The palette suggester had a very low completion rate — people opened it, got confused, and left." },
-          { type: 'p', text: "In the fifth recording, a user opened the style score, stared at it for a few seconds, and navigated away. Not confused — uninterested. That was worse." },
+          { type: 'p', text: "I watched five session recordings back-to-back. Users hit the 'what should I wear?' button first every time. The manual outfit builder averaged one visit per week per user. The style score got a single tap per install. The palette suggester had a very low completion rate - people opened it, got confused, and left." },
+          { type: 'p', text: "In the fifth recording, a user opened the style score, stared at it for a few seconds, and navigated away. Not confused - uninterested. That was worse." },
           { type: 'p', text: 'None of that was in a dashboard. It took an hour with a stopwatch to see.' },
         ],
       },
       {
         label: 'What I cut and why',
         body: [
-          { type: 'p', text: "I removed all three. Not hidden behind a flag — removed. The style score was the one that hurt. I had spent a weekend on the scoring rubric. When I removed it, nobody emailed to ask where it went. That was the answer." },
+          { type: 'p', text: "I removed all three. Not hidden behind a flag - removed. The style score was the one that hurt. I had spent a weekend on the scoring rubric. When I removed it, nobody emailed to ask where it went. That was the answer." },
           { type: 'list', items: [
             "Manual outfit builder: cut. Users came to be told what to wear, not to build an outfit themselves.",
             "Style score: cut. Grading someone's clothes is a reliable way to lose them.",
@@ -378,7 +378,7 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'After',
         body: [
-          { type: 'p', text: "Session length dropped. Weekly return rate climbed over the following month. The support message I feared — 'where did X go?' — arrived twice, from the same person, both times about the outfit builder. I sent a two-line explanation and heard nothing back." },
+          { type: 'p', text: "Session length dropped. Weekly return rate climbed over the following month. The support message I feared - 'where did X go?' - arrived twice, from the same person, both times about the outfit builder. I sent a two-line explanation and heard nothing back." },
           { type: 'p', text: 'The app got smaller and started working harder.' },
         ],
       },
@@ -386,7 +386,7 @@ export const blogPosts: BlogPost[] = [
         label: 'The pattern I keep watching for',
         body: [
           { type: 'p', text: "The feature I'm proudest of is often the one obscuring the feature that actually earns return visits. My taste is a lagging indicator; user behaviour is the real one." },
-          { type: 'p', text: 'If I had run the stopwatch session at v0.5, I would have caught this a month earlier. The tool that made the difference was not analytics — it was thirty minutes of watching someone use the app without commentary.' },
+          { type: 'p', text: 'If I had run the stopwatch session at v0.5, I would have caught this a month earlier. The tool that made the difference was not analytics - it was thirty minutes of watching someone use the app without commentary.' },
         ],
       },
     ],
@@ -398,7 +398,7 @@ export const blogPosts: BlogPost[] = [
     question: 'How do I make AI product decisions?',
     takeaway: 'He understands AI as a product capability.',
     summary:
-      'Why FitWardrobe runs its model on the phone even though the cloud version would be more accurate — a real trade-off table, not a manifesto.',
+      'Why FitWardrobe runs its model on the phone even though the cloud version would be more accurate - a real trade-off table, not a manifesto.',
     category: 'AI Product',
     tags: ['AI Product', 'On-Device AI', 'Trade-offs', 'Privacy', 'FitWardrobe'],
     readingTime: '7 min read',
@@ -407,7 +407,7 @@ export const blogPosts: BlogPost[] = [
     cover: coverLocalVsCloud,
     coverAlt: 'Editorial illustration: phone and cloud connected by a balance line',
     takeaways: [
-      'On-device was a product decision dressed as a technical one — the value was UX and trust, not cost.',
+      'On-device was a product decision dressed as a technical one - the value was UX and trust, not cost.',
       'The cloud version was measurably more accurate. It still lost the trade-off, and I can tell you exactly why.',
       "Every AI product decision I've made maps to the same four axes: latency, privacy, cost, and the recovery story when the model is wrong.",
     ],
@@ -428,8 +428,8 @@ export const blogPosts: BlogPost[] = [
       {
         label: "What the benchmark didn't answer",
         body: [
-          { type: 'p', text: "I ran benchmarks. The cloud model was more accurate — measurably, not marginally. The on-device model was faster — not by a small amount, by a factor that changed whether the interaction felt instant or laggy. The cost difference mattered less than I expected." },
-          { type: 'p', text: "Then I asked the questions the benchmark couldn't answer. What happens on a subway with no signal? What does a user assume we're doing with their bedroom photos? How do we roll back a bad model version? What's our story when accuracy drops on darker fabrics — a known failure mode for most vision models?" },
+          { type: 'p', text: "I ran benchmarks. The cloud model was more accurate - measurably, not marginally. The on-device model was faster - not by a small amount, by a factor that changed whether the interaction felt instant or laggy. The cost difference mattered less than I expected." },
+          { type: 'p', text: "Then I asked the questions the benchmark couldn't answer. What happens on a subway with no signal? What does a user assume we're doing with their bedroom photos? How do we roll back a bad model version? What's our story when accuracy drops on darker fabrics - a known failure mode for most vision models?" },
         ],
       },
       {
@@ -442,7 +442,7 @@ export const blogPosts: BlogPost[] = [
             "Cost: on-device has no per-call cost at scale. That mattered less than the other two, but it made the solo-builder economics trivial.",
             'Accuracy: cloud was better. I accepted the gap and added a "not right? tap to fix" button so every mistake became a feedback loop, not a dead end.',
           ]},
-          { type: 'p', text: "On-device shipped. The thing I gave up — accuracy — became a training signal through the correction button. The axis I lost on was the one that compounded." },
+          { type: 'p', text: "On-device shipped. The thing I gave up - accuracy - became a training signal through the correction button. The axis I lost on was the one that compounded." },
         ],
       },
       {
@@ -491,7 +491,7 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'Mostly right is not a promise',
         body: [
-          { type: 'p', text: "Reps in a regulated industry cannot afford to log wrong information — a mis-classified interaction can breach compliance. The model was performing well on our eval. That number is a great engineering result and a terrible product argument. 'Mostly right' is not a promise a rep can carry into an audit." },
+          { type: 'p', text: "Reps in a regulated industry cannot afford to log wrong information - a mis-classified interaction can breach compliance. The model was performing well on our eval. That number is a great engineering result and a terrible product argument. 'Mostly right' is not a promise a rep can carry into an audit." },
           { type: 'p', text: "Adoption in the first two weeks was low. Reps used the assistant to draft, then re-typed the same information into the form manually. We had shipped a very expensive typewriter." },
         ],
       },
@@ -509,7 +509,7 @@ export const blogPosts: BlogPost[] = [
           { type: 'list', items: [
             'Read-back: after each turn, the assistant echoes what it heard in structured form before saving. One extra tap. Zero ambiguity.',
             'Source pinning: every logged field shows the exact rep utterance it came from. Trust is easier when the receipt is visible.',
-            'Uncertainty as UI: confidence below a threshold surfaces as a yellow badge with "confirm?" — not a hidden score.',
+            'Uncertainty as UI: confidence below a threshold surfaces as a yellow badge with "confirm?" - not a hidden score.',
             'Reversible commit: every save has a 30-second undo without leaving the screen. Small, but it changes the emotional cost of trying.',
           ]},
         ],
@@ -517,7 +517,7 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'When it crossed something',
         body: [
-          { type: 'p', text: "Adoption moved substantially — from a small fraction of reps to most of them — in about a month. The model accuracy did not move. The rate of manual re-typing dropped to near zero." },
+          { type: 'p', text: "Adoption moved substantially - from a small fraction of reps to most of them - in about a month. The model accuracy did not move. The rate of manual re-typing dropped to near zero." },
           { type: 'p', text: "The support tickets shifted topic entirely: from 'how do I check what got saved?' to feature requests for new interaction types. When the complaint changes, the product has crossed something." },
         ],
       },
@@ -526,6 +526,7 @@ export const blogPosts: BlogPost[] = [
         body: [
           { type: 'p', text: "The mistake was optimising the wrong number. I had spent two weeks squeezing a few more accuracy points out of the model. Those points were invisible to the user. The read-back UI took a day and moved adoption far more." },
           { type: 'p', text: "The trade-off I still watch: friction added for trust can become friction added for its own sake. The read-back is one extra tap, worth it. If I added a second confirmation on top, I'd be paying for safety I didn't need with adoption I couldn't afford. That balance point has to be checked with real users, not felt." },
+          { type: 'p', text: "The same failure mode - optimising the wrong thing because the metric isn't defined - is what led me to build [SEO-GEO Optimizer](/case-studies/seo-geo-optimizer). AI IDEs were optimising for SEO signals that Google deprecated in March 2024, because nobody had defined the right success criterion for them." },
         ],
       },
     ],
@@ -537,7 +538,7 @@ export const blogPosts: BlogPost[] = [
     question: 'How did my engineering work influence my PM approach?',
     takeaway: 'His technical background supports his product thinking.',
     summary:
-      'A JETIR-published EV-charging prototype and an ESP32 robot taught me more about product management than any framework — because both had physical failure modes that could not be argued with.',
+      'A JETIR-published EV-charging prototype and an ESP32 robot taught me more about product management than any framework - because both had physical failure modes that could not be argued with.',
     category: 'Career',
     tags: ['Career', 'Systems Thinking', 'Hardware', 'JETIR', 'Engineering to PM'],
     readingTime: '6 min read',
@@ -548,19 +549,19 @@ export const blogPosts: BlogPost[] = [
     takeaways: [
       "Hardware forces you to ship one thing that works, not five things that might.",
       'Peer review taught me to write for a reader who is looking for reasons to reject.',
-      'Every constraint I hit — power, latency, weight, bandwidth — showed up later in a software product wearing different clothes.',
+      'Every constraint I hit - power, latency, weight, bandwidth - showed up later in a software product wearing different clothes.',
     ],
     sections: [
       {
         label: 'Before I knew what a PRD was',
         body: [
-          { type: 'p', text: "Before I ever wrote a PRD, I built a wireless EV-charging prototype using inductive power transfer. It won the branch expo and was published in JETIR. Around the same time, I shipped an autonomous ESP32 robot with GPS tracking and live video. The EV paper was accepted. I don't think I read it after it went up — I was already on to the next thing, which is either a healthy instinct or a bad habit. I've gone back and forth on it." },
+          { type: 'p', text: "Before I ever wrote a PRD, I built a wireless EV-charging prototype using inductive power transfer. It won the branch expo and was published in JETIR. Around the same time, I shipped an autonomous ESP32 robot with GPS tracking and live video. The EV paper was accepted. I don't think I read it after it went up - I was already on to the next thing, which is either a healthy instinct or a bad habit. I've gone back and forth on it." },
         ],
       },
       {
         label: "The rubric that doesn't punish over-scope",
         body: [
-          { type: 'p', text: "Engineering projects at the college level reward complexity. The temptation is always to add another feature, another sensor, another mode — because the grading rubric doesn't penalise over-scope. Real product work does. The transferable skill wasn't the hardware. It was learning to defend one working thing against ten interesting ones." },
+          { type: 'p', text: "Engineering projects at the college level reward complexity. The temptation is always to add another feature, another sensor, another mode - because the grading rubric doesn't penalise over-scope. Real product work does. The transferable skill wasn't the hardware. It was learning to defend one working thing against ten interesting ones." },
         ],
       },
       {
@@ -580,7 +581,7 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'What transferred',
         body: [
-          { type: 'p', text: "Write claims like a peer reviewer will read them. Trade features for reliability without apologising. Respect the constraint you can't argue with — battery, latency, budget — before you optimise the one you can." },
+          { type: 'p', text: "Write claims like a peer reviewer will read them. Trade features for reliability without apologising. Respect the constraint you can't argue with - battery, latency, budget - before you optimise the one you can." },
           { type: 'p', text: "Those aren't hardware lessons. They're just product lessons I learned the hard way first." },
         ],
       },
@@ -597,10 +598,10 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'product-thinking-toolkit',
     title: 'My Product Thinking Toolkit',
-    question: 'Which frameworks do I actually use — and how?',
+    question: 'Which frameworks do I actually use - and how?',
     takeaway: 'He applies frameworks instead of memorizing them.',
     summary:
-      'Five frameworks I reach for regularly, each shown on a real project — with the version I use, not the textbook version.',
+      'Five frameworks I reach for regularly, each shown on a real project - with the version I use, not the textbook version.',
     category: 'Frameworks',
     tags: ['Frameworks', 'JTBD', 'RICE', 'PRD', 'Roadmaps'],
     readingTime: '8 min read',
@@ -610,7 +611,7 @@ export const blogPosts: BlogPost[] = [
     coverAlt: 'Editorial illustration: flat-lay of notebook, compass, pen, ruler',
     takeaways: [
       'Frameworks earn their place by replacing an argument, not by replacing thinking.',
-      'My versions of RICE, JTBD, and OSTs are all missing pieces of the textbook — on purpose.',
+      'My versions of RICE, JTBD, and OSTs are all missing pieces of the textbook - on purpose.',
       'The best test of whether you own a framework: can you say what you cut from it and why?',
     ],
     sections: [
@@ -635,11 +636,11 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'Five frameworks, all modified',
         body: [
-          { type: 'p', text: "JTBD on FitWardrobe. The job wasn't 'identify a garment' — it was 'leave the house feeling okay about how I look.' Naming the job renamed the product. The insight was in the verb, not the noun. I skip the forces-of-progress diagram entirely; the one-line job statement earns its keep on its own." },
+          { type: 'p', text: "JTBD on FitWardrobe. The job wasn't 'identify a garment' - it was 'leave the house feeling okay about how I look.' Naming the job renamed the product. The insight was in the verb, not the noun. I skip the forces-of-progress diagram entirely; the one-line job statement earns its keep on its own." },
           { type: 'p', text: "RICE on the CRM. I use Reach, Impact, and Effort. I dropped Confidence and replaced it with an 'evidence class' label: interview quote, analytic, competitor benchmark, or hunch. Hunches are allowed, but they get labelled. The column forces honesty without pretending hunches have a numeric value." },
           { type: 'p', text: "PRDs on Credex. Three sections: problem, decision (what we're building and what we're not), and success (metric and guardrail). No goals section, no background, no glossary. If it doesn't change what gets built, it's not in the doc." },
           { type: 'p', text: "User stories on Mithivoices. Written as jobs, not features: 'as a bilingual speaker joining a call late, I want the last 30 seconds transcribed so I can join without asking anyone to repeat themselves.' Feature-shaped stories get outdated; job-shaped ones survive scope changes." },
-          { type: 'p', text: "Opportunity Solution Trees on SEO-GEO. Used once, when I had five feature ideas and no principled way to choose between them. The tree made the parent opportunity obvious and eliminated two of the five ideas immediately. I don't use OSTs regularly — I tried to on a later project and got eleven branches deep before I lost the thread entirely. I use them only when I'm genuinely stuck." },
+          { type: 'p', text: "Opportunity Solution Trees on [SEO-GEO](/case-studies/seo-geo-optimizer). Used once, when I had five feature ideas and no principled way to choose between them. The tree made the parent opportunity obvious and eliminated two of the five ideas immediately. I don't use OSTs regularly - I tried to on a later project and got eleven branches deep before I lost the thread entirely. I use them only when I'm genuinely stuck." },
         ],
       },
       {
@@ -651,7 +652,7 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'The trap and the fix',
         body: [
-          { type: 'p', text: "The trap I fell into early was framework tourism — using a new one on every project to feel productive. It slowed everything down. The fix was boring: use the smallest set that gets you to a decision, and only reach for something new when the current tool has visibly failed twice." },
+          { type: 'p', text: "The trap I fell into early was framework tourism - using a new one on every project to feel productive. It slowed everything down. The fix was boring: use the smallest set that gets you to a decision, and only reach for something new when the current tool has visibly failed twice." },
           { type: 'p', text: "If I had to keep only one, it would be the modified RICE. The evidence-class column is where I catch myself lying to myself about what I actually know." },
         ],
       },
@@ -664,7 +665,7 @@ export const blogPosts: BlogPost[] = [
     question: 'Can I reflect on my work and improve?',
     takeaway: 'He learns from experience.',
     summary:
-      'A short, honest audit of what I would build differently on FitWardrobe if I got to start over on a Monday morning — no revisionism, only the mistakes I can actually name.',
+      'A short, honest audit of what I would build differently on FitWardrobe if I got to start over on a Monday morning - no revisionism, only the mistakes I can actually name.',
     category: 'Reflection',
     tags: ['Reflection', 'FitWardrobe', 'Lessons', 'MVP'],
     readingTime: '5 min read',
@@ -694,7 +695,7 @@ export const blogPosts: BlogPost[] = [
       {
         label: "The evidence I'd use from day one",
         body: [
-          { type: 'p', text: "The evidence I'd lean on today is the evidence I generated the hard way — the seven-interview retention swing, the stopwatch session that killed three features, the trust affordances from the CRM. I already have the receipts. Starting again means using them from Monday, not month three." },
+          { type: 'p', text: "The evidence I'd lean on today is the evidence I generated the hard way - the seven-interview retention swing, the stopwatch session that killed three features, the trust affordances from the CRM. I already have the receipts. Starting again means using them from Monday, not month three." },
         ],
       },
       {
@@ -703,9 +704,9 @@ export const blogPosts: BlogPost[] = [
           { type: 'p', text: "Here is the version I would build." },
           { type: 'list', items: [
             "Week 1: seven discovery conversations before any model work. A Figma clickthrough that mocks a single 'what should I wear?' answer. Measure one thing: whether people tap again without being prompted.",
-            "Week 2: pick the model architecture based on the four-axis exercise — latency, privacy, cost, recovery story — with the answer already leaning on-device but written down, not assumed. Week 2 would probably slip. It always does. I'd build something in week 1 that the interviews partly invalidated, and I'd need time to adjust.",
-            "Week 3: build the trust surface — read-back, undo, 'not right? tap to fix' — before the recommendation is good enough to be worth trusting.",
-            'Week 4: instrument two numbers — daily active outfits shown, and correction rate — and write the kill condition on day one.',
+            "Week 2: pick the model architecture based on the four-axis exercise - latency, privacy, cost, recovery story - with the answer already leaning on-device but written down, not assumed. Week 2 would probably slip. It always does. I'd build something in week 1 that the interviews partly invalidated, and I'd need time to adjust.",
+            "Week 3: build the trust surface - read-back, undo, 'not right? tap to fix' - before the recommendation is good enough to be worth trusting.",
+            'Week 4: instrument two numbers - daily active outfits shown, and correction rate - and write the kill condition on day one.',
           ]},
           { type: 'p', text: "The plan isn't really about weeks. It's about the order of bets, and the most important bet is that talking to people before building beats building before talking." },
         ],
@@ -726,6 +727,197 @@ export const blogPosts: BlogPost[] = [
     ],
     relatedCaseStudies: ['fitwardrobe'],
   },
+  {
+    slug: 'llm-orchestration-tools',
+    title: 'LLM Orchestration in 2026: What I Learned Building a Pipeline That Actually Works',
+    question: 'How do you sequence LLM calls without it breaking?',
+    takeaway: 'He builds orchestration that scales.',
+    summary:
+      'What I found after building a LangGraph pipeline for Mithivoices - the orchestration patterns that held up under real usage, and the ones that broke before anyone saw them.',
+    category: 'AI Product',
+    tags: ['AI Product', 'LLM', 'Architecture', 'Mithivoices', 'Agentic AI'],
+    readingTime: '7 min read',
+    publishedAt: 'Aug 09, 2026',
+    publishedAtISO: '2026-08-09',
+    cover: coverAiTrust,
+    coverAlt: 'Editorial illustration: nodes connecting in a complex graph structure',
+    takeaways: [
+      'Routing before dispatching saves latency. Intent classification is cheaper than running the full model chain.',
+      'Memory should be a sliding window, not full context. Context windows fail silently when they grow too large.',
+      'LangGraph gives you the control of raw API calls with the structure of a framework.',
+    ],
+    sections: [
+      {
+        label: 'The question I keep getting',
+        body: [
+          { type: 'p', text: 'What exactly is LLM orchestration, and why should a product manager care about it? Simply put, orchestration is how you string together multiple language model calls, external tools, and memory to complete a complex task without the system breaking down mid-thought. It is the difference between a chat wrapper and a product.' },
+        ],
+      },
+      {
+        label: 'What I built for Mithivoices',
+        body: [
+          { type: 'p', text: 'On Mithivoices, we needed real-time bilingual transcription. The pipeline started simple: voice input went to Whisper, then to an LLM for translation. But as soon as we needed the system to understand context across turns, a single chain broke. We needed state. I chose LangGraph because it treats the LLM as a node in a state machine, rather than a black box.' },
+        ],
+      },
+      {
+        label: 'Three patterns that held',
+        body: [
+          { type: 'list', items: [
+            'Routing first: Use a fast, cheap model to classify user intent before dispatching to heavy models.',
+            'Bounded memory: We implemented a sliding window for context. Passing the whole transcript always ended in hallucination or cost overruns.',
+            'Typed tools: Forcing the LLM to output strictly typed JSON schemas for tool-calling was the only way to get reliable integration.',
+          ]},
+        ],
+      },
+      {
+        label: 'Where it broke',
+        body: [
+          { type: 'p', text: 'The system failed in ways you don\'t see in local testing. We hit latency spikes during the routing step because of network overhead. We saw silent context failures where the LLM just "forgot" the speaker\'s language preference after ten turns. And we encountered subtle race conditions when streaming WebSocket states back to the client.' },
+        ],
+      },
+      {
+        label: 'What I\'d pick today',
+        body: [
+          { type: 'p', text: 'For simple extractions, raw API calls are fine. For anything requiring state or loops, LangGraph is the current standard. LangChain abstractions hide too much of the prompt for production systems. The control you need is always one layer beneath the abstraction they sell you.' },
+          { type: 'p', text: 'The same agentic architecture - chained phases, human-in-the-loop gates, typed tool schemas - is what I used when building the [SEO-GEO Optimizer](/case-studies/seo-geo-optimizer). The product context changed; the orchestration principles didn\'t.' },
+        ],
+      },
+    ],
+    relatedCaseStudies: ['mithivoices', 'seo-geo-optimizer'],
+  },
+  {
+    slug: 'agentic-ai-vs-ml',
+    title: "Agentic AI vs Machine Learning: A PM's Guide to Knowing the Difference",
+    question: 'Is it just a rebrand, or a new paradigm?',
+    takeaway: 'He understands the difference between prediction and action.',
+    summary:
+      'The one-paragraph difference between ML and agentic AI that most definitions get wrong - and why it matters for the products you are scoping right now.',
+    category: 'AI Product',
+    tags: ['AI Product', 'Agentic AI', 'Machine Learning', 'Career', 'Frameworks'],
+    readingTime: '6 min read',
+    publishedAt: 'Aug 09, 2026',
+    publishedAtISO: '2026-08-09',
+    cover: coverLocalVsCloud,
+    coverAlt: 'Editorial illustration: a machine learning model next to a robotic agent',
+    takeaways: [
+      'Machine Learning produces a prediction from a fixed input. Agentic AI takes actions and updates its state across multiple steps.',
+      'Scoping an ML feature requires bounding the input. Scoping an agentic feature requires bounding the action space.',
+      'If your system doesn\'t call an external tool or iterate on its own output, it is probably not agentic.',
+    ],
+    sections: [
+      {
+        label: 'The answer in one paragraph',
+        body: [
+          { type: 'p', text: 'Machine Learning (ML) produces a prediction or classification from a fixed input. It is a one-and-done computation. Agentic AI takes actions, uses tools, evaluates its own output, and updates its state across multiple steps to reach a goal. ML tells you what something is; an agent does something about it.' },
+        ],
+      },
+      {
+        label: 'Why the distinction matters for a PM',
+        body: [
+          { type: 'p', text: 'The difference isn\'t pedantic. It changes how you scope risk, measure success, and decide what to build. If you treat an agent like a traditional ML classifier, your success metrics will fail because you\'ll measure accuracy instead of task completion rate. And if you treat ML like an agent, you\'ll over-engineer a simple prediction.' },
+        ],
+      },
+      {
+        label: 'ML in practice: what I saw on Mithivoices',
+        body: [
+          { type: 'p', text: 'On Mithivoices, the Whisper transcription step is pure ML. You give it audio, it gives you text. Bounded input, bounded output. It is easy to evaluate against a golden dataset, easy to version, and entirely deterministic at temperature zero.' },
+        ],
+      },
+      {
+        label: 'Where "agentic" starts',
+        body: [
+          { type: 'p', text: 'The moment the pipeline needed to decide which tool to call based on intermediate context, we crossed into agentic territory. The system had to read a transcript, realize it was incomplete, call a web-search tool, read the result, and then synthesize a final answer. That multi-step, tool-using loop is the hallmark of an agent.' },
+        ],
+      },
+      {
+        label: 'The practical decision tree',
+        body: [
+          { type: 'p', text: 'If you need a single-step prediction or generation (e.g., "summarize this text", "is this image a hotdog?"), use traditional ML or a zero-shot LLM call. If you need the system to overcome obstacles, search for missing context, or interact with external APIs, you need an agentic pattern.' },
+          { type: 'p', text: 'The [SEO-GEO Optimizer](/case-studies/seo-geo-optimizer) is the clearest example of an agentic system I\'ve shipped: 14 sequential phases, each gated by a human-in-the-loop validation step, with the AI using tools (schema generators, robots.txt writers) across the full workflow.' },
+        ],
+      },
+    ],
+    relatedCaseStudies: ['seo-geo-optimizer'],
+  },
+  {
+    slug: 'agentic-ai-developer-guide',
+    title: 'Agentic AI Developer Guide: Bridging PM and Engineering',
+    question: 'What does a PM actually need to know about Agentic AI?',
+    takeaway: 'Why the best AI PMs need to understand agent orchestration (LangGraph, MCP) rather than just prompt engineering.',
+    summary: 'Prompt engineering is table stakes. To build autonomous systems, product managers must understand how to bound action spaces and evaluate agentic loops.',
+    category: 'AI Product',
+    tags: ['Agentic AI', 'MCP', 'LangGraph', 'LLMOps', 'Orchestration'],
+    readingTime: '7 min read',
+    publishedAt: 'Aug 10, 2026',
+    publishedAtISO: '2026-08-10',
+    cover: coverAiTrust,
+    coverAlt: 'Editorial illustration: nodes and connections representing an agentic workflow',
+    takeaways: [
+      'Prompt engineering is just the UI. Orchestration is the product.',
+      'Agentic systems fail when the action space is unbounded. Your job as a PM is to constrain what the agent is allowed to do.',
+      'The Model Context Protocol (MCP) is the new API standard. You do not need to write it, but you must understand how it connects your agent to external data.',
+    ],
+    sections: [
+      {
+        label: 'The shift from prompts to agents',
+        body: [
+          { type: 'p', text: 'In 2024, AI PMs focused on prompt engineering. By 2026, the bottleneck moved to orchestration. A prompt is a single interaction. An agent is a loop. It decides, acts, observes, and decides again.' },
+          { type: 'p', text: 'When you transition from managing a chat interface to an agentic system, your primary risk changes from "will the model say the wrong thing?" to "will the model do the wrong thing?"' },
+        ],
+      },
+      {
+        label: 'Bounding the action space',
+        body: [
+          { type: 'p', text: 'The most important PM decision in an agentic workflow is what the agent is explicitly NOT allowed to do. If an agent has access to a SQL execution tool, it must be scoped to read-only views, or restricted by row-level security. The PM defines the blast radius.' },
+        ],
+      },
+      {
+        label: 'Understanding MCP',
+        body: [
+          { type: 'p', text: 'The Model Context Protocol (MCP) standardizes how agents talk to external tools and data sources. As a PM, you don\'t need to write the servers, but you need to map your user journeys to the specific MCP resources and tools your agent will require to complete the job.' },
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'generative-ai-technical-seo',
+    title: 'Generative AI for Technical SEO: A Builder\'s Perspective',
+    question: 'How do you optimize a site for an Answer Engine?',
+    takeaway: 'How to structure modern web apps for answer engines (Perplexity, ChatGPT) using LLMs.txt and dynamic schema.',
+    summary: 'Search is shifting from blue links to direct answers. Technical SEO now means making your unstructured data legible to a retrieval-augmented generation (RAG) system.',
+    category: 'Frameworks',
+    tags: ['Technical SEO', 'GEO', 'Generative Engine Optimization', 'LLMs.txt', 'Structured Data'],
+    readingTime: '6 min read',
+    publishedAt: 'Aug 10, 2026',
+    publishedAtISO: '2026-08-10',
+    cover: coverToolkit,
+    coverAlt: 'Editorial illustration: tools for structuring data for LLMs',
+    takeaways: [
+      'LLMs don\'t care about your CSS. They use JSON-LD and semantic HTML as potentially helpful implementation guidance.',
+      'The llms.txt proposal is an emerging, optional format with unspecified client processing, not a robots.txt replacement.',
+      'Answer engines may prioritize dense, factual information over keyword-stuffed narrative.',
+    ],
+    sections: [
+      {
+        label: 'The new SEO is GEO',
+        body: [
+          { type: 'p', text: 'Generative Engine Optimization (GEO) is evolving alongside traditional SEO for informational queries. When a user asks an answer engine about your product, it may synthesize an answer directly from the DOM. A clean semantic structure serves as helpful implementation guidance for these models.' },
+        ],
+      },
+      {
+        label: 'LLMs.txt: An emerging proposal',
+        body: [
+          { type: 'p', text: 'Rather than a strict replacement for robots.txt, llms.txt is an emerging, optional proposal with unspecified client processing. It serves as a markdown-friendly map of your content that can be provided as a helpful hint for ingestion into a context window.' },
+        ],
+      },
+      {
+        label: 'Why JSON-LD matters more than ever',
+        body: [
+          { type: 'p', text: 'LLMs are exceptionally good at parsing structured JSON data. If your page provides a rich Person, ProfilePage, or SoftwareApplication schema, it acts as potentially helpful implementation guidance for an agent extracting entity data, bypassing the noise of visual layout.' },
+        ],
+      },
+    ],
+  }
 ]
 
 export const getBlogPost = (slug: string) => blogPosts.find((p) => p.slug === slug)

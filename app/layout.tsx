@@ -30,10 +30,10 @@ const greatVibes = Great_Vibes({
 
 export const metadata: Metadata = {
   title: {
-    default: "Aryan Panwar — Aspiring Product Manager",
+    default: "Aryan Panwar | AI Product Manager",
     template: "%s | Aryan Panwar",
   },
-  description: "Product Evidence Book by Aryan Panwar — case studies, product thinking, and writing from an aspiring PM with a builder background.",
+  description: "Product Evidence Book by Aryan Panwar: case studies, product thinking, and writing from an AI PM with a builder background.",
   authors: [{ name: "Aryan Panwar" }],
   metadataBase: new URL("https://aryanpanwar.in"),
   icons: {
@@ -42,25 +42,25 @@ export const metadata: Metadata = {
     apple: "/favicon.webp",
   },
   openGraph: {
-    title: "Aryan Panwar — Aspiring Product Manager",
-    description: "Case studies, product thinking, and writing from Aryan Panwar — an aspiring PM with a builder background.",
+    title: "Aryan Panwar | AI Product Manager",
+    description: "Case studies, product thinking, and writing from Aryan Panwar: an AI PM with a builder background.",
     url: "https://aryanpanwar.in/",
     type: "website",
-    siteName: "Aryan Panwar — Product Evidence Book",
+    siteName: "Aryan Panwar | Product Evidence Book",
     images: [
       {
         url: "/assets/og-cover.webp",
         width: 1200,
         height: 630,
-        alt: "Aryan Panwar — Aspiring Product Manager",
+        alt: "Aryan Panwar | AI Product Manager",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@aryanpanwar",
-    title: "Aryan Panwar — Aspiring Product Manager",
-    description: "Case studies, product thinking, and writing from Aryan Panwar — an aspiring PM with a builder background.",
+    title: "Aryan Panwar | AI Product Manager",
+    description: "Case studies, product thinking, and writing from Aryan Panwar: an AI PM with a builder background.",
     images: ["/assets/og-cover.webp"],
   },
 };

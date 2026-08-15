@@ -1,6 +1,6 @@
-# Aryan Panwar — Product Evidence Book
+# Aryan Panwar - Product Evidence Book
 
-> Aryan Panwar is an aspiring Product Manager with a builder background — ECE graduate from MIET Meerut (2026) who ships AI products and writes about product tradeoffs, AI feature design, and PM frameworks. He has built FitWardrobe (on-device AI wardrobe stylist), Mithivoices (open-source real-time voice AI stack), SEO-GEO Optimizer (npm package for AI search visibility), and an AI-First CRM for healthcare field reps.
+> Aryan Panwar is an AI Product Manager with a builder background - ECE graduate from MIET Meerut (2026) who ships AI products and writes about product tradeoffs, AI feature design, and PM frameworks. He has built FitWardrobe (on-device AI wardrobe stylist), Mithivoices (open-source real-time voice AI stack), SEO-GEO Optimizer (npm package for AI search visibility), and an AI-First HCP CRM for healthcare field reps.
 
 ## About
 
@@ -12,7 +12,7 @@
 - [FitWardrobe](https://aryanpanwar.in/case-studies/fitwardrobe): AI wardrobe stylist — analyzed McKinsey/Movinga research on closet dormancy, grew to 20.8K organic impressions and 315 clicks (1.5% CTR), solved cataloguing friction from pilot feedback, preparing upcoming Beta launch at https://fitwardrobe.me.
 - [Mithivoices](https://aryanpanwar.in/case-studies/mithivoices): Open-source real-time voice AI stack — prioritized a 40+ module OSS backlog with RICE against a hard 500ms E2E latency ceiling.
 - [SEO-GEO Optimizer](https://aryanpanwar.in/case-studies/seo-geo-optimizer): npm package that auto-generates structured data, llms.txt, and answer-first content to make sites legible to AI answer engines like Perplexity and ChatGPT.
-- [AI-First CRM (HCP)](https://aryanpanwar.in/case-studies/ai-first-crm-hcp): Field-rep CRM for healthcare — ran 8 behavioral discovery interviews, chose draft-and-confirm over autonomy to maintain 85%+ acceptance rate.
+- [AI-First HCP CRM](https://aryanpanwar.in/case-studies/ai-first-crm-hcp): Field-rep CRM for healthcare - ran 8 behavioral discovery interviews, chose draft-and-confirm over autonomy to maintain 85%+ acceptance rate.
 - [Credex Spend Audit](https://aryanpanwar.in/case-studies/credex-spend-audit): North-star metric "Dollars of Verified Savings Surfaced" with counter-metrics (false-positive rate, savings rejection rate) to prevent Goodhart's Law.
 
 ## Product Thinking

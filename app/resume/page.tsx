@@ -19,7 +19,7 @@ export default function ResumeLibraryPage() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Aryan Panwar",
-    jobTitle: "Aspiring Product Manager",
+    jobTitle: "AI Product Manager",
     url: "https://aryanpanwar.in/",
     sameAs: [
       "https://www.linkedin.com/in/aryan-panwar1",

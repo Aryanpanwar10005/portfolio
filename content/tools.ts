@@ -1,4 +1,4 @@
-// PM toolkit — how I think, prioritise, and communicate.
+// PM toolkit - how I think, prioritise, and communicate.
 export const pmToolkit = [
   "Notion",
   "Figma",
@@ -10,7 +10,7 @@ export const pmToolkit = [
   "Miro",
 ];
 
-// Technical fluency — the stack I reach for when a wedge needs a prototype.
+// Technical fluency - the stack I reach for when a wedge needs a prototype.
 export const technicalFluency = [
   "LangChain",
   "LangGraph",
@@ -50,10 +50,10 @@ export const publications = [
   {
     title:
       "Automated Dual-Spot Wireless Charging and Parking Management System for Electric Vehicles",
-    venue: "JETIR — Journal of Emerging Technologies and Innovative Research",
+    venue: "JETIR - Journal of Emerging Technologies and Innovative Research",
     meta: "Vol 13 · Issue 4 · April 2026 · Impact Factor 7.95 · ISSN 2349-5162",
     url: "https://www.jetir.org/view?paper=JETIR2604872",
-    note: "1st place — College Branch Expo. IPT-based prototype at 85% wireless charging efficiency.",
+    note: "1st place - College Branch Expo. IPT-based prototype at 85% wireless charging efficiency.",
   },
 ];
 

@@ -37,7 +37,7 @@ export function HeroLibrary({ onExplore }: { onExplore: () => void }) {
             className="mt-6 text-lg text-foreground-muted max-w-xl leading-relaxed"
           >
             One resume rarely fits every hiring bar. Pick the version written for the seat
-            you're hiring for — each is tailored to the signals that role actually screens for.
+            you're hiring for - each is tailored to the signals that role actually screens for.
           </motion.p>
 
           <motion.blockquote
@@ -48,7 +48,7 @@ export function HeroLibrary({ onExplore }: { onExplore: () => void }) {
           >
             <span className="absolute inset-x-0 top-0 h-px bg-[hsl(var(--accent))] opacity-70" />
             <p className="font-serif-italic text-lg text-foreground leading-relaxed">
-              "A resume isn't a document — it's a filter. The best filter is the one written for
+              "A resume isn't a document - it's a filter. The best filter is the one written for
               the reader on the other side."
             </p>
           </motion.blockquote>

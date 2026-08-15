@@ -15,7 +15,7 @@ export function CaseStudiesList() {
             Three products, <span className="font-serif-italic text-primary">told the PM way.</span>
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-foreground-muted">
-            Problem, users, tradeoffs, metrics, and what I&apos;d do next — for the three
+            Problem, users, tradeoffs, metrics, and what I&apos;d do next - for the three
             projects I&apos;ve thought about hardest.
           </p>
         </div>

@@ -21,7 +21,7 @@ export const skillCategories: SkillCategory[] = [
   {
     slug: "product-seo-geo",
     title: "Product · SEO · GEO",
-    blurb: "Growth loops for products that need to be found — by humans and by LLMs.",
+    blurb: "Growth loops for products that need to be found - by humans and by LLMs.",
     items: ["Analytics instrumentation", "Funnel Analysis", "A/B testing", "User Research", "SEO-GEO strategy", "Content ops"],
   },
   {
@@ -58,7 +58,7 @@ export const skillCategories: SkillCategory[] = [
   {
     slug: "hardware-embedded",
     title: "Hardware & Embedded",
-    blurb: "Where the builder background started — sensors, motors, firmware.",
+    blurb: "Where the builder background started - sensors, motors, firmware.",
     items: ["ESP32", "Arduino", "IR / ultrasonic sensors", "Inverse kinematics", "PCB prototyping"],
   },
 ];

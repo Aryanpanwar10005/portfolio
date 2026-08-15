@@ -7,9 +7,10 @@ export type PlaybookEntry = {
   whenToUse: string;
   steps: string[];
   template?: string;
+  publishedAtISO?: string;
 };
 
-// "My Product Thinking" — every entry is grounded in a real project I shipped.
+// "My Product Thinking" - every entry is grounded in a real project I shipped.
 export const playbook: PlaybookEntry[] = [
   {
     slug: "jtbd-fitwardrobe",
@@ -24,7 +25,7 @@ export const playbook: PlaybookEntry[] = [
       "Wrote 3 candidate jobs. Killed the two that described features instead of outcomes.",
       "Interviewed 20 users about the last time they picked an outfit, not the ideal one.",
       "Rewrote the home screen around the job: ‘Help me leave the house feeling put together in under 30 seconds.’",
-      "Killed everything on the roadmap that didn’t serve that job — including a shopping tab I had already prototyped.",
+      "Killed everything on the roadmap that didn’t serve that job - including a shopping tab I had already prototyped.",
     ],
   },
   {
@@ -39,7 +40,7 @@ export const playbook: PlaybookEntry[] = [
     steps: [
       "Framed Reach as ‘% of new contributors who hit this within a week’.",
       "Framed Impact on a 0.25 → 3 scale tied to the reference agent’s latency.",
-      "Divided by realistic dev weeks — mine and contributors’.",
+      "Divided by realistic dev weeks - mine and contributors’.",
       "Published the sheet in the repo so contributors could argue with it, not around it.",
     ],
   },
@@ -65,7 +66,7 @@ export const playbook: PlaybookEntry[] = [
     title: "North-star + counter-metrics, applied to Credex",
     project: "Credex Spend Audit",
     summary:
-      "Choosing a metric that only goes up when the customer actually wins — and the counter-metrics that keep it honest.",
+      "Choosing a metric that only goes up when the customer actually wins - and the counter-metrics that keep it honest.",
     whenToUse:
       "At the start of a quarter, or when the dashboard has 40 charts and no answer.",
     steps: [
@@ -81,7 +82,7 @@ export const playbook: PlaybookEntry[] = [
     title: "Discovery interviews, applied to AI-First CRM",
     project: "AI-First CRM (HCP)",
     summary:
-      "How I ran problem-space interviews with field reps without leading the witness — and what I threw away because of them.",
+      "How I ran problem-space interviews with field reps without leading the witness - and what I threw away because of them.",
     whenToUse:
       "Before writing a PRD, before scoping, whenever the team is arguing about what the user wants.",
     steps: [
@@ -97,14 +98,14 @@ export const playbook: PlaybookEntry[] = [
     title: "AI product tradeoffs I actually made",
     project: "Across FitWardrobe, Mithivoices, HCP CRM",
     summary:
-      "On-device vs cloud, eval design, latency vs quality — the concrete decisions I made, and what would make me revisit them.",
+      "On-device vs cloud, eval design, latency vs quality - the concrete decisions I made, and what would make me revisit them.",
     whenToUse:
       "Any AI feature above one engineering week, before writing the PRD.",
     steps: [
       "FitWardrobe: chose on-device vision for privacy + latency; would revisit if attribute quality plateaus.",
       "Mithivoices: chose latency ceiling as a hard constraint; every quality upgrade must fit under 500ms E2E.",
       "HCP CRM: chose draft-and-confirm over autonomy; would revisit only after acceptance rate stays above 85% for a quarter.",
-      "Wrote a one-page decision log per tradeoff — with the ‘change our mind’ trigger written first, not last.",
+      "Wrote a one-page decision log per tradeoff - with the ‘change our mind’ trigger written first, not last.",
     ],
   },
 ];

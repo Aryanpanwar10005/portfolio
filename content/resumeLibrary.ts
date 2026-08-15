@@ -35,12 +35,12 @@ export const resumeVariants: ResumeVariant[] = [
     isPlaceholder: false,
     summary: {
       experience: [
-        "Founder & PM — FitWardrobe · owned discovery, PRDs, and design QA end-to-end for an AI wardrobe stylist.",
-        "Product & AI Engineer — Mithivoices, Credex, HCP CRM · shipped product direction and code across three AI wedges.",
+        "Founder & PM - FitWardrobe · owned discovery, PRDs, and design QA end-to-end for an AI wardrobe stylist.",
+        "Product & AI Engineer - Mithivoices, Credex, HCP CRM · shipped product direction and code across three AI wedges.",
       ],
       projects: [
-        "FitWardrobe — AI wardrobe stylist, on-device vision-first PM case study.",
-        "Credex — AI SaaS spend auditor validated with 5 ops-lead discovery calls.",
+        "FitWardrobe - AI wardrobe stylist, on-device vision-first PM case study.",
+        "Credex - AI SaaS spend auditor validated with 5 ops-lead discovery calls.",
       ],
       skills: [
         "User research & JTBD framing",
@@ -49,12 +49,12 @@ export const resumeVariants: ResumeVariant[] = [
         "North star + funnel metric trees",
         "Go-to-market & organic growth",
       ],
-      education: ["B.Tech ECE — MIET Meerut (2022 — 2026)"],
+      education: ["B.Tech ECE - MIET Meerut (2022 - 2026)"],
       achievements: [
         "20+ discovery interviews · 6 diary studies synthesised into a 3-insight product bet.",
         "Generated 20.8K organic search impressions and 315 clicks (1.5% CTR, avg position 14.9) in 6 months with zero paid spend.",
       ],
-      publications: ["JETIR — Automated Dual-Spot Wireless Charging (IF 7.95, 2026)."],
+      publications: ["JETIR - Automated Dual-Spot Wireless Charging (IF 7.95, 2026)."],
     },
   },
   {
@@ -69,12 +69,12 @@ export const resumeVariants: ResumeVariant[] = [
     isPlaceholder: false,
     summary: {
       experience: [
-        "Credex — modelled SaaS spend deltas across 5 ops teams; framed the audit workflow into a repeatable playbook.",
-        "FitWardrobe — built the analytics stack (event schema, activation funnel) from zero.",
+        "Credex - modelled SaaS spend deltas across 5 ops teams; framed the audit workflow into a repeatable playbook.",
+        "FitWardrobe - built the analytics stack (event schema, activation funnel) from zero.",
       ],
       projects: [
-        "Spend audit rubric — turned interview notes into a scored requirements matrix.",
-        "Activation funnel teardown — pinpointed the drop between first outfit and daily use.",
+        "Spend audit rubric - turned interview notes into a scored requirements matrix.",
+        "Activation funnel teardown - pinpointed the drop between first outfit and daily use.",
       ],
       skills: [
         "Requirements gathering & gap analysis",
@@ -83,9 +83,9 @@ export const resumeVariants: ResumeVariant[] = [
         "Funnel & cohort analysis",
         "Dashboarding (Amplitude / GA4)",
       ],
-      education: ["B.Tech ECE — MIET Meerut (2022 — 2026)"],
+      education: ["B.Tech ECE - MIET Meerut (2022 - 2026)"],
       achievements: ["Built working knowledge of enterprise instrumentation and process constraints during internship at Indian Potash Limited's distillery."],
-      publications: ["JETIR — Automated Dual-Spot Wireless Charging (IF 7.95, 2026)."],
+      publications: ["JETIR - Automated Dual-Spot Wireless Charging (IF 7.95, 2026)."],
     },
   },
   {
@@ -100,12 +100,12 @@ export const resumeVariants: ResumeVariant[] = [
     isPlaceholder: false,
     summary: {
       experience: [
-        "AI-first HCP CRM — LangGraph agent PM'd end-to-end; 80%+ AI-draft acceptance in internal testing.",
-        "Mithivoices — set the latency budget (<500ms E2E) and eval strategy for an OSS voice stack.",
+        "AI-first HCP CRM - LangGraph agent PM'd end-to-end; 80%+ AI-draft acceptance in internal testing.",
+        "Mithivoices - set the latency budget (<500ms E2E) and eval strategy for an OSS voice stack.",
       ],
       projects: [
-        "SEO-GEO Optimizer — npm package for making sites legible to answer engines.",
-        "Eval harness for HCP CRM — grounded acceptance metric, hallucination guardrails.",
+        "SEO-GEO Optimizer - npm package for making sites legible to answer engines.",
+        "Eval harness for HCP CRM - grounded acceptance metric, hallucination guardrails.",
       ],
       skills: [
         "LLM product scoping & model selection",
@@ -114,9 +114,9 @@ export const resumeVariants: ResumeVariant[] = [
         "Latency vs. cost tradeoff decisions",
         "LLMOps & AI observability",
       ],
-      education: ["B.Tech ECE — MIET Meerut (2022 — 2026)"],
-      achievements: ["NVIDIA DLI — Transformer-based NLP certified.", "3 shipped LLM products with real users."],
-      publications: ["JETIR — Automated Dual-Spot Wireless Charging (IF 7.95, 2026)."],
+      education: ["B.Tech ECE - MIET Meerut (2022 - 2026)"],
+      achievements: ["NVIDIA DLI - Transformer-based NLP certified.", "3 shipped LLM products with real users."],
+      publications: ["JETIR - Automated Dual-Spot Wireless Charging (IF 7.95, 2026)."],
     },
   },
   {
@@ -131,12 +131,12 @@ export const resumeVariants: ResumeVariant[] = [
     isPlaceholder: false,
     summary: {
       experience: [
-        "Mithivoices — real-time voice AI stack; streaming pipeline, TTS/STT plumbing, <500ms latency target.",
-        "AI-first HCP CRM — LangGraph orchestration, Postgres + vector store, edge-function tools.",
+        "Mithivoices - real-time voice AI stack; streaming pipeline, TTS/STT plumbing, <500ms latency target.",
+        "AI-first HCP CRM - LangGraph orchestration, Postgres + vector store, edge-function tools.",
       ],
       projects: [
-        "SEO-GEO Optimizer — published npm package.",
-        "FitWardrobe — on-device vision, TensorFlow Lite inference.",
+        "SEO-GEO Optimizer - published npm package.",
+        "FitWardrobe - on-device vision, TensorFlow Lite inference.",
       ],
       skills: [
         "TypeScript / React / Next.js",
@@ -146,9 +146,9 @@ export const resumeVariants: ResumeVariant[] = [
         "Supabase / Postgres & edge functions",
         "Evals & production observability",
       ],
-      education: ["B.Tech ECE — MIET Meerut (2022 — 2026)"],
+      education: ["B.Tech ECE - MIET Meerut (2022 - 2026)"],
       achievements: ["Shipped 9 real products across AI, hardware, and web."],
-      publications: ["JETIR — Automated Dual-Spot Wireless Charging (IF 7.95, 2026)."],
+      publications: ["JETIR - Automated Dual-Spot Wireless Charging (IF 7.95, 2026)."],
     },
   },
 ];
@@ -167,7 +167,7 @@ export const resumeFaqCategories: ResumeFaqCategory[] = [
     questions: [
       {
         q: "Who are you?",
-        a: "I'm Aryan Panwar, an ECE graduate from MIET Meerut (2026). I started as a builder — shipping hardware projects, AI apps, and web products — and gradually moved toward the problem-framing side of product work. Today I'm focused on breaking into Product Management, especially in AI-first teams.",
+        a: "I'm Aryan Panwar, an ECE graduate from MIET Meerut (2026). I started as a builder - shipping hardware projects, agentic AI systems, and web products - and gradually moved toward the problem-framing side of product work. Today I'm focused on breaking into Product Management, especially in AI-first teams.",
       },
       {
         q: "What roles are you looking for?",
@@ -185,7 +185,7 @@ export const resumeFaqCategories: ResumeFaqCategory[] = [
     questions: [
       {
         q: "Are these real products?",
-        a: "Yes. Every case study here is grounded in a product I built or worked on directly — FitWardrobe, Mithivoices, Credex, an AI-first HCP CRM, and the SEO-GEO Optimizer npm package. I include real metrics, discovery notes, and the tradeoffs I made along the way.",
+        a: "Yes. Every case study here is grounded in a product I built or worked on directly - FitWardrobe, Mithivoices, Credex, an AI-first HCP CRM, and the SEO-GEO Optimizer npm package. I include real metrics, discovery notes, and the tradeoffs I made along the way.",
       },
       {
         q: "Why are only a few projects featured?",
@@ -211,7 +211,7 @@ export const resumeFaqCategories: ResumeFaqCategory[] = [
       },
       {
         q: "Are your resumes ATS-friendly?",
-        a: "Yes. They use standard section headings, clean single-column layouts, and avoid heavy graphics or tables that confuse parsers. They're also readable for humans — the only audience that actually matters.",
+        a: "Yes. They use standard section headings, clean single-column layouts, and avoid heavy graphics or tables that confuse parsers. They're also readable for humans - the only audience that actually matters.",
       },
     ],
   },

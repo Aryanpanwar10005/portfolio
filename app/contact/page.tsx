@@ -72,7 +72,7 @@ export default function ContactPage() {
             '@type': 'Person',
             '@id': 'https://aryanpanwar.in/#person',
             name: 'Aryan Panwar',
-            jobTitle: 'Aspiring Product Manager',
+            jobTitle: 'AI Product Manager',
             url: 'https://aryanpanwar.in/',
             email: 'mailto:aryanpanwar10005@gmail.com',
             sameAs: [
@@ -94,7 +94,7 @@ export default function ContactPage() {
       <PageHeader
         eyebrow="Contact"
         title={<>Let's build something <span className="font-serif-italic text-primary">meaningful.</span></>}
-        intro="Product roles, thoughtful collaborations, or a conversation about how AI is reshaping product craft — the inbox is open, and I read every message."
+        intro="Product roles, thoughtful collaborations, or a conversation about how AI is reshaping product craft - the inbox is open, and I read every message."
       />
 
       <section className="px-6 md:px-10 pb-24 max-w-7xl mx-auto">
@@ -224,7 +224,7 @@ export default function ContactPage() {
           <p className="font-serif-italic text-xl md:text-2xl text-foreground max-w-2xl leading-snug">
             "The best products begin as a considered conversation. If any of this resonates, I would love to hear from you."
           </p>
-          <p className="mt-4 text-sm label-caps text-foreground-muted">— Aryan Panwar</p>
+          <p className="mt-4 text-sm label-caps text-foreground-muted">- Aryan Panwar</p>
         </div>
       </section>
     </>

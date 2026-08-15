@@ -3,7 +3,7 @@ import { PageHeader } from '@/components/PageHeader'
 
 export const metadata: Metadata = {
   title: "About",
-  description: "A short introduction to Aryan Panwar — ECE graduate from MIET Meerut (2026), aspiring PM with a builder background, and the values that shape how I ship.",
+  description: "A short introduction to Aryan Panwar - ECE graduate from MIET Meerut (2026), AI Product Manager with a builder background, and the values that shape how I ship.",
   alternates: {
     canonical: "/about",
   },
@@ -17,31 +17,39 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'Person',
-            '@id': 'https://aryanpanwar.in/#person',
-            name: 'Aryan Panwar',
-            jobTitle: 'Aspiring Product Manager',
-            description: 'Aspiring Product Manager with a builder background — ships AI products (FitWardrobe, Mithivoices, SEO-GEO Optimizer) and writes about product tradeoffs, AI feature design, and PM frameworks.',
+            '@type': 'AboutPage',
+            '@id': 'https://aryanpanwar.in/about/#webpage',
             url: 'https://aryanpanwar.in/about',
-            image: 'https://aryanpanwar.in/assets/aryan-portrait.webp',
-            alumniOf: {
-              '@type': 'CollegeOrUniversity',
-              name: 'MIET Meerut',
-              sameAs: 'https://www.miet.ac.in/'
-            },
-            knowsAbout: [
-              'Product Management',
-              'AI Product Development',
-              'Jobs-to-be-Done (JTBD)',
-              'On-Device AI',
-              'RICE Prioritization',
-              'LLM Evaluation & System Design'
-            ],
-            sameAs: [
-              'https://www.linkedin.com/in/aryan-panwar1',
-              'https://github.com/Aryanpanwar10005',
-              'https://x.com/aryanpanwar',
-            ],
+            mainEntity: {
+              '@type': 'Person',
+              '@id': 'https://aryanpanwar.in/#person',
+              name: 'Aryan Panwar',
+              jobTitle: 'AI Product Manager',
+              description: 'AI Product Manager with a builder background - ships agentic AI systems (FitWardrobe, Mithivoices, SEO-GEO Optimizer) and writes about product tradeoffs, AI feature design, and PM frameworks.',
+              url: 'https://aryanpanwar.in/about',
+              image: 'https://aryanpanwar.in/assets/aryan-portrait.webp',
+              alumniOf: {
+                '@type': 'CollegeOrUniversity',
+                name: 'MIET Meerut',
+                sameAs: 'https://www.miet.ac.in/'
+              },
+              knowsAbout: [
+                'Product Management',
+                'Agentic AI',
+                'MCP',
+                'Multimodal AI',
+                'AI Product Development',
+                'Jobs-to-be-Done (JTBD)',
+                'On-Device AI',
+                'RICE Prioritization',
+                'LLM Evaluation & System Design'
+              ],
+              sameAs: [
+                'https://www.linkedin.com/in/aryan-panwar1',
+                'https://github.com/Aryanpanwar10005',
+                'https://x.com/aryanpanwar',
+              ],
+            }
           })
         }}
       />
@@ -51,19 +59,19 @@ export default function AboutPage() {
       />
       <section className="px-6 md:px-10 pb-24 max-w-2xl mx-auto space-y-14 text-lg text-foreground leading-relaxed">
         <Block label="Who I am">
-          I'm Aryan Panwar — an ECE graduate from MIET Meerut (2026) and an
-          aspiring Product Manager. I came to product from the builder side: I
-          ship AI products, write about the tradeoffs, and want to spend my
-          early PM years in the room where the calls get made.
+          I'm Aryan Panwar, an ECE graduate from MIET Meerut (2026) and an AI
+          Product Manager. I came to product from the builder side: I ship agentic
+          AI systems, write about the tradeoffs, and want to spend my early PM
+          years in the room where the calls get made.
         </Block>
         <Block label="Why PM">
           Because the interesting problems live at the intersection of user,
-          business, and technology — and PM is the seat where you actually get
+          business, and technology - and PM is the seat where you actually get
           to make the tradeoffs. I'd rather own an outcome than a feature.
         </Block>
         <Block label="Values">
           User first, always. Evidence over opinion. Restraint is a feature.
-          Ship to learn — the roadmap is a hypothesis, not a promise.
+          Ship to learn - the roadmap is a hypothesis, not a promise.
         </Block>
         <Block label="Range">
           Before AI products, I built hardware: a robot arm, a dual-spot

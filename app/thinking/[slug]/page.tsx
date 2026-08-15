@@ -54,7 +54,7 @@ export default async function PlaybookEntryPage({ params }: PageProps) {
               '@type': 'Article',
               headline: entry.title,
               description: entry.summary,
-              datePublished: '2025-01-01',
+              ...(entry.publishedAtISO && { datePublished: entry.publishedAtISO }),
               author: {
                 '@type': 'Person',
                 name: 'Aryan Panwar',
@@ -86,7 +86,7 @@ export default async function PlaybookEntryPage({ params }: PageProps) {
       </div>
       <p className="label-caps text-accent mt-8">{entry.number}</p>
       <h1 className="mt-2 font-display text-section text-foreground">
-        {entry.title} <span className="text-foreground-muted">— Product Thinking</span>
+        {entry.title} <span className="text-foreground-muted">- Product Thinking</span>
       </h1>
       <p className="mt-2 label-caps text-foreground-subtle">Project · {entry.project}</p>
       <p className="mt-4 text-xl text-foreground-muted">{entry.summary}</p>

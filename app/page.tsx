@@ -24,14 +24,14 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "ProfilePage",
             "@id": "https://aryanpanwar.in/#profilepage",
-            "name": "Aryan Panwar — Product Evidence Book",
+            "name": "Aryan Panwar | Product Evidence Book",
             "url": "https://aryanpanwar.in/",
             "mainEntity": {
               "@type": "Person",
               "@id": "https://aryanpanwar.in/#person",
               "name": "Aryan Panwar",
-              "jobTitle": "Aspiring Product Manager",
-              "description": "Aspiring Product Manager with a builder background — ships AI products (FitWardrobe, Mithivoices, SEO-GEO Optimizer) and writes about product tradeoffs, AI feature design, and PM frameworks.",
+              "jobTitle": "AI Product Manager",
+              "description": "AI Product Manager with a builder background - ships agentic AI products (FitWardrobe, Mithivoices, SEO-GEO Optimizer) and writes about product tradeoffs, AI feature design, and PM frameworks.",
               "url": "https://aryanpanwar.in/",
               "image": "https://aryanpanwar.in/assets/aryan-portrait.webp",
               "alumniOf": {

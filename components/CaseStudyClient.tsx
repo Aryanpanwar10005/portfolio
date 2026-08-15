@@ -106,14 +106,14 @@ export function CaseStudyClient({ study }: CaseStudyClientProps) {
           transition={{ duration: 0.7 }}
           className="mt-6 font-display text-hero text-foreground"
         >
-          {study.title} <span className="text-foreground-muted">— Case Study</span>
+          {study.title} <span className="text-foreground-muted">- Case Study</span>
         </motion.h1>
         <p className="mt-4 text-xl text-foreground-muted max-w-3xl">{study.tagline}</p>
         <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-border">
           <Meta label="Role" value={study.role} />
           <Meta label="Platform" value={study.platform} />
           <Meta label="Timeline" value={study.timeline} />
-          <Meta label="Status" value={study.status ?? '—'} />
+          <Meta label="Status" value={study.status ?? '-'} />
         </div>
         {study.result && (
           <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/5 px-4 py-1.5">

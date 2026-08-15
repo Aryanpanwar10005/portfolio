@@ -42,7 +42,7 @@ export default function JourneyPage() {
             '@type': 'Person',
             '@id': 'https://aryanpanwar.in/#person',
             name: 'Aryan Panwar',
-            jobTitle: 'Aspiring Product Manager',
+            jobTitle: 'AI Product Manager',
             url: 'https://aryanpanwar.in/journey',
             alumniOf: { '@type': 'CollegeOrUniversity', name: 'MIET Meerut' },
             hasOccupation: {

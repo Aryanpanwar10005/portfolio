@@ -28,7 +28,7 @@ export default function BlogIndex() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Blog',
-            name: 'Aryan Panwar — Writing',
+            name: 'Aryan Panwar - Writing',
             url: 'https://aryanpanwar.in/writing',
             description: 'Ten PM-evidence essays. Each answers one hiring question with a real product decision.',
             blogPost: blogPosts.map((p) => ({
@@ -45,7 +45,7 @@ export default function BlogIndex() {
       <PageHeader
         eyebrow="Writing"
         title={<>Product evidence, <span className="font-serif-italic text-primary">one question at a time.</span></>}
-        intro="Ten essays. Each answers a specific question a PM recruiter asks — grounded in a product I actually shipped."
+        intro="Ten essays. Each answers a specific question a PM recruiter asks - grounded in a product I actually shipped."
       />
 
       {featured && (
