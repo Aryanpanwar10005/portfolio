@@ -78,6 +78,7 @@ export default async function PlaybookEntryPage({ params }: PageProps) {
               ],
             },
           ])
+          .replace(/</g, '\u003c')
         }}
       />
       <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mb-8">

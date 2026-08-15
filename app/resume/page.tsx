@@ -18,12 +18,18 @@ export default function ResumeLibraryPage() {
   const person = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://aryanpanwar.in/#person",
     name: "Aryan Panwar",
     jobTitle: "AI Product Manager",
     url: "https://aryanpanwar.in/",
     sameAs: [
       "https://www.linkedin.com/in/aryan-panwar1",
       "https://github.com/Aryanpanwar10005",
+      "https://x.com/aryan_panwar1",
+      "https://www.producthunt.com/@aryan_panwar10005",
+      "https://orcid.org/0009-0002-4793-4364",
+      "https://www.researchgate.net/profile/Aryan-Panwar-7",
+      "https://scholar.google.com/citations?view_op=list_works&hl=en&user=a4rB-NMAAAAJ",
     ],
   };
 
@@ -32,7 +38,7 @@ export default function ResumeLibraryPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([person, breadcrumb])
+          __html: JSON.stringify([person, breadcrumb]).replace(/</g, '\u003c')
         }}
       />
       <HeroLibrary

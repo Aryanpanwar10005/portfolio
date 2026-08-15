@@ -47,13 +47,18 @@ export default function Home() {
                 "North Star Metrics",
                 "On-Device AI",
                 "LLM Engineering",
+                "Agentic AI Systems",
                 "React",
                 "Python"
               ],
               "sameAs": [
                 "https://www.linkedin.com/in/aryan-panwar1",
                 "https://github.com/Aryanpanwar10005",
-                "https://www.producthunt.com/@aryan_panwar10005"
+                "https://x.com/aryan_panwar1",
+                "https://www.producthunt.com/@aryan_panwar10005",
+                "https://orcid.org/0009-0002-4793-4364",
+                "https://www.researchgate.net/profile/Aryan-Panwar-7",
+                "https://scholar.google.com/citations?view_op=list_works&hl=en&user=a4rB-NMAAAAJ"
               ],
               "hasCredential": {
                 "@type": "EducationalOccupationalCredential",
@@ -62,7 +67,7 @@ export default function Home() {
                 "recognizedBy": { "@type": "CollegeOrUniversity", "name": "MIET Meerut" }
               }
             }
-          })
+          }).replace(/</g, '\\u003c')
         }}
       />
       <Hero />

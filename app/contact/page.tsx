@@ -78,9 +78,11 @@ export default function ContactPage() {
             sameAs: [
               'https://www.linkedin.com/in/aryan-panwar1',
               'https://github.com/Aryanpanwar10005',
+              'https://x.com/aryan_panwar1',
               'https://www.producthunt.com/@aryan_panwar10005',
               'https://orcid.org/0009-0002-4793-4364',
               'https://www.researchgate.net/profile/Aryan-Panwar-7',
+              'https://scholar.google.com/citations?view_op=list_works&hl=en&user=a4rB-NMAAAAJ',
             ],
             contactPoint: {
               '@type': 'ContactPoint',
@@ -88,12 +90,12 @@ export default function ContactPage() {
               email: 'aryanpanwar10005@gmail.com',
               availableLanguage: 'English',
             },
-          })
+          }).replace(/</g, '\u003c')
         }}
       />
       <PageHeader
         eyebrow="Contact"
-        title={<>Let's build something <span className="font-serif-italic text-primary">meaningful.</span></>}
+        title={<>Let&apos;s build something <span className="font-serif-italic text-primary">meaningful.</span></>}
         intro="Product roles, thoughtful collaborations, or a conversation about how AI is reshaping product craft - the inbox is open, and I read every message."
       />
 
@@ -222,7 +224,7 @@ export default function ContactPage() {
         {/* Footer note */}
         <div className="mt-20 pt-10 border-t border-border">
           <p className="font-serif-italic text-xl md:text-2xl text-foreground max-w-2xl leading-snug">
-            "The best products begin as a considered conversation. If any of this resonates, I would love to hear from you."
+            &quot;The best products begin as a considered conversation. If any of this resonates, I would love to hear from you.&quot;
           </p>
           <p className="mt-4 text-sm label-caps text-foreground-muted">- Aryan Panwar</p>
         </div>

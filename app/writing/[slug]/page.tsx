@@ -188,7 +188,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([postSchema, breadcrumbSchema])
+          __html: JSON.stringify([postSchema, breadcrumbSchema]).replace(/</g, '\u003c')
         }}
       />
 

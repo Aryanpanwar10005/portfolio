@@ -78,6 +78,24 @@ export default function RootLayout({
     >
       <head>
         <AnalyticsScripts />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              '@id': 'https://aryanpanwar.in/#website',
+              name: 'Aryan Panwar',
+              url: 'https://aryanpanwar.in',
+              description: 'Product Evidence Book by Aryan Panwar: case studies, product thinking, and writing from an AI PM with a builder background.',
+              publisher: {
+                '@type': 'Person',
+                '@id': 'https://aryanpanwar.in/#person',
+                name: 'Aryan Panwar',
+              },
+            }).replace(/</g, '\u003c'),
+          }}
+        />
       </head>
       <body className="min-h-screen bg-background text-foreground flex flex-col">
         <GtmNoScript />
