@@ -27,6 +27,7 @@ export default function CaseStudiesIndex() {
               url: `https://aryanpanwar.in/case-studies/${c.slug}`,
             })),
           })
+          .replace(/</g, '\u003c')
         }}
       />
       <PageHeader

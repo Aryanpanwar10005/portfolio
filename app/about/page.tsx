@@ -47,10 +47,14 @@ export default function AboutPage() {
               sameAs: [
                 'https://www.linkedin.com/in/aryan-panwar1',
                 'https://github.com/Aryanpanwar10005',
-                'https://x.com/aryanpanwar',
+                'https://x.com/aryan_panwar1',
+                'https://www.producthunt.com/@aryan_panwar10005',
+                'https://orcid.org/0009-0002-4793-4364',
+                'https://www.researchgate.net/profile/Aryan-Panwar-7',
+                'https://scholar.google.com/citations?view_op=list_works&hl=en&user=a4rB-NMAAAAJ',
               ],
             }
-          })
+          }).replace(/</g, '\u003c')
         }}
       />
       <PageHeader
