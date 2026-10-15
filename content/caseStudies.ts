@@ -6,7 +6,6 @@ const seoGeoCover = "/assets/seo-geo-optimizer.webp";
 const aiCrmCover = "/assets/ai-crm-hcp.webp";
 const credexCover = "/assets/credex-spend-audit.webp";
 const evChargerCover = "/assets/evcharger.webp";
-const robotCover = "/assets/robot.webp";
 const staircaseCover = "/assets/staircase.webp";
 
 export type CaseStudy = {
@@ -24,6 +23,12 @@ export type CaseStudy = {
   status?: "Shipped" | "In Progress" | "Concept";
   publishedAtISO?: string;
   metaDescription?: string;
+  /** Search-result title; defaults to "<title>: AI Product Case Study". */
+  seoTitle?: string;
+  /** Month the case study content was last revised, e.g. "October 2026". */
+  updatedLabel?: string;
+  /** One-line "try it" command shown under the header, for tool case studies. */
+  quickStart?: { command: string; note: string };
   result?: string;
   tldr?: string[];
   liveUrl?: string;
@@ -92,6 +97,7 @@ export const caseStudies: CaseStudy[] = [
       "Result & Next Step: Polishing the experience based on test feedback and launching the Beta/Early Access version very soon. Early users can claim access at https://fitwardrobe.me (validated by 20.8K organic impressions in 6 months).",
     ],
     liveUrl: "https://fitwardrobe.me/",
+    updatedLabel: "October 2026",
     repoUrl: "https://github.com/fitwardrobe/fitwardrobe",
     extraLinks: [
       {
@@ -113,7 +119,7 @@ export const caseStudies: CaseStudy[] = [
       targetUsers:
         "I assumed I was building for fashion-conscious people. Discovery interviews said otherwise. The people who engaged most were time-constrained and mildly anxious about social presentation - not particularly interested in fashion, but very interested in fewer decisions per morning.",
       research:
-        "Before building, I ran 20+ discovery interviews and 6 diary studies - where participants texted me every morning with what they wore and why. This matched what academic research from PLATE 2025 found: clothing retention is a retrieval and memory challenge, not a storage problem (plateconference.org). When pilot users tested early builds, most stopped logging by day 4 - revealing high cataloguing friction. That feedback reshaped our solution to focus on automated single-photo recommendations rather than manual entry.",
+        "Before building, I checked the problem against published research: PLATE 2025 found that clothing retention is a retrieval and memory challenge, not a storage problem (plateconference.org). When pilot users tested early builds, most stopped logging by day 4 - revealing high cataloguing friction. That feedback reshaped our solution to focus on automated single-photo recommendations rather than manual entry.",
       insights: [
         "Users don't want more outfit ideas - they want fewer, and confident ones.",
         "'Fit' is emotional: the same shirt gets rejected on a Monday and picked on a Friday.",
@@ -246,9 +252,13 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "seo-geo-optimizer",
+    // Matches what Search Console shows people searching for (GEO case study, geo optimizer).
+    seoTitle: "SEO-GEO Optimizer: A Generative Engine Optimization Case Study",
+    updatedLabel: "October 2026",
+    quickStart: { command: "npx seo-geo-optimizer", note: "Run it in your project folder. Add --help for IDE-specific options." },
     tier: "flagship",
     title: "SEO-GEO Optimizer",
-    tagline: "Stop AI IDEs giving stale SEO advice - a 14-phase agentic skill for Cursor, Windsurf, and Copilot.",
+    tagline: "Stop AI IDEs giving stale SEO advice - a 10-phase agentic skill for Cursor, Windsurf, and Copilot.",
     role: "Creator & PM",
     platform: "npm · Node · Cursor · Windsurf · Copilot",
     timeline: "2026",
@@ -256,15 +266,15 @@ export const caseStudies: CaseStudy[] = [
     problem:
       "AI IDEs give outdated SEO advice. When Windsurf told me to optimize for FID - a Core Web Vital Google deprecated in March 2024 - I realized LLMs have no reliable way to stay current with search standards. Meanwhile, the $1B+ Generative Engine Optimization (GEO) market is growing rapidly, but developer tooling is lagging behind.",
     solution:
-      "I built `seo-geo-optimizer`, an agent-native npm package. Instead of a passive library, it's a 14-phase agentic workflow. Running `npx seo-geo-optimizer` auto-detects the IDE (Cursor, Windsurf, Copilot) and installs strict instruction files that guide the AI through technical SEO, schema generation, and AI legibility audits.",
+      "I built `seo-geo-optimizer`, an agent-native npm package. Instead of a passive library, it's a 10-phase agentic workflow. Running `npx seo-geo-optimizer` auto-detects the IDE (Cursor, Windsurf, Copilot) and installs strict instruction files that guide the AI through technical SEO, schema generation, and AI legibility audits.",
     cover: seoGeoCover,
     status: "Shipped",
-    metaDescription: "I built a 14-phase agentic npm skill to stop AI IDEs giving stale SEO advice. Covers technical SEO, schema, and Generative Engine Optimization (GEO). 411 installs.",
-    result: "411 organic downloads with zero paid distribution. The package is now listed on PrimeSkills AI Store and mcpskills.io, providing developers a 'one prompt, full audit' solution for AI search visibility.",
+    metaDescription: "I built a 10-phase agentic npm skill to stop AI IDEs giving stale SEO advice. Covers technical SEO, schema, and Generative Engine Optimization (GEO). 500+ npm downloads.",
+    result: "500+ npm downloads with no paid promotion. The package is now listed on PrimeSkills AI Store and mcpskills.io, providing developers a 'one prompt, full audit' solution for AI search visibility.",
     tldr: [
-      "Built a 14-phase agentic npm skill that auto-installs SEO/GEO rules into Cursor, Windsurf, and Copilot.",
+      "Built a 10-phase agentic npm skill that auto-installs SEO/GEO rules into Cursor, Windsurf, and Copilot.",
       "Solved AI hallucination: prevents IDEs from giving outdated SEO advice (like optimizing for deprecated FID).",
-      "411 organic downloads with zero marketing; featured on PrimeSkills AI Store."
+      "500+ npm downloads with no paid promotion; listed on PrimeSkills AI Store."
     ],
     repoUrl: "https://github.com/Aryanpanwar10005/seo-geo-optimizer",
     extraLinks: [
@@ -275,7 +285,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     sections: {
       overview:
-        "SEO-GEO Optimizer is a developer-first library for the AI-search era, built as a 14-phase agentic workflow with human-in-the-loop validation gates rather than a single-pass script. It treats LLMs as first-class crawlers, not accidents.",
+        "SEO-GEO Optimizer is a developer-first library for the AI-search era, built as a 10-phase agentic workflow with human-in-the-loop validation gates rather than a single-pass script. It treats LLMs as first-class crawlers, not accidents.",
       problemStatement:
         "SEO best-practice is optimised for click-through; GEO (Generative Engine Optimization) is optimised for citation. Most sites are optimised for neither.",
       marketNeed:
@@ -295,7 +305,7 @@ export const caseStudies: CaseStudy[] = [
         "Auto JSON-LD for Article / FAQ / HowTo / Product",
         "llms.txt generator",
         "Answer-block components for React frameworks",
-        "14-phase agentic execution pipeline - a 40-question discovery intake through technical SEO, schema, content strategy, and GEO optimisation, with a human-in-the-loop validation gate between phases so nothing commits without review",
+        "10-phase agentic execution pipeline - a 40-question discovery intake through technical SEO, schema, content strategy, and GEO optimisation, with a human-in-the-loop validation gate between phases so nothing commits without review",
       ],
       outOfScope: [
         "Full analytics dashboard",
@@ -322,7 +332,7 @@ export const caseStudies: CaseStudy[] = [
       prototype:
         "Dogfooded on this portfolio and my own blog before any public release. Iterated the API until it fit a real site in under 30 minutes. If I couldn't use it myself in half an hour, the defaults weren't sane enough.",
       finalSolution:
-        "A single package, three exports, and a 14-phase agentic pipeline underneath - each phase gated by a human-in-the-loop validation step - covering Article, FAQ, and HowTo pages out of the box.",
+        "A single package, three exports, and a 10-phase agentic pipeline underneath - each phase gated by a human-in-the-loop validation step - covering Article, FAQ, and HowTo pages out of the box.",
       reflection:
         "The best PM work here was aggressive scope-cutting. I said no to a hosted SaaS tier three times. Each time it would have delayed the first real user shipping by months.",
       lessons: [
@@ -336,6 +346,12 @@ export const caseStudies: CaseStudy[] = [
     tier: "supporting",
     title: "AI-First CRM (HCP)",
     tagline: "A LangGraph-powered CRM that treats every healthcare-provider conversation as a stateful agent workflow.",
+    result: "Shipped to reps. Measured on Rep-Confirmed Interactions per Week, not model accuracy.",
+    tldr: [
+      "An agentic CRM for pharma field reps: every healthcare-provider conversation is handled as a stateful LangGraph workflow rather than a one-shot prompt.",
+      "The north star is Rep-Confirmed Interactions per Week. An accurate model reps do not use changes nothing, so adoption was the metric rather than F1.",
+      "The sharpest call was switching off inferred cross-visit context. It was accurate and reps liked it, but it read as surveillance, and trust mattered more than capability in month one.",
+    ],
     role: "Product & AI Engineer",
     platform: "Web · LangGraph · Python",
     timeline: "2025",
@@ -404,6 +420,12 @@ export const caseStudies: CaseStudy[] = [
     tier: "supporting",
     title: "Credex - AI Spend Audit",
     tagline: "An AI auditor that reads a company’s SaaS invoices and flags every dollar leaking out of the stack.",
+    result: "Concept. Scoped to a forwardable CFO report rather than a dashboard.",
+    tldr: [
+      "An AI auditor that reads a company's SaaS invoices and flags spend leaking out of the stack: duplicate tools, unused seats, silent renewals.",
+      "The north star is Dollars of Verified Savings Surfaced, because that is the number that earns a second conversation with a CFO.",
+      "The decision that shaped v1 was refusing to build a dashboard. A report gets forwarded to a CFO and a dashboard does not, so the artifact is the growth loop.",
+    ],
     role: "Product & AI Engineer",
     platform: "Web · LLM Pipelines",
     timeline: "2025",
@@ -486,18 +508,6 @@ export const archivedProjects: ArchiveProject[] = [
     links: [{ label: "Live", url: "https://golfheros.vercel.app/" }],
   },
   {
-    slug: "webable-vendorshield",
-    title: "WebAble AI - VendorShield",
-    tag: "DevPost hackathon",
-    problem:
-      "Vendor-security audit platform that uses AI to generate and manage security reports with MongoDB persistence, PDF export, and a Docker-containerised full stack.",
-    stack: ["Next.js", "MongoDB", "JWT", "Docker"],
-    year: "2025",
-    links: [
-      { label: "GitHub", url: "https://github.com/Aryanpanwar10005/WebAble-AI" },
-    ],
-  },
-  {
     slug: "hyperliquid-trader-analysis",
     title: "Hyperliquid Trader Analysis",
     tag: "Data science",
@@ -511,29 +521,13 @@ export const archivedProjects: ArchiveProject[] = [
     ],
   },
   {
-    slug: "esp32-differential-drive-robot",
-    title: "ESP32 Differential Drive Robot",
-    tag: "Embedded",
-    problem:
-      "Production firmware for an autonomous robot - GPS tracking, BLE authentication, WebSocket telemetry, and live ESP32-CAM video streaming.",
-    stack: ["C++", "ESP32", "PlatformIO", "BLE", "GPS"],
-    year: "2024",
-    cover: robotCover,
-    links: [
-      {
-        label: "GitHub",
-        url: "https://github.com/Aryanpanwar10005/ESP32-differential-drive-robot",
-      },
-    ],
-  },
-  {
     slug: "wireless-ev-charging",
     title: "Wireless EV Charging Prototype",
     tag: "Published · JETIR",
     problem:
-      "IPT-based wireless EV charging prototype with dual-spot parking management - 85% charging efficiency. 1st place at college branch expo, published in JETIR (IF 7.95).",
+      "IPT-based wireless EV charging prototype with dual-spot parking management. 1st place at the college branch expo; written up as a co-authored paper in JETIR.",
     stack: ["C++", "Arduino", "Power Electronics", "IPT"],
-    metric: "85% efficiency",
+    metric: "1st place, branch expo",
     year: "2026",
     cover: evChargerCover,
     links: [

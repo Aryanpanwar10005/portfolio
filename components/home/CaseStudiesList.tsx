@@ -12,11 +12,11 @@ export function CaseStudiesList() {
         <div className="mb-16">
           <p className="label-caps mb-3">02 · Flagship Case Studies</p>
           <h2 className="font-display text-section text-foreground max-w-3xl">
-            Three products, <span className="font-serif-italic text-primary">told the PM way.</span>
+            Three products, <span className="font-serif-italic text-primary-ink">and the calls behind them.</span>
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-foreground-muted">
-            Problem, users, tradeoffs, metrics, and what I&apos;d do next - for the three
-            projects I&apos;ve thought about hardest.
+            For each one: the problem, who it was for, what I measured, what I cut, and
+            what I&apos;d do differently next time.
           </p>
         </div>
 
@@ -43,7 +43,7 @@ export function CaseStudiesList() {
               </Link>
               <div className="lg:col-span-5 lg:px-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="label-caps text-accent">0{i + 1}</span>
+                  <span className="label-caps text-accent-ink">0{i + 1}</span>
                   {c.status && (
                     <span className="text-xs px-2 py-0.5 border border-border rounded-full text-foreground-muted">
                       {c.status}
@@ -56,14 +56,12 @@ export function CaseStudiesList() {
                 </p>
                 <div className="mt-6 flex flex-wrap gap-x-6 gap-y-1 text-sm text-foreground-subtle">
                   <span>{c.role}</span>
-                  <span>·</span>
                   <span>{c.platform}</span>
-                  <span>·</span>
                   <span>{c.timeline}</span>
                 </div>
                 <Link
                   href={`/case-studies/${c.slug}`}
-                  className="mt-6 inline-flex items-center gap-2 text-primary font-medium border-b border-primary pb-1 hover:gap-3 transition-all"
+                  className="mt-6 inline-flex items-center gap-2 text-primary-ink font-medium border-b border-primary pb-1 hover:gap-3 transition-all"
                 >
                   View case study <span aria-hidden>→</span>
                 </Link>
@@ -78,8 +76,8 @@ export function CaseStudiesList() {
             className="border-t border-border pt-8 text-center"
           >
             <p className="font-serif-italic text-xl text-foreground-muted">
-              Supporting case studies and the full archive live on the{' '}
-              <Link href="/case-studies" className="text-primary border-b border-primary">Case Studies page</Link>.
+              Two more case studies and the full project archive are on the{' '}
+              <Link href="/case-studies" className="text-primary-ink border-b border-primary">Case Studies page</Link>.
             </p>
           </motion.div>
         </div>

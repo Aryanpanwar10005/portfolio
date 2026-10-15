@@ -1,5 +1,11 @@
 import type { Metadata } from 'next'
-import { blogPosts, allBlogTags, blogTagToSlug } from '@/content/blog'
+import {
+  blogPosts,
+  allBlogTags,
+  blogTagToSlug,
+  postsForTag,
+  TAG_INDEX_THRESHOLD,
+} from '@/content/blog'
 import { notFound } from 'next/navigation'
 import { BlogTagClient } from '@/components/BlogTagClient'
 
@@ -19,15 +25,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const path = `/writing/tag/${tagSlug}`
 
+  // Sub-threshold tags stay reachable and keep passing link signals, they just
+  // do not compete in the index as near-duplicates of the single post they list.
+  // Safe because every post is also linked from /writing and listed in the
+  // sitemap, so nothing is discoverable only through a tag page.
+  const isThin = postsForTag(tag).length < TAG_INDEX_THRESHOLD
+
   return {
-    title: `${tag} Essays`,
-    description: `Essays and product reflections tagged with ${tag} by Aryan Panwar.`,
+    title: `Essays on ${tag}`,
+    description: `Essays and product reflections on ${tag} by Aryan Panwar: what I tried, what I cut and what I learned.`,
     alternates: {
       canonical: path,
     },
+    ...(isThin && { robots: { index: false, follow: true } }),
     openGraph: {
-      title: `${tag} Essays | Aryan Panwar`,
-      description: `Essays and product reflections tagged with ${tag} by Aryan Panwar.`,
+      title: `Essays on ${tag} | Aryan Panwar`,
+      description: `Essays and product reflections on ${tag} by Aryan Panwar: what I tried, what I cut and what I learned.`,
       url: `https://aryanpanwar.in${path}`,
     },
   }
@@ -61,7 +74,7 @@ export default async function BlogTagPage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumb)
+          __html: JSON.stringify(breadcrumb).replace(/</g, '\\u003c')
         }}
       />
       <BlogTagClient tag={tag} matches={matches} tags={tags} />

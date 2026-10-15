@@ -2,7 +2,9 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { getPlaybookEntry, playbook } from '@/content/playbook'
 import { BackButton } from '@/components/BackButton'
+import { NextSteps } from '@/components/NextSteps'
 import { notFound } from 'next/navigation'
+import { metaDescription, pageTitle } from '@/lib/seo'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -20,11 +22,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const path = `/thinking/${entry.slug}`
 
   return {
-    title: entry.title,
-    description: entry.summary,
+    title: pageTitle(entry.title),
+    description: metaDescription(entry.summary),
     openGraph: {
       title: entry.title,
-      description: entry.summary,
+      description: metaDescription(entry.summary),
+      type: 'article',
       url: `https://aryanpanwar.in${path}`,
     },
     alternates: {
@@ -43,6 +46,7 @@ export default async function PlaybookEntryPage({ params }: PageProps) {
   }
 
   const path = `/thinking/${entry.slug}`
+  const nextEntry = playbook[(playbook.findIndex((p) => p.slug === entry.slug) + 1) % playbook.length]
   return (
     <article className="pt-32 md:pt-40 pb-24 px-6 md:px-10 max-w-3xl mx-auto">
       <script
@@ -78,14 +82,14 @@ export default async function PlaybookEntryPage({ params }: PageProps) {
               ],
             },
           ])
-          .replace(/</g, '\u003c')
+          .replace(/</g, '\\u003c')
         }}
       />
       <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mb-8">
         <BackButton to="/thinking" label="Back to thinking" />
-        <Link href="/thinking" className="label-caps text-foreground-muted hover:text-primary transition-colors">My Product Thinking</Link>
+        <Link href="/thinking" className="label-caps text-foreground-muted hover:text-primary-ink transition-colors">My Product Thinking</Link>
       </div>
-      <p className="label-caps text-accent mt-8">{entry.number}</p>
+      <p className="label-caps text-accent-ink mt-8">{entry.number}</p>
       <h1 className="mt-2 font-display text-section text-foreground">
         {entry.title} <span className="text-foreground-muted">- Product Thinking</span>
       </h1>
@@ -103,12 +107,16 @@ export default async function PlaybookEntryPage({ params }: PageProps) {
         <ol className="space-y-4">
           {entry.steps.map((step, i) => (
             <li key={i} className="flex gap-6 text-lg text-foreground">
-              <span className="font-display text-primary text-2xl leading-none">{String(i + 1).padStart(2, '0')}</span>
+              <span className="w-10 shrink-0 tabular-nums font-display text-primary-ink text-2xl leading-none">{String(i + 1).padStart(2, '0')}</span>
               <span className="leading-relaxed">{step}</span>
             </li>
           ))}
         </ol>
       </section>
+      <NextSteps
+        className="px-0! md:px-0! pb-0! mt-16"
+        next={{ href: `/thinking/${nextEntry.slug}`, label: nextEntry.title, kicker: 'Next framework' }}
+      />
     </article>
   )
 }

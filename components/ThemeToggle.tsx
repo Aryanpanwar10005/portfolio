@@ -1,75 +1,51 @@
 "use client"
 
-import { useEffect, useState } from 'react'
+import { useSyncExternalStore } from 'react'
 import { Sun, Moon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { trackEvent } from '@/lib/analytics'
 
-
 type Theme = 'light' | 'dark'
 
-export function ThemeToggle({ className }: { className?: string }) {
-  const [theme, setTheme] = useState<Theme>('light')
-  const [mounted, setMounted] = useState(false)
+// The `dark` class on <html> is the single source of truth. The blocking script
+// in app/layout.tsx has already resolved localStorage + prefers-color-scheme and
+// applied it before first paint, so subscribing to the DOM keeps every toggle
+// instance (desktop and mobile both render one) in sync with what is on screen.
+const listeners = new Set<() => void>()
 
-  useEffect(() => {
-    // Read real preference only on client, after mount.
-    // Wrapped in try/catch: localStorage can throw in private/incognito
-    // or when storage is blocked by the browser. The finally clause
-    // guarantees setMounted(true) always fires so the component leaves
-    // its placeholder state regardless of storage errors.
-    try {
-      const stored = window.localStorage.getItem('theme')
-      const resolved: Theme = stored === 'dark' ? 'dark' : 'light'
-      setTimeout(() => {
-        setTheme(resolved)
-      }, 0)
-    } catch {
-      // Keep light fallback already set by useState
-    } finally {
-      setMounted(true)
-    }
-  }, [])
-
-  useEffect(() => {
-    if (!mounted) return
-    const root = document.documentElement
-    if (theme === 'dark') root.classList.add('dark')
-    else root.classList.remove('dark')
-    try {
-      window.localStorage.setItem('theme', theme)
-    } catch {}
-  }, [theme, mounted])
-
-  const toggle = () => {
-    const next: Theme = theme === 'light' ? 'dark' : 'light'
-    setTheme(next)
-    trackEvent('theme_toggle', { theme: next })
+function subscribe(onStoreChange: () => void) {
+  listeners.add(onStoreChange)
+  return () => {
+    listeners.delete(onStoreChange)
   }
+}
 
+function getSnapshot(): Theme {
+  return document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+}
+
+// No DOM on the server. The inline script corrects this before the user sees
+// anything, and React re-reads the real value straight after hydration.
+function getServerSnapshot(): Theme {
+  return 'light'
+}
+
+export function ThemeToggle({ className }: { className?: string }) {
+  const theme = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot)
   const isDark = theme === 'dark'
 
-  // Render a stable placeholder during SSR & first hydration paint
-  // so server HTML and client HTML always match (no hydration mismatch).
-  // The button is disabled and aria-hidden so it is non-interactive:
-  // it cannot be tabbed to, clicked, or announced by screen readers
-  // before the real theme preference has been read from localStorage.
-  if (!mounted) {
-    return (
-      <button
-        type="button"
-        disabled
-        aria-hidden="true"
-        tabIndex={-1}
-        aria-label="Loading theme"
-        className={cn(
-          'inline-flex items-center justify-center w-10 h-10 rounded-full border border-border bg-surface-2 text-foreground opacity-0 pointer-events-none',
-          className
-        )}
-      >
-        <Moon className="w-4 h-4" />
-      </button>
-    )
+  const toggle = () => {
+    const next: Theme = isDark ? 'light' : 'dark'
+    document.documentElement.classList.toggle('dark', next === 'dark')
+    // Written only on an explicit choice, so a visitor who has never pressed the
+    // button keeps following their OS preference on later visits.
+    try {
+      window.localStorage.setItem('theme', next)
+    } catch {
+      // Private mode or blocked storage: the toggle still works for this session.
+    }
+    listeners.forEach((notify) => notify())
+    trackEvent('theme_toggle', { theme: next })
   }
 
   return (
@@ -78,7 +54,7 @@ export function ThemeToggle({ className }: { className?: string }) {
       onClick={toggle}
       aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
       className={cn(
-        'inline-flex items-center justify-center w-10 h-10 rounded-full border border-border bg-surface-2 text-foreground hover:text-primary hover:border-primary/40 transition-colors',
+        'inline-flex items-center justify-center w-11 h-11 rounded-full border border-border bg-surface-2 text-foreground hover:text-primary-ink hover:border-primary/40 transition-colors',
         className
       )}
     >

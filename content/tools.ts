@@ -37,7 +37,7 @@ export const contactLinks = {
   linkedin: "https://www.linkedin.com/in/aryan-panwar1",
   github: "https://github.com/Aryanpanwar10005",
   website: "https://aryanpanwar.in",
-  location: "Meerut, UP, India",
+  location: "Delhi NCR, India",
   scholar: "https://scholar.google.com/citations?view_op=list_works&hl=en&user=a4rB-NMAAAAJ",
   orcid: "https://orcid.org/0009-0002-4793-4364",
   researchgate: "https://www.researchgate.net/profile/Aryan-Panwar-7",
@@ -51,9 +51,9 @@ export const publications = [
     title:
       "Automated Dual-Spot Wireless Charging and Parking Management System for Electric Vehicles",
     venue: "JETIR - Journal of Emerging Technologies and Innovative Research",
-    meta: "Vol 13 · Issue 4 · April 2026 · Impact Factor 7.95 · ISSN 2349-5162",
+    meta: "Co-author · Vol 13 · Issue 4 · April 2026 · ISSN 2349-5162",
     url: "https://www.jetir.org/view?paper=JETIR2604872",
-    note: "1st place - College Branch Expo. IPT-based prototype at 85% wireless charging efficiency.",
+    note: "1st place - College Branch Expo. IPT-based wireless charging prototype.",
   },
 ];
 

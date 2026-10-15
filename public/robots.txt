@@ -1,4 +1,4 @@
-# robots.txt — Aryan Panwar Portfolio
+# robots.txt - Aryan Panwar Portfolio
 # https://aryanpanwar.in
 
 # === DEFAULT: ALLOW ALL ===

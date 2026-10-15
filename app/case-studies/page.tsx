@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { PageHeader } from '@/components/PageHeader'
+import { NextSteps } from '@/components/NextSteps'
 import {
   flagshipCaseStudies,
   supportingCaseStudies,
@@ -27,13 +28,13 @@ export default function CaseStudiesIndex() {
               url: `https://aryanpanwar.in/case-studies/${c.slug}`,
             })),
           })
-          .replace(/</g, '\u003c')
+          .replace(/</g, '\\u003c')
         }}
       />
       <PageHeader
         eyebrow="Case Studies"
-        title={<>Products in <span className="font-serif-italic text-primary">practice.</span></>}
-        intro="Flagship studies I've thought about hardest, supporting studies for range, and an archive of everything else I've built."
+        title={<>Products in <span className="font-serif-italic text-primary-ink">practice.</span></>}
+        intro="Three flagship studies with the full story, two shorter ones, and an archive of everything else I've built."
       />
       <section className="px-6 md:px-10 pb-16 max-w-7xl mx-auto">
         <p className="label-caps mb-8">Flagship</p>
@@ -52,14 +53,14 @@ export default function CaseStudiesIndex() {
                   <Image src={c.cover} alt={`${c.title} case study preview`} fill className="object-cover img-editorial group-hover:scale-[1.02] transition-transform duration-700" sizes="(max-width: 1024px) 100vw, 50vw" />
                 </div>
               </Link>
-              <div className="lg:col-span-5">
-                <p className="label-caps text-accent mb-3">0{i + 1} · {c.status}</p>
-                <h2 className="font-display text-large text-foreground">{c.title}</h2>
+              <div className="lg:col-span-5 relative group">
+                <p className="label-caps text-accent-ink mb-3">0{i + 1} · {c.status}</p>
+                <h2 className="font-display text-large text-foreground group-hover:text-primary-ink transition-colors">{c.title}</h2>
                 <p className="mt-3 text-lg text-foreground-muted">{c.tagline}</p>
-                <div className="mt-4 flex flex-wrap gap-x-4 text-sm text-foreground-subtle">
-                  <span>{c.role}</span><span>·</span><span>{c.platform}</span><span>·</span><span>{c.timeline}</span>
+                <div className="mt-4 flex flex-wrap gap-x-6 gap-y-1 text-sm text-foreground-subtle">
+                  <span>{c.role}</span><span>{c.platform}</span><span>{c.timeline}</span>
                 </div>
-                <Link href={`/case-studies/${c.slug}`} className="mt-6 inline-flex items-center gap-2 text-primary border-b border-primary pb-1 font-medium">
+                <Link href={`/case-studies/${c.slug}`} className="mt-6 inline-flex items-center gap-2 text-primary-ink border-b border-primary pb-1 font-medium after:absolute after:inset-0">
                   Read case study →
                 </Link>
               </div>
@@ -76,8 +77,8 @@ export default function CaseStudiesIndex() {
               <div className="relative aspect-16/10 overflow-hidden bg-surface-2 mb-5">
                 <Image src={c.cover} alt={`${c.title} case study preview`} fill className="object-cover group-hover:scale-[1.02] transition-transform duration-700" sizes="(max-width: 768px) 100vw, 50vw" />
               </div>
-              <p className="label-caps text-accent mb-2">{c.status}</p>
-              <h3 className="font-display text-2xl text-foreground group-hover:text-primary transition-colors">{c.title}</h3>
+              <p className="label-caps text-accent-ink mb-2">{c.status}</p>
+              <h3 className="font-display text-2xl text-foreground group-hover:text-primary-ink transition-colors">{c.title}</h3>
               <p className="mt-2 text-foreground-muted">{c.tagline}</p>
             </Link>
           ))}
@@ -87,7 +88,7 @@ export default function CaseStudiesIndex() {
       <section className="px-6 md:px-10 pb-24 pt-16 max-w-7xl mx-auto border-t border-border">
         <p className="label-caps mb-3">Archive</p>
         <h2 className="font-display text-large text-foreground mb-8">
-          Things I&apos;ve <span className="font-serif-italic text-primary">built.</span>
+          Things I&apos;ve <span className="font-serif-italic text-primary-ink">built.</span>
         </h2>
         <p className="text-foreground-muted max-w-2xl mb-10">
           Supporting products, hardware prototypes, and published research - evidence that the PM instinct is grounded in shipping real systems.
@@ -113,7 +114,7 @@ export default function CaseStudiesIndex() {
                     className="absolute inset-0 flex items-center justify-center p-6 text-primary-foreground"
                     style={{
                       background:
-                        'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary) / 0.75) 100%)',
+                        'linear-gradient(135deg, hsl(var(--brand-surface)) 0%, hsl(var(--brand-surface) / 0.8) 100%)',
                     }}
                   >
                     <div className="text-center">
@@ -138,7 +139,7 @@ export default function CaseStudiesIndex() {
                   <span className="label-caps text-foreground-subtle shrink-0">{p.year}</span>
                 </div>
                 {p.tag && (
-                  <p className="mt-1 label-caps text-primary">
+                  <p className="mt-1 label-caps text-primary-ink">
                     {p.tag}
                     {p.metric ? ` · ${p.metric}` : ''}
                   </p>
@@ -153,7 +154,7 @@ export default function CaseStudiesIndex() {
                         href={l.url}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-sm text-primary underline underline-offset-4 hover:opacity-80"
+                        className="text-sm text-primary-ink underline underline-offset-4 hover:opacity-80"
                       >
                         {l.label} ↗
                       </a>
@@ -165,6 +166,7 @@ export default function CaseStudiesIndex() {
           ))}
         </div>
       </section>
+      <NextSteps next={{ href: '/thinking', label: 'How I make these calls: product thinking', kicker: 'Next' }} />
     </>
   )
 }

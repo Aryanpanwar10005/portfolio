@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { ResumePreviewStack } from "./ResumePreviewStack";
-import { resumeTrustBadges } from "@/content/resumeLibrary";
+import { resumeTrustBadges, resumeVariants } from "@/content/resumeLibrary";
 import { BackButton } from "@/components/BackButton";
 
 export function HeroLibrary({ onExplore }: { onExplore: () => void }) {
@@ -28,7 +28,7 @@ export function HeroLibrary({ onExplore }: { onExplore: () => void }) {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="font-display text-section text-foreground"
           >
-            Resume <span className="font-serif-italic text-primary">Library.</span>
+            Resume <span className="font-serif-italic text-primary-ink">Library.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -37,7 +37,7 @@ export function HeroLibrary({ onExplore }: { onExplore: () => void }) {
             className="mt-6 text-lg text-foreground-muted max-w-xl leading-relaxed"
           >
             One resume rarely fits every hiring bar. Pick the version written for the seat
-            you're hiring for - each is tailored to the signals that role actually screens for.
+            you&apos;re hiring for - each is tailored to the signals that role actually screens for.
           </motion.p>
 
           <motion.blockquote
@@ -48,8 +48,8 @@ export function HeroLibrary({ onExplore }: { onExplore: () => void }) {
           >
             <span className="absolute inset-x-0 top-0 h-px bg-[hsl(var(--accent))] opacity-70" />
             <p className="font-serif-italic text-lg text-foreground leading-relaxed">
-              "A resume isn't a document - it's a filter. The best filter is the one written for
-              the reader on the other side."
+              &quot;A resume isn&apos;t a document - it&apos;s a filter. The best filter is the one written for
+              the reader on the other side.&quot;
             </p>
           </motion.blockquote>
 
@@ -64,7 +64,7 @@ export function HeroLibrary({ onExplore }: { onExplore: () => void }) {
                 key={b}
                 className="inline-flex items-center gap-1.5 rounded-full border border-[hsl(var(--primary))]/25 bg-background/60 px-3 py-1.5 text-xs font-medium text-foreground-muted"
               >
-                <Check className="w-3.5 h-3.5 text-[hsl(var(--accent))]" strokeWidth={2.5} />
+                <Check className="w-3.5 h-3.5 text-accent-ink" strokeWidth={2.5} />
                 {b}
               </li>
             ))}
@@ -77,6 +77,13 @@ export function HeroLibrary({ onExplore }: { onExplore: () => void }) {
             >
               Choose a resume ↓
             </button>
+            <a
+              href={(resumeVariants.find((v) => v.recommended) ?? resumeVariants[0]).pdfUrl}
+              download
+              className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium text-foreground hover:border-primary/40 hover:text-primary-ink transition-colors"
+            >
+              Download recommended resume (PDF)
+            </a>
           </div>
 
           <div className="hairline-gold mt-10 max-w-24" />

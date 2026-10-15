@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { blogPosts, getBlogPost, blogTagToSlug, type BodyBlock } from '@/content/blog'
 import { BackButton } from '@/components/BackButton'
 import { notFound } from 'next/navigation'
+import { metaDescription, pageTitle } from '@/lib/seo'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -21,22 +22,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const path = `/writing/${post.slug}`
 
   return {
-    title: post.title,
-    description: post.summary,
+    title: pageTitle(post.seoTitle ?? post.title),
+    description: metaDescription(post.summary),
     openGraph: {
-      title: post.title,
-      description: post.summary,
+      title: post.seoTitle ?? post.title,
+      description: metaDescription(post.summary),
       type: 'article',
       publishedTime: post.publishedAtISO,
       url: `https://aryanpanwar.in${path}`,
-      images: [
-        {
-          url: post.cover,
-          width: 1200,
-          height: 630,
-          alt: post.coverAlt,
-        },
-      ],
     },
     alternates: {
       canonical: path,
@@ -59,12 +52,12 @@ function parseTextWithCitations(text: string): React.ReactNode {
       const url = match[2]
       parts.push(
         (url.startsWith('/') && !url.startsWith('//') || url.startsWith('./') || url.startsWith('../') || url.startsWith('#')) ? (
-          <Link key={key++} href={url} className="text-primary underline underline-offset-2 hover:opacity-75 transition-opacity font-medium">
+          <Link key={key++} href={url} className="text-primary-ink underline underline-offset-2 hover:opacity-75 transition-opacity font-medium">
             {label}
           </Link>
         ) : (
           <a key={key++} href={url} target="_blank" rel="noopener noreferrer"
-            className="text-primary underline underline-offset-2 hover:opacity-75 transition-opacity font-medium">
+            className="text-primary-ink underline underline-offset-2 hover:opacity-75 transition-opacity font-medium">
             {label}
           </a>
         )
@@ -75,7 +68,7 @@ function parseTextWithCitations(text: string): React.ReactNode {
       parts.push('(')
       parts.push(
         <a key={key++} href={`https://${domain}`} target="_blank" rel="noopener noreferrer"
-          className="text-accent underline underline-offset-2 hover:opacity-75 transition-opacity text-[0.9em]">
+          className="text-accent-ink underline underline-offset-2 hover:opacity-75 transition-opacity text-[0.9em]">
           {domain}
         </a>
       )
@@ -93,7 +86,7 @@ function renderBlock(block: BodyBlock, i: number) {
       return (
         <blockquote
           key={i}
-          className="border-l-2 border-primary pl-6 my-10 font-serif-italic text-xl md:text-2xl text-primary leading-relaxed"
+          className="border-l-2 border-primary pl-6 my-10 font-serif-italic text-xl md:text-2xl text-primary-ink leading-relaxed"
         >
           &quot;{parseTextWithCitations(block.text)}&quot;
         </blockquote>
@@ -188,19 +181,19 @@ export default async function BlogPostPage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([postSchema, breadcrumbSchema]).replace(/</g, '\u003c')
+          __html: JSON.stringify([postSchema, breadcrumbSchema]).replace(/</g, '\\u003c')
         }}
       />
 
       <header className="px-6 md:px-10 max-w-3xl mx-auto">
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mb-8">
           <BackButton to="/writing" label="Back to writing" />
-          <Link href="/writing" className="label-caps text-foreground-muted hover:text-primary transition-colors">
+          <Link href="/writing" className="label-caps text-foreground-muted hover:text-primary-ink transition-colors">
             All essays
           </Link>
         </div>
 
-        <p className="label-caps text-primary">
+        <p className="label-caps text-primary-ink">
           Writing · <span className="text-foreground-muted">{post.category}</span>
         </p>
         <h1 className="mt-3 font-display text-section text-foreground leading-[1.05]">{post.title}</h1>
@@ -215,10 +208,10 @@ export default async function BlogPostPage({ params }: PageProps) {
         </div>
 
         <div className="mt-8 border-l-4 border-primary bg-primary/3 p-6 rounded-r-lg">
-          <p className="text-xs font-semibold tracking-wider text-primary uppercase mb-2">PM hiring question</p>
+          <p className="text-xs font-semibold tracking-wider text-primary-ink uppercase mb-2">PM hiring question</p>
           <p className="font-display text-2xl text-foreground font-semibold leading-snug">{post.question}</p>
           <div className="mt-4 pt-4 border-t border-primary/10">
-            <p className="text-xs font-semibold tracking-wider text-primary/80 uppercase mb-1">Recruiter takeaway</p>
+            <p className="text-xs font-semibold tracking-wider text-primary-ink uppercase mb-1">Recruiter takeaway</p>
             <p className="text-lg text-foreground font-serif-italic">&quot;{post.takeaway}&quot;</p>
           </div>
         </div>
@@ -243,8 +236,8 @@ export default async function BlogPostPage({ params }: PageProps) {
       {post.takeaways.length > 0 && (
         <aside className="mt-12 px-6 md:px-10 max-w-2xl mx-auto">
           <div className="border-l-2 border-accent pl-6">
-            <p className="label-caps text-accent mb-4">Three takeaways</p>
-            <ol className="space-y-3 list-decimal list-inside marker:text-accent marker:font-display">
+            <p className="label-caps text-accent-ink mb-4">Three takeaways</p>
+            <ol className="space-y-3 list-decimal list-inside marker:text-accent-ink marker:font-display">
               {post.takeaways.map((t, i) => (
                 <li key={i} className="text-foreground leading-relaxed">{t}</li>
               ))}
@@ -256,7 +249,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       <div className="mt-16 px-6 md:px-10 max-w-2xl mx-auto space-y-4">
         {post.sections.map((s, i) => (
           <section key={i} className="pt-8">
-            <h2 className="text-lg font-bold tracking-wider text-primary uppercase mb-4">
+            <h2 className="text-lg font-bold tracking-wider text-primary-ink uppercase mb-4">
               0{i + 1} · {s.label}
             </h2>
             <div className="space-y-6">{s.body.map((b, j) => renderBlock(b, j))}</div>
@@ -271,7 +264,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             <Link
               key={t}
               href={`/writing/tag/${blogTagToSlug(t)}`}
-              className="text-xs px-3 py-1 border border-border rounded-full text-foreground-muted hover:text-primary hover:border-primary transition-colors"
+              className="text-xs px-3 py-1 border border-border rounded-full text-foreground-muted hover:text-primary-ink hover:border-primary transition-colors"
             >
               {t}
             </Link>
@@ -297,8 +290,8 @@ export default async function BlogPostPage({ params }: PageProps) {
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
-                  <p className="mt-4 label-caps text-primary">{p.category}</p>
-                  <h3 className="mt-2 font-display text-2xl text-foreground group-hover:text-primary transition-colors leading-snug">
+                  <p className="mt-4 label-caps text-primary-ink">{p.category}</p>
+                  <h3 className="mt-2 font-display text-2xl text-foreground group-hover:text-primary-ink transition-colors leading-snug">
                     {p.title}
                   </h3>
                   <p className="mt-2 text-foreground-muted">{p.summary}</p>
@@ -306,7 +299,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               ))}
             </div>
             <div className="mt-12">
-              <Link href="/writing" className="label-caps text-primary border-b border-primary pb-1">
+              <Link href="/writing" className="label-caps text-primary-ink border-b border-primary pb-1">
                 ← All essays
               </Link>
             </div>

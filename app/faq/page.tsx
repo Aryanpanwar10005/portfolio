@@ -36,7 +36,7 @@ function CategorySection({
       aria-labelledby={`faq-category-${category.id}`}
     >
       <div className="flex items-start gap-4 mb-6">
-        <span className="label-caps text-primary mt-1">
+        <span className="label-caps text-primary-ink mt-1">
           {String(index + 1).padStart(2, "0")}
         </span>
         <h2
@@ -107,26 +107,26 @@ export default function ResumeFaqPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([breadcrumb, faqSchema])
+          __html: JSON.stringify([breadcrumb, faqSchema]).replace(/</g, '\\u003c')
         }}
       />
 
       <main className="min-h-screen bg-background">
         <div className="max-w-4xl mx-auto px-6 md:px-10 pt-32 pb-24">
           <div className="mb-10">
-            <BackButton to="/resume" label="Back to resume library" />
+            <BackButton />
           </div>
 
           <header className="mb-16 md:mb-20">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border bg-surface-2 mb-5">
-              <MessageCircleQuestion className="w-4 h-4 text-primary" />
+              <MessageCircleQuestion className="w-4 h-4 text-primary-ink" />
               <span className="text-xs font-medium tracking-wider uppercase text-foreground-muted">
                 Resume FAQ
               </span>
             </div>
             <h1 className="font-display text-4xl md:text-6xl text-foreground max-w-3xl mb-5">
               Questions,{" "}
-              <span className="font-serif-italic text-primary">answered.</span>
+              <span className="font-serif-italic text-primary-ink">answered.</span>
             </h1>
             <p className="text-lg md:text-xl text-foreground-muted max-w-2xl leading-relaxed">
               A short, recruiter-focused guide to my resumes, projects, and the best way to reach me.
@@ -145,7 +145,7 @@ export default function ResumeFaqPage() {
               Still have a question?
             </h2>
             <p className="text-foreground-muted max-w-lg mx-auto mb-8 leading-relaxed">
-              If you didn't find the answer you're looking for, feel free to reach out. I'm always happy to discuss products, opportunities, or ideas.
+              If you didn&apos;t find the answer you&apos;re looking for, feel free to reach out. I&apos;m always happy to discuss products, opportunities, or ideas.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button
@@ -154,7 +154,7 @@ export default function ResumeFaqPage() {
                 onClick={() => trackEvent("faq_cta_click", { cta: "lets_connect", page: "/faq" })}
               >
                 <Link href="/contact" className="inline-flex items-center gap-2">
-                  Let's Connect
+                  Let&apos;s Connect
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>

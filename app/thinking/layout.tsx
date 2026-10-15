@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Product Thinking & Frameworks',
+  title: { default: 'Product Thinking & Frameworks', template: '%s | Aryan Panwar' },
   description: 'Mental models, evaluation playbooks, and decision frameworks for product managers navigating AI and software systems by Aryan Panwar.',
   alternates: {
     canonical: '/thinking',

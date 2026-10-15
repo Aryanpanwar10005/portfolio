@@ -28,6 +28,8 @@ export type BlogCategory =
 export type BlogPost = {
   slug: string
   title: string
+  /** Search-result title when the on-page title is too long or misses the searched wording. */
+  seoTitle?: string
   question: string
   takeaway: string
   summary: string
@@ -730,6 +732,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'llm-orchestration-tools',
     title: 'LLM Orchestration in 2026: What I Learned Building a Pipeline That Actually Works',
+    seoTitle: 'LLM Orchestration Tools: What I Learned Building a Pipeline',
     question: 'How do you sequence LLM calls without it breaking?',
     takeaway: 'He builds orchestration that scales.',
     summary:
@@ -788,6 +791,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'agentic-ai-vs-ml',
     title: "Agentic AI vs Machine Learning: A PM's Guide to Knowing the Difference",
+    seoTitle: 'Agentic AI vs Machine Learning: When to Use Which',
     question: 'Is it just a rebrand, or a new paradigm?',
     takeaway: 'He understands the difference between prediction and action.',
     summary:
@@ -930,3 +934,13 @@ export const allBlogTags = () =>
 
 export const allBlogCategories = () =>
   Array.from(new Set(blogPosts.map((p) => p.category)))
+
+// A tag page that lists a single post is near-duplicate of that post and adds
+// little for a reader arriving from search. Bing's guidelines ask that the
+// sitemap list exactly the URLs you want indexed, so the sitemap filter and the
+// robots directive on the tag route both read this one number: change it here
+// and the two can never disagree.
+export const TAG_INDEX_THRESHOLD = 2
+
+export const postsForTag = (tag: string) =>
+  blogPosts.filter((p) => p.tags.includes(tag))

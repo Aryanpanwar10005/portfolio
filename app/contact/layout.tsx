@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contact & Connect',
+  title: { default: 'Contact & Connect', template: '%s | Aryan Panwar' },
   description: 'Get in touch with Aryan Panwar for Product Management opportunities, project discussions, or collaborations.',
   alternates: {
     canonical: '/contact',

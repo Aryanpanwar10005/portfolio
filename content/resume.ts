@@ -1,6 +1,6 @@
 export const resumeData = {
   summary:
-    "AI Product Manager with a builder background - hardware, AI, and web - who found that the most interesting problem is always upstream of the code. Five products built, 20+ discovery interviews, and one organic traction story later, I'm ready for the room where the tradeoffs get made.",
+    "AI Product Manager with a builder background - hardware, AI, and web - who found that the most interesting problem is always upstream of the code. Five products built and one organic traction story later, I'm ready for the room where the tradeoffs get made.",
   target: "Associate Product Manager / PM roles at AI-first or AI-adjacent product teams.",
   experience: [
     {
@@ -9,8 +9,7 @@ export const resumeData = {
       period: "2025 - Present",
       bullets: [
         "Owned discovery, PRDs, prioritisation, and design QA end-to-end for an AI wardrobe stylist.",
-        "Ran 20+ discovery interviews and 6 diary studies; synthesised into a 3-insight product bet.",
-        "Generated 20.8K organic search impressions and 315 clicks (1.5% CTR, avg position 14.9) in 6 months with zero paid spend - evidence of organic search visibility and demand signal.",
+                "Generated 20.8K organic search impressions and 315 clicks (1.5% CTR, avg position 14.9) in 6 months with zero paid spend - evidence of organic search visibility and demand signal.",
       ],
     },
     {

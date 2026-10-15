@@ -26,7 +26,7 @@ export function ResumeViewer({ activeId }: { activeId: ResumeVariant["id"] }) {
         <p className="label-caps mb-4">03 · Interactive Preview</p>
         <div className="flex flex-wrap items-end justify-between gap-6 mb-8">
           <h2 className="font-display text-large text-foreground max-w-3xl">
-            Read the resume, <span className="font-serif-italic text-primary">or skim the map.</span>
+            Read the resume, <span className="font-serif-italic text-primary-ink">or skim the map.</span>
           </h2>
           <div className="flex gap-2">
             <a
@@ -34,7 +34,7 @@ export function ResumeViewer({ activeId }: { activeId: ResumeVariant["id"] }) {
               target="_blank"
               rel="noreferrer"
               onClick={() => trackEvent("resume_fullscreen", { role: variant.id })}
-              className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-xs font-medium text-foreground-muted hover:border-[hsl(var(--primary))] hover:text-[hsl(var(--primary))] transition-colors"
+              className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-xs font-medium text-foreground-muted hover:border-[hsl(var(--primary))] hover:text-primary-ink transition-colors"
             >
               <Maximize2 className="w-3.5 h-3.5" />
               Fullscreen

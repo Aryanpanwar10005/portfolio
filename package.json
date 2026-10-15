@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint .",
+    "index:bing": "node scripts/bing-submit.js",
+    "lint:strict": "eslint . --max-warnings 0"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

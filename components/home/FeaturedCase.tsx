@@ -85,7 +85,7 @@ export function FeaturedCase() {
             </div>
             <Link
               href={`/case-studies/${featured.slug}`}
-              className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all border-b border-primary pb-1"
+              className="inline-flex items-center gap-2 text-primary-ink font-medium hover:gap-3 transition-all border-b border-primary pb-1"
             >
               Read the full case study <span aria-hidden>→</span>
             </Link>

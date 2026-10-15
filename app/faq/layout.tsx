@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Frequently Asked Questions',
+  title: { default: 'Frequently Asked Questions', template: '%s | Aryan Panwar' },
   description: 'Common questions on hiring, product philosophy, technical background, and project discovery answered by Aryan Panwar.',
   alternates: {
     canonical: '/faq',

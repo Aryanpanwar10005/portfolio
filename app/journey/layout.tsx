@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Journey & Milestones',
+  title: { default: 'Journey & Milestones', template: '%s | Aryan Panwar' },
   description: 'Timeline, published research papers, academic background, and the engineering-to-PM evolution of Aryan Panwar.',
   alternates: {
     canonical: '/journey',

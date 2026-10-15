@@ -20,7 +20,12 @@ export default function ResumeLibraryPage() {
     "@type": "Person",
     "@id": "https://aryanpanwar.in/#person",
     name: "Aryan Panwar",
-    jobTitle: "AI Product Manager",
+    jobTitle: "Business Analyst Intern",
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Cloud Ingenious',
+      url: 'https://www.cloudingenious.com/',
+    },
     url: "https://aryanpanwar.in/",
     sameAs: [
       "https://www.linkedin.com/in/aryan-panwar1",
@@ -30,6 +35,8 @@ export default function ResumeLibraryPage() {
       "https://orcid.org/0009-0002-4793-4364",
       "https://www.researchgate.net/profile/Aryan-Panwar-7",
       "https://scholar.google.com/citations?view_op=list_works&hl=en&user=a4rB-NMAAAAJ",
+      "https://dev.to/aryanpanwar1",
+      "https://www.npmjs.com/~aryanpanwar",
     ],
   };
 
@@ -38,7 +45,7 @@ export default function ResumeLibraryPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([person, breadcrumb]).replace(/</g, '\u003c')
+          __html: JSON.stringify([person, breadcrumb]).replace(/</g, '\\u003c')
         }}
       />
       <HeroLibrary

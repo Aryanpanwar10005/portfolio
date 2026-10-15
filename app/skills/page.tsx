@@ -79,12 +79,12 @@ export default function SkillsPage() {
                 ...(c.url ? { url: c.url } : {}),
               },
             })),
-          })
+          }).replace(/</g, '\\u003c')
         }}
       />
       <PageHeader
         eyebrow="Skills & Certifications"
-        title={<>The <span className="font-serif-italic text-primary">craft</span>, categorised.</>}
+        title={<>The <span className="font-serif-italic text-primary-ink">craft</span>, categorised.</>}
         intro="Skills are only useful if they show up in shipped work. Search a tool, filter by discipline, or scan the credentials that back it up."
       />
 
@@ -124,7 +124,7 @@ export default function SkillsPage() {
                     'text-xs uppercase tracking-wider px-3.5 py-2 border transition-colors ' +
                     (active
                       ? 'bg-primary text-primary-foreground border-primary'
-                      : 'border-border text-foreground-muted hover:border-primary hover:text-primary')
+                      : 'border-border text-foreground-muted hover:border-primary hover:text-primary-ink')
                   }
                 >
                   {f.title}
@@ -175,7 +175,7 @@ export default function SkillsPage() {
                 key={c.title}
                 className="bg-background border border-border p-8 flex items-start gap-5"
               >
-                <div className="shrink-0 w-11 h-11 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+                <div className="shrink-0 w-11 h-11 rounded-full bg-primary/10 text-primary-ink flex items-center justify-center">
                   <Award className="w-5 h-5" />
                 </div>
                 <div className="flex-1">
@@ -192,7 +192,7 @@ export default function SkillsPage() {
                           issuer: c.issuer,
                         })
                       }
-                      className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-primary-hover underline underline-offset-4"
+                      className="inline-flex items-center gap-1.5 text-sm text-primary-ink hover:text-primary-hover underline underline-offset-4"
                     >
                       Verify credential <ExternalLink className="w-3.5 h-3.5" />
                     </a>
@@ -218,7 +218,7 @@ export default function SkillsPage() {
                 setQuery('')
                 setFilter('all')
               }}
-              className="mt-5 inline-flex items-center gap-2 border border-foreground/30 text-foreground px-5 py-2.5 text-sm font-medium hover:border-primary hover:text-primary transition-colors"
+              className="mt-5 inline-flex items-center gap-2 border border-foreground/30 text-foreground px-5 py-2.5 text-sm font-medium hover:border-primary hover:text-primary-ink transition-colors"
             >
               Reset
             </button>
@@ -230,8 +230,8 @@ export default function SkillsPage() {
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div>
             <p className="label-caps mb-3">Where this shows up</p>
-            <h2 className="font-display text-section text-foreground max-w-md">
-              See the <span className="font-serif-italic text-primary">skills</span> in shipped product.
+            <h2 className="font-display text-section text-foreground max-w-xl">
+              See the <span className="font-serif-italic text-primary-ink">skills</span> in shipped product.
             </h2>
           </div>
           <div className="flex flex-wrap gap-4 md:justify-end">
@@ -243,7 +243,7 @@ export default function SkillsPage() {
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 border border-foreground/30 text-foreground px-6 py-3.5 text-sm font-medium hover:border-primary hover:text-primary transition-colors"
+              className="inline-flex items-center gap-2 border border-foreground/30 text-foreground px-6 py-3.5 text-sm font-medium hover:border-primary hover:text-primary-ink transition-colors"
             >
               Get in touch
             </Link>

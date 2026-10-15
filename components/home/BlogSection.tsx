@@ -14,13 +14,13 @@ export function BlogSection() {
           <div>
             <p className="label-caps mb-3">05 · Writing</p>
             <h2 className="font-display text-section text-foreground">
-              Product evidence, <span className="font-serif-italic text-primary">in essays.</span>
+              Notes on <span className="font-serif-italic text-primary-ink">product decisions.</span>
             </h2>
             <p className="mt-4 max-w-2xl text-lg text-foreground-muted">
-              Each post answers one PM hiring question - grounded in a real product I built, not a framework I memorised.
+              Short essays, each answering one product question with something I built or worked on.
             </p>
           </div>
-          <Link href="/writing" className="text-primary font-medium border-b border-primary pb-1">
+          <Link href="/writing" className="text-primary-ink font-medium border-b border-primary pb-1">
             All essays →
           </Link>
         </div>
@@ -45,17 +45,17 @@ export function BlogSection() {
                   />
                 </div>
                 <div className="mt-5 flex items-center gap-3 label-caps flex-wrap">
-                  <span className="text-primary">{p.category}</span>
+                  <span className="text-primary-ink">{p.category}</span>
                   <span className="text-foreground-subtle">·</span>
                   <span>{p.readingTime}</span>
                   <span className="text-foreground-subtle">·</span>
                   <span>{p.publishedAt}</span>
                 </div>
-                <h3 className="mt-3 font-display text-2xl md:text-3xl text-foreground group-hover:text-primary transition-colors">
+                <h3 className="mt-3 font-display text-2xl md:text-3xl text-foreground group-hover:text-primary-ink transition-colors">
                   {p.title}
                 </h3>
                 <p className="mt-3 text-foreground-muted leading-relaxed">{p.summary}</p>
-                <p className="mt-4 label-caps text-accent">Answers: {p.question}</p>
+                <p className="mt-4 label-caps text-accent-ink">Answers: {p.question}</p>
               </Link>
             </motion.article>
           ))}

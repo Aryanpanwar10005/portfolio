@@ -30,8 +30,13 @@ export default function Home() {
               "@type": "Person",
               "@id": "https://aryanpanwar.in/#person",
               "name": "Aryan Panwar",
-              "jobTitle": "AI Product Manager",
-              "description": "AI Product Manager with a builder background - ships agentic AI products (FitWardrobe, Mithivoices, SEO-GEO Optimizer) and writes about product tradeoffs, AI feature design, and PM frameworks.",
+              "jobTitle": "Business Analyst Intern",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Cloud Ingenious",
+                "url": "https://www.cloudingenious.com/"
+              },
+              "description": "Business Analyst Intern on Salesforce projects at Cloud Ingenious. Builds agentic AI products on the side (FitWardrobe, Mithivoices, SEO-GEO Optimizer) and writes about product decisions, AI trade-offs and PM frameworks.",
               "url": "https://aryanpanwar.in/",
               "image": "https://aryanpanwar.in/assets/aryan-portrait.webp",
               "alumniOf": {
@@ -41,12 +46,13 @@ export default function Home() {
               },
               "knowsAbout": [
                 "Product Management",
+                "Business Analysis",
+                "Salesforce",
                 "AI Product Development",
                 "Jobs-to-be-Done",
                 "RICE Prioritization",
                 "North Star Metrics",
                 "On-Device AI",
-                "LLM Engineering",
                 "Agentic AI Systems",
                 "React",
                 "Python"
@@ -58,7 +64,9 @@ export default function Home() {
                 "https://www.producthunt.com/@aryan_panwar10005",
                 "https://orcid.org/0009-0002-4793-4364",
                 "https://www.researchgate.net/profile/Aryan-Panwar-7",
-                "https://scholar.google.com/citations?view_op=list_works&hl=en&user=a4rB-NMAAAAJ"
+                "https://scholar.google.com/citations?view_op=list_works&hl=en&user=a4rB-NMAAAAJ",
+                "https://dev.to/aryanpanwar1",
+                "https://www.npmjs.com/~aryanpanwar"
               ],
               "hasCredential": {
                 "@type": "EducationalOccupationalCredential",
