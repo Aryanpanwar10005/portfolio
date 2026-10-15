@@ -1,7 +1,11 @@
 import Script from "next/script";
 
-const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID;
-const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID;
+// Vercel still has the variables under their old VITE_ names, so read both.
+// The IDs are public (they ship in the page HTML anyway), so they also serve as
+// a last-resort default: analytics must never silently disappear on deploy.
+// The hostname guard below keeps localhost and preview URLs silent regardless.
+const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID || process.env.VITE_GA4_ID || "G-L4N43VLPEY";
+const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || process.env.VITE_CLARITY_ID || "xlzqq2x1eo";
 
 // Only the production deployment reports analytics. Preview deployments
 // (*.vercel.app) and local dev stay silent so they never pollute the data.
