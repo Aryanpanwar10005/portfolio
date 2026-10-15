@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { PageHeader } from '@/components/PageHeader'
+import { NextSteps } from '@/components/NextSteps'
 import { playbook } from '@/content/playbook'
 import { motion } from 'framer-motion'
 
@@ -21,13 +22,13 @@ export default function PlaybookIndex() {
               name: p.title,
               url: `https://aryanpanwar.in/thinking/${p.slug}`,
             })),
-          })
+          }).replace(/</g, '\\u003c')
         }}
       />
       <PageHeader
         eyebrow="My Product Thinking"
-        title={<>Frameworks, <span className="font-serif-italic text-primary">grounded in real work.</span></>}
-        intro="Not a theory dump. Every entry starts with a product I've shipped, and the framework that shaped a real decision inside it."
+        title={<>Frameworks, <span className="font-serif-italic text-primary-ink">grounded in real work.</span></>}
+        intro="Six frameworks, each shown on one of my own projects, with the decision it shaped."
       />
       <section className="px-6 md:px-10 pb-24 max-w-7xl mx-auto">
         <div className="paper p-2 md:p-4">
@@ -42,8 +43,8 @@ export default function PlaybookIndex() {
                 className="nth-[-n+3]:md:border-b nth-[-n+3]:md:border-border"
               >
                 <Link href={`/thinking/${p.slug}`} className="block p-8 h-full group hover:bg-background/60 transition-colors">
-                  <p className="label-caps text-accent mb-3">{p.number}</p>
-                  <h2 className="font-display text-2xl text-foreground group-hover:text-primary transition-colors">{p.title}</h2>
+                  <p className="label-caps text-accent-ink mb-3">{p.number}</p>
+                  <h2 className="font-display text-2xl text-foreground group-hover:text-primary-ink transition-colors">{p.title}</h2>
                   <p className="mt-3 text-foreground-muted text-sm leading-relaxed">{p.summary}</p>
                   <p className="mt-4 label-caps text-foreground-subtle">Project · {p.project}</p>
                 </Link>
@@ -52,6 +53,7 @@ export default function PlaybookIndex() {
           </div>
         </div>
       </section>
+      <NextSteps next={{ href: '/case-studies', label: 'See these frameworks at work: the case studies', kicker: 'Next' }} />
     </>
   )
 }

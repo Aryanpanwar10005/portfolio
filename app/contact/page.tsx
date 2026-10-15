@@ -72,7 +72,12 @@ export default function ContactPage() {
             '@type': 'Person',
             '@id': 'https://aryanpanwar.in/#person',
             name: 'Aryan Panwar',
-            jobTitle: 'AI Product Manager',
+            jobTitle: 'Business Analyst Intern',
+            worksFor: {
+              '@type': 'Organization',
+              name: 'Cloud Ingenious',
+              url: 'https://www.cloudingenious.com/',
+            },
             url: 'https://aryanpanwar.in/',
             email: 'mailto:aryanpanwar10005@gmail.com',
             sameAs: [
@@ -83,6 +88,8 @@ export default function ContactPage() {
               'https://orcid.org/0009-0002-4793-4364',
               'https://www.researchgate.net/profile/Aryan-Panwar-7',
               'https://scholar.google.com/citations?view_op=list_works&hl=en&user=a4rB-NMAAAAJ',
+              'https://dev.to/aryanpanwar1',
+              'https://www.npmjs.com/~aryanpanwar',
             ],
             contactPoint: {
               '@type': 'ContactPoint',
@@ -90,13 +97,13 @@ export default function ContactPage() {
               email: 'aryanpanwar10005@gmail.com',
               availableLanguage: 'English',
             },
-          }).replace(/</g, '\u003c')
+          }).replace(/</g, '\\u003c')
         }}
       />
       <PageHeader
         eyebrow="Contact"
-        title={<>Let&apos;s build something <span className="font-serif-italic text-primary">meaningful.</span></>}
-        intro="Product roles, thoughtful collaborations, or a conversation about how AI is reshaping product craft - the inbox is open, and I read every message."
+        title={<>Let&apos;s <span className="font-serif-italic text-primary-ink">talk.</span></>}
+        intro="A question about my work, a Salesforce project or an AI product idea? Send a note. I read every message."
       />
 
       <section className="px-6 md:px-10 pb-24 max-w-7xl mx-auto">
@@ -106,10 +113,10 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-7 relative overflow-hidden rounded-2xl bg-primary text-primary-foreground p-8 md:p-12 shadow-2xl"
+            className="lg:col-span-7 relative overflow-hidden rounded-2xl bg-brand-surface text-primary-foreground p-8 md:p-12 shadow-2xl"
           >
             <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-accent/15 blur-3xl" aria-hidden />
-            <p className="label-caps text-accent/90 mb-6">Primary channel</p>
+            <p className="label-caps text-accent-ink mb-6">Primary channel</p>
             <div className="flex items-start gap-4 mb-8">
               <div className="mt-2 shrink-0 w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center">
                 <Mail className="w-5 h-5" />
@@ -117,9 +124,10 @@ export default function ContactPage() {
               <div className="min-w-0">
                 <a
                   href={`mailto:${contactLinks.email}`}
-                  className="block font-display text-3xl md:text-4xl lg:text-5xl leading-tight break-all hover:text-accent transition-colors"
+                  className="block font-display text-2xl sm:text-3xl xl:text-4xl leading-tight break-words hover:text-accent-ink transition-colors"
                 >
-                  {contactLinks.email}
+                  {contactLinks.email.split('@')[0]}
+                  <wbr />@{contactLinks.email.split('@')[1]}
                 </a>
                 <p className="mt-3 text-primary-foreground/70 text-sm md:text-base max-w-md">
                   I reply within 48 hours on weekdays. A short note about context helps me respond well.
@@ -154,7 +162,7 @@ export default function ContactPage() {
             <p className="label-caps text-foreground-muted mb-6">Details</p>
             <ul className="space-y-5">
               <li className="flex items-start gap-4">
-                <MapPin className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                <MapPin className="w-5 h-5 text-primary-ink mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium">Based in</p>
                   <p className="text-foreground-muted">{contactLinks.location}</p>
@@ -166,15 +174,15 @@ export default function ContactPage() {
                 </span>
                 <div>
                   <p className="font-medium">Availability</p>
-                  <p className="text-foreground-muted">Open to APM / PM roles and select product collaborations.</p>
+                  <p className="text-foreground-muted">Open to conversations about product, Salesforce and AI projects.</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
-                <FileText className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                <FileText className="w-5 h-5 text-primary-ink mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium">Resume</p>
-                  <a href="/resume" className="text-primary hover:text-primary-hover underline-offset-4 hover:underline">
-                    View one-page resume →
+                  <a href="/resume" className="text-primary-ink hover:text-primary-hover underline-offset-4 hover:underline">
+                    Browse the resume library →
                   </a>
                 </div>
               </li>
@@ -204,7 +212,7 @@ export default function ContactPage() {
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-primary/8 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                      <div className="w-10 h-10 rounded-lg bg-primary/8 text-primary-ink flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                         <Icon className="w-5 h-5" />
                       </div>
                       <div>
@@ -212,7 +220,7 @@ export default function ContactPage() {
                         <p className="text-sm text-foreground-muted">{c.handle}</p>
                       </div>
                     </div>
-                    <ArrowUpRight className="w-4 h-4 text-foreground-muted group-hover:text-primary group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all" />
+                    <ArrowUpRight className="w-4 h-4 text-foreground-muted group-hover:text-primary-ink group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all" />
                   </div>
                   <p className="mt-4 text-sm text-foreground-muted leading-relaxed">{c.note}</p>
                 </motion.a>

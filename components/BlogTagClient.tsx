@@ -19,12 +19,12 @@ export function BlogTagClient({ tag, matches, tags }: BlogTagClientProps) {
     <div className="pt-32 md:pt-40 pb-24 px-6 md:px-10 max-w-6xl mx-auto">
       <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mb-8">
         <BackButton />
-        <Link href="/writing" className="label-caps text-foreground-muted hover:text-primary transition-colors">
+        <Link href="/writing" className="label-caps text-foreground-muted hover:text-primary-ink transition-colors">
           All essays
         </Link>
       </div>
 
-      <p className="label-caps text-primary">Writing · Topic</p>
+      <p className="label-caps text-primary-ink">Writing · Topic</p>
       <h1 className="mt-3 font-display text-section text-foreground leading-[1.05]">
         {tag} <span className="font-serif-italic text-foreground-muted">essays.</span>
       </h1>
@@ -53,13 +53,13 @@ export function BlogTagClient({ tag, matches, tags }: BlogTagClientProps) {
                 />
               </div>
               <div className="mt-5 flex flex-wrap gap-3 label-caps">
-                <span className="text-primary">{p.category}</span>
+                <span className="text-primary-ink">{p.category}</span>
                 <span className="text-foreground-subtle">·</span>
                 <span>{p.readingTime}</span>
                 <span className="text-foreground-subtle">·</span>
                 <time dateTime={p.publishedAtISO}>{p.publishedAt}</time>
               </div>
-              <h2 className="mt-3 font-display text-2xl md:text-3xl text-foreground group-hover:text-primary transition-colors leading-snug">
+              <h2 className="mt-3 font-display text-2xl md:text-3xl text-foreground group-hover:text-primary-ink transition-colors leading-snug">
                 {p.title}
               </h2>
               <p className="mt-3 text-foreground-muted leading-relaxed">{p.summary}</p>
@@ -75,7 +75,7 @@ export function BlogTagClient({ tag, matches, tags }: BlogTagClientProps) {
             <Link
               key={t}
               href={`/writing/tag/${blogTagToSlug(t)}`}
-              className="text-xs px-3 py-1 border border-border rounded-full text-foreground-muted hover:text-primary hover:border-primary transition-colors"
+              className="text-xs px-3 py-1 border border-border rounded-full text-foreground-muted hover:text-primary-ink hover:border-primary transition-colors"
             >
               {t}
             </Link>

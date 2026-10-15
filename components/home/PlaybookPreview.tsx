@@ -12,14 +12,14 @@ export function PlaybookPreview() {
           <div>
             <p className="label-caps mb-3">04 · My Product Thinking</p>
             <h2 className="font-display text-section text-foreground">
-              Frameworks, <span className="font-serif-italic text-primary">grounded</span> in real projects.
+              Frameworks, <span className="font-serif-italic text-primary-ink">grounded</span> in real projects.
             </h2>
             <p className="mt-3 max-w-xl text-lg text-foreground-muted">
-              Every entry starts with a product I shipped - not with theory.
-              JTBD, RICE scoring, opportunity trees, and metrics - applied to real products.
+              Each framework is shown on one of my own projects: JTBD, RICE scoring,
+              opportunity trees and north-star metrics, with the decisions they led to.
             </p>
           </div>
-          <Link href="/thinking" className="text-primary font-medium border-b border-primary pb-1">
+          <Link href="/thinking" className="text-primary-ink font-medium border-b border-primary pb-1">
             Open my thinking →
           </Link>
         </div>
@@ -39,10 +39,10 @@ export function PlaybookPreview() {
                   className="block p-6 h-full hover:bg-background/60 transition-colors group"
                 >
                   <div className="flex items-baseline justify-between mb-3">
-                    <span className="label-caps text-accent">{entry.number}</span>
-                    <span className="text-foreground-muted group-hover:text-primary transition-colors">→</span>
+                    <span className="label-caps text-accent-ink">{entry.number}</span>
+                    <span className="text-foreground-muted group-hover:text-primary-ink transition-colors">→</span>
                   </div>
-                  <h3 className="font-display text-2xl text-foreground group-hover:text-primary transition-colors">
+                  <h3 className="font-display text-2xl text-foreground group-hover:text-primary-ink transition-colors">
                     {entry.title}
                   </h3>
                   <p className="mt-2 text-sm text-foreground-muted leading-relaxed">

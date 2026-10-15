@@ -46,7 +46,7 @@ export const journey: Milestone[] = [
     year: "April 2026",
     title: "Published research + 1st place at branch expo",
     description:
-      "‘Automated Dual-Spot Wireless Charging and Parking Management System for EVs’ published in JETIR (IF 7.95, Vol 13 · Issue 4, ID JETIR2604872, Apr 27 2026) - 85% wireless charging efficiency, 1st place at the MIET branch expo. The paper's structure - assumption, method, result, discussion - quietly became how I write PRDs.",
+      "Co-authored ‘Automated Dual-Spot Wireless Charging and Parking Management System for EVs’, published in JETIR (Vol 13 · Issue 4, ID JETIR2604872, Apr 27 2026). The prototype took 1st place at the MIET branch expo. The paper's structure - assumption, method, result, discussion - quietly became how I write PRDs.",
     link: {
       label: "Read Published Paper (JETIR ↗)",
       url: "https://www.jetir.org/view?paper=JETIR2604872",
@@ -63,9 +63,19 @@ export const journey: Milestone[] = [
     },
   },
   {
+    year: "Jun 2026 – present",
+    title: "Business Analyst Intern, Cloud Ingenious",
+    description:
+      "Joined Cloud Ingenious, a Salesforce consulting partner, as a Business Analyst Intern. I work on Salesforce implementation projects, where I'm learning how real businesses turn processes into systems.",
+    link: {
+      label: "Cloud Ingenious ↗",
+      url: "https://www.cloudingenious.com/",
+    },
+  },
+  {
     year: "Next",
     title: "AI Product Manager",
     description:
-      "Looking for a product team where the bar is high, the users are real, and the outcome matters. I want to spend my early PM years in the room where the tradeoffs are made.",
+      "Where I'm headed: a product team where the bar is high, the users are real, and the outcome matters. I want my early PM years in the room where the trade-offs are made.",
   },
 ];

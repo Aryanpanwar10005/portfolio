@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { getCaseStudy, flagshipCaseStudies, supportingCaseStudies } from '@/content/caseStudies'
 import { notFound } from 'next/navigation'
 import { CaseStudyClient } from '@/components/CaseStudyClient'
+import { metaDescription, pageTitle } from '@/lib/seo'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -17,22 +18,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const path = `/case-studies/${study.slug}`
+  const seoTitle = study.seoTitle ?? `${study.title}: AI Product Case Study`
 
   return {
-    title: study.title,
-    description: study.metaDescription ?? study.tagline,
+    title: pageTitle(seoTitle),
+    description: metaDescription(study.metaDescription ?? study.tagline),
     openGraph: {
-      title: `${study.title} | AI PM Case Study`,
-      description: study.metaDescription ?? study.tagline,
+      title: seoTitle,
+      description: metaDescription(study.metaDescription ?? study.tagline),
+      type: 'article',
       url: `https://aryanpanwar.in${path}`,
-      images: [
-        {
-          url: study.cover,
-          width: 800,
-          height: 800,
-          alt: study.title,
-        },
-      ],
     },
     alternates: {
       canonical: path,
@@ -51,6 +46,10 @@ export default async function CaseStudyPage({ params }: PageProps) {
   }
 
   const path = `/case-studies/${study.slug}`
+  const ordered = [...flagshipCaseStudies, ...supportingCaseStudies]
+  const nextEntry = ordered[(ordered.findIndex((c) => c.slug === study.slug) + 1) % ordered.length]
+  const nextStudy = nextEntry && nextEntry.slug !== study.slug ? { slug: nextEntry.slug, title: nextEntry.title } : undefined
+
   return (
     <>
       <script
@@ -103,7 +102,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                   name: 'How does the seo-geo-optimizer npm package work?',
                   acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'It is a 14-phase agentic workflow that runs inside AI IDEs (Cursor, Windsurf, Copilot). It auto-detects your environment and installs rules to guide the AI through technical SEO, schema generation, and content formatting.'
+                    text: 'It is a 10-phase agentic workflow that runs inside AI IDEs (Cursor, Windsurf, Copilot). It auto-detects your environment and installs rules to guide the AI through technical SEO, schema generation, and content formatting.'
                   }
                 },
                 {
@@ -119,15 +118,15 @@ export default async function CaseStudyPage({ params }: PageProps) {
                   name: 'Is seo-geo-optimizer an agentic AI or machine learning tool?',
                   acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'It is an agentic AI tool. It takes multi-step actions across 14 phases, modifies your workspace files, and validates its own output, unlike machine learning which only makes predictions.'
+                    text: 'It is an agentic AI tool. It takes multi-step actions across 10 phases, modifies your workspace files, and validates its own output, unlike machine learning which only makes predictions.'
                   }
                 }
               ]
             }] : [])
-          ])
+          ]).replace(/</g, '\\u003c')
         }}
       />
-      <CaseStudyClient study={study} />
+      <CaseStudyClient study={study} next={nextStudy} />
     </>
   )
 }

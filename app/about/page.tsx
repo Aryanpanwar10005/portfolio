@@ -1,11 +1,17 @@
 import type { Metadata } from 'next'
 import { PageHeader } from '@/components/PageHeader'
+import { NextSteps } from '@/components/NextSteps'
 
 export const metadata: Metadata = {
   title: "About",
-  description: "A short introduction to Aryan Panwar - ECE graduate from MIET Meerut (2026), AI Product Manager with a builder background, and the values that shape how I ship.",
+  description: "A short introduction to Aryan Panwar: ECE graduate from MIET Meerut (2026), Business Analyst Intern at Cloud Ingenious, and builder of AI products.",
   alternates: {
     canonical: "/about",
+  },
+  openGraph: {
+    title: "About | Aryan Panwar",
+    description: "A short introduction to Aryan Panwar: background, values and the way I work.",
+    url: "https://aryanpanwar.in/about",
   },
 }
 
@@ -24,9 +30,14 @@ export default function AboutPage() {
               '@type': 'Person',
               '@id': 'https://aryanpanwar.in/#person',
               name: 'Aryan Panwar',
-              jobTitle: 'AI Product Manager',
-              description: 'AI Product Manager with a builder background - ships agentic AI systems (FitWardrobe, Mithivoices, SEO-GEO Optimizer) and writes about product tradeoffs, AI feature design, and PM frameworks.',
-              url: 'https://aryanpanwar.in/about',
+              jobTitle: 'Business Analyst Intern',
+              worksFor: {
+                '@type': 'Organization',
+                name: 'Cloud Ingenious',
+                url: 'https://www.cloudingenious.com/',
+              },
+              description: 'Business Analyst Intern on Salesforce projects at Cloud Ingenious. Builds agentic AI products on the side (FitWardrobe, Mithivoices, SEO-GEO Optimizer) and writes about product decisions, AI trade-offs and PM frameworks.',
+              url: 'https://aryanpanwar.in/',
               image: 'https://aryanpanwar.in/assets/aryan-portrait.webp',
               alumniOf: {
                 '@type': 'CollegeOrUniversity',
@@ -35,6 +46,8 @@ export default function AboutPage() {
               },
               knowsAbout: [
                 'Product Management',
+                'Business Analysis',
+                'Salesforce',
                 'Agentic AI',
                 'MCP',
                 'Multimodal AI',
@@ -52,21 +65,24 @@ export default function AboutPage() {
                 'https://orcid.org/0009-0002-4793-4364',
                 'https://www.researchgate.net/profile/Aryan-Panwar-7',
                 'https://scholar.google.com/citations?view_op=list_works&hl=en&user=a4rB-NMAAAAJ',
+                'https://dev.to/aryanpanwar1',
+                'https://www.npmjs.com/~aryanpanwar',
               ],
             }
-          }).replace(/</g, '\u003c')
+          }).replace(/</g, '\\u003c')
         }}
       />
       <PageHeader
         eyebrow="About"
-        title={<>A short <span className="font-serif-italic text-primary">introduction.</span></>}
+        title={<>A short <span className="font-serif-italic text-primary-ink">introduction.</span></>}
       />
-      <section className="px-6 md:px-10 pb-24 max-w-2xl mx-auto space-y-14 text-lg text-foreground leading-relaxed">
+      <section className="px-6 md:px-10 pb-24 max-w-7xl mx-auto"><div className="max-w-2xl space-y-14 text-lg text-foreground leading-relaxed">
         <Block label="Who I am">
-          I&apos;m Aryan Panwar, an ECE graduate from MIET Meerut (2026) and an AI
-          Product Manager. I came to product from the builder side: I ship agentic
-          AI systems, write about the tradeoffs, and want to spend my early PM
-          years in the room where the calls get made.
+          I&apos;m Aryan Panwar, an ECE graduate from MIET Meerut (2026). I work as a
+          Business Analyst Intern at Cloud Ingenious, a Salesforce consulting partner,
+          on Salesforce implementation projects. On the side I build agentic AI
+          products and write about the trade-offs. Product management is where I&apos;m
+          headed: I want my early PM years in the room where the calls get made.
         </Block>
         <Block label="Why PM">
           Because the interesting problems live at the intersection of user,
@@ -88,7 +104,9 @@ export default function AboutPage() {
           Reading product essays, disassembling AI features I use every day,
           and running short experiments that end up as writing on this site.
         </Block>
+        </div>
       </section>
+      <NextSteps next={{ href: '/case-studies', label: 'See the work: product case studies', kicker: 'Next' }} />
     </>
   )
 }
@@ -96,7 +114,7 @@ export default function AboutPage() {
 function Block({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div>
-      <h2 className="label-caps text-accent mb-3">{label}</h2>
+      <h2 className="label-caps text-accent-ink mb-3">{label}</h2>
       <div className="hairline mb-4" />
       <p>{children}</p>
     </div>

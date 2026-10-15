@@ -2,6 +2,9 @@
 @source "../components/**/*.{ts,tsx}";
 @source "../app/**/*.{ts,tsx}";
 
+/* The theme toggle sets .dark on <html>, so dark: utilities follow it (not the OS setting). */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
@@ -17,6 +20,10 @@
   --color-primary-foreground: hsl(var(--primary-foreground));
   --color-primary-hover: hsl(var(--primary-hover));
   --color-primary-deep: hsl(var(--primary-deep));
+  /* Text-safe variants: --primary and --accent are tuned for fills and accents. */
+  --color-primary-ink: hsl(var(--primary-ink));
+  --color-accent-ink: hsl(var(--accent-ink));
+  --color-brand-surface: hsl(var(--brand-surface));
 
   --color-secondary: hsl(var(--secondary));
   --color-secondary-foreground: hsl(var(--secondary-foreground));
@@ -86,8 +93,8 @@
   --surface-2: 34 38% 93%;       /* #F5F0E8 */
   --surface-3: 34 36% 92%;       /* #F3EEE6 */
   --foreground: 0 0% 13%;        /* #222 */
-  --foreground-muted: 0 0% 18%;
-  --foreground-subtle: 0 0% 23%;
+  --foreground-muted: 0 0% 32%;   /* #525252, 7.1:1 on ivory */
+  --foreground-subtle: 0 0% 40%;  /* #666, 5.3:1 on ivory */
 
   --card: 34 38% 93%;
   --card-foreground: 0 0% 13%;
@@ -100,6 +107,8 @@
   --primary-foreground: 34 40% 95%;
   --primary-hover: 348 51% 28%;  /* #6B2235 */
   --primary-deep: 349 51% 19%;   /* #4A1826 */
+  /* Large brand fills (section bands, hero arch). Stays deep in both themes. */
+  --brand-surface: 349 51% 24%;
 
   --secondary: 34 30% 88%;
   --secondary-foreground: 0 0% 13%;
@@ -107,8 +116,11 @@
   --muted: 34 20% 85%;
   --muted-foreground: 0 0% 35%;
 
-  /* Warm Gold accent — used sparingly */
+  /* Warm Gold accent - used sparingly */
   --accent: 36 44% 60%;          /* #C7A36A */
+  /* Gold as text on ivory: #C7A36A is only 2.2:1, so text uses a deeper bronze (5.2:1). */
+  --accent-ink: 36 44% 35%;
+  --primary-ink: var(--primary);
   --accent-foreground: 0 0% 13%;
 
   --destructive: 0 70% 45%;
@@ -136,11 +148,15 @@
   --popover: 348 10% 11%;
   --popover-foreground: 34 40% 94%;
 
-  /* Deep Wine — lifted to clear WCAG AA 3:1 on dark charcoal (was 42% = 2.77:1) */
-  --primary: 349 60% 50%;        /* ~#C23A52 — contrast 3.9:1 on #171213 */
-  --primary-foreground: 34 60% 98%; /* near-white — clears 4.5:1 on red backgrounds */
+  /* Deep Wine - lifted for fills on dark charcoal (white text on it: 5:1). */
+  --primary: 349 60% 50%;        /* ~#C23A52 */
+  /* As text it measured 3.4-3.7:1, so text uses a lighter rose: 5.7:1 on the page. */
+  --primary-ink: 349 60% 64%;
+  --primary-foreground: 34 60% 98%; /* near-white - clears 4.5:1 on red backgrounds */
   --primary-hover: 349 60% 57%;  /* ~#D44560 */
   --primary-deep: 349 57% 41%;   /* ~#A42D43 */
+  /* Kept deep: the lifted --primary above is sized for text, not for filling a band. */
+  --brand-surface: 349 46% 19%;
 
   --secondary: 348 8% 17%;
   --secondary-foreground: 34 40% 94%;
@@ -148,8 +164,9 @@
   --muted: 348 6% 20%;
   --muted-foreground: 34 14% 70%;
 
-  /* Warm gold — brighter in dark mode */
+  /* Warm gold - brighter in dark mode */
   --accent: 36 60% 66%;          /* ~#D9B478 */
+  --accent-ink: var(--accent);
   --accent-foreground: 348 12% 8%;
 
   --destructive: 0 65% 50%;
@@ -197,8 +214,12 @@
   height: 100%;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.06;
-  mix-blend-mode: multiply;
+  opacity: 0.05;
+}
+
+/* Honour reduced-motion without JS: no hydration pop-in, no client bundle. */
+@media (prefers-reduced-motion: reduce) {
+  .grain-overlay { display: none; }
 }
 
 .grain-overlay::before {
@@ -209,9 +230,6 @@
   width: 200%;
   height: 200%;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-  animation: grain 8s steps(10) infinite;
-  will-change: transform;
-  transform: translateZ(0);
 }
 
 @keyframes grain {
@@ -236,32 +254,34 @@
   font-weight: 400;
 }
 
-.font-serif-italic {
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  font-weight: 300;
-}
+@layer components {
+  .font-serif-italic {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+  }
 
-.label-caps {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: hsl(var(--foreground-muted));
-}
+  .label-caps {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: hsl(var(--foreground-muted));
+  }
 
-.hairline {
-  height: 1px;
-  width: 100%;
-  background: hsl(var(--foreground) / 0.15);
-}
+  .hairline {
+    height: 1px;
+    width: 100%;
+    background: hsl(var(--foreground) / 0.15);
+  }
 
-.hairline-gold {
-  height: 1px;
-  width: 100%;
-  background: hsl(var(--accent));
-  opacity: 0.7;
+  .hairline-gold {
+    height: 1px;
+    width: 100%;
+    background: hsl(var(--accent));
+    opacity: 0.7;
+  }
 }
 
 /* Custom scrollbar */
@@ -282,20 +302,30 @@
   background: hsl(var(--primary));
 }
 
-/* Section spacing */
-.section-padding {
-  padding: 6rem 1.5rem;
-}
-
-@media (min-width: 768px) {
+@layer components {
+  /* Section spacing */
   .section-padding {
-    padding: 8rem 3rem;
+    padding-block: 4.5rem;
   }
-}
 
-@media (min-width: 1024px) {
-  .section-padding {
-    padding: 10rem 5rem;
+  .section-padding > * {
+    padding-inline: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-block: 6rem;
+    }
+
+    .section-padding > * {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding-block: 7.5rem;
+    }
   }
 }
 
@@ -309,17 +339,35 @@
   filter: sepia(0%) saturate(100%);
 }
 
-/* Paper card (notebook) */
-.paper {
-  background: hsl(var(--surface-2));
-  border: 1px solid hsl(var(--border));
-  box-shadow:
-    0 1px 0 hsl(var(--foreground) / 0.03),
-    0 20px 40px -30px hsl(var(--primary) / 0.15);
+@layer components {
+  /* Paper card (notebook) */
+  .paper {
+    background: hsl(var(--surface-2));
+    border: 1px solid hsl(var(--border));
+    box-shadow:
+      0 1px 0 hsl(var(--foreground) / 0.03),
+      0 20px 40px -30px hsl(var(--primary) / 0.15);
+  }
 }
 
 /* Wine arch decoration */
 .arch-shape {
   border-top-left-radius: 9999px;
   border-top-right-radius: 9999px;
+}
+
+/* Text placed on a wine band keeps the bright gold and near-white: the darker
+   ink tokens are only for light surfaces. Inherited by everything inside. */
+.bg-primary,
+.bg-brand-surface,
+.bg-primary-deep {
+  /* Override the resolved theme colours: --color-* are computed once on :root. */
+  --color-accent-ink: hsl(var(--accent));
+  --color-primary-ink: hsl(var(--primary-foreground));
+}
+
+/* Visible keyboard focus everywhere (mouse clicks don't trigger it). */
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
 }

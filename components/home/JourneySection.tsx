@@ -10,10 +10,11 @@ export function JourneySection() {
         <div className="mb-16">
           <p className="label-caps mb-3">06 · Journey</p>
           <h2 className="font-display text-section text-foreground">
-            From builder <span className="font-serif-italic text-primary">to PM.</span>
+            How I <span className="font-serif-italic text-primary-ink">got here.</span>
           </h2>
           <p className="mt-3 max-w-xl text-lg text-foreground-muted">
-            The milestones - hardware, research, shipped AI products, and where I&apos;m heading next.
+            Electronics, then hardware and research, then AI side projects, and now business
+            analysis on Salesforce projects. Product management is next.
           </p>
         </div>
 
@@ -28,7 +29,7 @@ export function JourneySection() {
               className="relative pb-12 last:pb-0"
             >
               <span className="absolute left-[-2.35rem] md:left-[-3.35rem] top-1.5 w-2.5 h-2.5 rounded-full bg-primary" />
-              <p className="label-caps text-accent mb-1">{m.year}</p>
+              <p className="label-caps text-accent-ink mb-1">{m.year}</p>
               <h3 className="font-display text-2xl md:text-3xl text-foreground">{m.title}</h3>
               <p className="mt-2 text-foreground-muted max-w-2xl leading-relaxed">{m.description}</p>
               {m.link && (
@@ -36,7 +37,7 @@ export function JourneySection() {
                   href={m.link.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1 mt-3 text-sm font-medium text-primary hover:text-primary-hover underline underline-offset-4 decoration-primary/40 transition-colors"
+                  className="inline-flex items-center gap-1 mt-3 text-sm font-medium text-primary-ink hover:text-primary-hover underline underline-offset-4 decoration-primary/40 transition-colors"
                 >
                   {m.link.label}
                 </a>

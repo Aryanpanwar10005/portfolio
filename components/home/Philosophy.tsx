@@ -5,7 +5,7 @@ import { values } from '@/content/tools'
 
 export function Philosophy() {
   return (
-    <section className="section-padding bg-primary text-primary-foreground">
+    <section className="section-padding bg-brand-surface text-primary-foreground">
       <div className="max-w-6xl mx-auto">
         <p className="label-caps mb-8 text-primary-foreground">07 · Product Philosophy</p>
         <motion.blockquote
@@ -16,7 +16,7 @@ export function Philosophy() {
           className="font-display text-large md:text-section leading-[1.05] max-w-5xl text-primary-foreground"
         >
           &ldquo;The PM job isn&apos;t to have the best ideas. It&apos;s to make sure the team ships
-          the <span className="font-serif-italic text-accent">right ones</span>, for the right users, with the right restraint.&rdquo;
+          the <span className="font-serif-italic text-accent-ink">right ones</span>, for the right users, with the right restraint.&rdquo;
         </motion.blockquote>
 
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-primary-foreground/20 pt-10">

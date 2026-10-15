@@ -1,8 +1,10 @@
 import { MetadataRoute } from 'next'
-import { blogPosts, blogTagToSlug } from '@/content/blog'
+import { blogPosts, blogTagToSlug, TAG_INDEX_THRESHOLD } from '@/content/blog'
 import { flagshipCaseStudies, supportingCaseStudies } from '@/content/caseStudies'
 import { playbook as playbooks } from '@/content/playbook' 
 
+// lastModified is only emitted where a real content date exists. Stamping every
+// URL with the build time teaches Google to ignore the field altogether.
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://aryanpanwar.in'
 
@@ -20,7 +22,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date(),
     priority: route === '' ? 1.0 : 0.8,
   }))
 
@@ -28,18 +29,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const allCaseStudies = [...flagshipCaseStudies, ...supportingCaseStudies]
   const caseStudyPages = allCaseStudies.map((study) => ({
     url: `${baseUrl}/case-studies/${study.slug}`,
-    lastModified: new Date(),
     priority: 0.9,
   }))
 
   // Dynamic Blog Posts
   const writingPages = blogPosts.map((post) => ({
     url: `${baseUrl}/writing/${post.slug}`,
-    lastModified: new Date(post.publishedAtISO || new Date()),
+    ...(post.publishedAtISO && { lastModified: new Date(post.publishedAtISO) }),
     priority: 0.7,
   }))
 
-  // Dynamic Blog Tags (Filter out thin 1-post tags from sitemap to optimize crawl budget)
+  // Dynamic Blog Tags. Thin tags are omitted here and carry noindex on the route
+  // itself, so the sitemap lists exactly the tag URLs we want indexed.
   const tagCounts = new Map<string, number>()
   blogPosts.forEach(post => {
     post.tags.forEach(tag => {
@@ -48,17 +49,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   })
   
   const tagPages = Array.from(tagCounts.entries())
-    .filter(([, count]) => count >= 2)
+    .filter(([, count]) => count >= TAG_INDEX_THRESHOLD)
     .map(([tag]) => ({
       url: `${baseUrl}/writing/tag/${blogTagToSlug(tag)}`,
-      lastModified: new Date(),
-      priority: 0.6,
+        priority: 0.6,
     }))
 
   // Dynamic Thinking (Playbooks)
   const thinkingPages = playbooks.map((playbook) => ({
     url: `${baseUrl}/thinking/${playbook.slug}`,
-    lastModified: new Date(),
     priority: 0.8,
   }))
 

@@ -16,31 +16,31 @@ export function CTASection() {
           transition={{ duration: 0.9 }}
           className="font-display text-hero text-foreground leading-[1.02] max-w-5xl"
         >
-          Let&apos;s build something <span className="font-serif-italic text-primary">meaningful.</span>
+          Let&apos;s <span className="font-serif-italic text-primary-ink">talk.</span>
         </motion.h2>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
           <p className="text-lg text-foreground-muted max-w-lg leading-relaxed">
-            I&apos;m looking for a product team where the bar is high and the users are real.
-            If that sounds like you, get in touch.
+            A question about a case study, a Salesforce project or an AI product idea?
+            Send me a note. I read every message.
           </p>
 
           <div className="space-y-2">
             <a href={`mailto:${contactLinks.email}`} className="group flex items-center justify-between py-4 border-b border-border">
               <span className="label-caps">Email</span>
-              <span className="text-foreground group-hover:text-primary transition-colors">{contactLinks.email}</span>
+              <span className="text-foreground group-hover:text-primary-ink transition-colors">{contactLinks.email}</span>
             </a>
             <a href={contactLinks.linkedin} target="_blank" rel="noreferrer" className="group flex items-center justify-between py-4 border-b border-border">
               <span className="label-caps">LinkedIn</span>
-              <span className="text-foreground group-hover:text-primary transition-colors">/in/aryan-panwar1 ↗</span>
+              <span className="text-foreground group-hover:text-primary-ink transition-colors">/in/aryan-panwar1 ↗</span>
             </a>
             <a href={contactLinks.github} target="_blank" rel="noreferrer" className="group flex items-center justify-between py-4 border-b border-border">
               <span className="label-caps">GitHub</span>
-              <span className="text-foreground group-hover:text-primary transition-colors">@Aryanpanwar10005 ↗</span>
+              <span className="text-foreground group-hover:text-primary-ink transition-colors">@Aryanpanwar10005 ↗</span>
             </a>
             <Link href="/resume" className="group flex items-center justify-between py-4 border-b border-border">
               <span className="label-caps">Resume</span>
-              <span className="text-foreground group-hover:text-primary transition-colors">Interactive resume →</span>
+              <span className="text-foreground group-hover:text-primary-ink transition-colors">Interactive resume →</span>
             </Link>
             <Link href="/contact" className="mt-6 inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3.5 text-sm font-medium hover:bg-primary-hover transition-colors">
               Get in touch <span aria-hidden>→</span>

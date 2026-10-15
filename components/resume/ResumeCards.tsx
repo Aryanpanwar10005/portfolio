@@ -1,17 +1,17 @@
 "use client"
 
 import { motion } from "framer-motion";
-import { Eye, Sparkles } from "lucide-react";
+import { Eye, Sparkles, Download } from "lucide-react";
 import { resumeVariants } from "@/content/resumeLibrary";
 import { trackEvent } from "@/lib/analytics";
 
 export function ResumeCards() {
   return (
-    <section id="choose" className="section-padding">
+    <section id="choose" className="section-padding scroll-mt-24">
       <div className="max-w-7xl mx-auto">
         <p className="label-caps mb-4">02 · Choose Your Resume</p>
         <h2 className="font-display text-large text-foreground max-w-3xl">
-          Every resume highlights different <span className="font-serif-italic text-primary">experiences.</span>
+          Every resume highlights different <span className="font-serif-italic text-primary-ink">experiences.</span>
         </h2>
         <p className="mt-4 text-foreground-muted max-w-2xl">
           Four versions, each rewritten for the signals its target recruiter actually reads.
@@ -51,7 +51,7 @@ function Card({
       )}
 
       <header>
-        <p className="label-caps text-[hsl(var(--primary))]">{v.tagline}</p>
+        <p className="label-caps text-primary-ink">{v.tagline}</p>
         <h3 className="mt-3 font-display text-3xl text-foreground">{v.role}</h3>
       </header>
 
@@ -86,6 +86,15 @@ function Card({
         >
           <Eye className="w-4 h-4" />
           View
+        </a>
+        <a
+          href={v.pdfUrl}
+          download
+          onClick={() => trackEvent("resume_download", { role: v.id })}
+          className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-foreground hover:border-primary/40 hover:text-primary-ink transition-colors"
+        >
+          <Download className="w-4 h-4" />
+          Download PDF
         </a>
       </div>
 

@@ -1,17 +1,7 @@
-"use client"
+import type { JSX } from "react";
 
-import { useEffect, useState } from "react";
-
-export function GrainOverlay() {
-  const [enabled, setEnabled] = useState(false);
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setEnabled(!mq.matches);
-    const onChange = () => setEnabled(!mq.matches);
-    mq.addEventListener?.("change", onChange);
-    return () => mq.removeEventListener?.("change", onChange);
-  }, []);
-  if (!enabled) return null;
+// Purely decorative. The reduced-motion preference is handled in globals.css so
+// this renders on the server with no client JS and no post-hydration pop-in.
+export function GrainOverlay(): JSX.Element {
   return <div className="grain-overlay" aria-hidden="true" />;
 }

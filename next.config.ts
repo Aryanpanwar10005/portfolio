@@ -62,6 +62,48 @@ const nextConfig: NextConfig = {
         destination: '/resume',
         permanent: true,
       },
+      // Legacy URLs that Google and Bing still list but that returned 404
+      // (checked against Search Console and Bing Webmaster data, Oct 2026).
+      {
+        source: '/index.html',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/Aryan_Panwar.pdf',
+        destination: '/docs/Aryan_Panwar_PM_Resume.pdf',
+        permanent: true,
+      },
+      {
+        source: '/assets/docs/Aryan_Panwar.pdf',
+        destination: '/docs/Aryan_Panwar_PM_Resume.pdf',
+        permanent: true,
+      },
+      {
+        source: '/writing/what-is-agentic-ai-developer.html',
+        destination: '/writing/agentic-ai-developer-guide',
+        permanent: true,
+      },
+      {
+        source: '/blog/hardware-logic-in-ai.html',
+        destination: '/writing/local-vs-cloud-ai-fitwardrobe',
+        permanent: true,
+      },
+      {
+        source: '/blog/embedded-iot-automation.html',
+        destination: '/writing/engineering-to-product-thinking',
+        permanent: true,
+      },
+      {
+        source: '/blog/embedded-engineer-faq.html',
+        destination: '/writing/engineering-to-product-thinking',
+        permanent: true,
+      },
+      {
+        source: '/blog/modern-embedded-engineer.html',
+        destination: '/writing/engineering-to-product-thinking',
+        permanent: true,
+      },
 
       // === 2. CASE STUDIES (old .html & reports paths) ===
       {
@@ -133,6 +175,20 @@ const nextConfig: NextConfig = {
       {
         source: '/blog/tag/:tag',
         destination: '/writing/tag/:tag',
+        permanent: true,
+      },
+
+      // === 6. CATCH-ALLS (evaluated LAST) ===
+      // Any other old blog post or report lands on its section index instead
+      // of a 404, so stray backlinks and stale index entries keep their value.
+      {
+        source: '/blog/:path*',
+        destination: '/writing',
+        permanent: true,
+      },
+      {
+        source: '/reports/:path*',
+        destination: '/case-studies',
         permanent: true,
       },
     ];

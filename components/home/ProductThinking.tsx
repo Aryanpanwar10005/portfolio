@@ -24,23 +24,23 @@ export function ProductThinking() {
         <div className="mb-12">
           <p className="label-caps mb-3">03 · How I Think</p>
           <h2 className="font-display text-section text-foreground max-w-3xl">
-            Product thinking, step by <span className="font-serif-italic text-primary">step.</span>
+            Product thinking, step by <span className="font-serif-italic text-primary-ink">step.</span>
           </h2>
         </div>
 
         {/* Stepper */}
         <div className="relative">
-          <div className="hairline mb-6" />
-          <div className="flex flex-wrap gap-x-2 gap-y-3">
+          <div className="hairline" />
+          <div className="flex flex-wrap gap-x-2 gap-y-3 -mt-px">
             {thinkingSteps.map((step, i) => (
               <button
                 key={step.key}
                 onMouseEnter={() => setActive(step.key)}
                 onClick={() => setActive(step.key)}
                 className={cn(
-                  'group flex items-baseline gap-2 px-3 py-2 -mt-6 text-sm transition-colors border-t-2',
+                  'group flex items-baseline gap-2 px-3 py-2 min-h-11 text-sm transition-colors border-t-2',
                   active === step.key
-                    ? 'border-primary text-primary'
+                    ? 'border-primary text-primary-ink'
                     : 'border-transparent text-foreground-muted hover:text-foreground'
                 )}
               >
@@ -61,7 +61,7 @@ export function ProductThinking() {
         >
           <div className="md:col-span-4">
             <p className="label-caps mb-2">Step</p>
-            <h3 className="font-display text-large text-primary">{current.label}</h3>
+            <h3 className="font-display text-large text-primary-ink">{current.label}</h3>
           </div>
           <p className="md:col-span-8 text-xl text-foreground leading-relaxed font-serif-italic md:pt-8">
             {current.body}

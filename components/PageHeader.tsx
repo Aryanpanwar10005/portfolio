@@ -24,8 +24,8 @@ export function PageHeader({ eyebrow, title, intro }: Props) {
         {eyebrow}
       </motion.p>
       <motion.h1
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ y: 12 }}
+        animate={{ y: 0 }}
         transition={{ duration: 0.7 }}
         className="font-display text-section text-foreground max-w-4xl"
       >

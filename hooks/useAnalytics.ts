@@ -1,23 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { usePathname, useSearchParams } from 'next/navigation'
 import { trackEvent } from '@/lib/analytics'
-
-// Fire a `page_view` event on every route change. Mount once at the Layout level.
-export function usePageViewTracking() {
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
-  const lastPath = useRef<string | null>(null)
-
-  useEffect(() => {
-    const search = searchParams ? searchParams.toString() : ''
-    const path = pathname + (search ? `?${search}` : '')
-    if (lastPath.current === path) return
-    lastPath.current = path
-    trackEvent('page_view', {
-      search: search || undefined,
-    })
-  }, [pathname, searchParams])
-}
 
 // Fire an event the first time an element becomes visible in the viewport.
 // Returns a ref to attach to the target element.

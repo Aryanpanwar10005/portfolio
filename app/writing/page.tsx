@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { PageHeader } from '@/components/PageHeader'
+import { NextSteps } from '@/components/NextSteps'
 import { blogPosts, allBlogTags, allBlogCategories, blogTagToSlug, type BlogCategory } from '@/content/blog'
 
 const ALL = 'All' as const
@@ -39,13 +40,13 @@ export default function BlogIndex() {
               articleSection: p.category,
               keywords: p.tags.join(', '),
             })),
-          })
+          }).replace(/</g, '\\u003c')
         }}
       />
       <PageHeader
         eyebrow="Writing"
-        title={<>Product evidence, <span className="font-serif-italic text-primary">one question at a time.</span></>}
-        intro="Ten essays. Each answers a specific question a PM recruiter asks - grounded in a product I actually shipped."
+        title={<>Product evidence, <span className="font-serif-italic text-primary-ink">one question at a time.</span></>}
+        intro="Essays on product decisions. Each one answers a single question, using something I built or worked on."
       />
 
       {featured && (
@@ -70,24 +71,24 @@ export default function BlogIndex() {
               </div>
             </Link>
             <div className="lg:col-span-5">
-              <p className="label-caps text-accent">Featured essay</p>
+              <p className="label-caps text-accent-ink">Featured essay</p>
               <div className="mt-3 flex flex-wrap gap-3 label-caps">
-                <span className="text-primary">{featured.category}</span>
+                <span className="text-primary-ink">{featured.category}</span>
                 <span className="text-foreground-subtle">·</span>
                 <span>{featured.readingTime}</span>
                 <span className="text-foreground-subtle">·</span>
                 <time dateTime={featured.publishedAtISO}>{featured.publishedAt}</time>
               </div>
               <h2 className="mt-4 font-display text-4xl md:text-5xl text-foreground leading-tight">
-                <Link href={`/writing/${featured.slug}`} className="hover:text-primary transition-colors">
+                <Link href={`/writing/${featured.slug}`} className="hover:text-primary-ink transition-colors">
                   {featured.title}
                 </Link>
               </h2>
               <p className="mt-4 text-lg text-foreground-muted leading-relaxed">{featured.summary}</p>
-              <p className="mt-4 label-caps text-accent">Answers: {featured.question}</p>
+              <p className="mt-4 label-caps text-accent-ink">Answers: {featured.question}</p>
               <Link
                 href={`/writing/${featured.slug}`}
-                className="mt-6 inline-flex items-center gap-2 text-primary font-medium border-b border-primary pb-1 hover:gap-3 transition-all"
+                className="mt-6 inline-flex items-center gap-2 text-primary-ink font-medium border-b border-primary pb-1 hover:gap-3 transition-all"
               >
                 Read the essay <span aria-hidden>→</span>
               </Link>
@@ -105,7 +106,7 @@ export default function BlogIndex() {
               className={`text-sm px-4 py-1.5 rounded-full border transition-colors ${
                 active === c
                   ? 'bg-primary text-primary-foreground border-primary'
-                  : 'border-border text-foreground-muted hover:text-primary hover:border-primary'
+                  : 'border-border text-foreground-muted hover:text-primary-ink hover:border-primary'
               }`}
             >
               {c}
@@ -135,17 +136,17 @@ export default function BlogIndex() {
                   />
                 </div>
                 <div className="mt-5 flex flex-wrap gap-3 label-caps">
-                  <span className="text-primary">{p.category}</span>
+                  <span className="text-primary-ink">{p.category}</span>
                   <span className="text-foreground-subtle">·</span>
                   <span>{p.readingTime}</span>
                   <span className="text-foreground-subtle">·</span>
                   <time dateTime={p.publishedAtISO}>{p.publishedAt}</time>
                 </div>
-                <h3 className="mt-3 font-display text-2xl md:text-3xl text-foreground group-hover:text-primary transition-colors leading-snug">
+                <h3 className="mt-3 font-display text-2xl md:text-3xl text-foreground group-hover:text-primary-ink transition-colors leading-snug">
                   {p.title}
                 </h3>
                 <p className="mt-3 text-foreground-muted leading-relaxed">{p.summary}</p>
-                <p className="mt-4 label-caps text-accent">Answers: {p.question}</p>
+                <p className="mt-4 label-caps text-accent-ink">Answers: {p.question}</p>
               </Link>
             </motion.article>
           ))}
@@ -163,7 +164,7 @@ export default function BlogIndex() {
               <Link
                 key={t}
                 href={`/writing/tag/${blogTagToSlug(t)}`}
-                className="text-sm px-3 py-1.5 border border-border rounded-full text-foreground-muted hover:text-primary hover:border-primary transition-colors"
+                className="text-sm px-3 py-1.5 border border-border rounded-full text-foreground-muted hover:text-primary-ink hover:border-primary transition-colors"
               >
                 {t}
               </Link>
@@ -171,6 +172,7 @@ export default function BlogIndex() {
           </div>
         </div>
       </section>
+      <NextSteps next={{ href: '/case-studies', label: 'The products behind these essays: case studies', kicker: 'Next' }} />
     </>
   )
 }
