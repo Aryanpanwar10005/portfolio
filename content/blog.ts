@@ -38,6 +38,8 @@ export type BlogPost = {
   readingTime: string
   publishedAt: string
   publishedAtISO: string
+  /** Date of the last significant content edit (not typo fixes). Feeds dateModified and the sitemap. */
+  updatedAtISO?: string
   cover: string
   coverAlt: string
   takeaways: string[]
@@ -56,8 +58,8 @@ export const blogPosts: BlogPost[] = [
     category: 'Discovery',
     tags: ['Discovery', 'User Research', 'MVP', 'FitWardrobe', 'On-Device AI'],
     readingTime: '7 min read',
-    publishedAt: 'May 12, 2026',
-    publishedAtISO: '2026-05-12',
+    publishedAt: 'Aug 4, 2026',
+    publishedAtISO: '2026-08-04',
     cover: coverDiscovery,
     coverAlt: 'Editorial illustration: hangers behind a magnifying lens on deep-wine background',
     takeaways: [
@@ -130,8 +132,8 @@ export const blogPosts: BlogPost[] = [
     category: 'Career',
     tags: ['PM Mindset', 'Career', 'Engineering to PM'],
     readingTime: '6 min read',
-    publishedAt: 'May 5, 2026',
-    publishedAtISO: '2026-05-05',
+    publishedAt: 'Aug 7, 2026',
+    publishedAtISO: '2026-08-07',
     cover: coverEngineerToPm,
     coverAlt: 'Editorial illustration: brain split between circuits and organic curves',
     takeaways: [
@@ -194,8 +196,8 @@ export const blogPosts: BlogPost[] = [
     category: 'Prioritization',
     tags: ['Prioritization', 'PRD', 'RICE', 'Trade-offs', 'Scope'],
     readingTime: '6 min read',
-    publishedAt: 'Apr 28, 2026',
-    publishedAtISO: '2026-04-28',
+    publishedAt: 'Jul 14, 2026',
+    publishedAtISO: '2026-07-14',
     cover: coverPrioritize,
     coverAlt: 'Editorial illustration: stack of index cards with one lifted priority card',
     takeaways: [
@@ -265,8 +267,8 @@ export const blogPosts: BlogPost[] = [
     category: 'Metrics',
     tags: ['Metrics', 'North Star', 'KPIs', 'Outcomes', 'Credex'],
     readingTime: '6 min read',
-    publishedAt: 'Apr 21, 2026',
-    publishedAtISO: '2026-04-21',
+    publishedAt: 'Jul 21, 2026',
+    publishedAtISO: '2026-07-21',
     cover: coverMetrics,
     coverAlt: 'Editorial illustration: bullseye target with an upward gold arrow',
     takeaways: [
@@ -335,8 +337,8 @@ export const blogPosts: BlogPost[] = [
     category: 'Prioritization',
     tags: ['Prioritization', 'Say No', 'FitWardrobe', 'Simplicity'],
     readingTime: '5 min read',
-    publishedAt: 'Apr 14, 2026',
-    publishedAtISO: '2026-04-14',
+    publishedAt: 'Jul 24, 2026',
+    publishedAtISO: '2026-07-24',
     cover: coverFeaturesRemoved,
     coverAlt: 'Editorial illustration: sculptor carving away pieces from a form',
     takeaways: [
@@ -404,8 +406,8 @@ export const blogPosts: BlogPost[] = [
     category: 'AI Product',
     tags: ['AI Product', 'On-Device AI', 'Trade-offs', 'Privacy', 'FitWardrobe'],
     readingTime: '7 min read',
-    publishedAt: 'Apr 7, 2026',
-    publishedAtISO: '2026-04-07',
+    publishedAt: 'Jul 28, 2026',
+    publishedAtISO: '2026-07-28',
     cover: coverLocalVsCloud,
     coverAlt: 'Editorial illustration: phone and cloud connected by a balance line',
     takeaways: [
@@ -474,8 +476,9 @@ export const blogPosts: BlogPost[] = [
     category: 'AI Product',
     tags: ['AI Product', 'Trust', 'UX', 'Hallucinations', 'Explainability'],
     readingTime: '7 min read',
-    publishedAt: 'Mar 31, 2026',
-    publishedAtISO: '2026-03-31',
+    publishedAt: 'Jul 17, 2026',
+    publishedAtISO: '2026-07-17',
+    updatedAtISO: '2026-08-15',
     cover: coverAiTrust,
     coverAlt: 'Editorial illustration: two hands meeting with a glowing node between them',
     takeaways: [
@@ -544,8 +547,8 @@ export const blogPosts: BlogPost[] = [
     category: 'Career',
     tags: ['Career', 'Systems Thinking', 'Hardware', 'JETIR', 'Engineering to PM'],
     readingTime: '6 min read',
-    publishedAt: 'Mar 24, 2026',
-    publishedAtISO: '2026-03-24',
+    publishedAt: 'Jul 31, 2026',
+    publishedAtISO: '2026-07-31',
     cover: coverEngToProduct,
     coverAlt: 'Editorial illustration: gears transforming into a lightbulb',
     takeaways: [
@@ -607,8 +610,8 @@ export const blogPosts: BlogPost[] = [
     category: 'Frameworks',
     tags: ['Frameworks', 'JTBD', 'RICE', 'PRD', 'Roadmaps'],
     readingTime: '8 min read',
-    publishedAt: 'Mar 17, 2026',
-    publishedAtISO: '2026-03-17',
+    publishedAt: 'Aug 11, 2026',
+    publishedAtISO: '2026-08-11',
     cover: coverToolkit,
     coverAlt: 'Editorial illustration: flat-lay of notebook, compass, pen, ruler',
     takeaways: [
@@ -671,8 +674,9 @@ export const blogPosts: BlogPost[] = [
     category: 'Reflection',
     tags: ['Reflection', 'FitWardrobe', 'Lessons', 'MVP'],
     readingTime: '5 min read',
-    publishedAt: 'Mar 10, 2026',
-    publishedAtISO: '2026-03-10',
+    publishedAt: 'Aug 14, 2026',
+    publishedAtISO: '2026-08-14',
+    updatedAtISO: '2026-08-15',
     cover: coverRestart,
     coverAlt: 'Editorial illustration: circular arrow with a sprout inside a gold circle',
     takeaways: [
@@ -740,8 +744,8 @@ export const blogPosts: BlogPost[] = [
     category: 'AI Product',
     tags: ['AI Product', 'LLM', 'Architecture', 'Mithivoices', 'Agentic AI'],
     readingTime: '7 min read',
-    publishedAt: 'Aug 09, 2026',
-    publishedAtISO: '2026-08-09',
+    publishedAt: 'Aug 21, 2026',
+    publishedAtISO: '2026-08-21',
     cover: coverAiTrust,
     coverAlt: 'Editorial illustration: nodes connecting in a complex graph structure',
     takeaways: [
@@ -799,8 +803,8 @@ export const blogPosts: BlogPost[] = [
     category: 'AI Product',
     tags: ['AI Product', 'Agentic AI', 'Machine Learning', 'Career', 'Frameworks'],
     readingTime: '6 min read',
-    publishedAt: 'Aug 09, 2026',
-    publishedAtISO: '2026-08-09',
+    publishedAt: 'Aug 28, 2026',
+    publishedAtISO: '2026-08-28',
     cover: coverLocalVsCloud,
     coverAlt: 'Editorial illustration: a machine learning model next to a robotic agent',
     takeaways: [
@@ -837,7 +841,7 @@ export const blogPosts: BlogPost[] = [
         label: 'The practical decision tree',
         body: [
           { type: 'p', text: 'If you need a single-step prediction or generation (e.g., "summarize this text", "is this image a hotdog?"), use traditional ML or a zero-shot LLM call. If you need the system to overcome obstacles, search for missing context, or interact with external APIs, you need an agentic pattern.' },
-          { type: 'p', text: 'The [SEO-GEO Optimizer](/case-studies/seo-geo-optimizer) is the clearest example of an agentic system I\'ve shipped: 14 sequential phases, each gated by a human-in-the-loop validation step, with the AI using tools (schema generators, robots.txt writers) across the full workflow.' },
+          { type: 'p', text: 'The [SEO-GEO Optimizer](/case-studies/seo-geo-optimizer) is the clearest example of an agentic system I\'ve shipped: 10 sequential phases, each gated by a human-in-the-loop validation step, with the AI using tools (schema generators, robots.txt writers) across the full workflow.' },
         ],
       },
     ],
@@ -852,8 +856,8 @@ export const blogPosts: BlogPost[] = [
     category: 'AI Product',
     tags: ['Agentic AI', 'MCP', 'LangGraph', 'LLMOps', 'Orchestration'],
     readingTime: '7 min read',
-    publishedAt: 'Aug 10, 2026',
-    publishedAtISO: '2026-08-10',
+    publishedAt: 'Aug 25, 2026',
+    publishedAtISO: '2026-08-25',
     cover: coverAiTrust,
     coverAlt: 'Editorial illustration: nodes and connections representing an agentic workflow',
     takeaways: [
@@ -892,8 +896,9 @@ export const blogPosts: BlogPost[] = [
     category: 'Frameworks',
     tags: ['Technical SEO', 'GEO', 'Generative Engine Optimization', 'LLMs.txt', 'Structured Data'],
     readingTime: '6 min read',
-    publishedAt: 'Aug 10, 2026',
-    publishedAtISO: '2026-08-10',
+    publishedAt: 'Aug 18, 2026',
+    publishedAtISO: '2026-08-18',
+    updatedAtISO: '2026-10-16',
     cover: coverToolkit,
     coverAlt: 'Editorial illustration: tools for structuring data for LLMs',
     takeaways: [

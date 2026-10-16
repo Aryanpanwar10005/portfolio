@@ -22,6 +22,8 @@ export type CaseStudy = {
   featured?: boolean;
   status?: "Shipped" | "In Progress" | "Concept";
   publishedAtISO?: string;
+  /** Date of the last significant content edit. Feeds dateModified and the sitemap. */
+  updatedAtISO?: string;
   metaDescription?: string;
   /** Search-result title; defaults to "<title>: AI Product Case Study". */
   seoTitle?: string;
@@ -81,7 +83,8 @@ export const caseStudies: CaseStudy[] = [
     role: "Founder & Product Manager",
     platform: "iOS · Web · On-device Vision",
     timeline: "2025 - Present",
-    publishedAtISO: "2025-01-01",
+    publishedAtISO: "2026-03-04",
+    updatedAtISO: "2026-10-16",
     problem:
       "People buy 60% more clothes than 15 years ago (mckinsey.com) and forget about them for years - Movinga's 18,000-household global audit found that the vast majority of closet items sit unworn for over 12 months (movinga.com). On top of that, M&S survey data showed people spend 17 minutes every morning (103 hours a year) deciding what to wear (marksandspencer.com). And when a special occasion comes up? The outfit they wanted is forgotten, unready, or buried.",
     solution:
@@ -177,7 +180,8 @@ export const caseStudies: CaseStudy[] = [
     role: "Product Manager & Contributor",
     platform: "Open Source · Python · Web",
     timeline: "2025",
-    publishedAtISO: "2025-01-01",
+    publishedAtISO: "2026-03-04",
+    updatedAtISO: "2026-07-21",
     problem:
       "Small teams who want to build voice AI products have two options: pay per-minute to closed APIs (Deepgram, ElevenLabs) that can change pricing any time, or dig through research code that never actually ships. There was no open, production-ready middle ground.",
     solution:
@@ -262,7 +266,8 @@ export const caseStudies: CaseStudy[] = [
     role: "Creator & PM",
     platform: "npm · Node · Cursor · Windsurf · Copilot",
     timeline: "2026",
-    publishedAtISO: "2026-01-01",
+    publishedAtISO: "2026-03-04",
+    updatedAtISO: "2026-10-16",
     problem:
       "AI IDEs give outdated SEO advice. When Windsurf told me to optimize for FID - a Core Web Vital Google deprecated in March 2024 - I realized LLMs have no reliable way to stay current with search standards. Meanwhile, the $1B+ Generative Engine Optimization (GEO) market is growing rapidly, but developer tooling is lagging behind.",
     solution:
@@ -355,7 +360,8 @@ export const caseStudies: CaseStudy[] = [
     role: "Product & AI Engineer",
     platform: "Web · LangGraph · Python",
     timeline: "2025",
-    publishedAtISO: "2025-01-01",
+    publishedAtISO: "2026-07-14",
+    updatedAtISO: "2026-10-16",
     problem:
       "Field reps talking to HCPs (healthcare providers) juggle 4+ tools per visit. Notes get lost, follow-ups slip, and the CRM becomes homework instead of a co-pilot.",
     solution:
@@ -429,7 +435,8 @@ export const caseStudies: CaseStudy[] = [
     role: "Product & AI Engineer",
     platform: "Web · LLM Pipelines",
     timeline: "2025",
-    publishedAtISO: "2025-01-01",
+    publishedAtISO: "2026-07-14",
+    updatedAtISO: "2026-10-16",
     problem:
       "Companies waste an estimated 30% of their SaaS spend on unused seats, duplicated tools, and forgotten renewals - and nobody has time to audit line-by-line.",
     solution:

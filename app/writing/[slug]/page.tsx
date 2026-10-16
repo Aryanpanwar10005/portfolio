@@ -29,6 +29,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: metaDescription(post.summary),
       type: 'article',
       publishedTime: post.publishedAtISO,
+      modifiedTime: post.updatedAtISO ?? post.publishedAtISO,
       url: `https://aryanpanwar.in${path}`,
     },
     alternates: {
@@ -149,7 +150,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     description: post.summary,
     image: post.cover?.startsWith('http') ? post.cover : `https://aryanpanwar.in${post.cover}`,
     datePublished: post.publishedAtISO,
-    dateModified: post.publishedAtISO,
+    dateModified: post.updatedAtISO ?? post.publishedAtISO,
     keywords: post.tags.join(', '),
     articleSection: post.category,
     wordCount: wordCount(post),

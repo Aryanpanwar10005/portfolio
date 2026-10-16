@@ -29,6 +29,21 @@ export function trackEvent(event: string, props: EventProps = {}) {
   }
 }
 
+// True when this browser opted out of analytics (the owner's own devices).
+// ?notrack=1 sets the flag, ?notrack=0 clears it. AnalyticsScripts.tsx inlines
+// the same check so GA4 and Clarity never load for an opted-out browser.
+export function isTrackingOptedOut(): boolean {
+  if (typeof window === 'undefined') return false
+  try {
+    const p = new URLSearchParams(window.location.search).get('notrack')
+    if (p === '1') localStorage.setItem('ap_notrack', '1')
+    if (p === '0') localStorage.removeItem('ap_notrack')
+    return localStorage.getItem('ap_notrack') === '1'
+  } catch {
+    return false
+  }
+}
+
 // Classify the current viewport for analytics segmentation.
 export function getDeviceCategory(): 'mobile' | 'tablet' | 'desktop' {
   if (typeof window === 'undefined') return 'desktop'

@@ -14,7 +14,10 @@ const IS_PRODUCTION = process.env.VERCEL_ENV
   : process.env.NODE_ENV === "production";
 
 // Runtime guard as well: only the live domain reports, never localhost/previews.
-const ON_LIVE_DOMAIN = `['aryanpanwar.in','www.aryanpanwar.in'].indexOf(location.hostname)>-1`;
+// The owner's own browsers opt out too: open any page once with ?notrack=1 and
+// that browser stops reporting for good (?notrack=0 turns it back on). Same flag
+// as lib/analytics.ts isTrackingOptedOut(), which Vercel Analytics checks.
+const ON_LIVE_DOMAIN = `['aryanpanwar.in','www.aryanpanwar.in'].indexOf(location.hostname)>-1&&!(function(){try{var p=new URLSearchParams(location.search).get('notrack');if(p==='1')localStorage.setItem('ap_notrack','1');if(p==='0')localStorage.removeItem('ap_notrack');return localStorage.getItem('ap_notrack')==='1'}catch(e){return false}})()`;
 
 export function AnalyticsScripts() {
   if (!IS_PRODUCTION) return null;
