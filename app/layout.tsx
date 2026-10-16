@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 import { GrainOverlay } from "@/components/GrainOverlay";
 import { ContactClickTracker } from "@/components/ContactClickTracker";
 import { AnalyticsScripts } from "@/components/AnalyticsScripts";
-import { Analytics } from "@vercel/analytics/react";
+import { VercelAnalytics } from "@/components/VercelAnalytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -115,7 +115,7 @@ export default function RootLayout({
         <Footer />
         <ContactClickTracker />
         <AnalyticsScripts />
-        <Analytics />
+        <VercelAnalytics />
       </body>
     </html>
   );

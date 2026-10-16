@@ -63,6 +63,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
               description: study.tagline,
               image: study.cover?.startsWith('http') ? study.cover : `https://aryanpanwar.in${study.cover}`,
               ...(study.publishedAtISO && { datePublished: study.publishedAtISO }),
+              ...((study.updatedAtISO ?? study.publishedAtISO) && { dateModified: study.updatedAtISO ?? study.publishedAtISO }),
               author: {
                 '@type': 'Person',
                 name: 'Aryan Panwar',
