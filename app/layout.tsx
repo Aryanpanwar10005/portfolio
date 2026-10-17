@@ -70,6 +70,8 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        {/* Site-wide, because pages that set their own canonical replace metadata.alternates. */}
+        <link rel="alternate" type="application/rss+xml" title="Aryan Panwar: Writing" href="/feed.xml" />
         {/*
           Runs synchronously before first paint so dark-mode visitors never see
           a light flash. next/script (even beforeInteractive) is not guaranteed
