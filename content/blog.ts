@@ -841,7 +841,7 @@ export const blogPosts: BlogPost[] = [
         label: 'The practical decision tree',
         body: [
           { type: 'p', text: 'If you need a single-step prediction or generation (e.g., "summarize this text", "is this image a hotdog?"), use traditional ML or a zero-shot LLM call. If you need the system to overcome obstacles, search for missing context, or interact with external APIs, you need an agentic pattern.' },
-          { type: 'p', text: 'The [SEO-GEO Optimizer](/case-studies/seo-geo-optimizer) is the clearest example of an agentic system I\'ve shipped: 10 sequential phases, each gated by a human-in-the-loop validation step, with the AI using tools (schema generators, robots.txt writers) across the full workflow.' },
+          { type: 'p', text: 'The [SEO-GEO Optimizer](/case-studies/seo-geo-optimizer) is the clearest example of an agentic system I\'ve shipped: 14 sequential phases, each gated by a human-in-the-loop validation step, with the AI using tools (schema generators, robots.txt writers) across the full workflow.' },
         ],
       },
     ],
