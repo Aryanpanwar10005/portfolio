@@ -198,6 +198,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: '6 min read',
     publishedAt: 'Jul 14, 2026',
     publishedAtISO: '2026-07-14',
+    updatedAtISO: '2026-10-18',
     cover: coverPrioritize,
     coverAlt: 'Editorial illustration: stack of index cards with one lifted priority card',
     takeaways: [
@@ -207,10 +208,10 @@ export const blogPosts: BlogPost[] = [
     ],
     sections: [
       {
-        label: 'Twenty-three features',
+        label: 'Twenty-odd features',
         body: [
-          { type: 'p', text: "On the AI-First CRM for pharma reps, the initial feature list had somewhere around twenty features - voice logging, offline sync, physician deduping, compliance flags, an assistant, an audit trail, and more. Every one was defensible in isolation. The team could not build all of them." },
-          { type: 'p', text: "One of those was a compliance flag system. An engineer had already started sketching a database schema for it before I remembered we had no compliance requirements in v1. I had written it on the list because it sounded right, not because anyone had asked for it." },
+          { type: 'p', text: "On the AI-First CRM prototype for pharma reps, I could list around twenty features before writing any code - voice logging, offline sync, physician deduping, compliance flags, an assistant, an audit trail, and more. Every one was defensible in isolation. I had a short, fixed build window and could not build all of them." },
+          { type: 'p', text: "Compliance was the interesting one. In a regulated field it sounds mandatory, so it went on the list without a question. When I asked what it actually had to do in a first version, the answer was small: one hard rule (a cap on in-person meetings per doctor per month) and a confirmation the rep ticks before saving. That is what I built. Everything bigger waited." },
         ],
       },
       {
@@ -238,24 +239,24 @@ export const blogPosts: BlogPost[] = [
             'Kill signal: the metric or observation that would make me drop it after launch.',
           ]},
           { type: 'p', text: "The kill signal column was one I added two weeks into using this, after I realised five items had no exit condition. I didn't start with it. I added it after keeping a feature I later regretted." },
-          { type: 'p', text: "On the CRM, that page cut the list down to six before the PRD started. Three of the cuts were mine. Two were painful. One was a feature I had already told an engineer we'd build, which cost me a phone call I did not enjoy making." },
+          { type: 'p', text: "On the CRM, that page cut the list to a handful before I wrote the plan: logging by form or by chat with the two kept in sync, an editable form so every AI suggestion can be corrected, the compliance check, and a few helper tools such as an HCP profile lookup. Voice logging and offline sync were the painful cuts." },
         ],
       },
       {
-        label: 'What shipped',
+        label: 'What I built',
         body: [
-          { type: 'p', text: "The v1 CRM shipped with six features. Two more were added in the second cycle after real usage - one that hadn't been on the pre-PRD at all, one that had been cut and came back with actual evidence behind it. Nothing that shipped in v1 got removed. That's the metric I care about: not a perfect roadmap, but no regrettable builds." },
+          { type: 'p', text: "The prototype has those features and nothing else. It has not been in front of real reps yet, so the next evidence has to come from a pilot, and the kill signals on the pre-PRD page are what I would watch first. The metric I care about stays the same: not a perfect roadmap, but no regrettable builds." },
         ],
       },
       {
         label: 'Where I still fail at this',
         body: [
           { type: 'p', text: "The hardest habit is being honest in the evidence column when I'm the one who wants the feature. I still catch myself inflating a hunch to 'preliminary research.' The mitigation is a peer: I ask an engineer or a fellow builder to read the page and only comment on the evidence column. It takes fifteen minutes and saves weeks." },
-          { type: 'p', text: "If I started the CRM again, I'd run the pre-PRD before the first stakeholder meeting instead of after. The list of twenty-odd features was itself a symptom - a sign I had absorbed everyone's wishes without weighing any of them." },
+          { type: 'p', text: "If I started the CRM again, I'd write the pre-PRD on day one instead of after drafting the list. The list of twenty-odd features was itself a symptom - a sign I had collected every idea without weighing any of them." },
         ],
       },
     ],
-    relatedCaseStudies: ['ai-crm-hcp'],
+    relatedCaseStudies: ['ai-first-crm-hcp'],
   },
   {
     slug: 'success-metrics-before-features',
@@ -472,70 +473,68 @@ export const blogPosts: BlogPost[] = [
     question: 'How do I reduce user uncertainty in AI features?',
     takeaway: 'He thinks beyond the model.',
     summary:
-      'Trust is a product surface, not a model property. Notes from the AI-First CRM on the four affordances that moved reps from "let me double-check" to "let it log."',
+      'Trust is a product surface, not a model property. Design notes from an AI-first CRM prototype: the four things I would add before asking a rep to rely on it.',
     category: 'AI Product',
     tags: ['AI Product', 'Trust', 'UX', 'Hallucinations', 'Explainability'],
-    readingTime: '7 min read',
+    readingTime: '5 min read',
     publishedAt: 'Jul 17, 2026',
     publishedAtISO: '2026-07-17',
-    updatedAtISO: '2026-08-15',
+    updatedAtISO: '2026-10-18',
     cover: coverAiTrust,
     coverAlt: 'Editorial illustration: two hands meeting with a glowing node between them',
     takeaways: [
-      'Trust is built by the surface, not the model. Same weights, different UI, different adoption.',
-      'The most effective trust move on the CRM was showing the source, not tuning the model.',
+      'Trust is built by the surface, not the model. The same model behind a different UI earns a different level of trust.',
+      'Showing where each logged field came from does more for trust than a few more points of accuracy.',
       'A confident wrong answer is worse than an honest uncertain one. Product surfaces have to make that choice explicit.',
     ],
     sections: [
       {
-        label: "The tool that worked and wasn't used",
+        label: 'Working is not the same as trusted',
         body: [
-          { type: 'p', text: "The AI-First CRM lets pharma reps log physician interactions by talking to an assistant instead of filling a form. The assistant is powered by a LangGraph pipeline. It works. Reps did not use it at first, because they did not trust it." },
+          { type: 'p', text: "The AI-First CRM prototype lets a pharma rep log a doctor visit by describing it in a chat instead of filling a form, and the form fills itself as the chat goes. A LangGraph pipeline does the extraction. On sample data, it works. But a logging tool can work and still not be trusted, and an untrusted one gets used as an expensive typewriter: the rep drafts with the assistant, then re-types everything into the form anyway." },
         ],
       },
       {
         label: 'Mostly right is not a promise',
         body: [
-          { type: 'p', text: "Reps in a regulated industry cannot afford to log wrong information - a mis-classified interaction can breach compliance. The model was performing well on our eval. That number is a great engineering result and a terrible product argument. 'Mostly right' is not a promise a rep can carry into an audit." },
-          { type: 'p', text: "Adoption in the first two weeks was low. Reps used the assistant to draft, then re-typed the same information into the form manually. We had shipped a very expensive typewriter." },
+          { type: 'p', text: "Reps in a regulated industry cannot afford to log wrong information - a mis-classified interaction can breach compliance. A model that is right most of the time still leaves the rep with the job of finding the times it isn't. 'Mostly right' is not a promise a rep can carry into an audit." },
         ],
       },
       {
-        label: 'What the help tickets actually said',
+        label: 'What the prototype already does',
         body: [
-          { type: 'p', text: "I sat with a few reps for an afternoon each and watched them use the tool. One rep asked the same question out loud every time the assistant responded: 'how do I know it heard me right?' He wasn't asking for better accuracy. He was asking for a receipt. I wrote that word in my notes and didn't fully understand it until I watched him re-type the assistant's output by hand." },
-          { type: 'p', text: "I also read every help ticket from the first month. Zero were about accuracy. All were about two things: auditability ('can I see what got logged?') and reversibility ('how do I fix it if it's wrong?')." },
+          { type: 'p', text: "Two things in the build are trust features, even though I didn't call them that while building. Every field the chat fills in is highlighted for a moment, so the rep can see exactly what changed. And the form stays editable, so any value the assistant suggests can be corrected before saving. A compliance confirmation has to be ticked before a visit is saved. That is a start, not a trust surface." },
         ],
       },
       {
-        label: 'Four things we added to the surface',
+        label: 'Four things I would add before a pilot',
         body: [
-          { type: 'p', text: "We did not retrain the model. We added four affordances." },
+          { type: 'p', text: "None of these needs a better model." },
           { type: 'list', items: [
             'Read-back: after each turn, the assistant echoes what it heard in structured form before saving. One extra tap. Zero ambiguity.',
-            'Source pinning: every logged field shows the exact rep utterance it came from. Trust is easier when the receipt is visible.',
-            'Uncertainty as UI: confidence below a threshold surfaces as a yellow badge with "confirm?" - not a hidden score.',
-            'Reversible commit: every save has a 30-second undo without leaving the screen. Small, but it changes the emotional cost of trying.',
-          ]},
+            'Source pinning: every logged field shows the exact words it came from. Trust is easier when the receipt is visible.',
+            'Uncertainty as UI: confidence below a threshold shows as a yellow "confirm?" badge, not a hidden score.',
+            'Reversible commit: every save gets a short undo without leaving the screen. Small, but it lowers the emotional cost of trying.',
+          ] },
         ],
       },
       {
-        label: 'When it crossed something',
+        label: 'How I would know it worked',
         body: [
-          { type: 'p', text: "Adoption moved substantially - from a small fraction of reps to most of them - in about a month. The model accuracy did not move. The rate of manual re-typing dropped to near zero." },
-          { type: 'p', text: "The support tickets shifted topic entirely: from 'how do I check what got saved?' to feature requests for new interaction types. When the complaint changes, the product has crossed something." },
+          { type: 'p', text: "The number to watch is not model accuracy. It is re-typing: how often a rep edits the draft versus entering the same information again by hand. If re-typing stays high after these four are in place, the surface has failed, however accurate the model is." },
+          { type: 'p', text: "The second signal is what people complain about. Complaints about checking what got saved mean trust is still the problem. Requests for new interaction types mean the product has moved past it." },
         ],
       },
       {
         label: 'The balance point',
         body: [
-          { type: 'p', text: "The mistake was optimising the wrong number. I had spent two weeks squeezing a few more accuracy points out of the model. Those points were invisible to the user. The read-back UI took a day and moved adoption far more." },
+          { type: 'p', text: "The tempting mistake is optimising the wrong number: weeks spent on a few accuracy points the user never notices, when a read-back screen is a day of work." },
           { type: 'p', text: "The trade-off I still watch: friction added for trust can become friction added for its own sake. The read-back is one extra tap, worth it. If I added a second confirmation on top, I'd be paying for safety I didn't need with adoption I couldn't afford. That balance point has to be checked with real users, not felt." },
           { type: 'p', text: "The same failure mode - optimising the wrong thing because the metric isn't defined - is what led me to build [SEO-GEO Optimizer](/case-studies/seo-geo-optimizer). AI IDEs were optimising for SEO signals that Google deprecated in March 2024, because nobody had defined the right success criterion for them." },
         ],
       },
     ],
-    relatedCaseStudies: ['ai-crm-hcp'],
+    relatedCaseStudies: ['ai-first-crm-hcp'],
   },
   {
     slug: 'engineering-to-product-thinking',
@@ -549,6 +548,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: '6 min read',
     publishedAt: 'Jul 31, 2026',
     publishedAtISO: '2026-07-31',
+    updatedAtISO: '2026-10-18',
     cover: coverEngToProduct,
     coverAlt: 'Editorial illustration: gears transforming into a lightbulb',
     takeaways: [
@@ -579,7 +579,7 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'Two calls I made, both uncomfortable',
         body: [
-          { type: 'p', text: "On the EV charger, I had to choose between chasing a higher efficiency rating (harder, longer, deadline at risk) or shipping 85% with clean documentation. I picked 85% and a good paper. It was the first time I traded a technical result for a delivery result, and the discomfort of that choice is what taught me what PM prioritisation actually feels like." },
+          { type: 'p', text: "On the EV charger, I had to choose between spending the last weeks measuring and pushing efficiency (harder, deadline at risk) or delivering a working prototype with clean documentation. I picked the working prototype and a good paper. We never measured efficiency properly, which is the first thing I would fix if I rebuilt it. It was the first time I traded a technical result for a delivery result, and the discomfort of that choice is what taught me what PM prioritisation actually feels like." },
           { type: 'p', text: "On the robot, I removed the second camera two weeks before the demo because power draw was ruining battery life. Losing the feature made the whole product work. That is the same conversation I have with engineers now, in different words." },
         ],
       },
@@ -662,7 +662,7 @@ export const blogPosts: BlogPost[] = [
         ],
       },
     ],
-    relatedCaseStudies: ['seo-geo-optimizer', 'ai-crm-hcp'],
+    relatedCaseStudies: ['seo-geo-optimizer', 'ai-first-crm-hcp'],
   },
   {
     slug: 'if-i-started-fitwardrobe-again',

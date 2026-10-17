@@ -33,7 +33,7 @@ export const values = [
 ];
 
 export const contactLinks = {
-  email: "aryanpanwar10005@gmail.com",
+  email: "aryanpanwar12311@gmail.com",
   linkedin: "https://www.linkedin.com/in/aryan-panwar1",
   github: "https://github.com/Aryanpanwar10005",
   website: "https://aryanpanwar.in",

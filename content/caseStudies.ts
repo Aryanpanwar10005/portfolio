@@ -20,7 +20,7 @@ export type CaseStudy = {
   solution: string;
   cover: string;
   featured?: boolean;
-  status?: "Shipped" | "In Progress" | "Concept";
+  status?: "Shipped" | "In Progress" | "Concept" | "Prototype";
   publishedAtISO?: string;
   /** Date of the last significant content edit. Feeds dateModified and the sitemap. */
   updatedAtISO?: string;
@@ -176,30 +176,30 @@ export const caseStudies: CaseStudy[] = [
     slug: "mithivoices",
     tier: "flagship",
     title: "Mithivoices",
-    tagline: "An open-source voice AI toolkit that lets small teams ship real-time voice agents without a research team.",
+    tagline: "An open-source, local voice AI platform: text-to-speech, speech-to-text and a swappable LLM, so small teams can prototype voice features without per-minute API fees.",
     role: "Product Manager & Contributor",
     platform: "Open Source · Python · Web",
-    timeline: "2025",
+    timeline: "Dec 2025 – Jan 2026",
     publishedAtISO: "2026-03-04",
     updatedAtISO: "2026-07-21",
     problem:
-      "Small teams who want to build voice AI products have two options: pay per-minute to closed APIs (Deepgram, ElevenLabs) that can change pricing any time, or dig through research code that never actually ships. There was no open, production-ready middle ground.",
+      "Small teams who want to build voice AI features have two options: pay per-minute to closed APIs (Deepgram, ElevenLabs) that can change pricing any time, or dig through research code that never actually ships.",
     solution:
-      "A modular, self-hostable stack - STT, LLM routing, TTS, telephony - packaged so a two-person team can ship a production voice agent in a weekend.",
+      "A self-hostable stack - text-to-speech with Piper voices, speech-to-text, and a pluggable LLM (Gemini or Ollama) - behind a FastAPI backend and a React web app.",
     cover: mithivoicesCover,
     featured: false,
     status: "Shipped",
-    metaDescription: "How I built and open-sourced a production-ready real-time voice AI stack - STT, LLM routing, TTS, telephony - so small teams can ship voice agents without per-minute API fees.",
-    result: "Open source · Production-ready",
+    metaDescription: "How I built and open-sourced a local voice AI platform - Piper text-to-speech, speech-to-text and a swappable LLM - so small teams can prototype voice features without per-minute API fees.",
+    result: "Open source · v0.2.0 released",
     tldr: [
-      "Small teams building voice AI had two options: pay per-minute to closed APIs like Deepgram or ElevenLabs, or dig through research code that never ships.",
-      "I built Mithivoices from scratch and open-sourced it - a modular stack with STT, LLM routing, TTS, and telephony adapters.",
-      "A 5-minute quickstart that puts a working voice agent on a phone number. Production-ready and open for contributors.",
+      "Small teams building voice features had two options: pay per-minute to closed APIs like Deepgram or ElevenLabs, or dig through research code that never ships.",
+      "I built Mithivoices and open-sourced it under MIT: text-to-speech with downloadable Piper voices, a speech-to-text endpoint, and an LLM layer that can switch between Gemini and Ollama.",
+      "v0.2.0 shipped in January 2026 with a README-first quickstart. Real-time voice agents and telephony are not built yet.",
     ],
     repoUrl: "https://github.com/mithivoices/ai-voice-platform",
     sections: {
       overview:
-        "Mithivoices is an OSS opinionated stack for real-time voice agents. It optimises for latency and swap-ability over completeness.",
+        "Mithivoices is an opinionated open-source voice platform that runs locally. It optimises for swap-ability and a simple setup over completeness.",
       problemStatement:
         "The gap between a voice demo and a production voice agent is measured in months. Latency, interruption handling, and cost per minute kill most builds.",
       marketNeed:
@@ -207,18 +207,18 @@ export const caseStudies: CaseStudy[] = [
       targetUsers:
         "Indie hackers, small SaaS teams, and researchers who want to ship, not train.",
       research:
-        "Went deep on a stack of GitHub repos that had stalled - looking for where they broke. Talked to builders who had abandoned voice projects mid-way. Interruption handling and latency were the two things that killed otherwise-working demos, across almost every conversation.",
+        "Read through open-source voice projects that had stalled, looking for where they broke. Setup pain and single-provider lock-in came up again and again, so those became the two things to design against.",
       insights: [
         "Builders don't want more models - they want opinionated defaults that let them skip the research phase entirely.",
-        "Sub-500ms end-to-end latency is the difference between 'demo' and 'usable.'",
+        "Working belief: sub-500ms end-to-end latency is the line between a demo and something usable. This version doesn't measure it yet.",
         "Swap-ability of STT/LLM/TTS is a hard requirement. Projects built on single-provider stacks break the moment pricing changes.",
       ],
       opportunity:
         "Ship the fastest, most swappable OSS voice stack - and let community modules cover the long tail.",
       scope: [
-        "Latency-first pipeline architecture",
-        "Pluggable STT / LLM / TTS providers",
-        "Interruption + barge-in handling out of the box",
+        "Text-to-speech with downloadable Piper voices",
+        "Speech-to-text endpoint",
+        "Pluggable LLM providers (Gemini, Ollama) behind one interface",
       ],
       outOfScope: [
         "Hosted SaaS layer",
@@ -233,19 +233,19 @@ export const caseStudies: CaseStudy[] = [
         "Kill condition: if the quickstart takes longer than 15 minutes for a developer who reads the README once, the defaults are not sane enough.",
       ],
       expectedBehaviour:
-        "Clone repo → run the reference agent → swap one provider → ship a branded agent in a weekend.",
+        "Clone the repo → download the voices → start the backend and web app → generate speech or transcribe audio → switch the LLM provider in config.",
       northStar: "Voice Agents Shipped by External Users",
       supportingMetrics: ["Median E2E Latency", "External Contributors", "GitHub Stars-to-Fork Ratio"],
       prioritization:
         "Every roadmap item was scored against 'does this reduce time-to-first-agent?' Anything that didn't was closed without ceremony.",
       wireframes:
-        "The README was the prototype. I wrote it before I wrote any code - describing how a developer would install and run a voice agent in a weekend. If the README made it sound easy, the API needed to make it easy. Everything I built was measured against whether the quickstart stayed honest.",
+        "The README was the prototype. I wrote it before I wrote any code - describing how a developer would install and run it in an afternoon. If the README made it sound easy, the API needed to make it easy. Everything I built was measured against whether the quickstart stayed honest.",
       prd:
-        "Module-level RFCs in the repo rather than a top-level PRD. Each module - STT adapter, interruption handler, TTS wrapper - had its own one-pager: the interface it exposed, what it didn't do, and what the open questions were.",
+        "A PRD and design notes in the repo's docs folder, written alongside the code: what each part exposes, what it doesn't do, and the open questions.",
       prototype:
-        "A live agent on a real phone number. Every architectural decision had to survive an actual call. If it felt wrong on a call, it didn't matter that it looked right in a spec.",
+        "A local web app on a FastAPI backend: pick a voice, generate audio, transcribe a clip. Everything had to run on one laptop, so a stranger could try it without cloud keys.",
       finalSolution:
-        "A clean pipeline, provider adapters, and a 5-minute quickstart that puts a working agent on a phone number.",
+        "An MIT-licensed platform with provider adapters for the LLM, Piper voices for speech, and a README-first quickstart.",
       reflection:
         "I built Mithivoices myself and then open-sourced it - which changed the design from day one. When you open-source something, every part has to work on its own. You can't have a messy monolith if strangers are going to use it. That's a product decision as much as an engineering one. The thing I didn't expect about OSS PM: contributors take the project in directions you didn't plan, and some of those directions are better than yours. I ran the module backlog through a RICE score and thought I had the reach estimates right. A contributor working on a deprioritised STT adapter pointed out I'd undercounted how many downstream modules depended on it - I'd scored from the roadmap, not the dependency graph, and he was right. I revised the score, shipped v0.2.0 on the adjusted priorities, and he stayed active on the project afterward. The framework didn't make me right. It made my reasoning visible enough for someone else to catch what I'd missed.",
       lessons: [
@@ -350,74 +350,74 @@ export const caseStudies: CaseStudy[] = [
     slug: "ai-first-crm-hcp",
     tier: "supporting",
     title: "AI-First CRM (HCP)",
-    tagline: "A LangGraph-powered CRM that treats every healthcare-provider conversation as a stateful agent workflow.",
-    result: "Shipped to reps. Measured on Rep-Confirmed Interactions per Week, not model accuracy.",
+    tagline: "A prototype CRM module where a pharma field rep logs a doctor visit by form or by chat, and the two stay in sync.",
+    result: "Working prototype on sample data. Not yet tested with real reps.",
     tldr: [
-      "An agentic CRM for pharma field reps: every healthcare-provider conversation is handled as a stateful LangGraph workflow rather than a one-shot prompt.",
-      "The north star is Rep-Confirmed Interactions per Week. An accurate model reps do not use changes nothing, so adoption was the metric rather than F1.",
-      "The sharpest call was switching off inferred cross-visit context. It was accurate and reps liked it, but it read as surveillance, and trust mattered more than capability in month one.",
+      "Built in April 2026 to a brief: a CRM module for pharma field reps that logs healthcare-professional (HCP) visits by form or by chat, with the two kept in sync.",
+      "A LangGraph pipeline with five assistant tools fills the form from the chat. Every AI-filled field is highlighted and stays editable, so the rep has the final say.",
+      "I have not put it in front of reps. The metrics and kill condition below are the plan for a pilot, not results.",
     ],
-    role: "Product & AI Engineer",
-    platform: "Web · LangGraph · Python",
-    timeline: "2025",
+    role: "Solo build (product and code)",
+    platform: "Web · FastAPI · LangGraph · React",
+    timeline: "April 2026",
     publishedAtISO: "2026-07-14",
-    updatedAtISO: "2026-10-16",
+    updatedAtISO: "2026-10-18",
     problem:
-      "Field reps talking to HCPs (healthcare providers) juggle 4+ tools per visit. Notes get lost, follow-ups slip, and the CRM becomes homework instead of a co-pilot.",
+      "Field reps log each doctor visit by hand after the fact, often hours later and from memory. Notes get lost, follow-ups slip, and the CRM becomes homework instead of help.",
     solution:
-      "A LangGraph-backed workflow where the CRM is an agent that listens, drafts notes, and proactively surfaces the next best action.",
+      "Let the rep describe the visit in plain language and have the system draft the structured record, with a normal form beside it for anyone who prefers to type.",
     cover: aiCrmCover,
-    status: "Shipped",
+    status: "Prototype",
     repoUrl: "https://github.com/Aryanpanwar10005/AI_CRM_HCP",
     sections: {
       overview:
-        "A working prototype that reframes CRM data entry as an outcome the system delivers, not a chore the user performs.",
+        "A working prototype that reframes CRM data entry as something the system drafts and the rep confirms, not a chore the rep does alone.",
       problemStatement:
-        "Traditional CRMs demand structured input from users under time pressure. Adoption is bad because the value is delayed and the friction is immediate.",
+        "Traditional CRMs demand structured input from users under time pressure. The value arrives later, in reports and follow-ups; the friction arrives now.",
       marketNeed:
-        "Pharma sales ops teams are actively piloting AI-first CRMs. The teams that win will make reps faster in the field, not just give managers prettier dashboards.",
+        "The brief asked for an AI-first way to log HCP interactions. The design question I cared about was not whether a model can extract fields, but whether a rep would trust what it extracted.",
       targetUsers:
-        "Field reps in life-sciences sales who are on the road between visits, plus their managers who live in the reports downstream.",
+        "Field reps in life-sciences sales who log visits between appointments, and the managers who read the reports downstream.",
       research:
-        "Shadowed reps between visits. The pattern that appeared across every conversation: the CRM was filled at night, from memory, hours after the visits. One rep said this at 11am, while actively typing notes into his phone to transcribe later. He didn't see the irony until I pointed it out.",
+        "No access to reps for this build. The design rests on the brief and on how field-sales CRMs are usually filled in. The assumptions below are what I would test first with real reps.",
       insights: [
-        "The best CRM is one the user never types into - but trust has to be earned before they'll stop typing.",
-        "Trust in AI notes is earned in the first few interactions, or not at all. Early accuracy matters more than average accuracy.",
+        "Hypothesis: the best CRM is one the rep barely types into, but trust has to be earned before they stop typing.",
+        "Hypothesis: trust in AI-drafted notes is set in the first few uses, so early accuracy matters more than average accuracy.",
       ],
       opportunity:
-        "Move CRM from a system of record to a system of action - the rep talks, the system captures and drafts the next step.",
+        "Move the CRM from a system of record to a system that drafts the record: the rep talks, the system captures, the rep confirms.",
       scope: [
-        "LangGraph agent for note capture + summarisation",
-        "Next-best-action recommendation surface",
-        "Human-in-the-loop review UI",
+        "Form and chat logging, kept in sync (AI-filled fields highlight for 1.5 seconds)",
+        "Five LangGraph assistant tools, including logging an interaction and an HCP profile lookup",
+        "A compliance check: a monthly cap on in-person meetings per HCP, plus a confirmation the rep ticks before saving",
       ],
-      outOfScope: ["Full CRM replacement", "Native mobile app", "Multi-tenant admin"],
+      outOfScope: ["Full CRM replacement", "Native mobile app", "Voice logging", "Multi-tenant admin"],
       assumptions:
-        "The most uncertain bet: that reps would trust a draft they could edit more than a form they controlled. That trust is earned quickly or not at all - the research said the first three interactions determined whether a rep adopted the tool or worked around it.",
+        "The most uncertain bet: that reps would trust a draft they can edit more than a form they control. If that is wrong, the chat becomes a typewriter and reps re-type everything into the form.",
       successCriteria: [
-        "Target: note capture time per visit drops meaningfully - enough that reps notice without being told to notice.",
-        "Target: draft acceptance rate above 80% - meaning fewer than 3 significant edits per note. Below that, the model is creating cleanup work.",
-        "Kill condition: if reps are re-typing the AI draft instead of editing it, the review surface has failed regardless of accuracy.",
+        "Pilot target: note capture time per visit drops enough that reps notice without being told.",
+        "Pilot target: draft acceptance above 80%, meaning fewer than 3 significant edits per note. Below that, the model creates cleanup work.",
+        "Kill condition: if reps re-type the AI draft instead of editing it, the review surface has failed regardless of accuracy.",
       ],
       expectedBehaviour:
-        "Rep finishes visit → opens app → reviews and confirms a pre-drafted summary → next-best-action is queued.",
-      northStar: "Rep-Confirmed Interactions per Week - not model accuracy, because a highly accurate model that reps don't use changes nothing.",
-      supportingMetrics: ["Draft Acceptance Rate", "Note Capture Time", "Next-Action Follow-Through"],
+        "Rep finishes a visit → describes it in the chat → reviews the highlighted fields → corrects anything wrong → confirms compliance → saves.",
+      northStar: "Rep-confirmed interactions per week (proposed) - not model accuracy, because an accurate model that reps don't use changes nothing.",
+      supportingMetrics: ["Draft acceptance rate", "Note capture time", "Re-typing rate"],
       prioritization:
-        "Everything was measured against rep time saved per visit. Manager dashboards were explicitly deprioritised for v1.",
+        "Everything was judged by expected rep time saved per visit. Manager dashboards, voice logging and offline sync were cut from the first version.",
       wireframes:
-        "Two rounds of flows with reps. The confirm-vs-edit ratio drove every layout choice - we measured how often a rep accepted a draft versus edited it, and used that to decide how much to surface versus hide.",
+        "Form and chat side by side, so the rep always sees what the assistant changed. Highlighting AI-filled fields was the simplest way to make the draft inspectable.",
       prd:
-        "One-page PRDs per agent node, plus a shared eval spec for the whole graph. Keeping the eval spec separate meant we could update it without touching the product spec.",
+        "Worked from the brief. The README documents each assistant tool: what it takes in, what it returns, and whether it calls an LLM.",
       prototype:
-        "Live agent tested against recorded visit transcripts before any rep saw it. Iterated on prompt and graph until the acceptance pattern looked right. Then showed it to reps.",
+        "FastAPI and LangGraph backend with a Groq-hosted Llama model, React and Redux frontend, SQLite by default, tested on seeded sample HCP data.",
       finalSolution:
-        "A stateful LangGraph agent, a light review UI, and a next-best-action queue synced to the existing CRM of record.",
+        "A LangGraph assistant that drafts the visit record, an editable form that stays in sync with it, and a compliance check before saving.",
       reflection:
-        "The hardest call was turning off a feature reps actually liked - the assistant would sometimes add context it had inferred from previous visits. Accurate. Creepy. We turned it off because trust was more important than capability in month one.",
+        "What I would do next is the part this build skipped: sit with a few reps, watch them log real visits, and measure how often they edit the draft versus re-type it. Until then, this is a well-reasoned prototype, not a validated product.",
       lessons: [
-        "The review surface is the product. The same model weights, with a bad confirmation UI, would have had a fraction of the adoption.",
-        "I spent two weeks improving accuracy by a few points. Those points were invisible to users. The read-back UI - one day of work - moved adoption more than those two weeks did.",
+        "The review surface is the product. The same model behind a worse confirmation UI would earn less trust.",
+        "Writing the kill condition before building kept the scope honest: anything that didn't help a rep confirm a draft faster was cut.",
       ],
     },
   },
@@ -508,9 +508,9 @@ export const archivedProjects: ArchiveProject[] = [
     title: "Digital Heroes Golf",
     tag: "Live product",
     problem:
-      "Subscription-based golf performance tracker with Game-of-Skill compliance and rolling-index math computed at the database layer. Razorpay payments live.",
-    stack: ["Next.js 15", "Tailwind v4", "Supabase", "Razorpay"],
-    metric: "Subscriptions live",
+      "Prototype subscription golf platform: a rolling five-score index computed in the database, weighted prize draws, and Razorpay in test mode.",
+    stack: ["Next.js 16", "Tailwind v4", "Supabase", "Razorpay (test mode)"],
+    metric: "Test-mode prototype",
     year: "2025",
     links: [{ label: "Live", url: "https://golfheros.vercel.app/" }],
   },
@@ -546,9 +546,9 @@ export const archivedProjects: ArchiveProject[] = [
     title: "4-DOF Robotic Arm",
     tag: "Robotics",
     problem:
-      "High-precision robotic arm using inverse-kinematics algorithms - 2 mm positioning accuracy for automated pick-and-place tasks with Arduino and servo motors.",
-    stack: ["C++", "Arduino", "Servo Motors", "IK"],
-    metric: "2 mm accuracy",
+      "Beginner 4-DOF servo arm on Arduino, driven by serial commands or push buttons.",
+    stack: ["C++", "Arduino", "Servo Motors"],
+    metric: "4 DOF",
     year: "2024",
     links: [
       {
@@ -562,9 +562,9 @@ export const archivedProjects: ArchiveProject[] = [
     title: "Smart Staircase Lighting",
     tag: "Hardware",
     problem:
-      "Automated IR motion-triggered lighting with Arduino control - 45% energy reduction versus always-on traditional systems.",
+      "IR sensors at both ends switch the lights on, and a timer switches them off, so the stairs are never left lit.",
     stack: ["C++", "Arduino", "IR Sensors"],
-    metric: "45% energy saved",
+    metric: "Auto-off timer",
     year: "2023",
     cover: staircaseCover,
     links: [
