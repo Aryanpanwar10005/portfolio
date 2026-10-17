@@ -262,7 +262,7 @@ export const caseStudies: CaseStudy[] = [
     quickStart: { command: "npx seo-geo-optimizer", note: "Run it in your project folder. Add --help for IDE-specific options." },
     tier: "flagship",
     title: "SEO-GEO Optimizer",
-    tagline: "Stop AI IDEs giving stale SEO advice - a 10-phase agentic skill for Cursor, Windsurf, and Copilot.",
+    tagline: "Stop AI IDEs giving stale SEO advice - a 14-phase agentic skill for Cursor, Windsurf, and Copilot.",
     role: "Creator & PM",
     platform: "npm · Node · Cursor · Windsurf · Copilot",
     timeline: "2026",
@@ -271,13 +271,13 @@ export const caseStudies: CaseStudy[] = [
     problem:
       "AI IDEs give outdated SEO advice. When Windsurf told me to optimize for FID - a Core Web Vital Google deprecated in March 2024 - I realized LLMs have no reliable way to stay current with search standards. Meanwhile, the $1B+ Generative Engine Optimization (GEO) market is growing rapidly, but developer tooling is lagging behind.",
     solution:
-      "I built `seo-geo-optimizer`, an agent-native npm package. Instead of a passive library, it's a 10-phase agentic workflow. Running `npx seo-geo-optimizer` auto-detects the IDE (Cursor, Windsurf, Copilot) and installs strict instruction files that guide the AI through technical SEO, schema generation, and AI legibility audits.",
+      "I built `seo-geo-optimizer`, an agent-native npm package. Instead of a passive library, it's a 14-phase agentic workflow. Running `npx seo-geo-optimizer` auto-detects the IDE (Cursor, Windsurf, Copilot) and installs strict instruction files that guide the AI through technical SEO, schema generation, and AI legibility audits.",
     cover: seoGeoCover,
     status: "Shipped",
-    metaDescription: "I built a 10-phase agentic npm skill to stop AI IDEs giving stale SEO advice. Covers technical SEO, schema, and Generative Engine Optimization (GEO). 500+ npm downloads.",
+    metaDescription: "I built a 14-phase agentic npm skill to stop AI IDEs giving stale SEO advice. Covers technical SEO, schema, and Generative Engine Optimization (GEO). 500+ npm downloads.",
     result: "500+ npm downloads with no paid promotion. The package is now listed on PrimeSkills AI Store and mcpskills.io, providing developers a 'one prompt, full audit' solution for AI search visibility.",
     tldr: [
-      "Built a 10-phase agentic npm skill that auto-installs SEO/GEO rules into Cursor, Windsurf, and Copilot.",
+      "Built a 14-phase agentic npm skill that auto-installs SEO/GEO rules into Cursor, Windsurf, and Copilot.",
       "Solved AI hallucination: prevents IDEs from giving outdated SEO advice (like optimizing for deprecated FID).",
       "500+ npm downloads with no paid promotion; listed on PrimeSkills AI Store."
     ],
@@ -290,7 +290,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     sections: {
       overview:
-        "SEO-GEO Optimizer is a developer-first library for the AI-search era, built as a 10-phase agentic workflow with human-in-the-loop validation gates rather than a single-pass script. It treats LLMs as first-class crawlers, not accidents.",
+        "SEO-GEO Optimizer is a developer-first library for the AI-search era, built as a 14-phase agentic workflow with human-in-the-loop validation gates rather than a single-pass script. It treats LLMs as first-class crawlers, not accidents.",
       problemStatement:
         "SEO best-practice is optimised for click-through; GEO (Generative Engine Optimization) is optimised for citation. Most sites are optimised for neither.",
       marketNeed:
@@ -310,7 +310,7 @@ export const caseStudies: CaseStudy[] = [
         "Auto JSON-LD for Article / FAQ / HowTo / Product",
         "llms.txt generator",
         "Answer-block components for React frameworks",
-        "10-phase agentic execution pipeline - a 40-question discovery intake through technical SEO, schema, content strategy, and GEO optimisation, with a human-in-the-loop validation gate between phases so nothing commits without review",
+        "14-phase agentic execution pipeline - a 32-question discovery intake through technical SEO, schema, content strategy, and GEO optimisation, with a human-in-the-loop validation gate between phases so nothing commits without review",
       ],
       outOfScope: [
         "Full analytics dashboard",
@@ -337,7 +337,7 @@ export const caseStudies: CaseStudy[] = [
       prototype:
         "Dogfooded on this portfolio and my own blog before any public release. Iterated the API until it fit a real site in under 30 minutes. If I couldn't use it myself in half an hour, the defaults weren't sane enough.",
       finalSolution:
-        "A single package, three exports, and a 10-phase agentic pipeline underneath - each phase gated by a human-in-the-loop validation step - covering Article, FAQ, and HowTo pages out of the box.",
+        "A single package, three exports, and a 14-phase agentic pipeline underneath - each phase gated by a human-in-the-loop validation step - covering Article, FAQ, and HowTo pages out of the box.",
       reflection:
         "The best PM work here was aggressive scope-cutting. I said no to a hosted SaaS tier three times. Each time it would have delayed the first real user shipping by months.",
       lessons: [
