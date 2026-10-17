@@ -28,7 +28,8 @@ export function trackEvent(event: string, props: EventProps = {}) {
     if (clarity) {
       clarity('event', event)
       // Each prop becomes a Clarity custom tag named <event>_<prop>, so
-      // recordings can be filtered by it (e.g. resume_download_role = ai-pm).
+      // recordings can be filtered by it (e.g. resume_download_role =
+      // product-management).
       for (const [key, value] of Object.entries(props)) {
         if (value === undefined || CLARITY_SKIP_PROPS.has(key)) continue
         clarity('set', `${event}_${key}`, String(value))
