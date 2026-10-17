@@ -1,22 +1,21 @@
-# Aryan Panwar – AI Product Manager
+# aryanpanwar.in
 
-[https://aryanpanwar.in](https://aryanpanwar.in)
+Source for [aryanpanwar.in](https://aryanpanwar.in): the case studies, product writing and resume library of Aryan Panwar, Business Analyst on Salesforce projects.
 
-Welcome to the source code for my personal portfolio, case studies, and blog. I'm an ECE graduate from MIET Meerut (2026) and an AI Product Manager who builds and ships agentic AI systems.
+## What's here
 
-## Overview
+- **Case studies:** the problem, the decisions and the results behind products I've built.
+- **Writing:** essays on product decisions, AI trade-offs and PM frameworks, also available as an [RSS feed](https://aryanpanwar.in/feed.xml).
+- **Resume library:** role-specific resumes as PDFs.
+- **For search and AI tools:** `sitemap.xml` with real last-changed dates, `llms.txt`, structured data on every page.
 
-This repository contains the Next.js application powering my personal website. It is designed with a focus on clean aesthetics, minimal design, and fast performance.
+## Stack
 
-### Features
-- **Portfolio & Case Studies:** Detailed write-ups of projects I've built and shipped.
-- **Writing:** Blog posts and essays on AI, product management, and engineering.
-- **Responsive & Dark Mode:** Accessible and modern UI using Tailwind CSS and Radix UI.
-- **Tech Stack:** Next.js (App Router), React, TypeScript, Tailwind CSS, Framer Motion.
+Next.js (App Router), React, TypeScript and Tailwind CSS, deployed on Vercel. Analytics: GA4, Microsoft Clarity and Vercel Analytics, all limited to the live domain.
 
-## Local Development
+## Local development
 
-1. Clone the repository
+1. Clone the repository.
 2. Install dependencies: `npm install`
-3. Run the development server: `npm run dev`
-4. Open [http://localhost:3000](http://localhost:3000) with your browser.
+3. Start the dev server: `npm run dev`
+4. Open [http://localhost:3000](http://localhost:3000).
