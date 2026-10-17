@@ -34,14 +34,14 @@ export const playbook: PlaybookEntry[] = [
     title: "RICE prioritization, applied to Mithivoices",
     project: "Mithivoices",
     summary:
-      "Scoring an OSS backlog of 40+ modules against one axis: does this reduce time-to-first-agent for a stranger?",
+      "How to score an open-source backlog against one axis: does this reduce time-to-first-agent for a stranger?",
     whenToUse:
       "When the backlog has more than 15 items, contributors are pulling in different directions, and the loudest voice keeps winning.",
     steps: [
-      "Framed Reach as ‘% of new contributors who hit this within a week’.",
-      "Framed Impact on a 0.25 → 3 scale tied to the reference agent’s latency.",
-      "Divided by realistic dev weeks - mine and contributors’.",
-      "Published the sheet in the repo so contributors could argue with it, not around it.",
+      "Frame Reach as the share of new contributors who would hit this item within a week.",
+      "Frame Impact on a 0.25 → 3 scale tied to time-to-first-agent.",
+      "Divide by realistic dev weeks, counting your own time honestly.",
+      "Publish the sheet in the repo, so contributors can argue with it instead of around it.",
     ],
   },
   {
@@ -79,17 +79,17 @@ export const playbook: PlaybookEntry[] = [
   {
     slug: "discovery-hcp-crm",
     number: "05",
-    title: "Discovery interviews, applied to AI-First CRM",
+    title: "Discovery interviews: the plan for AI-First CRM",
     project: "AI-First CRM (HCP)",
     summary:
-      "How I ran problem-space interviews with field reps without leading the witness - and what I threw away because of them.",
+      "The interview plan I would run before piloting the AI-First CRM prototype: test assumptions, not opinions. The prototype was built without access to reps, so this plan has not been run yet.",
     whenToUse:
       "Before writing a PRD, before scoping, whenever the team is arguing about what the user wants.",
     steps: [
-      "Wrote 5 assumptions I was testing. Refused to move on until each one had a falsification test.",
-      "Recruited 8 reps who actually used a CRM daily. Skipped managers on purpose.",
-      "Asked about the last visit, not the ideal one. Behavioural, not hypothetical.",
-      "Synthesized into 3 insights, each backed by 2+ quotes. Everything else got parked, not shipped.",
+      "Write down the 5 assumptions being tested, each with a result that would prove it wrong.",
+      "Recruit about 8 reps who use a CRM every day. Leave managers out of the first round on purpose.",
+      "Ask about the last visit, not the ideal one: behaviour, not hypotheticals.",
+      "Synthesize into a few insights, each backed by at least 2 quotes. Park everything else.",
     ],
   },
   {
