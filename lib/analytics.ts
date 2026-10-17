@@ -15,11 +15,26 @@ declare global {
   }
 }
 
+// Props holding text a visitor typed. GA4 still gets them, but they are not
+// sent to Clarity as tags: Clarity masks typed input in its recordings, and a
+// tag would show that text anyway.
+const CLARITY_SKIP_PROPS = new Set(['query'])
+
 export function trackEvent(event: string, props: EventProps = {}) {
   if (typeof window === 'undefined') return
   try {
     window.gtag?.('event', event, props)
-    window.clarity?.('event', event)
+    const clarity = window.clarity
+    if (clarity) {
+      clarity('event', event)
+      // Each prop becomes a Clarity custom tag named <event>_<prop>, so
+      // recordings can be filtered by it (e.g. resume_download_role =
+      // product-management).
+      for (const [key, value] of Object.entries(props)) {
+        if (value === undefined || CLARITY_SKIP_PROPS.has(key)) continue
+        clarity('set', `${event}_${key}`, String(value))
+      }
+    }
     window.dispatchEvent(new CustomEvent('app:analytics', { detail: { event, props } }))
     if (process.env.NODE_ENV === 'development') {
       console.debug('[analytics]', event, props)
