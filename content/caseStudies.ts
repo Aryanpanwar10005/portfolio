@@ -389,7 +389,7 @@ export const caseStudies: CaseStudy[] = [
       scope: [
         "Form and chat logging, kept in sync (AI-filled fields highlight for 1.5 seconds)",
         "Five LangGraph assistant tools, including logging an interaction and an HCP profile lookup",
-        "A compliance check: a monthly cap on in-person meetings per HCP, plus a confirmation the rep ticks before saving",
+        "A compliance check the rep can ask for in chat (a monthly cap on in-person visits per HCP), plus a confirmation box that must be ticked before the form saves",
       ],
       outOfScope: ["Full CRM replacement", "Native mobile app", "Voice logging", "Multi-tenant admin"],
       assumptions:
@@ -400,7 +400,7 @@ export const caseStudies: CaseStudy[] = [
         "Kill condition: if reps re-type the AI draft instead of editing it, the review surface has failed regardless of accuracy.",
       ],
       expectedBehaviour:
-        "Rep finishes a visit → describes it in the chat → reviews the highlighted fields → corrects anything wrong → confirms compliance → saves.",
+        "Rep finishes a visit → describes it in the chat → the assistant logs it and fills the form, highlighting what changed → rep corrects anything wrong in the form or by asking in chat. In the prototype the chat saves as soon as it understands the visit; the pilot version would hold it as a draft until the rep confirms.",
       northStar: "Rep-confirmed interactions per week (proposed) - not model accuracy, because an accurate model that reps don't use changes nothing.",
       supportingMetrics: ["Draft acceptance rate", "Note capture time", "Re-typing rate"],
       prioritization:
@@ -412,9 +412,9 @@ export const caseStudies: CaseStudy[] = [
       prototype:
         "FastAPI and LangGraph backend with a Groq-hosted Llama model, React and Redux frontend, SQLite by default, tested on seeded sample HCP data.",
       finalSolution:
-        "A LangGraph assistant that drafts the visit record, an editable form that stays in sync with it, and a compliance check before saving.",
+        "A LangGraph assistant that logs the visit from a plain-language description, an editable form that stays in sync with it, and a compliance check the rep can ask for.",
       reflection:
-        "What I would do next is the part this build skipped: sit with a few reps, watch them log real visits, and measure how often they edit the draft versus re-type it. Until then, this is a well-reasoned prototype, not a validated product.",
+        "What I would do next is the part this build skipped: sit with a few reps, watch them log real visits, and measure how often they edit the draft versus re-type it. The first code change would be a real draft step: today the chat saves a visit immediately, and pressing Save on the form afterwards creates a second record. Until then, this is a well-reasoned prototype, not a validated product.",
       lessons: [
         "The review surface is the product. The same model behind a worse confirmation UI would earn less trust.",
         "Writing the kill condition before building kept the scope honest: anything that didn't help a rep confirm a draft faster was cut.",
@@ -506,7 +506,7 @@ export const archivedProjects: ArchiveProject[] = [
   {
     slug: "digital-heroes-golf",
     title: "Digital Heroes Golf",
-    tag: "Live product",
+    tag: "Prototype",
     problem:
       "Prototype subscription golf platform: a rolling five-score index computed in the database, weighted prize draws, and Razorpay in test mode.",
     stack: ["Next.js 16", "Tailwind v4", "Supabase", "Razorpay (test mode)"],

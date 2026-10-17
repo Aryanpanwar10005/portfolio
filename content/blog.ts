@@ -134,6 +134,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: '6 min read',
     publishedAt: 'Aug 7, 2026',
     publishedAtISO: '2026-08-07',
+    updatedAtISO: '2026-10-18',
     cover: coverEngineerToPm,
     coverAlt: 'Editorial illustration: brain split between circuits and organic curves',
     takeaways: [
@@ -151,7 +152,7 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'Mithivoices, or: what I built first',
         body: [
-          { type: 'p', text: "On Mithivoices I built a real-time WebSocket pipeline before I had a single answer to 'who needs sub-450ms voice translation, and what breaks in their life today because they don\'t have it?' The pipeline worked. Nobody I could name was waiting for it." },
+          { type: 'p', text: "On Mithivoices I built the whole voice loop first - speech-to-text, a language model, text-to-speech, a voice library, even sign-in and billing screens - before I had a single answer to 'who needs a voice assistant that runs on their own machine, and what breaks in their week because they don\'t have one?' The pipeline worked. Nobody I could name was waiting for it." },
           { type: 'p', text: "The engineering mindset - 'I can build this, therefore I should' - is a superpower when the problem is well-defined and a liability when it isn\'t. Most product problems aren't." },
         ],
       },
@@ -211,7 +212,7 @@ export const blogPosts: BlogPost[] = [
         label: 'Twenty-odd features',
         body: [
           { type: 'p', text: "On the AI-First CRM prototype for pharma reps, I could list around twenty features before writing any code - voice logging, offline sync, physician deduping, compliance flags, an assistant, an audit trail, and more. Every one was defensible in isolation. I had a short, fixed build window and could not build all of them." },
-          { type: 'p', text: "Compliance was the interesting one. In a regulated field it sounds mandatory, so it went on the list without a question. When I asked what it actually had to do in a first version, the answer was small: one hard rule (a cap on in-person meetings per doctor per month) and a confirmation the rep ticks before saving. That is what I built. Everything bigger waited." },
+          { type: 'p', text: "Compliance was the interesting one. In a regulated field it sounds mandatory, so it went on the list without a question. When I asked what it actually had to do in a first version, the answer was small: one hard rule (a cap on in-person meetings per doctor per month) that the rep can check in chat, and a confirmation the rep ticks before the form saves. That is what I built. Everything bigger waited." },
         ],
       },
       {
@@ -238,7 +239,7 @@ export const blogPosts: BlogPost[] = [
             'Appetite: time the feature is worth, decided before we estimate. If the estimate exceeds appetite, we shrink scope, not schedule.',
             'Kill signal: the metric or observation that would make me drop it after launch.',
           ]},
-          { type: 'p', text: "The kill signal column was one I added two weeks into using this, after I realised five items had no exit condition. I didn't start with it. I added it after keeping a feature I later regretted." },
+          { type: 'p', text: "The kill signal column came later. I didn't start with it. I added it when I noticed that several items on my list had no condition under which I would ever drop them." },
           { type: 'p', text: "On the CRM, that page cut the list to a handful before I wrote the plan: logging by form or by chat with the two kept in sync, an editable form so every AI suggestion can be corrected, the compliance check, and a few helper tools such as an HCP profile lookup. Voice logging and offline sync were the painful cuts." },
         ],
       },
@@ -503,7 +504,7 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'What the prototype already does',
         body: [
-          { type: 'p', text: "Two things in the build are trust features, even though I didn't call them that while building. Every field the chat fills in is highlighted for a moment, so the rep can see exactly what changed. And the form stays editable, so any value the assistant suggests can be corrected before saving. A compliance confirmation has to be ticked before a visit is saved. That is a start, not a trust surface." },
+          { type: 'p', text: "Two things in the build are trust features, even though I didn't call them that while building. Every field the chat fills in is highlighted for a moment, so the rep can see exactly what changed. And the form stays editable, so any value the assistant fills in can be corrected. The gap: the chat saves a visit as soon as it understands it, so the review comes after the save, not before. A compliance confirmation has to be ticked before the form saves. That is a start, not a trust surface." },
         ],
       },
       {
@@ -612,6 +613,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: '8 min read',
     publishedAt: 'Aug 11, 2026',
     publishedAtISO: '2026-08-11',
+    updatedAtISO: '2026-10-18',
     cover: coverToolkit,
     coverAlt: 'Editorial illustration: flat-lay of notebook, compass, pen, ruler',
     takeaways: [
@@ -644,7 +646,7 @@ export const blogPosts: BlogPost[] = [
           { type: 'p', text: "JTBD on FitWardrobe. The job wasn't 'identify a garment' - it was 'leave the house feeling okay about how I look.' Naming the job renamed the product. The insight was in the verb, not the noun. I skip the forces-of-progress diagram entirely; the one-line job statement earns its keep on its own." },
           { type: 'p', text: "RICE on the CRM. I use Reach, Impact, and Effort. I dropped Confidence and replaced it with an 'evidence class' label: interview quote, analytic, competitor benchmark, or hunch. Hunches are allowed, but they get labelled. The column forces honesty without pretending hunches have a numeric value." },
           { type: 'p', text: "PRDs on Credex. Three sections: problem, decision (what we're building and what we're not), and success (metric and guardrail). No goals section, no background, no glossary. If it doesn't change what gets built, it's not in the doc." },
-          { type: 'p', text: "User stories on Mithivoices. Written as jobs, not features: 'as a bilingual speaker joining a call late, I want the last 30 seconds transcribed so I can join without asking anyone to repeat themselves.' Feature-shaped stories get outdated; job-shaped ones survive scope changes." },
+          { type: 'p', text: "User stories on Mithivoices. Written as jobs, not features: 'as a content creator, I want natural-sounding voices so that my content feels professional.' That story survives whichever voice engine we pick; 'add a Piper voice selector' would not. Feature-shaped stories get outdated; job-shaped ones survive scope changes." },
           { type: 'p', text: "Opportunity Solution Trees on [SEO-GEO](/case-studies/seo-geo-optimizer). Used once, when I had five feature ideas and no principled way to choose between them. The tree made the parent opportunity obvious and eliminated two of the five ideas immediately. I don't use OSTs regularly - I tried to on a later project and got eleven branches deep before I lost the thread entirely. I use them only when I'm genuinely stuck." },
         ],
       },
@@ -735,62 +737,74 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'llm-orchestration-tools',
-    title: 'LLM Orchestration in 2026: What I Learned Building a Pipeline That Actually Works',
-    seoTitle: 'LLM Orchestration Tools: What I Learned Building a Pipeline',
+    title: 'LLM Orchestration: What I Learned Building a Chain and an Agent',
+    seoTitle: 'LLM Orchestration Tools: Lessons From Two Small Pipelines',
     question: 'How do you sequence LLM calls without it breaking?',
-    takeaway: 'He builds orchestration that scales.',
+    takeaway: 'He picks the simplest orchestration that works.',
     summary:
-      'What I found after building a LangGraph pipeline for Mithivoices - the orchestration patterns that held up under real usage, and the ones that broke before anyone saw them.',
+      'Two small builds, two shapes: Mithivoices is a plain three-step chain, the AI-First CRM prototype is a LangGraph agent with five tools. What each shape was good for, and where the agent needed guard rails.',
     category: 'AI Product',
-    tags: ['AI Product', 'LLM', 'Architecture', 'Mithivoices', 'Agentic AI'],
-    readingTime: '7 min read',
+    tags: ['AI Product', 'LLM', 'Architecture', 'LangGraph', 'Agentic AI'],
+    readingTime: '6 min read',
     publishedAt: 'Aug 21, 2026',
     publishedAtISO: '2026-08-21',
+    updatedAtISO: '2026-10-18',
     cover: coverAiTrust,
     coverAlt: 'Editorial illustration: nodes connecting in a complex graph structure',
     takeaways: [
-      'Routing before dispatching saves latency. Intent classification is cheaper than running the full model chain.',
-      'Memory should be a sliding window, not full context. Context windows fail silently when they grow too large.',
-      'LangGraph gives you the control of raw API calls with the structure of a framework.',
+      'A fixed sequence does not need a framework. Mithivoices runs speech-to-text, a language model and text-to-speech as three calls in one request.',
+      'An agent earns its keep when the model has to choose between tools. Then the hard part is everything around the model, not the graph.',
+      'Answer the questions a rule can answer before the model sees them, and clean what the model says before the user sees it.',
     ],
     sections: [
       {
         label: 'The question I keep getting',
         body: [
-          { type: 'p', text: 'What exactly is LLM orchestration, and why should a product manager care about it? Simply put, orchestration is how you string together multiple language model calls, external tools, and memory to complete a complex task without the system breaking down mid-thought. It is the difference between a chat wrapper and a product.' },
+          { type: 'p', text: 'What exactly is LLM orchestration, and why should a product manager care about it? Simply put, orchestration is how you string together language model calls, tools and state so a task finishes without the system losing the thread. It is the difference between a chat wrapper and a product.' },
+          { type: 'p', text: 'I have built two small pipelines with very different shapes. Neither has real users yet, so this is about design choices, not scale.' },
         ],
       },
       {
-        label: 'What I built for Mithivoices',
+        label: 'Mithivoices: a chain is enough',
         body: [
-          { type: 'p', text: 'On Mithivoices, we needed real-time bilingual transcription. The pipeline started simple: voice input went to Whisper, then to an LLM for translation. But as soon as we needed the system to understand context across turns, a single chain broke. We needed state. I chose LangGraph because it treats the LLM as a node in a state machine, rather than a black box.' },
+          { type: 'p', text: 'Mithivoices takes a voice recording and answers out loud. One request runs three steps in order: Whisper turns speech into text, a language model writes the reply, and Piper turns the reply back into speech. The model can be Gemini in the cloud or Ollama on your own machine, behind one interface, so swapping providers is a setting rather than a rewrite.' },
+          { type: 'p', text: 'There is no framework and no graph, because nothing needs to branch. The one judgement call sits in plain code: a language check decides whether to translate before speaking, and it does not translate when it is unsure which language the text is in. Wrong-language speech is worse than none.' },
+          { type: 'p', text: 'The backend keeps no conversation history. That is the next real decision: the moment the assistant has to remember what you said three turns ago, the chain needs state, and that is when I would reach for something like LangGraph.' },
         ],
       },
       {
-        label: 'Three patterns that held',
+        label: 'The CRM: when a graph earns its keep',
+        body: [
+          { type: 'p', text: 'The [AI-First CRM prototype](/case-studies/ai-first-crm-hcp) is different. A field rep types something like "met Dr Rao today, discussed the new inhaler, she was positive", and the assistant has to decide what that is: a new visit to log, a correction to an earlier one, a question about the doctor, a compliance question or a request for a next step. Those are five tools, and choosing between them is the model\'s job. That is where LangGraph helped: one node calls the model, one runs the chosen tool, and the state carries the result back to the form.' },
+          { type: 'p', text: 'The state is not the chat transcript. Each message starts a fresh run, and the memory is the current form: its values and the ID of the visit being edited go in with every turn. The form is the source of truth, so the model never has to remember it.' },
+        ],
+      },
+      {
+        label: 'Three patterns from the CRM',
         body: [
           { type: 'list', items: [
-            'Routing first: Use a fast, cheap model to classify user intent before dispatching to heavy models.',
-            'Bounded memory: We implemented a sliding window for context. Passing the whole transcript always ended in hallucination or cost overruns.',
-            'Typed tools: Forcing the LLM to output strictly typed JSON schemas for tool-calling was the only way to get reliable integration.',
+            'Rules before the model: a compliance question ("can I visit Dr Rao again this month?") is caught by a simple pattern and answered straight from the database. It is faster, and the answer cannot be talked into being wrong.',
+            'Typed tool results: each tool returns structured fields for the form, not prose. The interface applies the fields and highlights them for a moment, so the rep sees exactly what changed.',
+            'Clean the reply: the model sometimes leaks JSON or tool names into its answer. Those lines are stripped before the rep sees them, and if nothing readable is left, a plain fallback message is shown instead.',
           ]},
         ],
       },
       {
         label: 'Where it broke',
         body: [
-          { type: 'p', text: 'The system failed in ways you don\'t see in local testing. We hit latency spikes during the routing step because of network overhead. We saw silent context failures where the LLM just "forgot" the speaker\'s language preference after ten turns. And we encountered subtle race conditions when streaming WebSocket states back to the client.' },
+          { type: 'p', text: 'After a tool ran, the hosted model would sometimes try to call another tool, including one that does not exist. The fix was blunt: once a tool result is in, the next model call is not allowed to call tools at all, only to summarise.' },
+          { type: 'p', text: 'The bigger flaw is about state, not the model. The chat saves a visit as soon as it understands it, and the form has its own Save button that creates a new record. Use both and you get a duplicate. Two paths that write the same thing need one owner, and in a pilot that owner would be the rep, confirming a draft.' },
         ],
       },
       {
         label: 'What I\'d pick today',
         body: [
-          { type: 'p', text: 'For simple extractions, raw API calls are fine. For anything requiring state or loops, LangGraph is the current standard. LangChain abstractions hide too much of the prompt for production systems. The control you need is always one layer beneath the abstraction they sell you.' },
-          { type: 'p', text: 'The same agentic architecture - chained phases, human-in-the-loop gates, typed tool schemas - is what I used when building the [SEO-GEO Optimizer](/case-studies/seo-geo-optimizer). The product context changed; the orchestration principles didn\'t.' },
+          { type: 'p', text: 'For a fixed sequence, plain function calls. For anything where the model chooses between tools or loops, a graph framework, because the control flow stays visible. Either way, the work that decides whether it holds up is around the model: the rules that skip it, the schema that constrains it, and the cleanup after it.' },
+          { type: 'p', text: 'The [SEO-GEO Optimizer](/case-studies/seo-geo-optimizer) uses a related idea at a larger scale: chained phases with a human approval gate between them, so nothing moves on without a review.' },
         ],
       },
     ],
-    relatedCaseStudies: ['mithivoices', 'seo-geo-optimizer'],
+    relatedCaseStudies: ['ai-first-crm-hcp', 'mithivoices', 'seo-geo-optimizer'],
   },
   {
     slug: 'agentic-ai-vs-ml',

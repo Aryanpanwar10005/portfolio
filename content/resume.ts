@@ -34,9 +34,9 @@ export const resumeData = {
   ],
   projects: [
     { name: "FitWardrobe", note: "AI wardrobe stylist - flagship case study" },
-    { name: "Mithivoices", note: "OSS real-time voice AI stack" },
+    { name: "Mithivoices", note: "Open-source voice AI platform" },
     { name: "SEO-GEO Optimizer", note: "npm package for AI-search legibility" },
-    { name: "AI-First HCP CRM", note: "LangGraph-based sales agent" },
+    { name: "AI-First HCP CRM", note: "LangGraph prototype for field reps" },
     { name: "Credex", note: "AI SaaS spend audit concept" },
   ],
   publications: [
