@@ -103,7 +103,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                   name: 'How does the seo-geo-optimizer npm package work?',
                   acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'It is a 10-phase agentic workflow that runs inside AI IDEs (Cursor, Windsurf, Copilot). It auto-detects your environment and installs rules to guide the AI through technical SEO, schema generation, and content formatting.'
+                    text: 'It is a 14-phase agentic workflow that runs inside AI IDEs (Cursor, Windsurf, Copilot). It auto-detects your environment and installs rules to guide the AI through technical SEO, schema generation, and content formatting.'
                   }
                 },
                 {
@@ -119,7 +119,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                   name: 'Is seo-geo-optimizer an agentic AI or machine learning tool?',
                   acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'It is an agentic AI tool. It takes multi-step actions across 10 phases, modifies your workspace files, and validates its own output, unlike machine learning which only makes predictions.'
+                    text: 'It is an agentic AI tool. It takes multi-step actions across 14 phases, modifies your workspace files, and validates its own output, unlike machine learning which only makes predictions.'
                   }
                 }
               ]
