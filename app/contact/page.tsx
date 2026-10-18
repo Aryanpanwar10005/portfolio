@@ -79,7 +79,7 @@ export default function ContactPage() {
               url: 'https://www.cloudingenious.com/',
             },
             url: 'https://aryanpanwar.in/',
-            email: 'mailto:aryanpanwar10005@gmail.com',
+            email: 'mailto:aryanpanwar12311@gmail.com',
             sameAs: [
               'https://www.linkedin.com/in/aryan-panwar1',
               'https://github.com/Aryanpanwar10005',
@@ -94,7 +94,7 @@ export default function ContactPage() {
             contactPoint: {
               '@type': 'ContactPoint',
               contactType: 'professional',
-              email: 'aryanpanwar10005@gmail.com',
+              email: 'aryanpanwar12311@gmail.com',
               availableLanguage: 'English',
             },
           }).replace(/</g, '\\u003c')

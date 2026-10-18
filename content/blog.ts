@@ -134,6 +134,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: '6 min read',
     publishedAt: 'Aug 7, 2026',
     publishedAtISO: '2026-08-07',
+    updatedAtISO: '2026-10-18',
     cover: coverEngineerToPm,
     coverAlt: 'Editorial illustration: brain split between circuits and organic curves',
     takeaways: [
@@ -151,7 +152,7 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'Mithivoices, or: what I built first',
         body: [
-          { type: 'p', text: "On Mithivoices I built a real-time WebSocket pipeline before I had a single answer to 'who needs sub-450ms voice translation, and what breaks in their life today because they don\'t have it?' The pipeline worked. Nobody I could name was waiting for it." },
+          { type: 'p', text: "On Mithivoices I built the whole voice loop first - speech-to-text, a language model, text-to-speech, a voice library, even sign-in and billing screens - before I had a single answer to 'who needs a voice assistant that runs on their own machine, and what breaks in their week because they don\'t have one?' The pipeline worked. Nobody I could name was waiting for it." },
           { type: 'p', text: "The engineering mindset - 'I can build this, therefore I should' - is a superpower when the problem is well-defined and a liability when it isn\'t. Most product problems aren't." },
         ],
       },
@@ -198,6 +199,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: '6 min read',
     publishedAt: 'Jul 14, 2026',
     publishedAtISO: '2026-07-14',
+    updatedAtISO: '2026-10-18',
     cover: coverPrioritize,
     coverAlt: 'Editorial illustration: stack of index cards with one lifted priority card',
     takeaways: [
@@ -207,10 +209,10 @@ export const blogPosts: BlogPost[] = [
     ],
     sections: [
       {
-        label: 'Twenty-three features',
+        label: 'Twenty-odd features',
         body: [
-          { type: 'p', text: "On the AI-First CRM for pharma reps, the initial feature list had somewhere around twenty features - voice logging, offline sync, physician deduping, compliance flags, an assistant, an audit trail, and more. Every one was defensible in isolation. The team could not build all of them." },
-          { type: 'p', text: "One of those was a compliance flag system. An engineer had already started sketching a database schema for it before I remembered we had no compliance requirements in v1. I had written it on the list because it sounded right, not because anyone had asked for it." },
+          { type: 'p', text: "On the AI-First CRM prototype for pharma reps, I could list around twenty features before writing any code - voice logging, offline sync, physician deduping, compliance flags, an assistant, an audit trail, and more. Every one was defensible in isolation. I had a short, fixed build window and could not build all of them." },
+          { type: 'p', text: "Compliance was the interesting one. In a regulated field it sounds mandatory, so it went on the list without a question. When I asked what it actually had to do in a first version, the answer was small: one hard rule (a cap on in-person meetings per doctor per month) that the rep can check in chat, and a confirmation the rep ticks before the form saves. That is what I built. Everything bigger waited." },
         ],
       },
       {
@@ -237,25 +239,25 @@ export const blogPosts: BlogPost[] = [
             'Appetite: time the feature is worth, decided before we estimate. If the estimate exceeds appetite, we shrink scope, not schedule.',
             'Kill signal: the metric or observation that would make me drop it after launch.',
           ]},
-          { type: 'p', text: "The kill signal column was one I added two weeks into using this, after I realised five items had no exit condition. I didn't start with it. I added it after keeping a feature I later regretted." },
-          { type: 'p', text: "On the CRM, that page cut the list down to six before the PRD started. Three of the cuts were mine. Two were painful. One was a feature I had already told an engineer we'd build, which cost me a phone call I did not enjoy making." },
+          { type: 'p', text: "The kill signal column came later. I didn't start with it. I added it when I noticed that several items on my list had no condition under which I would ever drop them." },
+          { type: 'p', text: "On the CRM, that page cut the list to a handful before I wrote the plan: logging by form or by chat with the two kept in sync, an editable form so every AI suggestion can be corrected, the compliance check, and a few helper tools such as an HCP profile lookup. Voice logging and offline sync were the painful cuts." },
         ],
       },
       {
-        label: 'What shipped',
+        label: 'What I built',
         body: [
-          { type: 'p', text: "The v1 CRM shipped with six features. Two more were added in the second cycle after real usage - one that hadn't been on the pre-PRD at all, one that had been cut and came back with actual evidence behind it. Nothing that shipped in v1 got removed. That's the metric I care about: not a perfect roadmap, but no regrettable builds." },
+          { type: 'p', text: "The prototype has those features and nothing else. It has not been in front of real reps yet, so the next evidence has to come from a pilot, and the kill signals on the pre-PRD page are what I would watch first. The metric I care about stays the same: not a perfect roadmap, but no regrettable builds." },
         ],
       },
       {
         label: 'Where I still fail at this',
         body: [
           { type: 'p', text: "The hardest habit is being honest in the evidence column when I'm the one who wants the feature. I still catch myself inflating a hunch to 'preliminary research.' The mitigation is a peer: I ask an engineer or a fellow builder to read the page and only comment on the evidence column. It takes fifteen minutes and saves weeks." },
-          { type: 'p', text: "If I started the CRM again, I'd run the pre-PRD before the first stakeholder meeting instead of after. The list of twenty-odd features was itself a symptom - a sign I had absorbed everyone's wishes without weighing any of them." },
+          { type: 'p', text: "If I started the CRM again, I'd write the pre-PRD on day one instead of after drafting the list. The list of twenty-odd features was itself a symptom - a sign I had collected every idea without weighing any of them." },
         ],
       },
     ],
-    relatedCaseStudies: ['ai-crm-hcp'],
+    relatedCaseStudies: ['ai-first-crm-hcp'],
   },
   {
     slug: 'success-metrics-before-features',
@@ -472,70 +474,68 @@ export const blogPosts: BlogPost[] = [
     question: 'How do I reduce user uncertainty in AI features?',
     takeaway: 'He thinks beyond the model.',
     summary:
-      'Trust is a product surface, not a model property. Notes from the AI-First CRM on the four affordances that moved reps from "let me double-check" to "let it log."',
+      'Trust is a product surface, not a model property. Design notes from an AI-first CRM prototype: the four things I would add before asking a rep to rely on it.',
     category: 'AI Product',
     tags: ['AI Product', 'Trust', 'UX', 'Hallucinations', 'Explainability'],
-    readingTime: '7 min read',
+    readingTime: '5 min read',
     publishedAt: 'Jul 17, 2026',
     publishedAtISO: '2026-07-17',
-    updatedAtISO: '2026-08-15',
+    updatedAtISO: '2026-10-18',
     cover: coverAiTrust,
     coverAlt: 'Editorial illustration: two hands meeting with a glowing node between them',
     takeaways: [
-      'Trust is built by the surface, not the model. Same weights, different UI, different adoption.',
-      'The most effective trust move on the CRM was showing the source, not tuning the model.',
+      'Trust is built by the surface, not the model. The same model behind a different UI earns a different level of trust.',
+      'Showing where each logged field came from does more for trust than a few more points of accuracy.',
       'A confident wrong answer is worse than an honest uncertain one. Product surfaces have to make that choice explicit.',
     ],
     sections: [
       {
-        label: "The tool that worked and wasn't used",
+        label: 'Working is not the same as trusted',
         body: [
-          { type: 'p', text: "The AI-First CRM lets pharma reps log physician interactions by talking to an assistant instead of filling a form. The assistant is powered by a LangGraph pipeline. It works. Reps did not use it at first, because they did not trust it." },
+          { type: 'p', text: "The AI-First CRM prototype lets a pharma rep log a doctor visit by describing it in a chat instead of filling a form, and the form fills itself as the chat goes. A LangGraph pipeline does the extraction. On sample data, it works. But a logging tool can work and still not be trusted, and an untrusted one gets used as an expensive typewriter: the rep drafts with the assistant, then re-types everything into the form anyway." },
         ],
       },
       {
         label: 'Mostly right is not a promise',
         body: [
-          { type: 'p', text: "Reps in a regulated industry cannot afford to log wrong information - a mis-classified interaction can breach compliance. The model was performing well on our eval. That number is a great engineering result and a terrible product argument. 'Mostly right' is not a promise a rep can carry into an audit." },
-          { type: 'p', text: "Adoption in the first two weeks was low. Reps used the assistant to draft, then re-typed the same information into the form manually. We had shipped a very expensive typewriter." },
+          { type: 'p', text: "Reps in a regulated industry cannot afford to log wrong information - a mis-classified interaction can breach compliance. A model that is right most of the time still leaves the rep with the job of finding the times it isn't. 'Mostly right' is not a promise a rep can carry into an audit." },
         ],
       },
       {
-        label: 'What the help tickets actually said',
+        label: 'What the prototype already does',
         body: [
-          { type: 'p', text: "I sat with a few reps for an afternoon each and watched them use the tool. One rep asked the same question out loud every time the assistant responded: 'how do I know it heard me right?' He wasn't asking for better accuracy. He was asking for a receipt. I wrote that word in my notes and didn't fully understand it until I watched him re-type the assistant's output by hand." },
-          { type: 'p', text: "I also read every help ticket from the first month. Zero were about accuracy. All were about two things: auditability ('can I see what got logged?') and reversibility ('how do I fix it if it's wrong?')." },
+          { type: 'p', text: "Two things in the build are trust features, even though I didn't call them that while building. Every field the chat fills in is highlighted for a moment, so the rep can see exactly what changed. And the form stays editable, so any value the assistant fills in can be corrected. The gap: the chat saves a visit as soon as it understands it, so the review comes after the save, not before. A compliance confirmation has to be ticked before the form saves. That is a start, not a trust surface." },
         ],
       },
       {
-        label: 'Four things we added to the surface',
+        label: 'Four things I would add before a pilot',
         body: [
-          { type: 'p', text: "We did not retrain the model. We added four affordances." },
+          { type: 'p', text: "None of these needs a better model." },
           { type: 'list', items: [
             'Read-back: after each turn, the assistant echoes what it heard in structured form before saving. One extra tap. Zero ambiguity.',
-            'Source pinning: every logged field shows the exact rep utterance it came from. Trust is easier when the receipt is visible.',
-            'Uncertainty as UI: confidence below a threshold surfaces as a yellow badge with "confirm?" - not a hidden score.',
-            'Reversible commit: every save has a 30-second undo without leaving the screen. Small, but it changes the emotional cost of trying.',
-          ]},
+            'Source pinning: every logged field shows the exact words it came from. Trust is easier when the receipt is visible.',
+            'Uncertainty as UI: confidence below a threshold shows as a yellow "confirm?" badge, not a hidden score.',
+            'Reversible commit: every save gets a short undo without leaving the screen. Small, but it lowers the emotional cost of trying.',
+          ] },
         ],
       },
       {
-        label: 'When it crossed something',
+        label: 'How I would know it worked',
         body: [
-          { type: 'p', text: "Adoption moved substantially - from a small fraction of reps to most of them - in about a month. The model accuracy did not move. The rate of manual re-typing dropped to near zero." },
-          { type: 'p', text: "The support tickets shifted topic entirely: from 'how do I check what got saved?' to feature requests for new interaction types. When the complaint changes, the product has crossed something." },
+          { type: 'p', text: "The number to watch is not model accuracy. It is re-typing: how often a rep edits the draft versus entering the same information again by hand. If re-typing stays high after these four are in place, the surface has failed, however accurate the model is." },
+          { type: 'p', text: "The second signal is what people complain about. Complaints about checking what got saved mean trust is still the problem. Requests for new interaction types mean the product has moved past it." },
         ],
       },
       {
         label: 'The balance point',
         body: [
-          { type: 'p', text: "The mistake was optimising the wrong number. I had spent two weeks squeezing a few more accuracy points out of the model. Those points were invisible to the user. The read-back UI took a day and moved adoption far more." },
+          { type: 'p', text: "The tempting mistake is optimising the wrong number: weeks spent on a few accuracy points the user never notices, when a read-back screen is a day of work." },
           { type: 'p', text: "The trade-off I still watch: friction added for trust can become friction added for its own sake. The read-back is one extra tap, worth it. If I added a second confirmation on top, I'd be paying for safety I didn't need with adoption I couldn't afford. That balance point has to be checked with real users, not felt." },
           { type: 'p', text: "The same failure mode - optimising the wrong thing because the metric isn't defined - is what led me to build [SEO-GEO Optimizer](/case-studies/seo-geo-optimizer). AI IDEs were optimising for SEO signals that Google deprecated in March 2024, because nobody had defined the right success criterion for them." },
         ],
       },
     ],
-    relatedCaseStudies: ['ai-crm-hcp'],
+    relatedCaseStudies: ['ai-first-crm-hcp'],
   },
   {
     slug: 'engineering-to-product-thinking',
@@ -549,6 +549,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: '6 min read',
     publishedAt: 'Jul 31, 2026',
     publishedAtISO: '2026-07-31',
+    updatedAtISO: '2026-10-18',
     cover: coverEngToProduct,
     coverAlt: 'Editorial illustration: gears transforming into a lightbulb',
     takeaways: [
@@ -579,7 +580,7 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'Two calls I made, both uncomfortable',
         body: [
-          { type: 'p', text: "On the EV charger, I had to choose between chasing a higher efficiency rating (harder, longer, deadline at risk) or shipping 85% with clean documentation. I picked 85% and a good paper. It was the first time I traded a technical result for a delivery result, and the discomfort of that choice is what taught me what PM prioritisation actually feels like." },
+          { type: 'p', text: "On the EV charger, I had to choose between spending the last weeks measuring and pushing efficiency (harder, deadline at risk) or delivering a working prototype with clean documentation. I picked the working prototype and a good paper. We never measured efficiency properly, which is the first thing I would fix if I rebuilt it. It was the first time I traded a technical result for a delivery result, and the discomfort of that choice is what taught me what PM prioritisation actually feels like." },
           { type: 'p', text: "On the robot, I removed the second camera two weeks before the demo because power draw was ruining battery life. Losing the feature made the whole product work. That is the same conversation I have with engineers now, in different words." },
         ],
       },
@@ -612,6 +613,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: '8 min read',
     publishedAt: 'Aug 11, 2026',
     publishedAtISO: '2026-08-11',
+    updatedAtISO: '2026-10-18',
     cover: coverToolkit,
     coverAlt: 'Editorial illustration: flat-lay of notebook, compass, pen, ruler',
     takeaways: [
@@ -644,7 +646,7 @@ export const blogPosts: BlogPost[] = [
           { type: 'p', text: "JTBD on FitWardrobe. The job wasn't 'identify a garment' - it was 'leave the house feeling okay about how I look.' Naming the job renamed the product. The insight was in the verb, not the noun. I skip the forces-of-progress diagram entirely; the one-line job statement earns its keep on its own." },
           { type: 'p', text: "RICE on the CRM. I use Reach, Impact, and Effort. I dropped Confidence and replaced it with an 'evidence class' label: interview quote, analytic, competitor benchmark, or hunch. Hunches are allowed, but they get labelled. The column forces honesty without pretending hunches have a numeric value." },
           { type: 'p', text: "PRDs on Credex. Three sections: problem, decision (what we're building and what we're not), and success (metric and guardrail). No goals section, no background, no glossary. If it doesn't change what gets built, it's not in the doc." },
-          { type: 'p', text: "User stories on Mithivoices. Written as jobs, not features: 'as a bilingual speaker joining a call late, I want the last 30 seconds transcribed so I can join without asking anyone to repeat themselves.' Feature-shaped stories get outdated; job-shaped ones survive scope changes." },
+          { type: 'p', text: "User stories on Mithivoices. Written as jobs, not features: 'as a content creator, I want natural-sounding voices so that my content feels professional.' That story survives whichever voice engine we pick; 'add a Piper voice selector' would not. Feature-shaped stories get outdated; job-shaped ones survive scope changes." },
           { type: 'p', text: "Opportunity Solution Trees on [SEO-GEO](/case-studies/seo-geo-optimizer). Used once, when I had five feature ideas and no principled way to choose between them. The tree made the parent opportunity obvious and eliminated two of the five ideas immediately. I don't use OSTs regularly - I tried to on a later project and got eleven branches deep before I lost the thread entirely. I use them only when I'm genuinely stuck." },
         ],
       },
@@ -662,7 +664,7 @@ export const blogPosts: BlogPost[] = [
         ],
       },
     ],
-    relatedCaseStudies: ['seo-geo-optimizer', 'ai-crm-hcp'],
+    relatedCaseStudies: ['seo-geo-optimizer', 'ai-first-crm-hcp'],
   },
   {
     slug: 'if-i-started-fitwardrobe-again',
@@ -735,62 +737,74 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'llm-orchestration-tools',
-    title: 'LLM Orchestration in 2026: What I Learned Building a Pipeline That Actually Works',
-    seoTitle: 'LLM Orchestration Tools: What I Learned Building a Pipeline',
+    title: 'LLM Orchestration: What I Learned Building a Chain and an Agent',
+    seoTitle: 'LLM Orchestration Tools: Lessons From Two Small Pipelines',
     question: 'How do you sequence LLM calls without it breaking?',
-    takeaway: 'He builds orchestration that scales.',
+    takeaway: 'He picks the simplest orchestration that works.',
     summary:
-      'What I found after building a LangGraph pipeline for Mithivoices - the orchestration patterns that held up under real usage, and the ones that broke before anyone saw them.',
+      'Two small builds, two shapes: Mithivoices is a plain three-step chain, the AI-First CRM prototype is a LangGraph agent with five tools. What each shape was good for, and where the agent needed guard rails.',
     category: 'AI Product',
-    tags: ['AI Product', 'LLM', 'Architecture', 'Mithivoices', 'Agentic AI'],
-    readingTime: '7 min read',
+    tags: ['AI Product', 'LLM', 'Architecture', 'LangGraph', 'Agentic AI'],
+    readingTime: '6 min read',
     publishedAt: 'Aug 21, 2026',
     publishedAtISO: '2026-08-21',
+    updatedAtISO: '2026-10-18',
     cover: coverAiTrust,
     coverAlt: 'Editorial illustration: nodes connecting in a complex graph structure',
     takeaways: [
-      'Routing before dispatching saves latency. Intent classification is cheaper than running the full model chain.',
-      'Memory should be a sliding window, not full context. Context windows fail silently when they grow too large.',
-      'LangGraph gives you the control of raw API calls with the structure of a framework.',
+      'A fixed sequence does not need a framework. Mithivoices runs speech-to-text, a language model and text-to-speech as three calls in one request.',
+      'An agent earns its keep when the model has to choose between tools. Then the hard part is everything around the model, not the graph.',
+      'Answer the questions a rule can answer before the model sees them, and clean what the model says before the user sees it.',
     ],
     sections: [
       {
         label: 'The question I keep getting',
         body: [
-          { type: 'p', text: 'What exactly is LLM orchestration, and why should a product manager care about it? Simply put, orchestration is how you string together multiple language model calls, external tools, and memory to complete a complex task without the system breaking down mid-thought. It is the difference between a chat wrapper and a product.' },
+          { type: 'p', text: 'What exactly is LLM orchestration, and why should a product manager care about it? Simply put, orchestration is how you string together language model calls, tools and state so a task finishes without the system losing the thread. It is the difference between a chat wrapper and a product.' },
+          { type: 'p', text: 'I have built two small pipelines with very different shapes. Neither has real users yet, so this is about design choices, not scale.' },
         ],
       },
       {
-        label: 'What I built for Mithivoices',
+        label: 'Mithivoices: a chain is enough',
         body: [
-          { type: 'p', text: 'On Mithivoices, we needed real-time bilingual transcription. The pipeline started simple: voice input went to Whisper, then to an LLM for translation. But as soon as we needed the system to understand context across turns, a single chain broke. We needed state. I chose LangGraph because it treats the LLM as a node in a state machine, rather than a black box.' },
+          { type: 'p', text: 'Mithivoices takes a voice recording and answers out loud. One request runs three steps in order: Whisper turns speech into text, a language model writes the reply, and Piper turns the reply back into speech. The model can be Gemini in the cloud or Ollama on your own machine, behind one interface, so swapping providers is a setting rather than a rewrite.' },
+          { type: 'p', text: 'There is no framework and no graph, because nothing needs to branch. The one judgement call sits in plain code: a language check decides whether to translate before speaking, and it does not translate when it is unsure which language the text is in. Wrong-language speech is worse than none.' },
+          { type: 'p', text: 'The backend keeps no conversation history. That is the next real decision: the moment the assistant has to remember what you said three turns ago, the chain needs state, and that is when I would reach for something like LangGraph.' },
         ],
       },
       {
-        label: 'Three patterns that held',
+        label: 'The CRM: when a graph earns its keep',
+        body: [
+          { type: 'p', text: 'The [AI-First CRM prototype](/case-studies/ai-first-crm-hcp) is different. A field rep types something like "met Dr Rao today, discussed the new inhaler, she was positive", and the assistant has to decide what that is: a new visit to log, a correction to an earlier one, a question about the doctor, a compliance question or a request for a next step. Those are five tools, and choosing between them is the model\'s job. That is where LangGraph helped: one node calls the model, one runs the chosen tool, and the state carries the result back to the form.' },
+          { type: 'p', text: 'The state is not the chat transcript. Each message starts a fresh run, and the memory is the current form: its values and the ID of the visit being edited go in with every turn. The form is the source of truth, so the model never has to remember it.' },
+        ],
+      },
+      {
+        label: 'Three patterns from the CRM',
         body: [
           { type: 'list', items: [
-            'Routing first: Use a fast, cheap model to classify user intent before dispatching to heavy models.',
-            'Bounded memory: We implemented a sliding window for context. Passing the whole transcript always ended in hallucination or cost overruns.',
-            'Typed tools: Forcing the LLM to output strictly typed JSON schemas for tool-calling was the only way to get reliable integration.',
+            'Rules before the model: a compliance question ("can I visit Dr Rao again this month?") is caught by a simple pattern and answered straight from the database. It is faster, and the answer cannot be talked into being wrong.',
+            'Typed tool results: each tool returns structured fields for the form, not prose. The interface applies the fields and highlights them for a moment, so the rep sees exactly what changed.',
+            'Clean the reply: the model sometimes leaks JSON or tool names into its answer. Those lines are stripped before the rep sees them, and if nothing readable is left, a plain fallback message is shown instead.',
           ]},
         ],
       },
       {
         label: 'Where it broke',
         body: [
-          { type: 'p', text: 'The system failed in ways you don\'t see in local testing. We hit latency spikes during the routing step because of network overhead. We saw silent context failures where the LLM just "forgot" the speaker\'s language preference after ten turns. And we encountered subtle race conditions when streaming WebSocket states back to the client.' },
+          { type: 'p', text: 'After a tool ran, the hosted model would sometimes try to call another tool, including one that does not exist. The fix was blunt: once a tool result is in, the next model call is not allowed to call tools at all, only to summarise.' },
+          { type: 'p', text: 'The bigger flaw is about state, not the model. The chat saves a visit as soon as it understands it, and the form has its own Save button that creates a new record. Use both and you get a duplicate. Two paths that write the same thing need one owner, and in a pilot that owner would be the rep, confirming a draft.' },
         ],
       },
       {
         label: 'What I\'d pick today',
         body: [
-          { type: 'p', text: 'For simple extractions, raw API calls are fine. For anything requiring state or loops, LangGraph is the current standard. LangChain abstractions hide too much of the prompt for production systems. The control you need is always one layer beneath the abstraction they sell you.' },
-          { type: 'p', text: 'The same agentic architecture - chained phases, human-in-the-loop gates, typed tool schemas - is what I used when building the [SEO-GEO Optimizer](/case-studies/seo-geo-optimizer). The product context changed; the orchestration principles didn\'t.' },
+          { type: 'p', text: 'For a fixed sequence, plain function calls. For anything where the model chooses between tools or loops, a graph framework, because the control flow stays visible. Either way, the work that decides whether it holds up is around the model: the rules that skip it, the schema that constrains it, and the cleanup after it.' },
+          { type: 'p', text: 'The [SEO-GEO Optimizer](/case-studies/seo-geo-optimizer) uses a related idea at a larger scale: chained phases with a human approval gate between them, so nothing moves on without a review.' },
         ],
       },
     ],
-    relatedCaseStudies: ['mithivoices', 'seo-geo-optimizer'],
+    relatedCaseStudies: ['ai-first-crm-hcp', 'mithivoices', 'seo-geo-optimizer'],
   },
   {
     slug: 'agentic-ai-vs-ml',
