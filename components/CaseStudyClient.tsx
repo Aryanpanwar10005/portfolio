@@ -122,7 +122,7 @@ export function CaseStudyClient({ study, next }: CaseStudyClientProps) {
           <Link href="/about" className="text-primary-ink underline underline-offset-4 decoration-primary/40 hover:decoration-primary">
             Aryan Panwar
           </Link>
-          , Business Analyst Intern on Salesforce projects at Cloud Ingenious
+          , Business Analyst on Salesforce projects at Cloud Ingenious
           {study.updatedLabel ? ` · Updated ${study.updatedLabel}` : ''}
         </p>
         <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-border">

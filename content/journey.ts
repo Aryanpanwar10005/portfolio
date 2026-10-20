@@ -64,9 +64,9 @@ export const journey: Milestone[] = [
   },
   {
     year: "Jun 2026 – present",
-    title: "Business Analyst Intern, Cloud Ingenious",
+    title: "Business Analyst, Cloud Ingenious",
     description:
-      "Joined Cloud Ingenious, a Salesforce consulting partner, as a Business Analyst Intern. I work on Salesforce implementation projects, where I'm learning how real businesses turn processes into systems.",
+      "Joined Cloud Ingenious, a Salesforce consulting partner, as a Business Analyst. I work on Salesforce implementation projects, where I'm learning how real businesses turn processes into systems.",
     link: {
       label: "Cloud Ingenious ↗",
       url: "https://www.cloudingenious.com/",

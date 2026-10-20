@@ -72,7 +72,7 @@ export default function ContactPage() {
             '@type': 'Person',
             '@id': 'https://aryanpanwar.in/#person',
             name: 'Aryan Panwar',
-            jobTitle: 'Business Analyst Intern',
+            jobTitle: 'Business Analyst',
             worksFor: {
               '@type': 'Organization',
               name: 'Cloud Ingenious',

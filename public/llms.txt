@@ -1,6 +1,6 @@
 # Aryan Panwar - Product Evidence Book
 
-> Aryan Panwar is a Business Analyst Intern on Salesforce projects at Cloud Ingenious and an ECE graduate from MIET Meerut (2026). He builds AI products on the side and writes about product trade-offs, AI feature design, and PM frameworks. His goal is AI product management. He has built FitWardrobe (on-device AI wardrobe stylist), Mithivoices (open-source voice AI platform: speech-to-text, an LLM and text-to-speech), SEO-GEO Optimizer (npm package for AI search visibility), and an AI-First HCP CRM prototype for healthcare field reps.
+> Aryan Panwar is a Business Analyst on Salesforce projects at Cloud Ingenious and an ECE graduate from MIET Meerut (2026). He builds AI products on the side and writes about product trade-offs, AI feature design, and PM frameworks. His goal is AI product management. He has built FitWardrobe (on-device AI wardrobe stylist), Mithivoices (open-source voice AI platform: speech-to-text, an LLM and text-to-speech), SEO-GEO Optimizer (npm package for AI search visibility), and an AI-First HCP CRM prototype for healthcare field reps.
 
 ## About
 

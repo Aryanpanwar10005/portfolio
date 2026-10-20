@@ -30,13 +30,13 @@ export default function Home() {
               "@type": "Person",
               "@id": "https://aryanpanwar.in/#person",
               "name": "Aryan Panwar",
-              "jobTitle": "Business Analyst Intern",
+              "jobTitle": "Business Analyst",
               "worksFor": {
                 "@type": "Organization",
                 "name": "Cloud Ingenious",
                 "url": "https://www.cloudingenious.com/"
               },
-              "description": "Business Analyst Intern on Salesforce projects at Cloud Ingenious. Builds agentic AI products on the side (FitWardrobe, Mithivoices, SEO-GEO Optimizer) and writes about product decisions, AI trade-offs and PM frameworks.",
+              "description": "Business Analyst on Salesforce projects at Cloud Ingenious. Builds agentic AI products on the side (FitWardrobe, Mithivoices, SEO-GEO Optimizer) and writes about product decisions, AI trade-offs and PM frameworks.",
               "url": "https://aryanpanwar.in/",
               "image": "https://aryanpanwar.in/assets/aryan-portrait.webp",
               "alumniOf": {

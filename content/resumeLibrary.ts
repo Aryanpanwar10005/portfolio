@@ -166,7 +166,7 @@ export const resumeFaqCategories: ResumeFaqCategory[] = [
     questions: [
       {
         q: "Who are you?",
-        a: "I'm Aryan Panwar, an ECE graduate from MIET Meerut (2026). I started as a builder - shipping hardware projects, agentic AI systems, and web products - and gradually moved toward the problem-framing side of product work. Today I work as a Business Analyst Intern on Salesforce projects at Cloud Ingenious, and I'm building toward Product Management, especially in AI-first teams.",
+        a: "I'm Aryan Panwar, an ECE graduate from MIET Meerut (2026). I started as a builder - shipping hardware projects, agentic AI systems, and web products - and gradually moved toward the problem-framing side of product work. Today I work as a Business Analyst on Salesforce projects at Cloud Ingenious, and I'm building toward Product Management, especially in AI-first teams.",
       },
       {
         q: "What roles are you looking for?",

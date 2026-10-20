@@ -4,7 +4,7 @@ import { NextSteps } from '@/components/NextSteps'
 
 export const metadata: Metadata = {
   title: "About",
-  description: "A short introduction to Aryan Panwar: ECE graduate from MIET Meerut (2026), Business Analyst Intern at Cloud Ingenious, and builder of AI products.",
+  description: "A short introduction to Aryan Panwar: ECE graduate from MIET Meerut (2026), Business Analyst at Cloud Ingenious, and builder of AI products.",
   alternates: {
     canonical: "/about",
   },
@@ -30,13 +30,13 @@ export default function AboutPage() {
               '@type': 'Person',
               '@id': 'https://aryanpanwar.in/#person',
               name: 'Aryan Panwar',
-              jobTitle: 'Business Analyst Intern',
+              jobTitle: 'Business Analyst',
               worksFor: {
                 '@type': 'Organization',
                 name: 'Cloud Ingenious',
                 url: 'https://www.cloudingenious.com/',
               },
-              description: 'Business Analyst Intern on Salesforce projects at Cloud Ingenious. Builds agentic AI products on the side (FitWardrobe, Mithivoices, SEO-GEO Optimizer) and writes about product decisions, AI trade-offs and PM frameworks.',
+              description: 'Business Analyst on Salesforce projects at Cloud Ingenious. Builds agentic AI products on the side (FitWardrobe, Mithivoices, SEO-GEO Optimizer) and writes about product decisions, AI trade-offs and PM frameworks.',
               url: 'https://aryanpanwar.in/',
               image: 'https://aryanpanwar.in/assets/aryan-portrait.webp',
               alumniOf: {
@@ -79,7 +79,7 @@ export default function AboutPage() {
       <section className="px-6 md:px-10 pb-24 max-w-7xl mx-auto"><div className="max-w-2xl space-y-14 text-lg text-foreground leading-relaxed">
         <Block label="Who I am">
           I&apos;m Aryan Panwar, an ECE graduate from MIET Meerut (2026). I work as a
-          Business Analyst Intern at Cloud Ingenious, a Salesforce consulting partner,
+          Business Analyst at Cloud Ingenious, a Salesforce consulting partner,
           on Salesforce implementation projects. On the side I build agentic AI
           products and write about the trade-offs. Product management is where I&apos;m
           headed: I want my early PM years in the room where the calls get made.

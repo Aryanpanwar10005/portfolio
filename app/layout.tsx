@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     default: "Aryan Panwar | Business Analyst & AI Product Builder",
     template: "%s | Aryan Panwar",
   },
-  description: "Aryan Panwar: Business Analyst Intern on Salesforce projects, building AI products on the side. Case studies, product thinking and writing.",
+  description: "Aryan Panwar: Business Analyst on Salesforce projects, building AI products on the side. Case studies, product thinking and writing.",
   authors: [{ name: "Aryan Panwar" }],
   metadataBase: new URL("https://aryanpanwar.in"),
   icons: {
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Aryan Panwar | Business Analyst & AI Product Builder",
-    description: "Aryan Panwar: Business Analyst Intern on Salesforce projects, building AI products on the side. Case studies, product thinking and writing.",
+    description: "Aryan Panwar: Business Analyst on Salesforce projects, building AI products on the side. Case studies, product thinking and writing.",
     url: "https://aryanpanwar.in/",
     type: "website",
     siteName: "Aryan Panwar | Product Evidence Book",
@@ -92,7 +92,7 @@ export default function RootLayout({
               '@id': 'https://aryanpanwar.in/#website',
               name: 'Aryan Panwar',
               url: 'https://aryanpanwar.in',
-              description: 'Aryan Panwar: Business Analyst Intern on Salesforce projects, building AI products on the side. Case studies, product thinking and writing.',
+              description: 'Aryan Panwar: Business Analyst on Salesforce projects, building AI products on the side. Case studies, product thinking and writing.',
               publisher: {
                 '@type': 'Person',
                 '@id': 'https://aryanpanwar.in/#person',

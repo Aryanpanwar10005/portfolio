@@ -56,7 +56,7 @@ export function Hero() {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="mt-5 max-w-xl text-base md:text-lg text-foreground-muted leading-relaxed"
           >
-            I&apos;m Aryan Panwar, a Business Analyst Intern on Salesforce projects at Cloud Ingenious.
+            I&apos;m Aryan Panwar, a Business Analyst on Salesforce projects at Cloud Ingenious.
             Outside work I&apos;ve built three AI products end to end. Each case study shows the
             problem, what I measured and what I cut.
           </motion.p>
