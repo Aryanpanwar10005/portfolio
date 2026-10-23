@@ -1,0 +1,25 @@
+# Builds the site and fails if a sitemap page or an old URL that search
+# engines know about stops resolving (see scripts/check-urls.mjs).
+name: Check URLs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check-urls:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Start the built site
+        run: |
+          npx next start -p 3000 &
+          npx --yes wait-on@8.0.1 http://localhost:3000 --timeout 60000
+      - run: npm run check:urls -- http://localhost:3000
