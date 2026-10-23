@@ -1,5 +1,22 @@
 import type { NextConfig } from "next";
 
+// Old article URLs from the static site. The same file lived under both
+// /blog/ and /writing/, so each one is redirected from both prefixes.
+const legacyPosts: Record<string, string> = {
+  'llm-orchestration-tools': 'llm-orchestration-tools',
+  'building-llm-orchestration-tools': 'llm-orchestration-tools',
+  'agentic-ai-vs-ml': 'agentic-ai-vs-ml',
+  'agentic-ai-faq': 'agentic-ai-developer-guide',
+  'what-is-agentic-ai-developer': 'agentic-ai-developer-guide',
+  'technical-seo-for-ai-products': 'generative-ai-technical-seo',
+  'seo-for-product-managers': 'generative-ai-technical-seo',
+  'seo-product-management-faq': 'generative-ai-technical-seo',
+  'hardware-logic-in-ai': 'local-vs-cloud-ai-fitwardrobe',
+  'embedded-iot-automation': 'engineering-to-product-thinking',
+  'embedded-engineer-faq': 'engineering-to-product-thinking',
+  'modern-embedded-engineer': 'engineering-to-product-thinking',
+};
+
 const nextConfig: NextConfig = {
   experimental: {
     turbopackLocalPostcssConfig: true,
@@ -7,46 +24,13 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       // === 1. HIGH-VALUE SPECIFIC REDIRECTS (Evaluated FIRST) ===
-      {
-        source: '/blog/llm-orchestration-tools.html',
-        destination: '/writing/llm-orchestration-tools',
-        permanent: true,
-      },
-      {
-        source: '/blog/building-llm-orchestration-tools.html',
-        destination: '/writing/llm-orchestration-tools',
-        permanent: true,
-      },
-      {
-        source: '/blog/agentic-ai-vs-ml.html',
-        destination: '/writing/agentic-ai-vs-ml',
-        permanent: true,
-      },
-      {
-        source: '/blog/agentic-ai-faq.html',
-        destination: '/writing/agentic-ai-developer-guide',
-        permanent: true,
-      },
-      {
-        source: '/blog/technical-seo-for-ai-products.html',
-        destination: '/writing/generative-ai-technical-seo',
-        permanent: true,
-      },
-      {
-        source: '/blog/what-is-agentic-ai-developer.html',
-        destination: '/writing/agentic-ai-developer-guide',
-        permanent: true,
-      },
-      {
-        source: '/blog/seo-for-product-managers.html',
-        destination: '/writing/generative-ai-technical-seo',
-        permanent: true,
-      },
-      {
-        source: '/blog/seo-product-management-faq.html',
-        destination: '/writing/generative-ai-technical-seo',
-        permanent: true,
-      },
+      ...Object.entries(legacyPosts).flatMap(([oldSlug, slug]) =>
+        ['blog', 'writing'].map((prefix) => ({
+          source: `/${prefix}/${oldSlug}.html`,
+          destination: `/writing/${slug}`,
+          permanent: true,
+        })),
+      ),
       {
         source: '/docs/Aryan.pdf',
         destination: '/docs/Aryan_Panwar_PM_Resume.pdf',
@@ -77,31 +61,6 @@ const nextConfig: NextConfig = {
       {
         source: '/assets/docs/Aryan_Panwar.pdf',
         destination: '/docs/Aryan_Panwar_PM_Resume.pdf',
-        permanent: true,
-      },
-      {
-        source: '/writing/what-is-agentic-ai-developer.html',
-        destination: '/writing/agentic-ai-developer-guide',
-        permanent: true,
-      },
-      {
-        source: '/blog/hardware-logic-in-ai.html',
-        destination: '/writing/local-vs-cloud-ai-fitwardrobe',
-        permanent: true,
-      },
-      {
-        source: '/blog/embedded-iot-automation.html',
-        destination: '/writing/engineering-to-product-thinking',
-        permanent: true,
-      },
-      {
-        source: '/blog/embedded-engineer-faq.html',
-        destination: '/writing/engineering-to-product-thinking',
-        permanent: true,
-      },
-      {
-        source: '/blog/modern-embedded-engineer.html',
-        destination: '/writing/engineering-to-product-thinking',
         permanent: true,
       },
 
@@ -179,6 +138,12 @@ const nextConfig: NextConfig = {
       },
 
       // === 6. CATCH-ALLS (evaluated LAST) ===
+      // A current article requested with the old .html suffix.
+      {
+        source: '/writing/:slug.html',
+        destination: '/writing/:slug',
+        permanent: true,
+      },
       // Any other old blog post or report lands on its section index instead
       // of a 404, so stray backlinks and stale index entries keep their value.
       {
