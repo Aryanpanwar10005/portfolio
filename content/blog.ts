@@ -56,17 +56,17 @@ export const blogPosts: BlogPost[] = [
     question: 'What should a spec say before an AI agent can pay?',
     takeaway: 'He writes the boring requirement that stops duplicate payments before anyone writes a prompt.',
     summary:
-      'A double-click once created two donations in a system my team built. An AI agent paying over UPI can make the same mistake every time it retries. Here is the acceptance criterion we added, what idempotency means in plain words, and six questions I would put in any spec for an agent that can spend money.',
+      'A double-click created two donations in a system my team built. An AI agent paying over UPI can repeat that on every retry. The fix, and six spec questions.',
     category: 'AI Product',
     tags: ['AI Product', 'Agentic AI', 'Requirements', 'Acceptance Criteria', 'Payments'],
-    readingTime: '5 min read',
-    publishedAt: 'Oct 26, 2026',
-    publishedAtISO: '2026-10-26',
+    readingTime: '4 min read',
+    publishedAt: 'Oct 25, 2026',
+    publishedAtISO: '2026-10-25',
     cover: coverDoubleClick,
     coverAlt: 'Illustration: a phone lock screen showing four identical ₹500 payment notifications, three of them marked retry',
     takeaways: [
-      'A duplicate record is rarely a screen bug. It is a missing rule about what counts as the same request.',
-      'People repeat a request by accident, once. Agents repeat it by design, every time a call times out.',
+      'Duplicate records usually trace back to a missing rule about what counts as the same request.',
+      'People repeat a request by accident; many agents retry automatically whenever a call times out.',
       'One acceptance criterion covers both: given the same request twice, the system creates one record, not two.',
     ],
     sections: [
@@ -80,7 +80,7 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'Why agents make it worse',
         body: [
-          { type: 'p', text: 'A person double-clicks by accident, once. An agent repeats a request on purpose. When a payment call times out, many agents simply try again, because from where they sit the first attempt might have failed. Sometimes it did. Often the payment went through and only the reply got lost.' },
+          { type: 'p', text: 'A person double-clicks by accident, once. An [agent](/writing/agentic-ai-vs-ml) repeats a request on purpose. When a payment call times out, many agents simply try again, because from where they sit the first attempt might have failed. Sometimes it did. Often the payment went through and only the reply got lost.' },
           { type: 'p', text: 'Without a guard, every retry is another double-click, at machine speed, with nobody watching the screen.' },
           { type: 'p', text: 'For Indian users this is close. [UPI payments inside ChatGPT](https://www.onmanorama.com/news/business/2025/10/09/npci-razorpay-openai-chatgpt-payments.html) went into pilot in October 2025 with NPCI and Razorpay, starting with groceries. In September 2026, Reuters reported that [NPCI is working on a framework](https://inc42.com/buzz/npci-to-launch-agentic-payments-on-upi-report/) that would let agents make small payments without the user approving each one.' },
         ],
@@ -98,6 +98,20 @@ export const blogPosts: BlogPost[] = [
           { type: 'p', text: 'Engineers call this idempotency: doing something twice has the same effect as doing it once. Pressing the lift button five times still brings one lift.' },
           { type: 'p', text: 'The usual way to build it is an idempotency key. The app attaches a unique ID to each request. The server remembers the IDs it has already handled, and when the same ID arrives again it returns the first result instead of doing the work again. Payment APIs such as [Stripe](https://docs.stripe.com/api/idempotent_requests) accept a key like this on payment requests.' },
           { type: 'p', text: 'As a BA or PM you do not need to pick the mechanism. You need to write down that it must exist, and what counts as a repeat.' },
+        ],
+      },
+      {
+        label: 'What it looks like in a spec',
+        body: [
+          { type: 'p', text: 'An example for an agent that pays a donation over UPI, written as acceptance criteria:' },
+          {
+            type: 'list',
+            items: [
+              'Given the agent sends a payment with key K, when the call times out and the agent retries with the same key K, then the donor is charged once and the agent gets the original result.',
+              'Given two payments with different keys but the same payee and amount within 60 seconds, when the second arrives, then the system asks the donor to confirm before paying.',
+              'Given a repeat is blocked, when the donor checks the app, then they see "Already paid ₹500 at 8:30" instead of an error.',
+            ],
+          },
         ],
       },
       {
@@ -119,7 +133,7 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'What I am taking from it',
         body: [
-          { type: 'p', text: 'Most of the work in that build challenge was not the screens. It was finding the rules nobody had written down. Agents raise the stakes on those rules: an agent follows the spec exactly, and where the spec is silent it repeats the same mistake quickly.' },
+          { type: 'p', text: 'In that build challenge, finding the rules nobody had written down took more of my time than the screens did. Agents raise the stakes on those rules: an agent follows the spec exactly, and where the spec is silent it repeats the same mistake quickly.' },
           { type: 'p', text: 'If I were writing the spec for an agent that can pay, the double-click test would go in before any prompt.' },
         ],
       },
