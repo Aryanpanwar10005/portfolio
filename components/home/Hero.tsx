@@ -30,8 +30,9 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden pt-24 md:pt-28 pb-4 md:pb-8">
       <div className="relative max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
-        <div className="lg:col-span-7 order-1 relative z-10">
-          {/* Text starts visible (only a slide-in): the heading is the LCP element on mobile. */}
+        <div className="lg:col-span-7 order-2 lg:order-1 relative z-10">
+          {/* Text starts visible (only a slide-in) so it paints with the first frame.
+              On mobile the portrait sits above it, so visitors see who this is first. */}
           <motion.p
             initial={{ y: 8 }}
             animate={{ y: 0 }}
@@ -150,7 +151,7 @@ export function Hero() {
           width is capped by the viewport height too, so the whole arch fits on
           short laptop screens (the cutout rises ~40% above the arch).
         */}
-        <div className="order-2 lg:col-span-5 relative w-full max-w-72 sm:max-w-sm mx-auto lg:mx-0 lg:mt-4 lg:max-w-none lg:w-[min(100%,26rem,calc((100svh-15rem)*0.8))] lg:justify-self-end lg:sticky lg:top-28">
+        <div className="order-1 lg:order-2 lg:col-span-5 relative w-full max-w-60 sm:max-w-xs mt-28 sm:mt-36 mx-auto lg:mx-0 lg:mt-4 lg:max-w-none lg:w-[min(100%,26rem,calc((100svh-15rem)*0.8))] lg:justify-self-end lg:sticky lg:top-28">
           <div className="relative aspect-4/5 w-full">
             {/* Wine arch backdrop */}
             <div aria-hidden className="absolute inset-0 arch-shape bg-brand-surface" />
