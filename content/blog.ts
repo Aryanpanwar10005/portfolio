@@ -8,6 +8,7 @@ const coverAiTrust = '/assets/blog/ai-trust.webp'
 const coverEngToProduct = '/assets/blog/engineering-to-product.webp'
 const coverToolkit = '/assets/blog/product-toolkit.webp'
 const coverRestart = '/assets/blog/restart-fitwardrobe.webp'
+const coverDoubleClick = '/assets/blog/double-click-test.webp'
 
 export type SectionLabel = string
 
@@ -48,6 +49,82 @@ export type BlogPost = {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: 'double-click-test-ai-agent-payments',
+    title: 'The Double-Click Test: The Requirement Every AI Agent That Pays Needs',
+    seoTitle: 'Idempotency for AI Agents That Pay: A PM Checklist',
+    question: 'What should a spec say before an AI agent can pay?',
+    takeaway: 'He writes the boring requirement that stops duplicate payments before anyone writes a prompt.',
+    summary:
+      'A double-click once created two donations in a system my team built. An AI agent paying over UPI can make the same mistake every time it retries. Here is the acceptance criterion we added, what idempotency means in plain words, and six questions I would put in any spec for an agent that can spend money.',
+    category: 'AI Product',
+    tags: ['AI Product', 'Agentic AI', 'Requirements', 'Acceptance Criteria', 'Payments'],
+    readingTime: '5 min read',
+    publishedAt: 'Oct 26, 2026',
+    publishedAtISO: '2026-10-26',
+    cover: coverDoubleClick,
+    coverAlt: 'Illustration: a phone lock screen showing four identical ₹500 payment notifications, three of them marked retry',
+    takeaways: [
+      'A duplicate record is rarely a screen bug. It is a missing rule about what counts as the same request.',
+      'People repeat a request by accident, once. Agents repeat it by design, every time a call times out.',
+      'One acceptance criterion covers both: given the same request twice, the system creates one record, not two.',
+    ],
+    sections: [
+      {
+        label: 'The bug',
+        body: [
+          { type: 'p', text: 'This came from an internal build challenge. Five of us built a donation and volunteer system on Salesforce for a fictional nonprofit, and I was the BA and team lead. Before the demo we wrote 107 test cases and fixed 9 real bugs.' },
+          { type: 'p', text: 'The worst one looked small. On a slow connection, a donor clicks "Donate", nothing seems to happen, so they click again. Each click created a new gift and a new supporter, so every report built on that data would have counted the same donation twice.' },
+        ],
+      },
+      {
+        label: 'Why agents make it worse',
+        body: [
+          { type: 'p', text: 'A person double-clicks by accident, once. An agent repeats a request on purpose. When a payment call times out, many agents simply try again, because from where they sit the first attempt might have failed. Sometimes it did. Often the payment went through and only the reply got lost.' },
+          { type: 'p', text: 'Without a guard, every retry is another double-click, at machine speed, with nobody watching the screen.' },
+          { type: 'p', text: 'For Indian users this is close. [UPI payments inside ChatGPT](https://www.onmanorama.com/news/business/2025/10/09/npci-razorpay-openai-chatgpt-payments.html) went into pilot in October 2025 with NPCI and Razorpay, starting with groceries. In September 2026, Reuters reported that [NPCI is working on a framework](https://inc42.com/buzz/npci-to-launch-agentic-payments-on-upi-report/) that would let agents make small payments without the user approving each one.' },
+        ],
+      },
+      {
+        label: 'The acceptance criterion we added',
+        body: [
+          { type: 'quote', text: 'Given the same request twice, the system creates one record, not two.' },
+          { type: 'p', text: 'It reads like the most boring line in the spec, and it worked. It also forced the two questions that mattered: what makes two requests "the same", and what the donor should see the second time.' },
+        ],
+      },
+      {
+        label: 'Idempotency in plain words',
+        body: [
+          { type: 'p', text: 'Engineers call this idempotency: doing something twice has the same effect as doing it once. Pressing the lift button five times still brings one lift.' },
+          { type: 'p', text: 'The usual way to build it is an idempotency key. The app attaches a unique ID to each request. The server remembers the IDs it has already handled, and when the same ID arrives again it returns the first result instead of doing the work again. Payment APIs such as [Stripe](https://docs.stripe.com/api/idempotent_requests) accept a key like this on payment requests.' },
+          { type: 'p', text: 'As a BA or PM you do not need to pick the mechanism. You need to write down that it must exist, and what counts as a repeat.' },
+        ],
+      },
+      {
+        label: 'Six questions I would put in the spec for an agent that can pay',
+        body: [
+          {
+            type: 'list',
+            items: [
+              'What makes two requests the same? The same key, payee and amount, within what time window?',
+              'When a call times out, does the agent check the payment status before it retries?',
+              'How many retries are allowed, and how far apart?',
+              'What is the limit per payment and per day, and who set it: the user or the product?',
+              'What does the user see when a repeat is blocked, so they do not try again by hand?',
+              'Where is every attempt logged, and who can reverse a duplicate if one gets through?',
+            ],
+          },
+        ],
+      },
+      {
+        label: 'What I am taking from it',
+        body: [
+          { type: 'p', text: 'Most of the work in that build challenge was not the screens. It was finding the rules nobody had written down. Agents raise the stakes on those rules: an agent follows the spec exactly, and where the spec is silent it repeats the same mistake quickly.' },
+          { type: 'p', text: 'If I were writing the spec for an agent that can pay, the double-click test would go in before any prompt.' },
+        ],
+      },
+    ],
+  },
   {
     slug: 'fitwardrobe-product-discovery',
     title: 'What Building FitWardrobe Taught Me About Product Discovery',
