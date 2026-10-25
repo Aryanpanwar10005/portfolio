@@ -50,9 +50,11 @@ export function Hero() {
             From requirements to <span className="font-serif-italic text-primary-ink">shipped AI products.</span>
           </motion.h1>
 
+          {/* Also visible from the first paint: this paragraph is larger than the
+              heading on mobile, so an opacity fade made it the (late) LCP element. */}
           <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ y: 8 }}
+            animate={{ y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
             className="mt-5 max-w-xl text-base md:text-lg text-foreground-muted leading-relaxed"
           >
@@ -62,8 +64,8 @@ export function Hero() {
           </motion.p>
 
           <motion.ul
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ y: 12 }}
+            animate={{ y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
             className="mt-5 grid gap-x-8 gap-y-3 sm:grid-cols-3 border-t border-border pt-5 max-w-2xl"
           >
@@ -82,8 +84,8 @@ export function Hero() {
           </motion.ul>
 
           <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ y: 12 }}
+            animate={{ y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
             className="mt-7 flex flex-wrap gap-3 sm:gap-4"
           >
