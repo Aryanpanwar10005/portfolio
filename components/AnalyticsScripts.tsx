@@ -25,31 +25,35 @@ export function AnalyticsScripts() {
   return (
     <>
       {/*
-        Google Analytics 4. The gtag() stub and config run as soon as the page
-        is interactive, so every call is queued in dataLayer and replayed when
-        the (heavy) library arrives later. GA4 sends the landing page_view
-        itself, and Enhanced Measurement ("page changes") records client-side
-        navigations, so the app must not send its own page_view.
-      */}
-      {GA4_ID && (
-        <>
-          {/* The library itself loads after window load + idle (like lazyOnload), live domain only. */}
-          <Script id="ga4-init" strategy="afterInteractive">
-            {`if(${ON_LIVE_DOMAIN}){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','${GA4_ID}');
-var idle=window.requestIdleCallback||function(f){setTimeout(f,1)};var load=function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=${GA4_ID}';document.head.appendChild(s)};
-if(document.readyState==='complete'){idle(load)}else{window.addEventListener('load',function(){idle(load)})}}`}
-          </Script>
-        </>
-      )}
+        GA4 and Microsoft Clarity. The gtag() and clarity() stubs run as soon as
+        the page is interactive, so every call is queued and replayed when the
+        libraries arrive. The libraries themselves (gtag.js alone blocked the
+        main thread for ~0.8s on mobile) load on the first scroll, tap or key
+        press, or 4s after window load, whichever comes first.
 
-      {/* Microsoft Clarity: heatmaps and session recordings. */}
-      {CLARITY_ID && (
-        <Script id="clarity-script" strategy="lazyOnload">
-          {`if(${ON_LIVE_DOMAIN})(function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-          })(window, document, "clarity", "script", "${CLARITY_ID}");`}
+        GA4 sends the landing page_view itself, with page_location/title/referrer
+        captured now, so a late library still records the right landing page.
+        Enhanced Measurement ("page changes") records client-side navigations,
+        but only once gtag.js has loaded: navigations before that are queued
+        here as page_view events. The app must not send its own page_view.
+      */}
+      {(GA4_ID || CLARITY_ID) && (
+        <Script id="analytics-init" strategy="afterInteractive">
+          {`if(${ON_LIVE_DOMAIN}){
+var GA='${GA4_ID}',CL='${CLARITY_ID}',gaReady=false;
+if(GA){window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());
+gtag('config',GA,{page_location:location.href,page_title:document.title,page_referrer:document.referrer});
+var queueNav=function(){if(gaReady)return;setTimeout(function(){gtag('event','page_view',{page_location:location.href,page_title:document.title})},300)};
+var push=history.pushState;history.pushState=function(){var r=push.apply(this,arguments);queueNav();return r};
+window.addEventListener('popstate',queueNav)}
+if(CL){window.clarity=window.clarity||function(){(window.clarity.q=window.clarity.q||[]).push(arguments)}}
+var started=false,events=['scroll','pointerdown','keydown','touchstart'];
+var start=function(){if(started)return;started=true;events.forEach(function(e){removeEventListener(e,start)});
+var idle=window.requestIdleCallback||function(f){setTimeout(f,1)};idle(function(){
+if(GA){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+GA;s.onload=function(){gaReady=true};document.head.appendChild(s)}
+if(CL){var c=document.createElement('script');c.async=true;c.src='https://www.clarity.ms/tag/'+CL;document.head.appendChild(c)}})};
+events.forEach(function(e){addEventListener(e,start,{passive:true})});
+var arm=function(){setTimeout(start,4000)};if(document.readyState==='complete'){arm()}else{addEventListener('load',arm)}}`}
         </Script>
       )}
     </>
