@@ -151,7 +151,7 @@ export function Hero() {
           width is capped by the viewport height too, so the whole arch fits on
           short laptop screens (the cutout rises ~40% above the arch).
         */}
-        <div className="order-1 lg:order-2 lg:col-span-5 relative w-full max-w-60 sm:max-w-xs mt-28 sm:mt-36 mx-auto lg:mx-0 lg:mt-4 lg:max-w-none lg:w-[min(100%,26rem,calc((100svh-15rem)*0.8))] lg:justify-self-end lg:sticky lg:top-28">
+        <div className="order-1 lg:order-2 lg:col-span-5 relative w-full max-w-60 sm:max-w-xs mt-2 sm:mt-6 mx-auto lg:mx-0 lg:mt-4 lg:max-w-none lg:w-[min(100%,26rem,calc((100svh-15rem)*0.8))] lg:justify-self-end lg:sticky lg:top-28">
           <div className="relative aspect-4/5 w-full">
             {/* Wine arch backdrop */}
             <div aria-hidden className="absolute inset-0 arch-shape bg-brand-surface" />
