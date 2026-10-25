@@ -8,7 +8,7 @@ const coverAiTrust = '/assets/blog/ai-trust.webp'
 const coverEngToProduct = '/assets/blog/engineering-to-product.webp'
 const coverToolkit = '/assets/blog/product-toolkit.webp'
 const coverRestart = '/assets/blog/restart-fitwardrobe.webp'
-const coverDoubleClick = '/assets/blog/double-click-test.webp'
+const coverDoubleClick = '/assets/blog/double-click-test-v2.webp'
 
 export type SectionLabel = string
 
