@@ -1,6 +1,6 @@
 # Aryan Panwar - Product Evidence Book
 
-> Aryan Panwar is a Business Analyst on Salesforce projects at Cloud Ingenious and an ECE graduate from MIET Meerut (2026). He builds AI products on the side and writes about product trade-offs, AI feature design, and PM frameworks. His goal is AI product management. He has built FitWardrobe (on-device AI wardrobe stylist), Mithivoices (open-source voice AI platform: speech-to-text, an LLM and text-to-speech), SEO-GEO Optimizer (npm package for AI search visibility), and an AI-First HCP CRM prototype for healthcare field reps.
+> Aryan Panwar is a Business Analyst on Salesforce projects at Cloud Ingenious and an ECE graduate from MIET Meerut (2026). He builds AI products on the side and writes about product trade-offs, AI feature design, and PM frameworks. His goal is AI product management. He has built FitWardrobe (a pre-launch wardrobe app: cloud AI outfit planning, wardrobe stored on the device), Mithivoices (open-source voice AI platform: speech-to-text, an LLM and text-to-speech), SEO-GEO Optimizer (npm package for AI search visibility), and an AI-First HCP CRM prototype for healthcare field reps.
 
 ## About
 
@@ -9,33 +9,33 @@
 
 ## Case Studies
 
-- [FitWardrobe](https://aryanpanwar.in/case-studies/fitwardrobe): AI wardrobe stylist - analyzed McKinsey/Movinga research on closet dormancy, grew to 20.8K organic impressions and 315 clicks (1.5% CTR), solved cataloguing friction from pilot feedback, preparing upcoming Beta launch at https://fitwardrobe.me.
+- [FitWardrobe](https://aryanpanwar.in/case-studies/fitwardrobe): Pre-launch wardrobe app (founder). Frames the problem as memory and time, not storage; clothes added once by photo or shop link; occasion-based outfits; cloud AI (Gemini, Groq) with the wardrobe stored on the device. No user metrics yet; the marketing site drew 20.8K Google impressions and 315 clicks in the six months to Sep 2026.
 - [Mithivoices](https://aryanpanwar.in/case-studies/mithivoices): Open-source local voice AI platform - Piper text-to-speech, speech-to-text and a swappable Gemini/Ollama LLM; v0.2.0 released January 2026.
 - [SEO-GEO Optimizer](https://aryanpanwar.in/case-studies/seo-geo-optimizer): npm package that auto-generates structured data, llms.txt, and answer-first content to make sites legible to AI answer engines like Perplexity and ChatGPT.
 - [AI-First HCP CRM](https://aryanpanwar.in/case-studies/ai-first-crm-hcp): Prototype CRM module for pharma field reps - log visits by form or chat, kept in sync, with a compliance check and a draft-and-confirm design. Not yet tested with real reps.
-- [Credex Spend Audit](https://aryanpanwar.in/case-studies/credex-spend-audit): North-star metric "Dollars of Verified Savings Surfaced" with counter-metrics (false-positive rate, savings rejection rate) to prevent Goodhart's Law.
+- [Credex Spend Audit](https://aryanpanwar.in/case-studies/credex-spend-audit): Concept built to a brief. North-star metric "Dollars of Verified Savings Surfaced" with counter-metrics (false-positive rate, savings rejection rate) to prevent Goodhart's Law.
 
 ## Product Thinking
 
-- [JTBD applied to FitWardrobe](https://aryanpanwar.in/thinking/jtbd-fitwardrobe): How Jobs-to-be-Done reframed the product from "another closet app" to a morning ritual, including killing a shopping tab that was already prototyped.
+- [JTBD applied to FitWardrobe](https://aryanpanwar.in/thinking/jtbd-fitwardrobe): How Jobs-to-be-Done reframes FitWardrobe from "another closet app" to getting dressed for a specific occasion, and what that cut from the first version.
 - [RICE applied to Mithivoices](https://aryanpanwar.in/thinking/rice-mithivoices): How to score an open-source backlog by whether each item reduces time-to-first-agent for a stranger.
 - [Opportunity Trees for SEO-GEO Optimizer](https://aryanpanwar.in/thinking/opportunity-tree-seo-geo): Mapping the AI-search space into structured opportunities before writing a single line of code.
 - [North-star metrics for Credex](https://aryanpanwar.in/thinking/north-star-credex): Choosing a metric that only moves when the customer actually wins, and the counter-metrics that keep it honest.
 - [Discovery interviews for AI-First CRM](https://aryanpanwar.in/thinking/discovery-hcp-crm): The interview plan to run with field reps before piloting the prototype, without leading the witness.
-- [AI product tradeoffs](https://aryanpanwar.in/thinking/ai-tradeoffs): On-device vs cloud, eval design, latency vs quality - decisions and written reversion triggers across FitWardrobe, Mithivoices and the HCP CRM prototype.
+- [AI product tradeoffs](https://aryanpanwar.in/thinking/ai-tradeoffs): Cloud vs on-device, eval design, latency vs quality - decisions and written reversion triggers across FitWardrobe, Mithivoices and the HCP CRM prototype.
 
 ## Writing
 
-- [What Building FitWardrobe Taught Me About Product Discovery](https://aryanpanwar.in/writing/fitwardrobe-product-discovery): Seven un-facilitated interviews changed the roadmap more than three weeks of building.
+- [What Building FitWardrobe Taught Me About Product Discovery](https://aryanpanwar.in/writing/fitwardrobe-product-discovery): How informal conversations moved the product from an image-tagging capability to occasion-based outfits.
 - [I Stopped Thinking Like an Engineer](https://aryanpanwar.in/writing/stopped-thinking-like-engineer): How the mental shift from shipping code to owning outcomes changed every decision I make.
 - [How to Prioritize Product Features Before Writing a PRD](https://aryanpanwar.in/writing/prioritize-features-before-prd): A practical pre-PRD prioritization framework.
 - [Why Every Product Needs Success Metrics Before Features](https://aryanpanwar.in/writing/success-metrics-before-features): North-star selection methodology to avoid building metrics that game themselves.
-- [The Features I Removed That Made FitWardrobe Better](https://aryanpanwar.in/writing/features-removed-fitwardrobe): On the discipline of subtraction in product development.
-- [Local AI vs Cloud AI: Decisions Behind FitWardrobe](https://aryanpanwar.in/writing/local-vs-cloud-ai-fitwardrobe): Concrete decision log for the on-device vs cloud tradeoff with reversion triggers.
+- [The Features I Cut From FitWardrobe Before Launch](https://aryanpanwar.in/writing/features-removed-fitwardrobe): On the discipline of subtraction, applied before launch.
+- [Local AI vs Cloud AI: Decisions Behind FitWardrobe](https://aryanpanwar.in/writing/local-vs-cloud-ai-fitwardrobe): Why FitWardrobe uses cloud AI for tagging and styling but keeps the wardrobe on the device, including model-retirement and API-terms risks.
 - [Building AI Features Users Actually Trust](https://aryanpanwar.in/writing/building-ai-features-users-trust): How to design AI interactions that feel reliable rather than magical.
 - [From Engineering Projects to Product Thinking](https://aryanpanwar.in/writing/engineering-to-product-thinking): The frameworks and mindset shifts that bridged the gap.
 - [My Product Thinking Toolkit](https://aryanpanwar.in/writing/product-thinking-toolkit): The PM frameworks I reach for most and how I apply them.
-- [If I Started FitWardrobe Again Today](https://aryanpanwar.in/writing/if-i-started-fitwardrobe-again): What I would do differently knowing what I know now.
+- [If I Started FitWardrobe Again Today](https://aryanpanwar.in/writing/if-i-started-fitwardrobe-again): What I would do differently, written before launch.
 
 ## Optional
 

@@ -34,7 +34,7 @@ export const journey: Milestone[] = [
     year: "Dec 2025",
     title: "Started shipping independently",
     description:
-      "Went from side-projects to a real shipping cadence: FitWardrobe (on-device AI, live), AI-First HCP CRM on LangGraph, Credex AI Spend Audit (live), Mithivoices open-source voice AI, and Digital Heroes Golf (live with payments). Learned that scope discipline is the whole game - and that AI wedges only work when the ritual around them is designed.",
+      "Went from side-projects to a real shipping cadence: FitWardrobe (cloud AI, pre-launch), an AI-First HCP CRM prototype on LangGraph, Credex AI Spend Audit (built to a brief, live demo), Mithivoices open-source voice AI, and a golf-platform prototype with test-mode payments. Learned that scope discipline is the whole game - and that AI wedges only work when the ritual around them is designed.",
   },
   {
     year: "Feb–Mar 2026",

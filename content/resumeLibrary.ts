@@ -28,8 +28,8 @@ export const resumeVariants: ResumeVariant[] = [
     tagline: "For APM, product analyst and AI product teams",
     bestFor: ["Associate PM", "Product Analyst", "Product Intern", "Founder's Office"],
     roleFit: "Strong",
-    version: "v3.2",
-    lastUpdated: "Oct 2026",
+    version: "v3.3",
+    lastUpdated: "Nov 2026",
     recommended: true,
     pdfUrl: "/docs/Aryan_Panwar_PM_Resume.pdf",
     isPlaceholder: false,
@@ -39,7 +39,7 @@ export const resumeVariants: ResumeVariant[] = [
         "Instrumentation Intern, Indian Potash Limited · Jun – Aug 2025.",
       ],
       projects: [
-        "FitWardrobe - AI wardrobe styling app; on-device image recognition keeps user photos on the phone.",
+        "FitWardrobe - wardrobe app (pre-launch); cloud image recognition (Gemini) and LLM outfit planning, with the wardrobe stored on the device.",
         "SEO & GEO Optimizer - open-source npm workflow for AI coding assistants.",
       ],
       skills: [
@@ -51,8 +51,8 @@ export const resumeVariants: ResumeVariant[] = [
       ],
       education: ["B.Tech ECE - MIET Meerut (2022 - 2026)"],
       achievements: [
-        "Four self-built products in public use.",
-        "FitWardrobe: 20.8K Google Search impressions and 315 clicks in six months, no paid spend.",
+        "Four self-built projects, from discovery to release.",
+        "FitWardrobe site: 20.8K Google Search impressions and 315 clicks in the six months to Sep 2026, no paid spend.",
       ],
       publications: ["Co-author, JETIR Vol 13 Issue 4 (Apr 2026): Automated Dual-Spot Wireless Charging for EVs."],
     },
@@ -63,8 +63,8 @@ export const resumeVariants: ResumeVariant[] = [
     tagline: "For BA, Salesforce and requirements-heavy teams",
     bestFor: ["Business Analyst", "Salesforce BA", "Process Analyst"],
     roleFit: "Strong",
-    version: "v3.2",
-    lastUpdated: "Oct 2026",
+    version: "v3.3",
+    lastUpdated: "Nov 2026",
     pdfUrl: "/docs/Aryan_Panwar_BA_Resume.pdf",
     isPlaceholder: false,
     summary: {
@@ -84,7 +84,7 @@ export const resumeVariants: ResumeVariant[] = [
         "SQL, Excel & GA4",
       ],
       education: ["B.Tech ECE - MIET Meerut (2022 - 2026)"],
-      achievements: ["Four self-built products in public use, from discovery to launch."],
+      achievements: ["Four self-built projects, from discovery to release."],
       publications: ["Co-author, JETIR Vol 13 Issue 4 (Apr 2026): Automated Dual-Spot Wireless Charging for EVs."],
     },
   },
@@ -94,18 +94,18 @@ export const resumeVariants: ResumeVariant[] = [
     tagline: "For technical, platform and AI product roles",
     bestFor: ["Associate Technical PM", "AI Product Analyst", "Platform PM"],
     roleFit: "Solid",
-    version: "v3.2",
-    lastUpdated: "Oct 2026",
+    version: "v3.3",
+    lastUpdated: "Nov 2026",
     pdfUrl: "/docs/Aryan_Panwar_TPM_Resume.pdf",
     isPlaceholder: false,
     summary: {
       experience: [
         "Business Analyst Intern, Cloud Ingenious · requirements and Salesforce data modelling.",
-        "Scoped and shipped four products in public use, with AI-assisted development.",
+        "Scoped and built four self-directed projects, with AI-assisted development.",
       ],
       projects: [
         "SEO & GEO Optimizer - 14-phase workflow with human-in-the-loop validation; 500+ npm downloads.",
-        "FitWardrobe - on-device image recognition with LLM outfit generation.",
+        "FitWardrobe - cloud image recognition (Gemini) with LLM outfit planning; pre-launch.",
       ],
       skills: [
         "API & integration requirements",
@@ -125,8 +125,8 @@ export const resumeVariants: ResumeVariant[] = [
     tagline: "For AI application and builder roles",
     bestFor: ["GenAI Developer", "AI Application Builder", "Product Engineer (AI)"],
     roleFit: "Growing",
-    version: "v3.2",
-    lastUpdated: "Oct 2026",
+    version: "v3.3",
+    lastUpdated: "Nov 2026",
     pdfUrl: "/docs/Aryan_Panwar_SWE_Resume.pdf",
     isPlaceholder: false,
     summary: {
@@ -184,7 +184,7 @@ export const resumeFaqCategories: ResumeFaqCategory[] = [
     questions: [
       {
         q: "Are these real products?",
-        a: "Yes. Every case study here is grounded in a product I built or worked on directly - FitWardrobe, Mithivoices, Credex, an AI-first HCP CRM, and the SEO-GEO Optimizer npm package. I include real metrics, discovery notes, and the tradeoffs I made along the way.",
+        a: "Yes. Every case study here is grounded in a product I built or worked on directly - FitWardrobe, Mithivoices, Credex, an AI-first HCP CRM, and the SEO-GEO Optimizer npm package. Each one says what stage it's at, shows only numbers I actually measured, and covers the tradeoffs I made along the way.",
       },
       {
         q: "Why are only a few projects featured?",

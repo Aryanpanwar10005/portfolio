@@ -18,14 +18,14 @@ export const playbook: PlaybookEntry[] = [
     title: "Jobs-to-be-Done, applied to FitWardrobe",
     project: "FitWardrobe",
     summary:
-      "How I moved FitWardrobe from ‘another closet app’ to a morning ritual by rewriting the job around the user's actual outcome.",
+      "How I'm framing FitWardrobe as ‘get dressed for this moment’ rather than ‘another closet app’, by rewriting the job around the outcome people actually want.",
     whenToUse:
       "When your product looks like a category (‘another CRM’, ‘another closet app’) and users bounce despite feature parity.",
     steps: [
       "Wrote 3 candidate jobs. Killed the two that described features instead of outcomes.",
-      "Interviewed 20 users about the last time they picked an outfit, not the ideal one.",
-      "Rewrote the home screen around the job: ‘Help me leave the house feeling put together in under 30 seconds.’",
-      "Killed everything on the roadmap that didn’t serve that job - including a shopping tab I had already prototyped.",
+      "Talked informally with friends about the last time they got stuck picking an outfit, not the ideal one.",
+      "Rewrote the home screen around the job: ‘Help me look put together for this occasion, from clothes I already own.’",
+      "Cut everything from the first version that didn’t serve that job, including a manual outfit builder and a style score.",
     ],
   },
   {
@@ -98,12 +98,12 @@ export const playbook: PlaybookEntry[] = [
     title: "AI product tradeoffs I actually made",
     project: "Across FitWardrobe, Mithivoices, HCP CRM",
     summary:
-      "On-device vs cloud, eval design, latency vs quality - the concrete decisions I made, and what would make me revisit them.",
+      "Cloud vs on-device, eval design, latency vs quality - the concrete decisions I made, and what would make me revisit them.",
     whenToUse:
       "Any AI feature above one engineering week, before writing the PRD.",
     steps: [
-      "FitWardrobe: chose on-device vision for privacy + latency; would revisit if attribute quality plateaus.",
-      "Mithivoices: chose latency ceiling as a hard constraint; every quality upgrade must fit under 500ms E2E.",
+      "FitWardrobe: chose cloud vision (Gemini) for tagging quality and kept the wardrobe stored on the device for privacy; would revisit if a provider retires the model or changes its terms.",
+      "Mithivoices: set a latency target as a hard constraint - every quality upgrade has to fit a sub-500ms end-to-end budget (a target; not yet measured end to end).",
       "HCP CRM: chose draft-and-confirm over autonomy; would revisit only after acceptance rate stays above 85% for a quarter.",
       "Wrote a one-page decision log per tradeoff - with the ‘change our mind’ trigger written first, not last.",
     ],
