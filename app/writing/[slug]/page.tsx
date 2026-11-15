@@ -212,8 +212,8 @@ export default async function BlogPostPage({ params }: PageProps) {
           <p className="text-xs font-semibold tracking-wider text-primary-ink uppercase mb-2">PM hiring question</p>
           <p className="font-display text-2xl text-foreground font-semibold leading-snug">{post.question}</p>
           <div className="mt-4 pt-4 border-t border-primary/10">
-            <p className="text-xs font-semibold tracking-wider text-primary-ink uppercase mb-1">Recruiter takeaway</p>
-            <p className="text-lg text-foreground font-serif-italic">&quot;{post.takeaway}&quot;</p>
+            <p className="text-xs font-semibold tracking-wider text-primary-ink uppercase mb-1">Why it matters</p>
+            <p className="text-lg text-foreground">{post.takeaway}</p>
           </div>
         </div>
 

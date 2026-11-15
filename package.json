@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint .",
     "index:bing": "node scripts/bing-submit.js",
+    "index:now": "node scripts/indexnow.mjs",
     "check:urls": "node scripts/check-urls.mjs",
     "lint:strict": "eslint . --max-warnings 0"
   },

@@ -18,6 +18,7 @@ const CORE_PAGES: Record<string, string> = {
   '/resume': '2026-10-16',
   '/faq': '2026-10-16',
   '/contact': '2026-10-16',
+  '/privacy': '2026-11-16',
 }
 
 // The playbook entries have not changed since they went live.

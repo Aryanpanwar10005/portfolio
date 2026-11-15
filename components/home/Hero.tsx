@@ -11,7 +11,7 @@ const portraitCutout = '/assets/aryan-portrait-cutout.webp'
 const proofPoints = [
   {
     name: 'FitWardrobe',
-    proof: 'AI wardrobe app. Its site ranks top 10 against Stylebook and Whering.',
+    proof: 'Wardrobe app, pre-launch. Its site drew 20.8K search impressions in six months, no ads.',
     href: '/case-studies/fitwardrobe',
   },
   {
@@ -21,7 +21,7 @@ const proofPoints = [
   },
   {
     name: 'Mithivoices',
-    proof: 'Open-source voice AI, built to reply in under 500 ms.',
+    proof: 'Open-source voice AI: speech-to-text, LLM and text-to-speech in one stack.',
     href: '/case-studies/mithivoices',
   },
 ]

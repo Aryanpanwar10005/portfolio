@@ -262,6 +262,20 @@ export function CaseStudyClient({ study, next }: CaseStudyClientProps) {
               </section>
             )
           })}
+          {study.faqs && study.faqs.length > 0 && (
+            <section id="faq" className="scroll-mt-28">
+              <h2 className="text-base font-bold tracking-wider text-primary-ink uppercase mb-3">Questions</h2>
+              <div className="hairline mb-6" />
+              <dl className="space-y-8 max-w-prose">
+                {study.faqs.map((f) => (
+                  <div key={f.q}>
+                    <dt className="font-display text-xl text-foreground">{f.q}</dt>
+                    <dd className="mt-2 text-lg text-foreground-muted leading-relaxed">{f.a}</dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+          )}
         </article>
       </div>
 

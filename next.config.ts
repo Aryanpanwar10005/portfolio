@@ -12,14 +12,46 @@ const legacyPosts: Record<string, string> = {
   'seo-for-product-managers': 'generative-ai-technical-seo',
   'seo-product-management-faq': 'generative-ai-technical-seo',
   'hardware-logic-in-ai': 'local-vs-cloud-ai-fitwardrobe',
-  'embedded-iot-automation': 'engineering-to-product-thinking',
   'embedded-engineer-faq': 'engineering-to-product-thinking',
   'modern-embedded-engineer': 'engineering-to-product-thinking',
 };
 
+// Content Security Policy. Inline scripts stay allowed because Next.js and the
+// analytics loader (components/AnalyticsScripts.tsx) inject them; everything
+// external is limited to GA4, Clarity and Vercel. When adding a third-party
+// script, image or API, add its origin here or the browser will block it.
+const csp = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://*.clarity.ms https://va.vercel-scripts.com",
+  "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.clarity.ms https://c.bing.com https://vitals.vercel-insights.com",
+  "img-src 'self' data: blob: https://*.google-analytics.com https://www.googletagmanager.com https://*.clarity.ms https://c.bing.com",
+  "style-src 'self' 'unsafe-inline'",
+  "font-src 'self' data:",
+  "frame-src 'self'",
+  "frame-ancestors 'self'",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  'upgrade-insecure-requests',
+].join('; ')
+
+const securityHeaders = [
+  { key: 'Content-Security-Policy', value: csp },
+  { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+  { key: 'X-Content-Type-Options', value: 'nosniff' },
+  { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+  { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=()' },
+  // Vercel sends "Access-Control-Allow-Origin: *" by default; nothing here is
+  // meant to be read cross-origin by scripts.
+  { key: 'Access-Control-Allow-Origin', value: 'https://aryanpanwar.in' },
+]
+
 const nextConfig: NextConfig = {
   experimental: {
     turbopackLocalPostcssConfig: true,
+  },
+  async headers() {
+    return [{ source: '/:path*', headers: securityHeaders }]
   },
   async redirects() {
     return [
@@ -31,6 +63,18 @@ const nextConfig: NextConfig = {
           permanent: true,
         })),
       ),
+      // The hardware/IoT post is closest to the career journey page, not an essay.
+      ...['blog', 'writing'].map((prefix) => ({
+        source: `/${prefix}/embedded-iot-automation.html`,
+        destination: '/journey',
+        permanent: true,
+      })),
+      // This tag was removed; Mithivoices content lives in its case study.
+      {
+        source: '/writing/tag/mithivoices',
+        destination: '/case-studies/mithivoices',
+        permanent: true,
+      },
       {
         source: '/docs/Aryan.pdf',
         destination: '/docs/Aryan_Panwar_PM_Resume.pdf',
@@ -99,17 +143,17 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/privacy.html',
-        destination: '/',
+        destination: '/privacy',
         permanent: true,
       },
       {
         source: '/terms.html',
-        destination: '/',
+        destination: '/privacy',
         permanent: true,
       },
       {
         source: '/cookies.html',
-        destination: '/',
+        destination: '/privacy',
         permanent: true,
       },
 

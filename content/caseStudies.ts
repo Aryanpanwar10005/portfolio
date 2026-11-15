@@ -36,6 +36,8 @@ export type CaseStudy = {
   liveUrl?: string;
   repoUrl?: string;
   extraLinks?: { label: string; url: string }[];
+  /** Shown on the page and reused as FAQPage JSON-LD, so the two always match. */
+  faqs?: { q: string; a: string }[];
   sections: {
     overview: string;
     problemStatement: string;
@@ -79,96 +81,92 @@ export const caseStudies: CaseStudy[] = [
     slug: "fitwardrobe",
     tier: "flagship",
     title: "FitWardrobe",
-    tagline: "An AI wardrobe stylist that turns a closet full of clothes into daily outfits people actually wear.",
-    role: "Founder & Product Manager",
-    platform: "iOS · Web · On-device Vision",
+    tagline: "A wardrobe app for people who already own enough clothes but have no time to remember them all or work out what goes together.",
+    role: "Founder",
+    platform: "Android · iOS · Web (pre-launch) · Cloud AI",
     timeline: "2025 - Present",
     publishedAtISO: "2026-03-04",
-    updatedAtISO: "2026-10-16",
+    updatedAtISO: "2026-11-16",
     problem:
-      "People buy 60% more clothes than 15 years ago (mckinsey.com) and forget about them for years - Movinga's 18,000-household global audit found that the vast majority of closet items sit unworn for over 12 months (movinga.com). On top of that, M&S survey data showed people spend 17 minutes every morning (103 hours a year) deciding what to wear (marksandspencer.com). And when a special occasion comes up? The outfit they wanted is forgotten, unready, or buried.",
+      "Most people own more clothes than they can keep track of. McKinsey reported that clothing purchases rose about 60% over 15 years (mckinsey.com), and Movinga's survey of 18,000+ households found most wardrobes hold items unworn for 12 months or more (movinga.com, 2018). The hard part isn't buying. It's remembering what you have and working out what goes together, usually at 8am or the night before an event. A dated M&S survey of women put weekday outfit choice at about 17 minutes.",
     solution:
-      "A vision-first wardrobe that catalogs every item from a photo, learns fit and occasion rules from real usage, and recommends outfits pre-scored for weather, calendar, and confidence.",
+      "Add your clothes once, by photo or by sharing a shop link or product image. FitWardrobe remembers them and puts a full outfit together from your own wardrobe for the occasion you pick: work, an interview, a date, a wedding or party, travel, the gym or an everyday day. Each outfit comes with one or two alternatives and a short reason.",
     cover: fitwardrobeCover,
     featured: true,
     status: "In Progress",
-    metaDescription: "How I analyzed McKinsey & Movinga research on closet dormancy, built an AI wardrobe testing version, solved pilot user friction, and prepared the upcoming Beta release for fitwardrobe.me.",
-    result: "20.8K impressions · 315 clicks · Beta Launching Soon",
+    metaDescription: "FitWardrobe product case study: framing the wardrobe problem as memory and time, not storage, choosing cloud AI with on-device wardrobe storage, and scoping the pre-launch build.",
+    result: "Pre-launch · 20.8K search impressions in 6 months (to Sep 2026)",
     tldr: [
-      "Situation & Research: McKinsey data shows global clothing purchases jumped 60% (mckinsey.com), Movinga's 18K household audit found items sit unworn for 12+ months (movinga.com), and M&S data showed users spend 17 mins/day (103 hrs/yr) deciding what to wear.",
-      "Task & Action: Framed the core problem - apps solve closet organization instead of daily retrieval. Built an on-device AI testing version, identified cold-start logging friction during pilot testing, and iterated to an instant recommendation loop.",
-      "Result & Next Step: Polishing the experience based on test feedback and launching the Beta/Early Access version very soon. Early users can claim access at https://fitwardrobe.me (validated by 20.8K organic impressions in 6 months).",
+      "Problem: people have the clothes but not the time or memory to combine them. Published research (McKinsey, Movinga) points the same way: the bottleneck is remembering, not owning.",
+      "Decision: clothes are added once (photo or shop link) and the app plans whole outfits per occasion. Image analysis runs in the cloud (Gemini) and styling uses an LLM via Groq, while the wardrobe itself stays stored on the phone.",
+      "Status: in development and not launched yet, so there are no user metrics. What is real so far is the marketing site's search traction: about 20.8K impressions and 315 clicks in the six months to September 2026, with no paid spend.",
     ],
     liveUrl: "https://fitwardrobe.me/",
-    updatedLabel: "October 2026",
+    updatedLabel: "November 2026",
     repoUrl: "https://github.com/fitwardrobe/fitwardrobe",
     extraLinks: [
       {
-        label: "Dev.to Case Essay",
-        url: "https://dev.to/aryan_panwar1/how-i-built-an-seo-skill-for-ai-ides-because-my-cursor-kept-getting-it-wrong-3dki",
-      },
-      {
-        label: "Claim Beta Access",
+        label: "FitWardrobe site",
         url: "https://fitwardrobe.me/",
       },
     ],
     sections: {
       overview:
-        "FitWardrobe is an AI fashion assistant that classifies clothing on-device and recommends daily outfits in under 30 seconds. Built following a complete S.T.A.R. product cycle: analyzing industry research, framing the retrieval problem, building a pilot testing version, solving real user logging friction, and preparing the imminent Beta launch at fitwardrobe.me.",
+        "FitWardrobe is a wardrobe app I'm building as founder. You add your clothes once, and it puts outfits together from what you already own for the occasion you choose. It is pre-launch: launch is planned on Android, iOS and the web together. This case study covers the framing, the architecture decision and the scope. There are no usage results yet, and I don't present any.",
       problemStatement:
-        "Wardrobe apps fail because they solve organisation instead of retrieval. While McKinsey research showed clothing buying jumped 60% (mckinsey.com), Movinga's 18,000-household audit proved that people forget what they own (movinga.com), and M&S survey data showed users spend 17 minutes every morning unable to decide (marksandspencer.com). The answer isn't a better catalogue. It's a system that does the remembering for you.",
+        "Wardrobe apps tend to solve organisation: a neat catalogue of everything you own. The problem people describe is different. They can't remember what they have, and they don't have time to work out combinations, especially before work or an event. The answer isn't a better catalogue. It's an app that does the remembering and the combining for you.",
       marketNeed:
-        "Research by McKinsey & Company showed global clothing purchases jumped 60% over a 15-year period (mckinsey.com), creating a visibility crisis in personal closets. The market problem was hiding in plain sight: not a lack of clothes, but a memory and retrieval bottleneck. On-device vision had just become fast enough to classify garments in under two seconds without a server. The moment that technical constraint lifted, the product became worth building.",
+        "McKinsey reported that clothing purchases rose about 60% over 15 years (mckinsey.com), and Movinga's 2018 survey of 18,000+ households found that most wardrobes hold clothes unworn for a year or more (movinga.com). Cloud vision models are now cheap and accurate enough to tag a garment from a single photo, which removes the data-entry work that made earlier wardrobe apps feel like homework.",
       targetUsers:
-        "I assumed I was building for fashion-conscious people. Discovery interviews said otherwise. The people who engaged most were time-constrained and mildly anxious about social presentation - not particularly interested in fashion, but very interested in fewer decisions per morning.",
+        "People in their twenties who dress for work, interviews, dates and events, own enough clothes, and are short on time. My research so far is informal: conversations with friends about the last time they got stuck choosing an outfit. It's a starting hypothesis, not validated segmentation.",
       research:
-        "Before building, I checked the problem against published research: PLATE 2025 found that clothing retention is a retrieval and memory challenge, not a storage problem (plateconference.org). When pilot users tested early builds, most stopped logging by day 4 - revealing high cataloguing friction. That feedback reshaped our solution to focus on automated single-photo recommendations rather than manual entry.",
+        "Desk research came first: published work on clothing use, including the PLATE conference papers on how people keep and forget clothes (plateconference.org). Then informal chats with friends. The pattern in both was the same: the pain is memory and time, and manual cataloguing is where people give up. That pushed the design toward adding each item once with as little effort as possible.",
       insights: [
-        "Users don't want more outfit ideas - they want fewer, and confident ones.",
-        "'Fit' is emotional: the same shirt gets rejected on a Monday and picked on a Friday.",
-        "Cataloguing feels like homework. If it takes more than 10 seconds per item, it doesn't happen.",
+        "People don't want more outfit ideas. They want one good outfit and a couple of alternatives.",
+        "The occasion matters more than the day: a wedding next week needs planning, a Tuesday at work needs speed.",
+        "Cataloguing feels like homework. Adding an item has to take one photo or one shared link.",
       ],
       opportunity:
-        "The right surface isn't a better closet - it's a morning ritual. Get a user a good outfit in under 30 seconds after opening the app.",
+        "Plan the outfit before the moment it's needed, the night before work or a week before the wedding, so the morning scramble goes away.",
       scope: [
-        "Photo-to-item vision pipeline (on-device background removal + attributes)",
-        "Daily outfit generator with weather + calendar signals",
-        "Feedback loop: keep / swap / never-again",
+        "Add clothes by photo or by sharing a shop link or product image (cloud image analysis; wardrobe stored on the device)",
+        "Occasion-based outfit planning: work, interview, date, wedding or party, everyday, travel, gym",
+        "One or two alternatives per outfit, plus keep / swap feedback",
       ],
       outOfScope: [
-        "Marketplace / shopping integration for v1",
+        "Accessories (planned for a later phase)",
         "Social sharing feed",
         "Multi-user closets",
       ],
       assumptions:
-        "The riskiest assumption was that people would accept 3–5 recommendations instead of an infinite scroll. Everything I'd built before had given users more options, not fewer. I wasn't sure the constraint would feel like confidence rather than limitation until I watched a pilot user tap 'keep' without scrolling.",
+        "The riskiest assumption is that people will accept one outfit plus one or two alternatives instead of an endless scroll. Everything I'd built before gave users more options, not fewer. This is untested with real users and is the first thing launch has to check.",
       successCriteria: [
-        "Target: D7 return rate meaningfully above the onboarding cohort baseline.",
-        "Target: kept-outfit rate above half of daily recommendations - the model earning trust, not just generating variety.",
-        "Kill condition: if correction rate rises above swap rate, the model is creating cleanup work, not saving time.",
+        "Target (post-launch): most new users add enough items to get a first outfit in their first session.",
+        "Target (post-launch): kept-outfit rate above half of suggestions, a sign of trust rather than variety.",
+        "Kill condition: if users correct the outfit more often than they swap it, the app is creating cleanup work instead of saving time.",
       ],
       expectedBehaviour:
-        "Open app → see today's outfit in under 5 seconds → tap keep or swap → move on with the morning.",
-      northStar: "Weekly Kept Outfits per Active User - chosen over DAU because it captures actual model trust. A user can open the app daily and reject everything. That's a failing product that looks good in the wrong metric.",
-      supportingMetrics: ["Time to First Outfit", "Swap Rate", "Correction Rate", "D7 / D30 Retention", "20.8K Impressions / 315 Clicks (1.5% CTR, avg position 14.9) - 6 months organic"],
+        "Pick the occasion → see a full outfit from your own clothes with a reason and one or two alternatives → keep or swap → done. (Target experience; not measured yet.)",
+      northStar: "Weekly kept outfits per active user. I chose it over DAU because it captures trust: a user can open the app daily and reject everything, which is a failing product that looks fine on the wrong metric.",
+      supportingMetrics: ["Planned: time to first outfit", "Planned: swap rate", "Planned: correction rate", "Planned: D7 / D30 retention", "Real (marketing site): 20.8K impressions / 315 clicks in the 6 months to Sep 2026; 258 clicks / 23.9K impressions in the 90 days to 14 Nov 2026"],
       prioritization:
-        "RICE across the backlog, with Confidence replaced by an evidence-class label. Vision quality and outfit-generation confidence won every round; social features consistently lost to retention bets.",
+        "RICE across the backlog, with Confidence replaced by an evidence label (research-backed, anecdotal or a guess). Outfit quality and easy item entry ranked first; social features ranked last.",
       wireframes:
-        "A Figma clickthrough showing a single 'what should I wear?' response - no catalog, no UI chrome, just an answer. I measured one thing: whether the test user tapped again without being asked. Most did. That was enough to start building.",
+        "Early screens answer one question, \"what should I wear for this?\", with no catalogue view in front. I showed them to a few friends to check that the answer, not the archive, was what caught their attention.",
       prd:
-        "One-page per release. The non-goals section was the one I took most seriously - it had to name the things I was explicitly choosing not to build. If I couldn't articulate why something was out of scope, it wasn't actually out of scope.",
+        "One page per release. I took the non-goals section most seriously: it has to name what I'm choosing not to build. If I can't say why something is out of scope, it isn't really out of scope.",
       prototype:
-        "A clickable mock shown to a handful of people before any model code existed. The biggest thing I learned: users engaged with the recommendation before they engaged with the catalog. They cared about the answer, not the archive.",
+        "The build is still in development. The most useful early lesson came from friends looking at the screens: they reacted to the outfit suggestion before they cared about the wardrobe list.",
       finalSolution:
-        "A vision-first onboarding, a daily home screen that opens on today's outfit, and a feedback loop that quietly trains the model on every keep or swap.",
+        "Planned for launch: quick item entry (photo or shop link), an occasion picker, full outfits with alternatives and a reason, and keep/swap feedback that the app will learn from.",
       results:
-        "20,800+ organic Google impressions and 315 clicks (1.5% CTR, avg position 14.9) over 6 months - zero paid spend. Following pilot testing - which surfaced cataloguing friction - and subsequent UI refinements, we are preparing the Beta launch at fitwardrobe.me.",
+        "No product results yet: FitWardrobe hasn't launched. The real number so far is search demand for the marketing site: about 20,800 Google impressions and 315 clicks in the six months to September 2026, and 258 clicks from 23,900 impressions in the 90 days to 14 November 2026, all unpaid.",
       reflection:
-        "By analyzing industry research (McKinsey, Movinga, M&S) and gathering pilot feedback, we identified cataloguing friction and iterated on product improvements, generating 20,800+ organic impressions without paid acquisition. We are now preparing to open early access for users at https://fitwardrobe.me.",
+        "The biggest change was in the problem statement, not the feature list. I started out thinking about a smarter closet and ended up with a planning tool for the moments when getting dressed matters. The architecture followed from that: use the best cloud model for tagging, and keep the wardrobe itself on the user's phone.",
       lessons: [
-        "The classifier - my original headline feature - became invisible in the final product. Not because it didn't work, but because the product worked better when it wasn't visible. That was a strange thing to accept.",
+        "The cataloguing feature I started with matters less than the outfit at the end. The product gets simpler when the catalogue stays in the background.",
         "Discovery before building is a habit, not a phase. I keep having to remind myself of this on every new project.",
-        "The catalog was the wrong hero. Users abandon apps that make them do upfront data entry - UX researchers call this the cold-start problem (plateconference.org). The fix was flipping the responsibility: the app remembers, the user adds one photo. Once that clicked, the whole product got simpler.",
+        "The catalogue was the wrong hero. Apps that demand upfront data entry lose people (the cold-start problem), so adding an item has to cost one photo or one link.",
       ],
     },
   },
@@ -287,6 +285,24 @@ export const caseStudies: CaseStudy[] = [
       { label: "GitHub Repo", url: "https://github.com/Aryanpanwar10005/seo-geo-optimizer" },
       { label: "Dev.to Writeup", url: "https://dev.to/aryanpanwar1/how-i-built-an-seo-skill-for-ai-ides-because-my-cursor-kept-getting-it-wrong-5hd1" },
       { label: "Product Hunt", url: "https://www.producthunt.com/products/seo-geo-optmization/launches/seo-geo-optimizer" }
+    ],
+    faqs: [
+      {
+        q: "What is Generative Engine Optimization (GEO)?",
+        a: "Generative Engine Optimization (GEO), also called AI SEO, is the practice of making content easy for AI answer engines such as ChatGPT, Perplexity and Google AI Overviews to find, understand, quote and cite. It builds on normal SEO rather than replacing it.",
+      },
+      {
+        q: "How does the seo-geo-optimizer npm package work?",
+        a: "Running npx seo-geo-optimizer installs an agent skill into the skills folder of your AI coding tool (Claude Code, Cursor, Copilot, Windsurf and others). The skill then guides the assistant through a 14-phase workflow covering technical SEO, structured data and AI-search readiness, with human checkpoints between phases.",
+      },
+      {
+        q: "Is traditional SEO enough for AI search?",
+        a: "It's the foundation. Google says its AI features use the same index and need no special markup or files, so crawlable, indexable, helpful pages come first. What GEO adds is discipline: direct answers near the top, clear structure, and first-hand evidence that's worth citing.",
+      },
+      {
+        q: "Is seo-geo-optimizer an agentic AI or machine learning tool?",
+        a: "It's an agentic workflow, not a machine-learning model. The AI assistant in your editor takes multi-step actions across the 14 phases, edits files in your workspace and checks its own output. A machine-learning model, by contrast, only makes predictions from data.",
+      },
     ],
     sections: {
       overview:
@@ -455,7 +471,7 @@ export const caseStudies: CaseStudy[] = [
       targetUsers:
         "Ops leads, fractional CFOs, and finance managers at 50–500 person companies - people who know they're overspending but don't have the bandwidth to prove it line by line.",
       research:
-        "Ran 5 in-depth discovery calls with ops leads and fractional CFOs at 50–500 person companies. Every single one had a version of a SaaS audit spreadsheet that hadn't been updated in months. The blocker wasn't lack of interest - it was that line-by-line reconciliation required hours they didn't have.",
+        "I built this to a brief from Credex, so the research was desk research: how SaaS-management platforms such as Vendr and Zylo work, who they serve, and where smaller teams fall back to spreadsheets. I didn't run formal discovery calls. The insights below are hypotheses that a pilot with real ops leads would need to confirm.",
       insights: [
         "The blocker isn't insight - it's the effort to produce it. Everyone knows they're overpaying. Nobody has three hours to reconcile it.",
         "A ranked list of specific dollar savings beats a dashboard. The report is what gets forwarded to the CFO.",
@@ -472,7 +488,7 @@ export const caseStudies: CaseStudy[] = [
         "Procurement workflow",
       ],
       assumptions:
-        "The central bet: that an ops lead would connect read-only integrations if the payoff was shown as a specific dollar number. People protect their data. I wasn't sure 'estimated savings' would be compelling enough until a pilot user forwarded their report to their CFO on the same day they ran it.",
+        "The central bet: that an ops lead would connect read-only integrations if the payoff was shown as a specific dollar number. People protect their data. Whether 'estimated savings' is compelling enough to get past that is untested. It's the first thing a pilot would have to prove.",
       successCriteria: [
         "Target: each audit surfaces a meaningful savings opportunity - enough that forwarding the report to a CFO feels worth doing.",
         "Target: most pilots who run a full audit convert to monthly monitoring without prompting.",
@@ -489,14 +505,14 @@ export const caseStudies: CaseStudy[] = [
       prd:
         "One-page PRD per pipeline stage plus a shared savings-rubric doc. The rubric was the most debated artifact: what counts as a verified saving versus an estimate.",
       prototype:
-        "Manual audit for two people before writing any code. I ran the reconciliation by hand, produced the report in a spreadsheet, and asked whether they'd pay for it. They said yes. Then I automated it.",
+        "Report-first: I worked through a sample reconciliation by hand and laid out the report in a spreadsheet before writing the pipeline, to see which numbers the report needed and which edge cases would break the matching.",
       finalSolution:
         "A read-only integration layer, an LLM-assisted reconciler, and a report designed to be forwarded to a CFO.",
       reflection:
         "The decision I'm most confident about: not building a dashboard for v1. The report is what gets forwarded to a CFO. A dashboard doesn't get forwarded. The artifact is the growth loop, not the app.",
       lessons: [
         "For B2B AI, the artifact matters more than the app. If the output is worth forwarding, you have distribution.",
-        "Running the process manually before automating it was the most valuable week I spent on this project. The manual version taught me which edge cases mattered and which didn't.",
+        "Working the process by hand before automating it was the most valuable part of this project. The manual version showed which edge cases mattered and which didn't.",
       ],
     },
   },
