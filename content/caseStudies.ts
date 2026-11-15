@@ -36,6 +36,8 @@ export type CaseStudy = {
   liveUrl?: string;
   repoUrl?: string;
   extraLinks?: { label: string; url: string }[];
+  /** Shown on the page and reused as FAQPage JSON-LD, so the two always match. */
+  faqs?: { q: string; a: string }[];
   sections: {
     overview: string;
     problemStatement: string;
@@ -283,6 +285,24 @@ export const caseStudies: CaseStudy[] = [
       { label: "GitHub Repo", url: "https://github.com/Aryanpanwar10005/seo-geo-optimizer" },
       { label: "Dev.to Writeup", url: "https://dev.to/aryanpanwar1/how-i-built-an-seo-skill-for-ai-ides-because-my-cursor-kept-getting-it-wrong-5hd1" },
       { label: "Product Hunt", url: "https://www.producthunt.com/products/seo-geo-optmization/launches/seo-geo-optimizer" }
+    ],
+    faqs: [
+      {
+        q: "What is Generative Engine Optimization (GEO)?",
+        a: "Generative Engine Optimization (GEO), also called AI SEO, is the practice of making content easy for AI answer engines such as ChatGPT, Perplexity and Google AI Overviews to find, understand, quote and cite. It builds on normal SEO rather than replacing it.",
+      },
+      {
+        q: "How does the seo-geo-optimizer npm package work?",
+        a: "Running npx seo-geo-optimizer installs an agent skill into the skills folder of your AI coding tool (Claude Code, Cursor, Copilot, Windsurf and others). The skill then guides the assistant through a 14-phase workflow covering technical SEO, structured data and AI-search readiness, with human checkpoints between phases.",
+      },
+      {
+        q: "Is traditional SEO enough for AI search?",
+        a: "It's the foundation. Google says its AI features use the same index and need no special markup or files, so crawlable, indexable, helpful pages come first. What GEO adds is discipline: direct answers near the top, clear structure, and first-hand evidence that's worth citing.",
+      },
+      {
+        q: "Is seo-geo-optimizer an agentic AI or machine learning tool?",
+        a: "It's an agentic workflow, not a machine-learning model. The AI assistant in your editor takes multi-step actions across the 14 phases, edits files in your workspace and checks its own output. A machine-learning model, by contrast, only makes predictions from data.",
+      },
     ],
     sections: {
       overview:

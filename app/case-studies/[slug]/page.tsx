@@ -86,43 +86,14 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 { '@type': 'ListItem', position: 3, name: study.title, item: `https://aryanpanwar.in${path}` },
               ],
             },
-            ...(study.slug === 'seo-geo-optimizer' ? [{
+            ...(study.faqs?.length ? [{
               '@context': 'https://schema.org',
               '@type': 'FAQPage',
-              mainEntity: [
-                {
-                  '@type': 'Question',
-                  name: 'What is Generative Engine Optimization (GEO)?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Generative Engine Optimization (GEO) is the practice of structuring content so that it is easily parsed, cited, and recommended by AI answer engines like ChatGPT, Perplexity, and Google AI Overviews.'
-                  }
-                },
-                {
-                  '@type': 'Question',
-                  name: 'How does the seo-geo-optimizer npm package work?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'It is a 14-phase agentic workflow that runs inside AI IDEs (Cursor, Windsurf, Copilot). It auto-detects your environment and installs rules to guide the AI through technical SEO, schema generation, and content formatting.'
-                  }
-                },
-                {
-                  '@type': 'Question',
-                  name: 'Why is traditional SEO insufficient for AI search?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Traditional SEO focuses on keyword density to rank as a blue link. AI search engines (LLMs) prioritize clarity, direct answers, and structured data to synthesize responses and cite sources.'
-                  }
-                },
-                {
-                  '@type': 'Question',
-                  name: 'Is seo-geo-optimizer an agentic AI or machine learning tool?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'It is an agentic AI tool. It takes multi-step actions across 14 phases, modifies your workspace files, and validates its own output, unlike machine learning which only makes predictions.'
-                  }
-                }
-              ]
+              mainEntity: study.faqs.map((f) => ({
+                '@type': 'Question',
+                name: f.q,
+                acceptedAnswer: { '@type': 'Answer', text: f.a },
+              })),
             }] : [])
           ]).replace(/</g, '\\u003c')
         }}

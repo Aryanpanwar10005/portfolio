@@ -66,7 +66,7 @@ function CategorySection({
             >
               {item.q}
             </AccordionTrigger>
-            <AccordionContent className="text-foreground-muted leading-relaxed text-base md:text-lg max-w-3xl">
+            <AccordionContent forceMount className="text-foreground-muted leading-relaxed text-base md:text-lg max-w-3xl">
               {item.a}
             </AccordionContent>
           </AccordionItem>

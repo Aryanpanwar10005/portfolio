@@ -1034,7 +1034,7 @@ export const allBlogCategories = () =>
 // sitemap list exactly the URLs you want indexed, so the sitemap filter and the
 // robots directive on the tag route both read this one number: change it here
 // and the two can never disagree.
-export const TAG_INDEX_THRESHOLD = 2
+export const TAG_INDEX_THRESHOLD = 3
 
 export const postsForTag = (tag: string) =>
   blogPosts.filter((p) => p.tags.includes(tag))

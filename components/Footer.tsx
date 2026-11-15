@@ -11,6 +11,7 @@ export function Footer() {
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-foreground-muted">
           <Link href="/writing" className="inline-flex min-h-11 items-center hover:text-primary-ink transition-colors">Writing</Link>
           <Link href="/faq" className="inline-flex min-h-11 items-center hover:text-primary-ink transition-colors">FAQ</Link>
+          <Link href="/privacy" className="inline-flex min-h-11 items-center hover:text-primary-ink transition-colors">Privacy</Link>
           <span className="text-foreground-muted">© {new Date().getFullYear()}</span>
         </div>
       </div>
